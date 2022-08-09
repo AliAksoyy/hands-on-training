@@ -1,17 +1,25 @@
 console.log('app.js is loaded');
 
-var myNumber1 = 11;
-console.log(myNumber1);
+// var myNumber1 = 11;
+// console.log(myNumber1);
 
-let v1 = 55;
-console.log(v1)
+// let v1 = 55;
+// console.log(v1)
 
 
-var myNumber2 = 22;
-console.log(myNumber1)
+// var myNumber2 = 22;
+// console.log(myNumber1)
 
-let v2 = 88;
+// let v2 = 88;
+// console.log(v2);
+
+var v1 = 11;
+var v2 = v1;
+v1= 22;
+console.log(v1);
 console.log(v2);
+
+
 
 
 // let firstName = prompt('Enter your name:');
