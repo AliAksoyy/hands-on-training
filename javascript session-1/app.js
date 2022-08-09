@@ -1,5 +1,19 @@
 console.log('app.js is loaded');
 
+var myNumber1 = 11;
+console.log(myNumber1);
+
+let v1 = 55;
+console.log(v1)
+
+
+var myNumber2 = 22;
+console.log(myNumber1)
+
+let v2 = 88;
+console.log(v2);
+
+
 // let firstName = prompt('Enter your name:');
 // alert('firstName :' + firstName);
 
@@ -26,36 +40,36 @@ some functions
 
 // ! const mevzuu
 
-const student = {
-  name: 'Nedim',
-  age: 34,
-};
+// const student = {
+//   name: 'Nedim',
+//   age: 34,
+// };
 
-console.log(student);
+// console.log(student);
 
-const otherStudent = student;
-otherStudent.name = 'Dan Brown';
+// const otherStudent = student;
+// otherStudent.name = 'Dan Brown';
 
-student = {
-  name: 'Ryan',
-  age: 44,
-};
+// student = {
+//   name: 'Ryan',
+//   age: 44,
+// };
 
-console.log(student);
-console.log(otherStudent);
+// console.log(student);
+// console.log(otherStudent);
 
-// ? primitive örnek
+// // ? primitive örnek
 
-let num1 = 501;
-console.log('num1 :>> ', num1);
+// let num1 = 501;
+// console.log('num1 :>> ', num1);
 
-num1 = 888;
-console.log('num1 :>> ', num1);
+// num1 = 888;
+// console.log('num1 :>> ', num1);
 
-let num2 = 467;
+// let num2 = 467;
 
-num1 = num2;
+// num1 = num2;
 
-// num2 = num2 + 3;
+// // num2 = num2 + 3;
 
-console.log(num1, num2);
+// console.log(num1, num2);
