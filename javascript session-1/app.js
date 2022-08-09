@@ -13,11 +13,27 @@ console.log('app.js is loaded');
 // let v2 = 88;
 // console.log(v2);
 
-var v1 = 11;
-var v2 = v1;
-v1= 22;
-console.log(v1);
-console.log(v2);
+// var v1 = 11;
+// var v2 = v1;
+// v1= 22;
+// console.log(v1);
+// console.log(v2);
+
+// const student = {
+//   name: "ali",
+//   age: 34,
+// };
+// console.log(student);
+// const otherStudent = student;
+// otherStudent.name = "aksoy";
+// console.log(student);
+// console.log(otherStudent);
+
+let num1 = 501;
+let num2 = 467;
+num1 = num2;
+num2 = num2 + 3;
+console.log(num1, num2)
 
 
 
