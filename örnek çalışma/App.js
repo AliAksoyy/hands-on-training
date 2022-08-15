@@ -55,3 +55,15 @@ console.log(typeof '') */
 // console.log('12' === 12)
 
 // console.log('12' * '12')
+
+
+// let x = 1234567890
+
+// let y = 123123123123123123
+
+// console.log({x})
+// console.log({y}, typeof y)
+
+let g = 0.1+0.2
+console.log(g);
+console.log(+g.toFixed(2))
