@@ -219,13 +219,20 @@
 // };
 // console.log(`The value is ${a}`);
 
-const sayi = prompt(`Bir sayi giriniz`,100);
-if (sayi > 0) {
-    console.log(`Girilen sayı ${sayi}'tür ve 0 dan büyüktür`)
-}
-if (sayi == 0) {
-    console.log(`Girilen sayı ${sayi}  dır`);
-}
-if (sayi < 0) {
-    console.log(`Girilen sayı ${sayi}  dır ve sıfırdan küçüktür`);
-}
+// const sayi = prompt(`Bir sayi giriniz`,100);
+// if (sayi > 0) {
+//     alert(`Girilen sayı ${sayi}'tür ve 0 dan büyüktür`)
+// }
+// if (sayi == 0) {
+//     console.log(`Girilen sayı ${sayi}  dır`);
+// }
+// if (sayi < 0) {
+//     console.log(`Girilen sayı ${sayi}  dır ve sıfırdan küçüktür`);
+// }
+
+const sayi = prompt(`Bir sayi giriniz`);
+if (sayi >= 0) {
+    console.log("pozitifdir")
+}else {
+    console.log("negatiftir")
+};
