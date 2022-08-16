@@ -55,8 +55,11 @@ console.log("****** CONDITIONS *******");
 // : console.log("Askerlik yapmasına gerek yok");
 
 
-let a = +prompt("Bir sayı giriniz",100);
-alert(`Bu yasndasin  ${a} `);
+// let a = +prompt("Bir sayı giriniz",100);
+// alert(`Bu yasndasin  ${a} `);
 
-let isLegit = confirm("are you legit");
-alert(isLegit);
+// let isLegit = confirm("are you legit");
+// alert(isLegit);
+
+let aValue = null
+console.log(aValue, typeof aValue)
