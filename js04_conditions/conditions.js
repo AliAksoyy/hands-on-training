@@ -77,9 +77,13 @@ console.log("****** CONDITIONS *******");
 // myCar.year = "1991";
 // console.log(myCar)
 
-const myCar = {
-    make:"Ford",
-    model:"Mustang",
-    year: 1991,
-};
-console.log(myCar.model)
+// const myCar = {
+//     make:"Ford",
+//     model:"Mustang",
+//     year: 1991,
+// };
+// console.log(myCar.model)
+
+let aNumber  = 3;
+aNumber  *= 3
+console.log(aNumber)
