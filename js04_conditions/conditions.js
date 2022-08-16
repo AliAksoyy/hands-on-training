@@ -361,7 +361,11 @@
 // const mesaj = hız >= 120 ? "Hızlı" : "Yavaş";
 // console.log(mesaj);
 
-const not = +prompt("not gir");
-let sonuc = not >= 50 ? "geçti" : "kaldı";
-// console.log(sonuc);
-console.log(not >= 50 ? "geçti" : "kaldı");
+// const not = +prompt("not gir");
+// let sonuc = not >= 50 ? "geçti" : "kaldı";
+// // console.log(sonuc);
+// console.log(not >= 50 ? "geçti" : "kaldı");
+
+const hız = 60;
+const mesaj = hız >=120 ? "Hızlı" : (hız >=90 ? "orta" : "yavaş");
+console.log(mesaj)
