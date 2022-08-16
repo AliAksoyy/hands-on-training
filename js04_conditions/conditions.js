@@ -67,5 +67,12 @@ console.log("****** CONDITIONS *******");
 // var x = (0.2*10 + 0.1*10) / 10;
 // console.log(x);
 
-let num = 0o34;
-console.log(num)
+// let num = 0o34;
+// console.log(num)
+
+// 
+const myCar = new Object();
+myCar.make = "Ford";
+myCar.model = "Mustang";
+myCar.year = "1991";
+console.log(myCar)
