@@ -105,8 +105,25 @@ console.log("****** CONDITIONS *******");
 // const a = 2, b = true, c = false;
 // console.log((a>2) || (a<4) )
 
-let a = 6, b = 7, c = 12;
-let d = a && b && c;
-let e = a || b || c;
-console.log(d)
-console.log(e)
+// let a = 6, b = 7, c = 12;
+// let d = a && b && c;
+// let e = a || b || c;
+// console.log(d)
+// console.log(e)
+
+console.log('clarus' + 'way');
+let a = "Full-Stack"
+a += ' Develepoer';
+console.log(a);
+let b = '55'
+let c = +b;
+console.log(b, typeof b);
+console.log(c, typeof c);
+
+const user = {
+    firstName: "ali",
+    lastName: "Aksoy",
+};
+console.log(user);
+delete user.lastName;
+console.log(user)
