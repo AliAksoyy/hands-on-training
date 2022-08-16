@@ -98,6 +98,9 @@ console.log("****** CONDITIONS *******");
 // console.log(b)
 
 // const a = 5, b = 2, c = "Clarusway";
-// console.log(a != 5)
-// console.log(b == 2)
+// console.log(a !== 5)
+// console.log(b == '2')
 // console.log(c == "clarusway")
+
+const a = 2, b = true, c = false;
+console.log((a>2) || (a<4) )
