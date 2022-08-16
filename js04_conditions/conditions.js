@@ -61,5 +61,11 @@ console.log("****** CONDITIONS *******");
 // let isLegit = confirm("are you legit");
 // alert(isLegit);
 
-let aValue = null
-console.log(aValue, typeof aValue)
+// let aValue = null
+// console.log(aValue, typeof aValue);
+
+// var x = (0.2*10 + 0.1*10) / 10;
+// console.log(x);
+
+let num = 0x5AD;
+console.log(num)
