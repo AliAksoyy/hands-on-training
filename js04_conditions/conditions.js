@@ -128,12 +128,23 @@ console.log("****** CONDITIONS *******");
 // delete user.lastName;
 // console.log(user)
 
-const number = prompt("Enter your number?", 100);
-if (number>0) {
-    console.log("The number is positive");
-} else if (number == 0){
-    console.log("The number is  0")
+// const number = prompt("Enter your number?", 100);
+// if (number>0) {
+//     console.log("The number is positive");
+// } else if (number == 0){
+//     console.log("The number is  0")
+// } else {
+//     console.log("The number is negative")
+// }
+// console.log("The number is statement is easy");
+
+const number = +prompt("Enter your number?", 100);
+if (number >= 0) {
+    if (number == 0) {
+        console.log("This number is 0")
+    }else {
+        console.log("sıfırdan büyüktür")
+    }
 } else {
-    console.log("The number is negative")
+    console.log("sıfırdan kücüktür ve eksi bir sayıdır")
 }
-console.log("The number is statement is easy");
