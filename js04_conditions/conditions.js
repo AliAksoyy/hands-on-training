@@ -341,18 +341,27 @@
 // }
 // console.log(dayName);
 
-let day = 1;
-let dayName;
-switch (day) {
-    case 1:
-        dayName = "pazartesi"
-        break;
-    case 2:
-        dayName = "Salı"
-        break;
+// let day = 1;
+// let dayName;
+// switch (day) {
+//     case 1:
+//         dayName = "pazartesi"
+//         break;
+//     case 2:
+//         dayName = "Salı"
+//         break;
 
-    default:
-        dayName = "geçersizgün"
-        break;
-}
-console.log(dayName);
+//     default:
+//         dayName = "geçersizgün"
+//         break;
+// }
+// console.log(dayName);
+
+// const hız = 90;
+// const mesaj = hız >= 120 ? "Hızlı" : "Yavaş";
+// console.log(mesaj);
+
+const not = +prompt("not gir");
+let sonuc = not >= 50 ? "geçti" : "kaldı";
+// console.log(sonuc);
+console.log(not >= 50 ? "geçti" : "kaldı");
