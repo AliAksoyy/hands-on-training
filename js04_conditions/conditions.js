@@ -92,7 +92,12 @@ console.log("****** CONDITIONS *******");
 // let b = 2;
 // console.log("a % b =", a%b)
 
-let a = 5;
-let b = --a;
-console.log(a)
-console.log(b)
+// let a = 5;
+// let b = --a;
+// console.log(a)
+// console.log(b)
+
+// const a = 5, b = 2, c = "Clarusway";
+// console.log(a != 5)
+// console.log(b == 2)
+// console.log(c == "clarusway")
