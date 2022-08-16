@@ -258,7 +258,8 @@ const c = Number(prompt("3. sayi giriniz"));
 let enBuyuk = a;
 if ( b >= enBuyuk) {
     enBuyuk = b;
-} else if (c >= enBuyuk) {
+}
+if (c >= enBuyuk) {
     enBuyuk =c;
 } console.log(`en büyük sayım ${enBuyuk}'tür`)
  
