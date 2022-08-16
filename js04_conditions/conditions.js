@@ -67,5 +67,5 @@ console.log("****** CONDITIONS *******");
 // var x = (0.2*10 + 0.1*10) / 10;
 // console.log(x);
 
-let num = 0x5AD;
+let num = 0o34;
 console.log(num)
