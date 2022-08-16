@@ -1,10 +1,10 @@
-// * ===============================================
-// *                  KARAR YAPILARI
-// * ===============================================
+// // * ===============================================
+// // *                  KARAR YAPILARI
+// // * ===============================================
 
-//**************** IF-ELSE *******************
+// //**************** IF-ELSE *******************
 
-console.log("****** CONDITIONS *******");
+// console.log("****** CONDITIONS *******");
 
 // const sayi = +prompt("Bir sayi giriniz:");
 // if (sayi > 0) {
@@ -70,7 +70,7 @@ console.log("****** CONDITIONS *******");
 // let num = 0o34;
 // console.log(num)
 
-// 
+
 // const myCar = new Object();
 // myCar.make = "Ford";
 // myCar.model = "Mustang";
@@ -171,50 +171,61 @@ console.log("****** CONDITIONS *******");
 // let result = (a >= 0) ? (a == 0 ? "zero" : "positive") : "negative";
 // console.log(result)
 
-let day = 4;
-let dayName;
-switch (day) {
-    case 1:
-        dayName = "Monday";
-        break;
-    case 2:
-        dayName = "Tuesday";
-        break;
-    case 3:
-        dayName = "Wednesday";
-        break;
-    case 4:
-        dayName = "Thursday";
-        break;
-    case 5:
-        dayName = "Friday";
-        break;
-    case 6:
-        dayName = "Saturday";
-        break;
-    case 7:
-        dayName = "Sunday";
-        break;
+// let day = 4;
+// let dayName;
+// switch (day) {
+//     case 1:
+//         dayName = "Monday";
+//         break;
+//     case 2:
+//         dayName = "Tuesday";
+//         break;
+//     case 3:
+//         dayName = "Wednesday";
+//         break;
+//     case 4:
+//         dayName = "Thursday";
+//         break;
+//     case 5:
+//         dayName = "Friday";
+//         break;
+//     case 6:
+//         dayName = "Saturday";
+//         break;
+//     case 7:
+//         dayName = "Sunday";
+//         break;
 
-    default:
-        dayName = "Invalid day";
+//     default:
+//         dayName = "Invalid day";
+// }
+// console.log(dayName);
+
+// let a = 3;
+
+// switch (a) {
+//     case "3":
+//         a = 33;
+//         break;
+//     case 2:
+//         a = "two";
+//         break;
+//     case 3:
+//         a = 'three';
+//         break;
+//     default:
+//         a = 'not found';
+//         break;
+// };
+// console.log(`The value is ${a}`);
+
+const sayi = prompt(`Bir sayi giriniz`,100);
+if (sayi > 0) {
+    console.log(`Girilen sayı ${sayi}'tür ve 0 dan büyüktür`)
 }
-console.log(dayName);
-
-let a = 3;
-
-switch (a) {
-    case "3":
-        a = 33;
-        break;
-    case 2:
-        a = "two";
-        break;
-    case 3:
-        a = 'three';
-        break;
-    default:
-        a = 'not found';
-        break;
-};
-console.log(`The value is ${a}`);
+if (sayi == 0) {
+    console.log(`Girilen sayı ${sayi}  dır`);
+}
+if (sayi < 0) {
+    console.log(`Girilen sayı ${sayi}  dır ve sıfırdan küçüktür`);
+}
