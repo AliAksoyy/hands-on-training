@@ -46,12 +46,14 @@ console.log("****** CONDITIONS *******");
 // let sonuc = not >= 50 ? "Gecti" : "Kaldi";
 // console.log(sonuc);
 
-const yas = 17;
-const cinsiyet = "erkek";
-const saglikli = true;
+// const yas = 20;
+// const cinsiyet = "erkek";
+// const saglikli = true;
 
-yas >= 18 && cinsiyet === "erkek" && saglikli
-? console.log("askerlik yapmali")
-: console.log("Askerlik yapmasına gerek yok");
+// yas >= 18 && cinsiyet === "erkek" && saglikli
+// ? console.log("askerlik yapmali")
+// : console.log("Askerlik yapmasına gerek yok");
 
 
+let a = +prompt("Bir sayı giriniz");
+console.log(a, typeof a);
