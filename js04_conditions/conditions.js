@@ -171,7 +171,7 @@ console.log("****** CONDITIONS *******");
 // let result = (a >= 0) ? (a == 0 ? "zero" : "positive") : "negative";
 // console.log(result)
 
-let day = 3;
+let day = 4;
 let dayName;
 switch (day) {
     case 1:
@@ -200,3 +200,21 @@ switch (day) {
         dayName = "Invalid day";
 }
 console.log(dayName);
+
+let a = 3;
+
+switch (a) {
+    case "3":
+        a = 33;
+        break;
+    case 2:
+        a = "two";
+        break;
+    case 3:
+        a = 'three';
+        break;
+    default:
+        a = 'not found';
+        break;
+};
+console.log(`The value is ${a}`);
