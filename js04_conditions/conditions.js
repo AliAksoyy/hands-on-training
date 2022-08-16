@@ -84,6 +84,15 @@ console.log("****** CONDITIONS *******");
 // };
 // console.log(myCar.model)
 
-let aNumber  = 3;
-aNumber  *= 3
-console.log(aNumber)
+// let aNumber  = 3;
+// aNumber  *= 3
+// console.log(aNumber)
+
+// let a = 9;
+// let b = 2;
+// console.log("a % b =", a%b)
+
+let a = 5;
+let b = --a;
+console.log(a)
+console.log(b)
