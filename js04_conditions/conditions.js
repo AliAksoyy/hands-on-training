@@ -162,7 +162,11 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log(result);
 
-const age = 20;
+// const age = 20;
 
-let result = (age >= 18) ? "You are legal" : "You are not legal yet"
+// let result = (age >= 18) ? "You are legal" : "You are not legal yet"
+// console.log(result)
+
+let a = 0;
+let result = (a >= 0) ? (a == 0 ? "zero" : "positive") : "negative";
 console.log(result)
