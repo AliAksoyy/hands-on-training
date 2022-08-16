@@ -102,5 +102,11 @@ console.log("****** CONDITIONS *******");
 // console.log(b == '2')
 // console.log(c == "clarusway")
 
-const a = 2, b = true, c = false;
-console.log((a>2) || (a<4) )
+// const a = 2, b = true, c = false;
+// console.log((a>2) || (a<4) )
+
+let a = 6, b = 7, c = 12;
+let d = a && b && c;
+let e = a || b || c;
+console.log(d)
+console.log(e)
