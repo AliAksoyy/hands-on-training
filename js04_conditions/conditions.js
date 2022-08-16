@@ -130,6 +130,8 @@ console.log("****** CONDITIONS *******");
 
 const number = prompt("Enter your number?", 100);
 if (number>0) {
-    console.log("The number positive");
+    console.log("The number is positive");
+} else {
+    console.log("The number is either a negative number or 0")
 }
 console.log("The number is statement is easy");
