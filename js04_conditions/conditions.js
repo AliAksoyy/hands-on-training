@@ -71,8 +71,15 @@ console.log("****** CONDITIONS *******");
 // console.log(num)
 
 // 
-const myCar = new Object();
-myCar.make = "Ford";
-myCar.model = "Mustang";
-myCar.year = "1991";
-console.log(myCar)
+// const myCar = new Object();
+// myCar.make = "Ford";
+// myCar.model = "Mustang";
+// myCar.year = "1991";
+// console.log(myCar)
+
+const myCar = {
+    make:"Ford",
+    model:"Mustang",
+    year: 1991,
+};
+console.log(myCar.model)
