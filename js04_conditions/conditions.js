@@ -138,13 +138,17 @@ console.log("****** CONDITIONS *******");
 // }
 // console.log("The number is statement is easy");
 
-const number = +prompt("Enter your number?", 100);
-if (number >= 0) {
-    if (number == 0) {
-        console.log("This number is 0")
-    }else {
-        console.log("sıfırdan büyüktür")
-    }
-} else {
-    console.log("sıfırdan kücüktür ve eksi bir sayıdır")
-}
+// const number = +prompt("Enter your number?", 100);
+// if (number >= 0) {
+//     if (number == 0) {
+//         console.log("This number is 0")
+//     }else {
+//         console.log("sıfırdan büyüktür")
+//     }
+// } else {
+//     console.log("sıfırdan kücüktür ve eksi bir sayıdır")
+// }
+
+let grade = prompt("Enter your score?", 100);
+let result = (grade >= 50) ? 'passed' : 'failed';
+console.log(`you ${result}, ${grade} the exam.`);
