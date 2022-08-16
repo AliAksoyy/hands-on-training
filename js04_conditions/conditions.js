@@ -171,7 +171,7 @@
 // let result = (a >= 0) ? (a == 0 ? "zero" : "positive") : "negative";
 // console.log(result)
 
-// let day = 4;
+// let day = 5;
 // let dayName;
 // switch (day) {
 //     case 1:
@@ -263,15 +263,50 @@
 //     enBuyuk =c;
 // } console.log(`en büyük sayım ${enBuyuk}'tür`)
 
-const age = prompt("sayi :");
-const gender = "erkek";
-const healty = true;
+// const age = prompt("sayi :");
+// const gender = "erkek";
+// const healty = true;
 
-const condition = (age >= 18 && gender == "erkek" && healty);
-if (condition) {
-    console.log("Askerlik yapmalı");
-} else {
-    console.log("Askerli yapması gerekmez")
+// const condition = (age >= 18 && gender == "erkek" && healty);
+// if (condition) {
+//     console.log("Askerlik yapmalı");
+// } else {
+//     console.log("Askerli yapması gerekmez")
+// }
+
+// let a = 3;
+
+// switch (a) {
+//     case "3":
+//         a = 33;
+//         break;
+//     case 2:
+//         a = "two";
+//         break;
+//     case 3:
+//         a = 'three';
+//         break;
+//     default:
+//         a = 'not found';
+//         break;
+// };
+// console.log(`The value is ${a}`);
+
+let a = 5;
+switch (a) {
+    case "3":
+        a = 33;
+        break;
+    case 2:
+        a = "two";
+        break;
+    case 3:
+        a = "Ali Aksoy"
+        break;
+    default:
+        a = "not found";
+        break;
+
 }
-
+console.log(a)
 
