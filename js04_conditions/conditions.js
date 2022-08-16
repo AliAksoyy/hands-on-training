@@ -153,11 +153,16 @@ console.log("****** CONDITIONS *******");
 // let result = (grade >= 50) ? 'passed' : 'failed';
 // console.log(`you ${result}, ${grade} the exam.`);
 
-const age = prompt("Enter your number")
-let result;
-if (age >= 18) {
-    result = "You are legal."
-} else {
-    result = "you are not legal yet."
-}
-console.log(result);
+// const age = prompt("Enter your number")
+// let result;
+// if (age >= 18) {
+//     result = "You are legal."
+// } else {
+//     result = "you are not legal yet."
+// }
+// console.log(result);
+
+const age = 20;
+
+let result = (age >= 18) ? "You are legal" : "You are not legal yet"
+console.log(result)
