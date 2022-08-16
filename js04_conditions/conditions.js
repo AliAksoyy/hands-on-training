@@ -238,17 +238,29 @@
 // };
 
 
+// const a = +prompt("1. sayi giriniz");
+// const b = +prompt("2. sayi giriniz");
+// const c = Number(prompt("3. sayi giriniz"));
+// if ((a > b) && (a > c)) {
+//     alert(`sayıların en büyüğü ${a}'dır`)
+// }
+// if ((b > a) && (b > c)) {
+//     alert(`sayıların en büyüğü ${b}'dır`)
+// }
+// if ((c > a) && (c > b)) {
+//     alert(`sayıların en büyüğü ${c}'dır`)
+// }
+
 const a = +prompt("1. sayi giriniz");
 const b = +prompt("2. sayi giriniz");
 const c = Number(prompt("3. sayi giriniz"));
-if ((a > b) && (a > c)) {
-    alert(`sayıların en büyüğü ${a}'dır`)
-}
-if ((b > a) && (b > c)) {
-    alert(`sayıların en büyüğü ${b}'dır`)
-}
-if ((c > a) && (c > b)) {
-    alert(`sayıların en büyüğü ${c}'dır`)
-}
+
+let enBuyuk = a;
+if ( b >= enBuyuk) {
+    enBuyuk = b;
+} else if (c >= enBuyuk) {
+    enBuyuk =c;
+} console.log(`en büyük sayım ${enBuyuk}'tür`)
+ 
 
 
