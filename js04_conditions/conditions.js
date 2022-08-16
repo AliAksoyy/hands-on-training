@@ -149,6 +149,15 @@ console.log("****** CONDITIONS *******");
 //     console.log("sıfırdan kücüktür ve eksi bir sayıdır")
 // }
 
-let grade = prompt("Enter your score?", 100);
-let result = (grade >= 50) ? 'passed' : 'failed';
-console.log(`you ${result}, ${grade} the exam.`);
+// let grade = prompt("Enter your score?", 100);
+// let result = (grade >= 50) ? 'passed' : 'failed';
+// console.log(`you ${result}, ${grade} the exam.`);
+
+const age = prompt("Enter your number")
+let result;
+if (age >= 18) {
+    result = "You are legal."
+} else {
+    result = "you are not legal yet."
+}
+console.log(result);
