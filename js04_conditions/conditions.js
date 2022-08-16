@@ -111,19 +111,25 @@ console.log("****** CONDITIONS *******");
 // console.log(d)
 // console.log(e)
 
-console.log('clarus' + 'way');
-let a = "Full-Stack"
-a += ' Develepoer';
-console.log(a);
-let b = '55'
-let c = +b;
-console.log(b, typeof b);
-console.log(c, typeof c);
+// console.log('clarus' + 'way');
+// let a = "Full-Stack"
+// a += ' Develepoer';
+// console.log(a);
+// let b = '55'
+// let c = +b;
+// console.log(b, typeof b);
+// console.log(c, typeof c);
 
-const user = {
-    firstName: "ali",
-    lastName: "Aksoy",
-};
-console.log(user);
-delete user.lastName;
-console.log(user)
+// const user = {
+//     firstName: "ali",
+//     lastName: "Aksoy",
+// };
+// console.log(user);
+// delete user.lastName;
+// console.log(user)
+
+const number = prompt("Enter your number?", 100);
+if (number>0) {
+    console.log("The number positive");
+}
+console.log("The number is statement is easy");
