@@ -251,17 +251,27 @@
 //     alert(`sayıların en büyüğü ${c}'dır`)
 // }
 
-const a = +prompt("1. sayi giriniz");
-const b = +prompt("2. sayi giriniz");
-const c = Number(prompt("3. sayi giriniz"));
+// const a = +prompt("1. sayi giriniz");
+// const b = +prompt("2. sayi giriniz");
+// const c = Number(prompt("3. sayi giriniz"));
 
-let enBuyuk = a;
-if ( b >= enBuyuk) {
-    enBuyuk = b;
+// let enBuyuk = a;
+// if ( b >= enBuyuk) {
+//     enBuyuk = b;
+// }
+// if (c >= enBuyuk) {
+//     enBuyuk =c;
+// } console.log(`en büyük sayım ${enBuyuk}'tür`)
+
+const age = prompt("sayi :");
+const gender = "erkek";
+const healty = true;
+
+const condition = (age >= 18 && gender == "erkek" && healty);
+if (condition) {
+    console.log("Askerlik yapmalı");
+} else {
+    console.log("Askerli yapması gerekmez")
 }
-if (c >= enBuyuk) {
-    enBuyuk =c;
-} console.log(`en büyük sayım ${enBuyuk}'tür`)
- 
 
 
