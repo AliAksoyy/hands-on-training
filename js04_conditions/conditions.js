@@ -230,9 +230,25 @@
 //     console.log(`Girilen sayı ${sayi}  dır ve sıfırdan küçüktür`);
 // }
 
-const sayi = prompt(`Bir sayi giriniz`);
-if (sayi >= 0) {
-    console.log("pozitifdir")
-}else {
-    console.log("negatiftir")
-};
+// const sayi = prompt(`Bir sayi giriniz`);
+// if (sayi >= 0) {
+//     console.log("pozitifdir")
+// }else {
+//     console.log("negatiftir")
+// };
+
+
+const a = +prompt("1. sayi giriniz");
+const b = +prompt("2. sayi giriniz");
+const c = Number(prompt("3. sayi giriniz"));
+if ((a > b) && (a > c)) {
+    alert(`sayıların en büyüğü ${a}'dır`)
+}
+if ((b > a) && (b > c)) {
+    alert(`sayıların en büyüğü ${b}'dır`)
+}
+if ((c > a) && (c > b)) {
+    alert(`sayıların en büyüğü ${c}'dır`)
+}
+
+
