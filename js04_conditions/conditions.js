@@ -374,17 +374,24 @@
 // ? Dört işlem hesap makinesi Projesi
 
 let num1 = +prompt("1'inci sayiyi giriniz:");
+let oparator = prompt("dört işlemdan herhangi birini giriniz")
 let num2 = +prompt("2'inci sayiyi giriniz:");
+let toplam = (num1 + num2)
+let cikarma = (num1 - num2)
+let carpma = (num1 * num2)
+let bolme = (num1 / num2)
 
-let sonuc;
-if(num1 + num2) {
-    console.log(`${sonuc} num1 + num2 'nin toplamdır`)
-} else if (num1 - num2) {
-    console.log(`${sonuc} num1 - num2 'nin çıkarımıdır`)
-} else if (num1*num2) {
-    console.log(`${sonuc} num1*num2 'nin çarpımıdır`)
-}else if (num1 / num2) {
-    console.log(`${sonuc} num1 / num2 'nin bölümüdür`)
+
+
+
+if(oparator == "+") {
+    console.log(`${toplam} num1 + num2 'nin toplamdır`)
+} else if (oparator == "-") {
+    console.log(`${cikarma} num1 - num2 'nin çıkarımıdır`)
+} else if (oparator == "*") {
+    console.log(`${carpma} num1*num2 'nin çarpımıdır`)
+}else if (oparator == "/") {
+    console.log(`${bolme} num1 / num2 'nin bölümüdür`)
 }else {
     console.log("Dört işlem haricinde başka bir işlem olduğu için hesaplanamaz")
 }
