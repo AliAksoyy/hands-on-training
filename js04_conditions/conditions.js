@@ -449,7 +449,7 @@ const gelir = +prompt("Aylik gelir degerinizi giriniz");
 const gider = +prompt("Aylık gider degerinizi giriniz");
 
 const kalanMiktar = (gelir - gider);
-let kredi = ((kalanMiktar >= asgariUcret) ? "Kredi verilebilir" : "Kredi Verilmesi Dusunulemez");
+let kredi = kalanMiktar >= asgariUcret ? "Kredi verilebilir" :"Kredi Verilmez";
 console.log(kredi);
 
 
