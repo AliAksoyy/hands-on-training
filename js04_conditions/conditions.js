@@ -398,7 +398,7 @@
 
 // ! Swtich Case çalışması projemezi yapıyoruz
 
-let day = 4;
+let day = +prompt("7'ye kadar bir sayı giriniz")
 let dayName;
 
 switch (day) {
