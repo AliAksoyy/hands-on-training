@@ -632,44 +632,56 @@
 
 // ! 2'inci soru çözümü
 
-const ay = +prompt("Ay ismini yazınız");
+const ay = prompt("Ay ismini yazınız");
 let ayNu;
 switch (ay) {
-    case Ocak :
+    case "Ocak" :
         ayNu = "1";
+        console.log(ayNu);
         break;
-    case Subat :
+    case "Subat" :
         ayNu = "2";
+        console.log(ayNu);
         break;
-    case Mart :
+    case "Mart" :
         ayNu = "3";
+        console.log(ayNu);
         break;
-    case Nisan :
+    case "Nisan" :
         ayNu = "4";
+        console.log(ayNu);
         break;
-    case Mayis :
+    case "Mayis" :
         ayNu = "5";
+        console.log(ayNu);
         break;
-    case Haziran :
+    case "Haziran" :
         ayNu = "6";
+        console.log(ayNu);
         break;
-    case Temmuz :
+    case "Temmuz" :
         ayNu = "7";
+        console.log(ayNu);
         break;
-    case Agustos :
+    case "Agustos" :
         ayNu = "8";
+        console.log(ayNu);
         break;
-    case Eylul :
+    case "Eylul" :
         ayNu = "9";
+        console.log(ayNu);
         break;
-    case Ekim :
+    case "Ekim" :
         ayNu = "10";
+        console.log(ayNu);
         break;
-    case Kasim :
+    case "Kasim" :
         ayNu = "11";
+        console.log(ayNu);
         break;
-    case Aralik :
+    case "Aralik" :
         ayNu = "12";
+        console.log(ayNu);
         break;
     default:
         console.log("girilen degeri kontrol ediniz");
