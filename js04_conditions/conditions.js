@@ -600,7 +600,11 @@
 // ? 1 nci soru
 const not = +prompt("Aldiginiz not degerini giriniz",100);
 let deger;
-if(not >= 91) {
+if(not >100 ) {
+    deger = "hata mesajı"
+    console.log(deger)
+}
+else if (not >= 91) {
     deger = "AA";
     console.log(deger)
 } else if (not >= 76) {
