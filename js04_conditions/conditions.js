@@ -598,34 +598,80 @@
 
 //* Assignment-5 noah hoca 
 // ? 1 nci soru
-const not = +prompt("Aldiginiz not degerini giriniz",100);
-let deger;
-if(not >100 ) {
-    deger = "hata mesajı"
-    console.log(deger)
-}
-else if (not >= 91) {
-    deger = "AA";
-    console.log(deger)
-} else if (not >= 76) {
-    deger = "BA";
-    console.log(deger)
-}
-else if (not >= 66) {
-    deger = "BB";
-    console.log(deger)
-}
- else if (not >= 46) {
-    deger = "CC";
-    console.log(deger)
-}
- else if (not >= 26) {
-    deger = "DD";
-    console.log(deger)
-}
- else if (not >= 0) {
-    deger = "FF";
-    console.log(deger)
-}else  {
-    console.log("hata mesaji")
+// const not = +prompt("Aldiginiz not degerini giriniz",100);
+// let deger;
+// if(not >100 ) {
+//     deger = "hata mesajı"
+//     console.log(deger)
+// }
+// else if (not >= 91) {
+//     deger = "AA";
+//     console.log(deger)
+// } else if (not >= 76) {
+//     deger = "BA";
+//     console.log(deger)
+// }
+// else if (not >= 66) {
+//     deger = "BB";
+//     console.log(deger)
+// }
+//  else if (not >= 46) {
+//     deger = "CC";
+//     console.log(deger)
+// }
+//  else if (not >= 26) {
+//     deger = "DD";
+//     console.log(deger)
+// }
+//  else if (not >= 0) {
+//     deger = "FF";
+//     console.log(deger)
+// }else  {
+//     console.log("hata mesaji")
+// }
+
+// ! 2'inci soru çözümü
+
+const ay = +prompt("Ay ismini yazınız");
+let ayNu;
+switch (ay) {
+    case Ocak :
+        ayNu = "1";
+        break;
+    case Subat :
+        ayNu = "2";
+        break;
+    case Mart :
+        ayNu = "3";
+        break;
+    case Nisan :
+        ayNu = "4";
+        break;
+    case Mayis :
+        ayNu = "5";
+        break;
+    case Haziran :
+        ayNu = "6";
+        break;
+    case Temmuz :
+        ayNu = "7";
+        break;
+    case Agustos :
+        ayNu = "8";
+        break;
+    case Eylul :
+        ayNu = "9";
+        break;
+    case Ekim :
+        ayNu = "10";
+        break;
+    case Kasim :
+        ayNu = "11";
+        break;
+    case Aralik :
+        ayNu = "12";
+        break;
+    default:
+        console.log("girilen degeri kontrol ediniz");
+
 }
