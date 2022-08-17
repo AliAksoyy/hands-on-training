@@ -448,6 +448,7 @@ const asgariUcret = 5000;
 const gelir = +prompt("Aylik gelir degerinizi giriniz");
 const gider = +prompt("Aylık gider degerinizi giriniz");
 
+const kalanMiktar = (gelir - gider);
 
 
 
