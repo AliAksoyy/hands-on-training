@@ -369,3 +369,12 @@
 // const hız = 60;
 // const mesaj = hız >=120 ? "Hızlı" : (hız >=90 ? "orta" : "yavaş");
 // console.log(mesaj)
+
+
+// ? Dört işlem hesap makinesi Projesi
+
+let num1 = +prompt("1'inci sayiyi giriniz:");
+let num2 = +prompt("2'inci sayiyi giriniz:");
+
+
+
