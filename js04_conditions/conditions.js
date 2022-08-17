@@ -479,7 +479,7 @@
 
 const num1 = +prompt("sayi giriniz");
 const num2 = +prompt("ikinci sayi giriniz");
-const islem = prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
+const islem = +prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
 let sonuc;
 switch (islem) {
     case 1:
