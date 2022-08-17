@@ -563,10 +563,35 @@
 
 
 //* Assignment-3
-let salary = +prompt("Enter your salary as TL:");
-if(salary <= 5500){
-    salary *= 1.5;
-}else if(salary>5500){
-    salary *= 1.1;
+// let salary = +prompt("Enter your salary as TL:");
+// if(salary <= 5500){
+//     salary *= 1.5;
+// }else if(salary>5500){
+//     salary *= 1.1;
+// }
+// console.log(`Your new raised salary is ${salary}TL`);
+
+
+
+//* Assignment-4
+// const income = +prompt("Enter your monthly income as TL:");
+// const expense = +prompt("Enter your monthly expense as TL:");
+// const minWage = 5500;
+// if((income-expense)>minWage){
+//     console.log(`You may receive loan from this bank🙆‍♂️ `)
+// }else if((income-expense)<=minWage){
+//     console.log(`Sorry! You can't receive the loan🤷‍♀️`)
+// }else{
+//     console.log("Please check your inputs for the loan system!!!")
+// }
+
+const income = +prompt("Enter your monthly income as TL:");
+const expense = +prompt("Enter your monthly expense as TL:");
+const minWage = 5500;
+if((income - expense) > nimAge) {
+    console.log("kredi olur");
+} else if ((income - expense) <= minWage) {
+    console.log("kredi olmaz")
+} else {
+    console.log("degerlendirelim")
 }
-console.log(`Your new raised salary is ${salary}TL`);
