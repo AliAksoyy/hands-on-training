@@ -482,23 +482,24 @@ const num2 = +prompt("ikinci sayi giriniz");
 const islem = prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
 let sonuc;
 switch (islem) {
-    case(1):
+    case 1:
         sonuc = num1 + num2;
         break;
-    case(2):
+    case 2:
         sonuc = num1 - num2;
         break;
-    case(3):
+    case 3:
         sonuc = num1 * num2;
         break;
-    case(4):
+    case 4:
         sonuc = num1 / num2;
         break;
     default:
         console.log(`${islem} istenilen deger degildir`)
         break;
 
-} console.log(`${sonuc}`);
+} 
+console.log(`${sonuc}`);
     
 
 
