@@ -376,5 +376,18 @@
 let num1 = +prompt("1'inci sayiyi giriniz:");
 let num2 = +prompt("2'inci sayiyi giriniz:");
 
+let sonuc;
+if(num1 + num2) {
+    console.log(`${sonuc} num1 + num2 'nin toplamdır`)
+} else if (num1 - num2) {
+    console.log(`${sonuc} num1 - num2 'nin çıkarımıdır`)
+} else if (num1*num2) {
+    console.log(`${sonuc} num1*num2 'nin çarpımıdır`)
+}else if (num1 / num2) {
+    console.log(`${sonuc} num1 / num2 'nin bölümüdür`)
+}else {
+    console.log("Dört işlem haricinde başka bir işlem olduğu için hesaplanamaz")
+}
+
 
 
