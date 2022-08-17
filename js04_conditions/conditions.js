@@ -690,29 +690,39 @@
 
 // ! 3'ncü soru çözümü
 
-const a = +prompt("ilk sayi gir");
-const b = +prompt("ikinci sayi gir");
-const c = +prompt("ucuncu sayi gir");
-let d = a + b + c;
-let  e = a*b*c;
+// const a = +prompt("ilk sayi gir");
+// const b = +prompt("ikinci sayi gir");
+// const c = +prompt("ucuncu sayi gir");
+// let d = a + b + c;
+// let  e = a*b*c;
 
-if((a>b) && (a>c)) {
-    console.log(`en buyukdeger ${a}'dir`);
-} else if ((b>a) && (b>c)) {
-        console.log(`en buyukdeger ${b}'dir`);
-    } else {
-        console.log(`en buyukdeger ${c}'dir`)
-    }
+// if((a>b) && (a>c)) {
+//     console.log(`en buyukdeger ${a}'dir`);
+// } else if ((b>a) && (b>c)) {
+//         console.log(`en buyukdeger ${b}'dir`);
+//     } else {
+//         console.log(`en buyukdeger ${c}'dir`)
+//     }
 
-if((a<b) && (a<c)) {
-    console.log(`en kuuck deger ${a}'dir`)
-} else if ((b<a) && (b<c)) {
-    console.log(`en kuuck deger ${b}'dir`)
-} else {
-    console.log(`en kuuck deger ${c}'dir`)
-}
+// if((a<b) && (a<c)) {
+//     console.log(`en kuuck deger ${a}'dir`)
+// } else if ((b<a) && (b<c)) {
+//     console.log(`en kuuck deger ${b}'dir`)
+// } else {
+//     console.log(`en kuuck deger ${c}'dir`)
+// }
 
 
 
-console.log(`${a} + ${b} + ${c} = ${d}`);
-console.log(`${a} * ${b} * ${c} = ${e}`);
+// console.log(`${a} + ${b} + ${c} = ${d}`);
+// console.log(`${a} * ${b} * ${c} = ${e}`);
+
+
+// * 4'üncü soru çözümü
+
+const a = +prompt("Bir sayi giriniz");
+
+let numberType = a%2 === 0 ? "Cift" : "Tek";
+console.log(numberType);
+
+
