@@ -452,6 +452,7 @@
 // let kredi = kalanMiktar >= asgariUcret ? "Kredi verilebilir" :"Kredi Verilmez";
 // console.log(kredi);
 
+//? code peer cozum 1 nci proje
 
 //* Assignment-1
 // const num1 = +prompt("Enter a number:");
@@ -478,7 +479,7 @@
 // console.log(`The calculation result is ${result}`)
 
 
-//? code peer cozum 1 nci proje
+
 
 // const num1 = +prompt("sayi giriniz");
 // const num2 = +prompt("ikinci sayi giriniz");
@@ -532,30 +533,40 @@
 // }
 
 
-const gun = prompt("bir gun giriniz");
-let sonuc;
-switch (gun) {
-    case "pazartesi":
-    case "salı":
-    case "carsamba":
-    case "persembe":
-        sonuc = "Inclass";
-        console.log(`${gun} ${sonuc}`)
-        break;
-    case "cuma":
-        sonuc = "Teamwork";
-        console.log(`${gun} ${sonuc}`)
-        break;
-    case "cumartesi":
-        sonuc = "Inclass + Workshop";
-        console.log(`${gun} ${sonuc}`)
-        break;
-    case "pazar":
-        sonuc = "self-study";
-        console.log(`${gun} ${sonuc}`)
-        break;
-    default:
-        console.log("yanlis bir giris yaptiniz")
-        break;
+// const gun = prompt("bir gun giriniz");
+// let sonuc;
+// switch (gun) {
+//     case "pazartesi":
+//     case "salı":
+//     case "carsamba":
+//     case "persembe":
+//         sonuc = "Inclass";
+//         console.log(`${gun} ${sonuc}`)
+//         break;
+//     case "cuma":
+//         sonuc = "Teamwork";
+//         console.log(`${gun} ${sonuc}`)
+//         break;
+//     case "cumartesi":
+//         sonuc = "Inclass + Workshop";
+//         console.log(`${gun} ${sonuc}`)
+//         break;
+//     case "pazar":
+//         sonuc = "self-study";
+//         console.log(`${gun} ${sonuc}`)
+//         break;
+//     default:
+//         console.log("yanlis bir giris yaptiniz")
+//         break;
 
+// }
+
+
+//* Assignment-3
+let salary = +prompt("Enter your salary as TL:");
+if(salary <= 5500){
+    salary *= 1.5;
+}else if(salary>5500){
+    salary *= 1.1;
 }
+console.log(`Your new raised salary is ${salary}TL`);
