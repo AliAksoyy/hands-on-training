@@ -598,132 +598,132 @@
 
 //* Assignment-5 noah hoca 
 // ? 1 nci soru
-// const not = +prompt("Aldiginiz not degerini giriniz",100);
-// let deger;
-// if(not >100 ) {
-//     deger = "hata mesajı"
-//     console.log(deger)
-// }
-// else if (not >= 91) {
-//     deger = "AA";
-//     console.log(deger)
-// } else if (not >= 76) {
-//     deger = "BA";
-//     console.log(deger)
-// }
-// else if (not >= 66) {
-//     deger = "BB";
-//     console.log(deger)
-// }
-//  else if (not >= 46) {
-//     deger = "CC";
-//     console.log(deger)
-// }
-//  else if (not >= 26) {
-//     deger = "DD";
-//     console.log(deger)
-// }
-//  else if (not >= 0) {
-//     deger = "FF";
-//     console.log(deger)
-// }else  {
-//     console.log("hata mesaji")
-// }
+const not = +prompt("Aldiginiz not degerini giriniz",100);
+let deger;
+if(not >100 ) {
+    deger = "hata mesajı"
+    console.log(deger)
+}
+else if (not >= 91) {
+    deger = "AA";
+    console.log(deger)
+} else if (not >= 76) {
+    deger = "BA";
+    console.log(deger)
+}
+else if (not >= 66) {
+    deger = "BB";
+    console.log(deger)
+}
+ else if (not >= 46) {
+    deger = "CC";
+    console.log(deger)
+}
+ else if (not >= 26) {
+    deger = "DD";
+    console.log(deger)
+}
+ else if (not >= 0) {
+    deger = "FF";
+    console.log(deger)
+}else  {
+    console.log("hata mesaji")
+}
 
 // ! 2'inci soru çözümü
 
-// const ay = prompt("Ay ismini yazınız");
-// let ayNu;
-// switch (ay) {
-//     case "Ocak" :
-//         ayNu = "1";
-//         console.log(ayNu);
-//         break;
-//     case "Subat" :
-//         ayNu = "2";
-//         console.log(ayNu);
-//         break;
-//     case "Mart" :
-//         ayNu = "3";
-//         console.log(ayNu);
-//         break;
-//     case "Nisan" :
-//         ayNu = "4";
-//         console.log(ayNu);
-//         break;
-//     case "Mayis" :
-//         ayNu = "5";
-//         console.log(ayNu);
-//         break;
-//     case "Haziran" :
-//         ayNu = "6";
-//         console.log(ayNu);
-//         break;
-//     case "Temmuz" :
-//         ayNu = "7";
-//         console.log(ayNu);
-//         break;
-//     case "Agustos" :
-//         ayNu = "8";
-//         console.log(ayNu);
-//         break;
-//     case "Eylul" :
-//         ayNu = "9";
-//         console.log(ayNu);
-//         break;
-//     case "Ekim" :
-//         ayNu = "10";
-//         console.log(ayNu);
-//         break;
-//     case "Kasim" :
-//         ayNu = "11";
-//         console.log(ayNu);
-//         break;
-//     case "Aralik" :
-//         ayNu = "12";
-//         console.log(ayNu);
-//         break;
-//     default:
-//         console.log("girilen degeri kontrol ediniz");
+const ay = prompt("Ay ismini yazınız");
+let ayNu;
+switch (ay) {
+    case "Ocak" :
+        ayNu = "1";
+        console.log(ayNu);
+        break;
+    case "Subat" :
+        ayNu = "2";
+        console.log(ayNu);
+        break;
+    case "Mart" :
+        ayNu = "3";
+        console.log(ayNu);
+        break;
+    case "Nisan" :
+        ayNu = "4";
+        console.log(ayNu);
+        break;
+    case "Mayis" :
+        ayNu = "5";
+        console.log(ayNu);
+        break;
+    case "Haziran" :
+        ayNu = "6";
+        console.log(ayNu);
+        break;
+    case "Temmuz" :
+        ayNu = "7";
+        console.log(ayNu);
+        break;
+    case "Agustos" :
+        ayNu = "8";
+        console.log(ayNu);
+        break;
+    case "Eylul" :
+        ayNu = "9";
+        console.log(ayNu);
+        break;
+    case "Ekim" :
+        ayNu = "10";
+        console.log(ayNu);
+        break;
+    case "Kasim" :
+        ayNu = "11";
+        console.log(ayNu);
+        break;
+    case "Aralik" :
+        ayNu = "12";
+        console.log(ayNu);
+        break;
+    default:
+        console.log("girilen degeri kontrol ediniz");
 
-// }
+}
 
 // ! 3'ncü soru çözümü
 
-// const a = +prompt("ilk sayi gir");
-// const b = +prompt("ikinci sayi gir");
-// const c = +prompt("ucuncu sayi gir");
-// let d = a + b + c;
-// let  e = a*b*c;
+const a = +prompt("ilk sayi gir");
+const b = +prompt("ikinci sayi gir");
+const c = +prompt("ucuncu sayi gir");
+let d = a + b + c;
+let  e = a*b*c;
 
-// if((a>b) && (a>c)) {
-//     console.log(`en buyukdeger ${a}'dir`);
-// } else if ((b>a) && (b>c)) {
-//         console.log(`en buyukdeger ${b}'dir`);
-//     } else {
-//         console.log(`en buyukdeger ${c}'dir`)
-//     }
+if((a>b) && (a>c)) {
+    console.log(`en buyukdeger ${a}'dir`);
+} else if ((b>a) && (b>c)) {
+        console.log(`en buyukdeger ${b}'dir`);
+    } else {
+        console.log(`en buyukdeger ${c}'dir`)
+    }
 
-// if((a<b) && (a<c)) {
-//     console.log(`en kuuck deger ${a}'dir`)
-// } else if ((b<a) && (b<c)) {
-//     console.log(`en kuuck deger ${b}'dir`)
-// } else {
-//     console.log(`en kuuck deger ${c}'dir`)
-// }
+if((a<b) && (a<c)) {
+    console.log(`en kuuck deger ${a}'dir`)
+} else if ((b<a) && (b<c)) {
+    console.log(`en kuuck deger ${b}'dir`)
+} else {
+    console.log(`en kuuck deger ${c}'dir`)
+}
 
 
 
-// console.log(`${a} + ${b} + ${c} = ${d}`);
-// console.log(`${a} * ${b} * ${c} = ${e}`);
+console.log(`${a} + ${b} + ${c} = ${d}`);
+console.log(`${a} * ${b} * ${c} = ${e}`);
 
 
 // * 4'üncü soru çözümü
 
-// const a = +prompt("Bir sayi giriniz");
+const a = +prompt("Bir sayi giriniz");
 
-// let numberType = a%2 === 0 ? "Cift" : "Tek";
-// console.log(numberType);
+let numberType = a%2 === 0 ? "Cift" : "Tek";
+console.log(numberType);
 
 
 // * 5'inci soru çözümü
