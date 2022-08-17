@@ -533,7 +533,7 @@
 
 
 const gun = prompt("bir gun giriniz");
-// let sonuc;
+let sonuc;
 switch (gun) {
     case "pazartesi":
     case "salı":
@@ -542,7 +542,20 @@ switch (gun) {
         sonuc = "Inclass";
         console.log(`${gun} ${sonuc}`)
         break;
-    case "Cuma":
-        console.log(`${gun} teamwork`)
+    case "cuma":
+        sonuc = "Teamwork";
+        console.log(`${gun} ${sonuc}`)
+        break;
+    case "cumartesi":
+        sonuc = "Inclass + Workshop";
+        console.log(`${gun} ${sonuc}`)
+        break;
+    case "pazar":
+        sonuc = "self-study";
+        console.log(`${gun} ${sonuc}`)
+        break;
+    default:
+        console.log("yanlis bir giris yaptiniz")
+        break;
 
 }
