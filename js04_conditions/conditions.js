@@ -704,6 +704,14 @@ if((a>b) && (a>c)) {
         console.log(`en buyukdeger ${c}'dir`)
     }
 
+if((a<b) && (a<c)) {
+    console.log(`en kuuck deger ${a}'dir`)
+} else if ((b<a) && (b<c)) {
+    console.log(`en kuuck deger ${b}'dir`)
+} else {
+    console.log(`en kuuck deger ${c}'dir`)
+}
+
 
 
 console.log(`${a} + ${b} + ${c} = ${d}`);
