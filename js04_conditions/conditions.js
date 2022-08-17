@@ -398,36 +398,37 @@
 
 // ! Swtich Case çalışması projemezi yapıyoruz
 
-let day = +prompt("Bir gün giriniz",7)
-dayName =
+let day = 4;
+let dayName;
 
 switch (day) {
     case 1:
-        dayName = InClass;
+        dayName = "InClass";
         break;
     case 2:
-        dayName = InClass;
+        dayName = "InClass";
         break;
     case 3:
-        dayName = InClass;
+        dayName = "InClass";
         break;
     case 4:
-        dayName = InClass;
+        dayName = "InClass";
         break;
     case 5:
-        dayName = Teamwork;
+        dayName = "Teamwork";
         break;
     case 6:
-        dayName = InClass + Workshop;
+        dayName = "InClass + Workshop";
         break;
     case 7:
-        dayName = Self-study;
+        dayName = "Self-study";
         break;
     
     default:
-        dayName = Geçersiz 
+        dayName = "Geçersiz ";
         break;
-}
+       
+} console.log(dayName);
 
 
 
