@@ -444,14 +444,62 @@
 
 // !  Kredi Riski Programı Projesi
 
-const asgariUcret = 5000;
-const gelir = +prompt("Aylik gelir degerinizi giriniz");
-const gider = +prompt("Aylık gider degerinizi giriniz");
+// const asgariUcret = 5000;
+// const gelir = +prompt("Aylik gelir degerinizi giriniz");
+// const gider = +prompt("Aylık gider degerinizi giriniz");
 
-const kalanMiktar = (gelir - gider);
-let kredi = kalanMiktar >= asgariUcret ? "Kredi verilebilir" :"Kredi Verilmez";
-console.log(kredi);
+// const kalanMiktar = (gelir - gider);
+// let kredi = kalanMiktar >= asgariUcret ? "Kredi verilebilir" :"Kredi Verilmez";
+// console.log(kredi);
 
+
+//* Assignment-1
+// const num1 = +prompt("Enter a number:");
+// const num2 = +prompt("Enter another number:");
+// const calc = +prompt("Choose one of them and enter the relevant number: 1.Sum , 2.Subtract , 3. Multiply , 4.Divide");
+// let result;
+// switch(calc){
+//     case 1:
+//         result= num1 + num2;
+//         break;
+//     case 2:
+//         result = num1 - num2;
+//         break;
+//     case 3:
+//         result = num1 * num2;
+//         break;
+//     case 4:
+//         result = num1 / num2;
+//         break;
+//     default:
+//         console.log(`${calc} is not valid option💥`)
+//         break;
+// }
+// console.log(`The calculation result is ${result}`)
+
+const num1 = +prompt("sayi giriniz");
+const num2 = +prompt("ikinci sayi giriniz");
+const islem = prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
+let sonuc;
+switch (islem) {
+    case(1):
+        sonuc = num1 + num2;
+        break;
+    case(2):
+        sonuc = num1 - num2;
+        break;
+    case(3):
+        sonuc = num1 * num2;
+        break;
+    case(4):
+        sonuc = num1 / num2;
+        break;
+    default:
+        console.log(`${islem} istenilen deger degildir`)
+        break;
+
+} console.log(`${sonuc}`);
+    
 
 
 
