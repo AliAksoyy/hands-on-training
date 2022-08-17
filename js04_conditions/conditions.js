@@ -720,9 +720,26 @@
 
 // * 4'üncü soru çözümü
 
-const a = +prompt("Bir sayi giriniz");
+// const a = +prompt("Bir sayi giriniz");
 
-let numberType = a%2 === 0 ? "Cift" : "Tek";
-console.log(numberType);
+// let numberType = a%2 === 0 ? "Cift" : "Tek";
+// console.log(numberType);
 
+
+// * 5'inci soru çözümü
+
+
+
+
+const deger = +prompt("sicaklik degeri gir:");
+const type = confirm("Celsicios okay ?")
+
+let yeniDeger;
+if(type == true) {
+    yeniDeger = (deger * 1.8) + 32;
+    console.log(`${yeniDeger}F'dir`)
+}else {
+    yeniDeger = (deger - 32) * 0.5556;
+    console.log(`${yeniDeger}C'dir`)
+}
 
