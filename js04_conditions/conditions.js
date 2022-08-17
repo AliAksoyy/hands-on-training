@@ -588,9 +588,9 @@
 const income = +prompt("Enter your monthly income as TL:");
 const expense = +prompt("Enter your monthly expense as TL:");
 const minWage = 5500;
-if((income - expense) > nimAge) {
+if((income - expense) > minWage) {
     console.log("kredi olur");
-} else if ((income - expense) <= minWage) {
+} else if ((income - expense) < minWage) {
     console.log("kredi olmaz")
 } else {
     console.log("degerlendirelim")
