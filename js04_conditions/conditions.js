@@ -398,37 +398,49 @@
 
 // ! Swtich Case çalışması projemezi yapıyoruz
 
-let day = +prompt("7'ye kadar bir sayı giriniz")
-let dayName;
+// let day = +prompt("7'ye kadar bir sayı giriniz")
+// let dayName;
 
-switch (day) {
-    case 1:
-        dayName = "InClass";
-        break;
-    case 2:
-        dayName = "InClass";
-        break;
-    case 3:
-        dayName = "InClass";
-        break;
-    case 4:
-        dayName = "InClass";
-        break;
-    case 5:
-        dayName = "Teamwork";
-        break;
-    case 6:
-        dayName = "InClass + Workshop";
-        break;
-    case 7:
-        dayName = "Self-study";
-        break;
+// switch (day) {
+//     case 1:
+//         dayName = "InClass";
+//         break;
+//     case 2:
+//         dayName = "InClass";
+//         break;
+//     case 3:
+//         dayName = "InClass";
+//         break;
+//     case 4:
+//         dayName = "InClass";
+//         break;
+//     case 5:
+//         dayName = "Teamwork";
+//         break;
+//     case 6:
+//         dayName = "InClass + Workshop";
+//         break;
+//     case 7:
+//         dayName = "Self-study";
+//         break;
     
-    default:
-        dayName = "Geçersiz ";
-        break;
+//     default:
+//         dayName = "Geçersiz ";
+//         break;
        
-} console.log(dayName);
+// } console.log(dayName);
+
+// ? ödev 3 asgari ücret maas projesi
+
+let asgariUcret = 5000;
+let maas = Number(prompt("Maas degerinizi giriniz"));
+ if(maas >= asgariUcret)  {
+    maas *=1.10;
+    console.log(`${maas}`); 
+ }else {
+    maas *=1.50;
+    console.log(`${maas}`);
+ };
 
 
 
