@@ -585,13 +585,43 @@
 //     console.log("Please check your inputs for the loan system!!!")
 // }
 
-const income = +prompt("Enter your monthly income as TL:");
-const expense = +prompt("Enter your monthly expense as TL:");
-const minWage = 5500;
-if((income - expense) > minWage) {
-    console.log("kredi olur");
-} else if ((income - expense) < minWage) {
-    console.log("kredi olmaz")
-} else {
-    console.log("degerlendirelim")
+// const income = +prompt("Enter your monthly income as TL:");
+// const expense = +prompt("Enter your monthly expense as TL:");
+// const minWage = 5500;
+// if((income - expense) > minWage) {
+//     console.log("kredi olur");
+// } else if ((income - expense) < minWage) {
+//     console.log("kredi olmaz")
+// } else {
+//     console.log("degerlendirelim")
+// }
+
+//* Assignment-5 noah hoca 
+// ? 1 nci soru
+const not = +prompt("Aldiginiz not degerini giriniz",100);
+let deger;
+if(not >= 91) {
+    deger = "AA";
+    console.log(deger)
+} else if (not >= 76) {
+    deger = "BA";
+    console.log(deger)
+}
+else if (not >= 66) {
+    deger = "BB";
+    console.log(deger)
+}
+ else if (not >= 46) {
+    deger = "CC";
+    console.log(deger)
+}
+ else if (not >= 26) {
+    deger = "DD";
+    console.log(deger)
+}
+ else if (not >= 0) {
+    deger = "FF";
+    console.log(deger)
+}else  {
+    console.log("hata mesaji")
 }
