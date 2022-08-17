@@ -432,15 +432,17 @@
 
 // ? ödev 3 asgari ücret maas projesi
 
-let asgariUcret = 5000;
-let maas = Number(prompt("Maas degerinizi giriniz"));
- if(maas >= asgariUcret)  {
-    maas *=1.10;
-    console.log(`${maas}`); 
- }else {
-    maas *=1.50;
-    console.log(`${maas}`);
- };
+// let asgariUcret = 5000;
+// let maas = Number(prompt("Maas degerinizi giriniz"));
+//  if(maas >= asgariUcret)  {
+//     maas *=1.10;
+//     console.log(`${maas}`); 
+//  }else {
+//     maas *=1.50;
+//     console.log(`${maas}`);
+//  };
+
+
 
 
 
