@@ -477,31 +477,72 @@
 // }
 // console.log(`The calculation result is ${result}`)
 
-const num1 = +prompt("sayi giriniz");
-const num2 = +prompt("ikinci sayi giriniz");
-const islem = +prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
-let sonuc;
-switch (islem) {
-    case 1:
-        sonuc = num1 + num2;
-        break;
-    case 2:
-        sonuc = num1 - num2;
-        break;
-    case 3:
-        sonuc = num1 * num2;
-        break;
-    case 4:
-        sonuc = num1 / num2;
-        break;
-    default:
-        console.log(`${islem} istenilen deger degildir`)
-        break;
 
-} 
-console.log(`${sonuc}`);
-    
+//? code peer cozum 1 nci proje
+
+// const num1 = +prompt("sayi giriniz");
+// const num2 = +prompt("ikinci sayi giriniz");
+// const islem = +prompt("1 degeri toplama, 2 degeri cıkarma, 3 degeri carpma ve 4 degeri de bolme anlamına gelmektedir");
+// let sonuc;
+// switch (islem) {
+//     case 1:
+//         sonuc = num1 + num2;
+//         break;
+//     case 2:
+//         sonuc = num1 - num2;
+//         break;
+//     case 3:
+//         sonuc = num1 * num2;
+//         break;
+//     case 4:
+//         sonuc = num1 / num2;
+//         break;
+//     default:
+//         console.log(`${islem} istenilen deger degildir`)
+//         break;
+
+// } 
+// console.log(`${sonuc}`);
 
 
+    //? code peer cozum 2 nci proje
 
 
+//*Assignment-2
+// const day = prompt("Enter a day which is related to your willing on your schedule: ")
+// switch(day){
+//     case "monday":
+//     case "tuesday":
+//     case "wednesday":
+//     case "thursday":
+//         console.log(`You must be in class sessions according to your schedule on ${day}`);
+//         break;
+//     case "friday":
+//         console.log(`You are to attend teamwork session on ${day}`);
+//         break;
+//     case "saturday":
+//         console.log(`${day} --> Firstly, you have to be in-class session. Then, It's time to show your apps in workshop!`);
+//         break;
+//     case "sunday":
+//         console.log(`${day} is your optional for self-study`)
+//         break;
+//     default:
+//         console.log("Entered a wrong day for the schedule!")
+//         break;
+// }
+
+
+const gun = prompt("bir gun giriniz");
+// let sonuc;
+switch (gun) {
+    case "pazartesi":
+    case "salı":
+    case "carsamba":
+    case "persembe":
+        sonuc = "Inclass";
+        console.log(`${gun} ${sonuc}`)
+        break;
+    case "Cuma":
+        console.log(`${gun} teamwork`)
+
+}
