@@ -632,58 +632,79 @@
 
 // ! 2'inci soru çözümü
 
-const ay = prompt("Ay ismini yazınız");
-let ayNu;
-switch (ay) {
-    case "Ocak" :
-        ayNu = "1";
-        console.log(ayNu);
-        break;
-    case "Subat" :
-        ayNu = "2";
-        console.log(ayNu);
-        break;
-    case "Mart" :
-        ayNu = "3";
-        console.log(ayNu);
-        break;
-    case "Nisan" :
-        ayNu = "4";
-        console.log(ayNu);
-        break;
-    case "Mayis" :
-        ayNu = "5";
-        console.log(ayNu);
-        break;
-    case "Haziran" :
-        ayNu = "6";
-        console.log(ayNu);
-        break;
-    case "Temmuz" :
-        ayNu = "7";
-        console.log(ayNu);
-        break;
-    case "Agustos" :
-        ayNu = "8";
-        console.log(ayNu);
-        break;
-    case "Eylul" :
-        ayNu = "9";
-        console.log(ayNu);
-        break;
-    case "Ekim" :
-        ayNu = "10";
-        console.log(ayNu);
-        break;
-    case "Kasim" :
-        ayNu = "11";
-        console.log(ayNu);
-        break;
-    case "Aralik" :
-        ayNu = "12";
-        console.log(ayNu);
-        break;
-    default:
-        console.log("girilen degeri kontrol ediniz");
+// const ay = prompt("Ay ismini yazınız");
+// let ayNu;
+// switch (ay) {
+//     case "Ocak" :
+//         ayNu = "1";
+//         console.log(ayNu);
+//         break;
+//     case "Subat" :
+//         ayNu = "2";
+//         console.log(ayNu);
+//         break;
+//     case "Mart" :
+//         ayNu = "3";
+//         console.log(ayNu);
+//         break;
+//     case "Nisan" :
+//         ayNu = "4";
+//         console.log(ayNu);
+//         break;
+//     case "Mayis" :
+//         ayNu = "5";
+//         console.log(ayNu);
+//         break;
+//     case "Haziran" :
+//         ayNu = "6";
+//         console.log(ayNu);
+//         break;
+//     case "Temmuz" :
+//         ayNu = "7";
+//         console.log(ayNu);
+//         break;
+//     case "Agustos" :
+//         ayNu = "8";
+//         console.log(ayNu);
+//         break;
+//     case "Eylul" :
+//         ayNu = "9";
+//         console.log(ayNu);
+//         break;
+//     case "Ekim" :
+//         ayNu = "10";
+//         console.log(ayNu);
+//         break;
+//     case "Kasim" :
+//         ayNu = "11";
+//         console.log(ayNu);
+//         break;
+//     case "Aralik" :
+//         ayNu = "12";
+//         console.log(ayNu);
+//         break;
+//     default:
+//         console.log("girilen degeri kontrol ediniz");
 
-}
+// }
+
+// ! 3'ncü soru çözümü
+
+const a = +prompt("ilk sayi gir");
+const b = +prompt("ikinci sayi gir");
+const c = +prompt("ucuncu sayi gir");
+let d = a + b + c;
+let  e = a*b*c;
+
+if((a>b) && (a>c)) {
+    console.log(`en buyukdeger ${a}'dir`);
+} else if ((b>a) && (b>c)) {
+        console.log(`en buyukdeger ${b}'dir`);
+    } else {
+        console.log(`en buyukdeger ${c}'dir`)
+    }
+
+
+
+console.log(`${a} + ${b} + ${c} = ${d}`);
+console.log(`${a} * ${b} * ${c} = ${e}`);
