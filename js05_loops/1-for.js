@@ -23,7 +23,22 @@
 //* Math.round() => degerine gore yuvarlar.
 //* Math.trunc() => kesirli sayinin tam 
 
-for(let i = 1; i <= 10; i++) {
-    const rastgele = Math.round(Math.random() * 100);
-    console.log(rastgele)
+// for(let i = 1; i <= 10; i++) {
+//     const rastgele = Math.round(Math.random() * 100);
+//     console.log(rastgele)
+// }
+
+// ? girilen sayının asal sayıp olup olmadıgını yazdıran kodu yaz for döngüsünü kullanarak
+
+const sayi = prompt("Pozitif bir sayi giriniz");
+let asal = true;
+
+if(sayi <= 1) {
+    alert("sayi 1'den buyuk olmalidir")
+} else {
+    for(let i=2 ; i<sayi ; i++) {
+        if(sayi % i == 0) {
+
+        }
+    }
 }
