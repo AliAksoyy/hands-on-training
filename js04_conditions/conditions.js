@@ -366,6 +366,6 @@
 // // console.log(sonuc);
 // console.log(not >= 50 ? "geçti" : "kaldı");
 
-const hız = 60;
-const mesaj = hız >=120 ? "Hızlı" : (hız >=90 ? "orta" : "yavaş");
-console.log(mesaj)
+// const hız = 60;
+// const mesaj = hız >=120 ? "Hızlı" : (hız >=90 ? "orta" : "yavaş");
+// console.log(mesaj)
