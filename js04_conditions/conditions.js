@@ -442,6 +442,13 @@
 //     console.log(`${maas}`);
 //  };
 
+// !  Kredi Riski Programı Projesi
+
+const asgariUcret = 5000;
+const gelir = +prompt("Aylik gelir degerinizi giriniz");
+const gider = +prompt("Aylık gider degerinizi giriniz");
+
+
 
 
 
