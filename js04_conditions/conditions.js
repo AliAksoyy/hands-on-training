@@ -373,27 +373,60 @@
 
 // ? Dört işlem hesap makinesi Projesi
 
-let num1 = +prompt("1'inci sayiyi giriniz:");
-let oparator = prompt("dört işlemdan herhangi birini giriniz")
-let num2 = +prompt("2'inci sayiyi giriniz:");
-let toplam = (num1 + num2)
-let cikarma = (num1 - num2)
-let carpma = (num1 * num2)
-let bolme = (num1 / num2)
+// let num1 = +prompt("1'inci sayiyi giriniz:");
+// let oparator = prompt("dört işlemdan herhangi birini giriniz")
+// let num2 = +prompt("2'inci sayiyi giriniz:");
+// let toplam = (num1 + num2)
+// let cikarma = (num1 - num2)
+// let carpma = (num1 * num2)
+// let bolme = (num1 / num2)
 
 
 
 
-if(oparator == "+") {
-    console.log(`${toplam} num1 + num2 'nin toplamdır`)
-} else if (oparator == "-") {
-    console.log(`${cikarma} num1 - num2 'nin çıkarımıdır`)
-} else if (oparator == "*") {
-    console.log(`${carpma} num1*num2 'nin çarpımıdır`)
-}else if (oparator == "/") {
-    console.log(`${bolme} num1 / num2 'nin bölümüdür`)
-}else {
-    console.log("Dört işlem haricinde başka bir işlem olduğu için hesaplanamaz")
+// if(oparator == "+") {
+//     console.log(`${toplam} num1 + num2 'nin toplamdır`)
+// } else if (oparator == "-") {
+//     console.log(`${cikarma} num1 - num2 'nin çıkarımıdır`)
+// } else if (oparator == "*") {
+//     console.log(`${carpma} num1*num2 'nin çarpımıdır`)
+// }else if (oparator == "/") {
+//     console.log(`${bolme} num1 / num2 'nin bölümüdür`)
+// }else {
+//     console.log("Dört işlem haricinde başka bir işlem olduğu için hesaplanamaz")
+// }
+
+// ! Swtich Case çalışması projemezi yapıyoruz
+
+let day = +prompt("Bir gün giriniz",7)
+dayName =
+
+switch (day) {
+    case 1:
+        dayName = InClass;
+        break;
+    case 2:
+        dayName = InClass;
+        break;
+    case 3:
+        dayName = InClass;
+        break;
+    case 4:
+        dayName = InClass;
+        break;
+    case 5:
+        dayName = Teamwork;
+        break;
+    case 6:
+        dayName = InClass + Workshop;
+        break;
+    case 7:
+        dayName = Self-study;
+        break;
+    
+    default:
+        dayName = Geçersiz 
+        break;
 }
 
 
