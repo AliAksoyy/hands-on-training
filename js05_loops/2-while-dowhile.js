@@ -33,3 +33,6 @@ console.log("****** WHILE *******");
 //! ************** ÖDEV: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve bu karakterlerden birisi girildiğinde O ana kadar girilen tüm notların ortalamasını hesaplayarak konsola ortalamayı bastıran uygulamayı yazınız.
 
 
+let javascriptIsFun = true;
+console.log(javascriptIsFun);
+console.log(first)
