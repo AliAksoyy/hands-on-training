@@ -245,9 +245,9 @@ console.log(!a || b);
 //     console.log("Someone else should drive")
 // }
 
-const c = true;
+const c = false;
 console.log(a && b && c );
-if(a || b && c) {
+if(a && b && !c) {
         console.log("sarah is able to drive");
 }else {
       console.log("Someone else should drive");
