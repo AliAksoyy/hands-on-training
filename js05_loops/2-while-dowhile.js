@@ -58,29 +58,37 @@ console.log("****** WHILE *******");
 // *** oparators***
 
 // **math oparetors
-const now = 2037
+// const now = 2037
+// const age = now - 1991;
+// const ageAyse = now- 1971;
+// console.log(age, ageAyse);
+
+// console.log(age *2, age / 2,  2 ** 3);
+
+// const firstName = "ali";
+// const lastName = "aksoy";
+// console.log(firstName + " " + lastName);
+//  ***assigment toparatörs
+// let x = 10 + 5; 
+// x *=10;
+// x++;
+// x--;
+// --x;
+// ++x;
+// console.log(x)
+// ****comparison operators
+
+// console.log(ageAyse > age);
+
+// console.log(ageAyse >=18)
+// const isFullAge = ageAyse  >=18;
+
+// console.log(now-1991 > now-2018)
+
+
+const now = 2037;
 const age = now - 1991;
-const ageAyse = now- 1971;
-console.log(age, ageAyse);
+const ageAyse = now - 1971;
 
-console.log(age *2, age / 2,  2 ** 3);
-
-const firstName = "ali";
-const lastName = "aksoy";
-console.log(firstName + " " + lastName);
-//  assigment toparatörs
-let x = 10 + 5; 
-x *=10;
-x++;
-x--;
---x;
-++x;
-console.log(x)
-// comparison operators
-
-console.log(ageAyse > age);
-
-console.log(ageAyse >=18)
-const isFullAge = ageAyse  >=18;
-
-console.log(now-1991 > now-2018)
+const averageAge = (age + ageAyse) / 2
+console.log(age, ageAyse, averageAge)
