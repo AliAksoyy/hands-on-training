@@ -43,4 +43,10 @@ console.log(age);
 let yas;
 console.log(yas);
 yas = 12;
-console.log(yas)
+console.log(yas);
+
+const yıl = 1991;
+yıl = 1990;
+console.log(yıl);
+
+
