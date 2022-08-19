@@ -201,3 +201,10 @@ console.log("Don't spend it all")
     console.log("All things take")
 }
 console.log(Boolean(0))
+
+let height;
+if(height) {
+    console.log("YAY! Height is defined")
+} else {
+    console.log("Height is UNDEFİNED")
+}
