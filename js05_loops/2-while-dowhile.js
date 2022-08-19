@@ -287,26 +287,49 @@ console.log("****** WHILE *******");
 
 const day = prompt("gün giriniz")
 
-switch (day) {
-    case 'monday':
-        console.log("Plan course structure");
-        console.log('Go to coding meetup');
-        break;
-    case 'thuesday':
-        console.log("Prepare theory videos");
-        break;
-    case "wednesday":
-    case "thursday" :
-        console.log("Write code examples")
-        break;
-    case "friday":
-        console.log("record videos");
-        break;
-    case "saturday":
-    case  "sunday":
-    console.log("Enjoy the weekend :D")
-        break;
-    default:
-        console.log("not a valid day")
+// switch (day) {
+//     case 'monday':
+//         console.log("Plan course structure");
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'thuesday':
+//         console.log("Prepare theory videos");
+//         break;
+//     case "wednesday":
+//     case "thursday" :
+//         console.log("Write code examples")
+//         break;
+//     case "friday":
+//         console.log("record videos");
+//         break;
+//     case "saturday":
+//     case  "sunday":
+//     console.log("Enjoy the weekend :D")
+//         break;
+//     default:
+//         console.log("not a valid day")
 
+// }
+
+if(day === "monday") {
+    console.log("a");
+} else if (day === "thuesday") {
+    console.log("b")
+} else if (day === "wednesday") {
+    console.log("c")
+}
+ else if (day === "thursday") {
+    console.log("d")
+}
+ else if (day === "wfriday") {
+   console.log("e")
+}
+ else if (day === "saturday") {
+    console.log("f")
+}
+ else if (day === "sunday") {
+    console.log("g")
+}
+ else {
+    console.log("not a valid day")
 }
