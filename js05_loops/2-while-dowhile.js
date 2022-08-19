@@ -120,3 +120,6 @@ console.log(jonas);
 const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job} !`;
 console.log(`I'm ${firstName}, a ${year - birthYear} year old ${job} !`);
 
+console.log(`ali
+aksoy
+1991`)
