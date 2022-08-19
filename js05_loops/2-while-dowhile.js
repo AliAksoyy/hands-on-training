@@ -78,3 +78,9 @@ x--;
 console.log(x)
 // comparison operators
 
+console.log(ageAyse > age);
+
+console.log(ageAyse >=18)
+const isFullAge = ageAyse  >=18;
+
+console.log(now-1991 > now-2018)
