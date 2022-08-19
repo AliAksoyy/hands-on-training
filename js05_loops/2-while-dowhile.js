@@ -184,27 +184,44 @@ console.log("****** WHILE *******");
 
 // ***falsy values
 
-0, undefined, null, "", false, NaN
+// 0, undefined, null, "", false, NaN
 
-console.log(Boolean (0))
-console.log(Boolean (null))
-console.log(Boolean (""))
-console.log(Boolean (undefined))
-console.log(Boolean (NaN))
-console.log(Boolean("ali"))
-console.log(Boolean({}))
+// console.log(Boolean (0))
+// console.log(Boolean (null))
+// console.log(Boolean (""))
+// console.log(Boolean (undefined))
+// console.log(Boolean (NaN))
+// console.log(Boolean("ali"))
+// console.log(Boolean({}))
 
-const money = 0;
-if(money) {
-console.log("Don't spend it all")
+// const money = 0;
+// if(money) {
+// console.log("Don't spend it all")
+// } else {
+//     console.log("All things take")
+// }
+// console.log(Boolean(0))
+
+// let height;
+// if(height) {
+//     console.log("YAY! Height is defined")
+// } else {
+//     console.log("Height is UNDEFİNED")
+// }
+
+// **equality operators
+
+let age = 18;
+if(age === 18) console.log("You just became an adult (strict)")
+if(age == 18) console.log("You just became an adult (loose)")
+
+const favourite = Number(prompt("What's your favourite number?"))
+console.log(favourite, typeof favourite);
+
+if(favourite === 23) {
+    console.log("Cool 23 is an amazing number")
+} else if (favourite === 7) {
+    console.log("7 is also a cool number")
 } else {
-    console.log("All things take")
-}
-console.log(Boolean(0))
-
-let height;
-if(height) {
-    console.log("YAY! Height is defined")
-} else {
-    console.log("Height is UNDEFİNED")
+    console.log("Number is not 23 or 7")
 }
