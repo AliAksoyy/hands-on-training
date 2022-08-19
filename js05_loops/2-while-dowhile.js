@@ -35,4 +35,12 @@ console.log("****** WHILE *******");
 
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
-console.log(first)
+console.log(typeof javascriptIsFun);
+
+let age = 30;
+age = 31;
+console.log(age);
+let yas;
+console.log(yas);
+yas = 12;
+console.log(yas)
