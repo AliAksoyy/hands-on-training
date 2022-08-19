@@ -233,11 +233,11 @@ console.log("****** WHILE *******");
 
 // ****Boolean Logic,Logical operations
 
-const a =  true;
-const b = true;
-console.log(a && b);
-console.log(a && !b);
-console.log(!a || b);
+// const a =  true;
+// const b = true;
+// console.log(a && b);
+// console.log(a && !b);
+// console.log(!a || b);
 
 // if(a && b) {
 //     console.log("sarah is able to drive");
@@ -245,10 +245,39 @@ console.log(!a || b);
 //     console.log("Someone else should drive")
 // }
 
-const c = false;
-console.log(a && b && c );
-if(a && b && !c) {
-        console.log("sarah is able to drive");
+// const c = false;
+// console.log(a && b && c );
+// if(a && b && !c) {
+//         console.log("sarah is able to drive");
+// }else {
+//       console.log("Someone else should drive");
+// }
+
+// *** code 3 challenge
+
+const a1 = (97 + 112 + 80) / 3;
+const b1 = (109 + 95 + 106) / 3;
+console.log(a1,b1)
+
+if(a1 > b1) {
+    console.log("Dolphin wins");
+} else if (a1 === b1) {
+    console.log("beraber")
+} else {
+    console.log("koalo wins")
+}
+
+// **bonus-1 
+ const a = (97 + 112 + 95) / 3;
+ const b = (109 + 95 + 30) / 3;
+ console.log(a, b);
+
+if(a >b && a>=100) {
+    console.log("dolphins win");
+} else if (b > a && b >=100) {
+    console.log("koalas win")
+} else if (a === b && a >=100 && b >=100) {
+    console.log("both wins")
 }else {
-      console.log("Someone else should drive");
+    console.log("No one wins the trophy")
 }
