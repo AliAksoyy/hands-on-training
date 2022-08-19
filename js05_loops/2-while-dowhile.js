@@ -109,17 +109,28 @@ console.log("****** WHILE *******");
 // ** strings and templste's
 
 
-const firstName = "Jonas";
-const job = "teacher";
-const birthYear = 1991;
-const year = 2037;
+// const firstName = "Jonas";
+// const job = "teacher";
+// const birthYear = 1991;
+// const year = 2037;
 
-const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + 'years old ' + job + " !";
-console.log(jonas);
+// const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + 'years old ' + job + " !";
+// console.log(jonas);
 
-const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job} !`;
-console.log(`I'm ${firstName}, a ${year - birthYear} year old ${job} !`);
+// const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job} !`;
+// console.log(`I'm ${firstName}, a ${year - birthYear} year old ${job} !`);
 
-console.log(`ali
-aksoy
-1991`)
+// console.log(`ali
+// aksoy
+// 1991`)
+
+// *** if else 
+
+const age = +prompt("bir sayı gir")
+// const isOldEnough = age >=18;
+if(age >= 18) {
+    console.log(`ehliyet alabilir `)
+} else {
+    const yearsLeft = 18 - age;
+    console.log(`sarah is oo young. Wait another ${yearsLeft} years : 👨🏽‍🤝‍👨🏽`);
+}
