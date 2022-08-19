@@ -145,21 +145,28 @@ console.log("****** WHILE *******");
 // console.log(centruy)
 
 // **** coe challenge -2
-const markMass = Number(prompt("değer giriniz mark için"));
-const johnMass = Number(prompt("değer giriniz john için"));
-const markHeight = 1.64;
-const johnHeight = 1.93;
+// const markMass = Number(prompt("değer giriniz mark için"));
+// const johnMass = Number(prompt("değer giriniz john için"));
+// const markHeight = 1.64;
+// const johnHeight = 1.93;
 
-let markBmı = markMass / markHeight ** 2;
-console.log(markBmı);
-let johnBmı = johnMass / johnHeight ** 2;
-console.log(johnBmı);
-console.log(markBmı > johnBmı);
+// let markBmı = markMass / markHeight ** 2;
+// console.log(markBmı);
+// let johnBmı = johnMass / johnHeight ** 2;
+// console.log(johnBmı);
+// console.log(markBmı > johnBmı);
 
-if(markBmı > johnBmı) {
-    console.log(`Mark's BMI is higher than John's`);
-    console.log(`Mark's BMI ${markBmı} is higher than John's ${johnBmı}`);
-} else {
-     console.log(`John's BMI is higher than Mark's`);
-     console.log(`John's BMI ${johnBmı} is higher than Mark's ${markBmı}`);
-}
+// if(markBmı > johnBmı) {
+//     console.log(`Mark's BMI is higher than John's`);
+//     console.log(`Mark's BMI ${markBmı} is higher than John's ${johnBmı}`);
+// } else {
+//      console.log(`John's BMI is higher than Mark's`);
+//      console.log(`John's BMI ${johnBmı} is higher than Mark's ${markBmı}`);
+// }
+
+
+// ***** Type Conversion
+
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
