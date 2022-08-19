@@ -193,3 +193,11 @@ console.log(Boolean (undefined))
 console.log(Boolean (NaN))
 console.log(Boolean("ali"))
 console.log(Boolean({}))
+
+const money = 0;
+if(money) {
+console.log("Don't spend it all")
+} else {
+    console.log("All things take")
+}
+console.log(Boolean(0))
