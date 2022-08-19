@@ -255,29 +255,58 @@ console.log("****** WHILE *******");
 
 // *** code 3 challenge
 
-const a1 = (97 + 112 + 80) / 3;
-const b1 = (109 + 95 + 106) / 3;
-console.log(a1,b1)
+// const a1 = (97 + 112 + 80) / 3;
+// const b1 = (109 + 95 + 106) / 3;
+// console.log(a1,b1)
 
-if(a1 > b1) {
-    console.log("Dolphin wins");
-} else if (a1 === b1) {
-    console.log("beraber")
-} else {
-    console.log("koalo wins")
-}
+// if(a1 > b1) {
+//     console.log("Dolphin wins");
+// } else if (a1 === b1) {
+//     console.log("beraber")
+// } else {
+//     console.log("koalo wins")
+// }
 
-// **bonus-1 
- const a = (97 + 112 + 95) / 3;
- const b = (109 + 95 + 30) / 3;
- console.log(a, b);
+// // **bonus-1 
+//  const a = (97 + 112 + 95) / 3;
+//  const b = (109 + 95 + 30) / 3;
+//  console.log(a, b);
 
-if(a >b && a>=100) {
-    console.log("dolphins win");
-} else if (b > a && b >=100) {
-    console.log("koalas win")
-} else if (a === b && a >=100 && b >=100) {
-    console.log("both wins")
-}else {
-    console.log("No one wins the trophy")
+// if(a >b && a>=100) {
+//     console.log("dolphins win");
+// } else if (b > a && b >=100) {
+//     console.log("koalas win")
+// } else if (a === b && a >=100 && b >=100) {
+//     console.log("both wins")
+// }else {
+//     console.log("No one wins the trophy")
+// }
+
+
+// ***** The swtich statement
+
+const day = prompt("gün giriniz")
+
+switch (day) {
+    case 'monday':
+        console.log("Plan course structure");
+        console.log('Go to coding meetup');
+        break;
+    case 'thuesday':
+        console.log("Prepare theory videos");
+        break;
+    case "wednesday":
+    case "thursday" :
+        console.log("Write code examples")
+        break;
+    case "friday":
+        console.log("record videos");
+        break;
+    case "saturday":
+    case  "sunday":
+    console.log("Enjoy the weekend :D")
+        break;
+    default:
+        console.log("not a valid day")
+
 }
