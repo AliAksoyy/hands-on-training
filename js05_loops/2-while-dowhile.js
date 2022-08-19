@@ -167,15 +167,29 @@ console.log("****** WHILE *******");
 
 // ***** Type Conversion
 
-const inputYear = "1991";
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
+// const inputYear = "1991";
+// console.log(Number(inputYear), inputYear);
+// console.log(Number(inputYear) + 18);
 
 
-console.log(Number("Jonas"));
-console.log(typeof NaN);
-console.log(String(23), 23)
+// console.log(Number("Jonas"));
+// console.log(typeof NaN);
+// console.log(String(23), 23)
 
-let n = "1" + 1;
-n = n-1;
-console.log(n)
+// let n = "1" + 1;
+// n = n-1;
+// console.log(n)
+
+// ***thurty and Falsy Vlaues
+
+// ***falsy values
+
+0, undefined, null, "", false, NaN
+
+console.log(Boolean (0))
+console.log(Boolean (null))
+console.log(Boolean (""))
+console.log(Boolean (undefined))
+console.log(Boolean (NaN))
+console.log(Boolean("ali"))
+console.log(Boolean({}))
