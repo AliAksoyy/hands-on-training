@@ -86,9 +86,23 @@ console.log("****** WHILE *******");
 // console.log(now-1991 > now-2018)
 
 
-const now = 2037;
-const age = now - 1991;
-const ageAyse = now - 1971;
+// const now = 2037;
+// const age = now - 1991;
+// const ageAyse = now - 1971;
 
-const averageAge = (age + ageAyse) / 2
-console.log(age, ageAyse, averageAge)
+// const averageAge = (age + ageAyse) / 2
+// console.log(age, ageAyse, averageAge)
+
+// ** code challenge -1
+
+const markMass = Number(prompt("değer giriniz mark için"));
+const johnMass = Number(prompt("değer giriniz john için"));
+const markHeight = 1.64;
+const johnHeight = 1.93;
+
+let markBmı = markMass / (markHeight ** 2);
+console.log(markBmı);
+let johnBmı = johnMass / (johnHeight ** 2);
+console.log(johnBmı);
+console.log(markBmı > johnBmı)
+
