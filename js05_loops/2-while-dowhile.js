@@ -67,4 +67,13 @@ console.log(age *2, age / 2,  2 ** 3);
 
 const firstName = "ali";
 const lastName = "aksoy";
-console.log(firstName + lastName);
+console.log(firstName + " " + lastName);
+
+let x = 10 + 5; 
+x *=10;
+x++;
+x--;
+--x;
+++x;
+
+console.log(x)
