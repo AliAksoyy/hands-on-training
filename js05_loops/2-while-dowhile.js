@@ -49,4 +49,5 @@ const yıl = 1991;
 yıl = 1990;
 console.log(yıl);
 
-
+var lastName = "aksoy";
+console.log(lastName);
