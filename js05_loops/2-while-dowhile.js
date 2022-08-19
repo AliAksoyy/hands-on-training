@@ -235,6 +235,20 @@ console.log("****** WHILE *******");
 
 const a =  true;
 const b = true;
-console.log(a && b)
-console.log(a && !b)
-console.log(!a || b)
+console.log(a && b);
+console.log(a && !b);
+console.log(!a || b);
+
+// if(a && b) {
+//     console.log("sarah is able to drive");
+// } else {
+//     console.log("Someone else should drive")
+// }
+
+const c = true;
+console.log(a && b && c );
+if(a || b && c) {
+        console.log("sarah is able to drive");
+}else {
+      console.log("Someone else should drive");
+}
