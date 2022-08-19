@@ -32,22 +32,39 @@ console.log("****** WHILE *******");
 
 //! ************** ÖDEV: Klavyeden Q veya q karakteri girilene kadar not girişi yapan ve bu karakterlerden birisi girildiğinde O ana kadar girilen tüm notların ortalamasını hesaplayarak konsola ortalamayı bastıran uygulamayı yazınız.
 
+// ****let-var-const ***
 
-let javascriptIsFun = true;
-console.log(javascriptIsFun);
-console.log(typeof javascriptIsFun);
 
-let age = 30;
-age = 31;
-console.log(age);
-let yas;
-console.log(yas);
-yas = 12;
-console.log(yas);
+// let javascriptIsFun = true;
+// console.log(javascriptIsFun);
+// console.log(typeof javascriptIsFun);
 
-const yıl = 1991;
-yıl = 1990;
-console.log(yıl);
+// let age = 30;
+// age = 31;
+// console.log(age);
+// let yas;
+// console.log(yas);
+// yas = 12;
+// console.log(yas);
 
-var lastName = "aksoy";
-console.log(lastName);
+// const yıl = 1991;
+// yıl = 1990;
+// console.log(yıl);
+
+// var lastName = "aksoy";
+// console.log(lastName);
+
+
+// *** oparators***
+
+
+const now = 2037
+const age = now - 1991;
+const ageAyse = now- 1971;
+console.log(age, ageAyse);
+
+console.log(age *2, age / 2,  2 ** 3);
+
+const firstName = "ali";
+const lastName = "aksoy";
+console.log(firstName + lastName);
