@@ -57,7 +57,7 @@ console.log("****** WHILE *******");
 
 // *** oparators***
 
-
+// **math oparetors
 const now = 2037
 const age = now - 1991;
 const ageAyse = now- 1971;
@@ -68,12 +68,13 @@ console.log(age *2, age / 2,  2 ** 3);
 const firstName = "ali";
 const lastName = "aksoy";
 console.log(firstName + " " + lastName);
-
+//  assigment toparatörs
 let x = 10 + 5; 
 x *=10;
 x++;
 x--;
 --x;
 ++x;
-
 console.log(x)
+// comparison operators
+
