@@ -126,11 +126,20 @@ console.log("****** WHILE *******");
 
 // *** if else 
 
-const age = +prompt("bir sayı gir")
-// const isOldEnough = age >=18;
-if(age >= 18) {
-    console.log(`ehliyet alabilir `)
+// const age = +prompt("bir sayı gir")
+// // const isOldEnough = age >=18;
+// if(age >= 18) {
+//     console.log(`ehliyet alabilir `)
+// } else {
+//     const yearsLeft = 18 - age;
+//     console.log(`sarah is oo young. Wait another ${yearsLeft} years : 👨🏽‍🤝‍👨🏽`);
+// }
+
+const birthYear = 2012;
+let centruy;
+if(birthYear < 2000) {
+    centruy = 20;
 } else {
-    const yearsLeft = 18 - age;
-    console.log(`sarah is oo young. Wait another ${yearsLeft} years : 👨🏽‍🤝‍👨🏽`);
+    centruy = 21;
 }
+console.log(centruy)
