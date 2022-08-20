@@ -40,9 +40,9 @@ console.log("**** FUNC DECLARATION ******");
 // //***************************************************/
 
 // function yasHesapla(isim, dogumTarihi) {
-//   // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
-//   // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
-//   // return sonuc;
+  // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir.`;
+  // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
+  // return sonuc;
 //   return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
 // }
 
@@ -82,7 +82,7 @@ console.log("**** FUNC DECLARATION ******");
 
 function yasYazdir(ad,tarih) {
   const yas = 2021 - tarih;
-  console.log(`benim adım ${ad} ve ben ${yas} yasındayim`);
+  console.log(`benim adım ${ad} ve ben ${new Date().getFullYear() - tarih} yasındayim`);
   return yas;
 }
 yasYazdir("ali",1990);
@@ -91,3 +91,6 @@ const yasAli = yasYazdir("ali",1991)
 const yasAhmet = yasYazdir("ahmet",1999)
 
 console.log(`yaslatın ortalamas = ${(yasAli + yasAhmet) / 2}`);
+
+// ** tek mi çift mi çalışması
+
