@@ -130,10 +130,16 @@ console.log("******** 2- EXPRESSION*******");
 
 // ** örenek
 
-function tekMi(sayi) {
-  return sayi % 2 ? `${sayi} tek` : `${sayi} cift`;
-}
-const sayi = prompt("bir sayı gir");
-console.log((tekMi(sayi)))
+// function tekMi(sayi) {
+//   return sayi % 2 ? `${sayi} tek` : `${sayi} cift`;
+// }
+// const sayi = prompt("bir sayı gir");
+// console.log((tekMi(sayi)))
 // console.log(tekMi(5));  
 // console.log(tekMi(6));  
+
+// *** 
+
+const hesapla = function(n1,n2) {
+  return
+}
