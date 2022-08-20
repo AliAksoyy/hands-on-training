@@ -120,10 +120,19 @@ console.log("******** 2- EXPRESSION*******");
 
 // ** örrnek
 
-function yasHesapla(isim,tarih) {
-  const sonuc = `${isim} in yasi ${new Date().getFullYear()-tarih}`;
-  return sonuc;
+// function yasHesapla(isim,tarih) {
+//   const sonuc = `${isim} in yasi ${new Date().getFullYear()-tarih}`;
+//   return sonuc;
+// }
+// const mesaj1 = yasHesapla("elif", "1990")
+// console.log(mesaj1);
+// console.log(yasHesapla("ali",1453))
+
+// ** örenek
+
+function tekMi(sayi) {
+  return sayi % 2 ? `${sayi} tek` : `${sayi} cift`;
 }
-const mesaj1 = yasHesapla("elif", "1990")
-console.log(mesaj1);
-console.log(yasHesapla("ali",1453))
+
+console.log(tekMi(5));  
+console.log(tekMi(6));  
