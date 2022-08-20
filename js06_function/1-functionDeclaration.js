@@ -33,3 +33,14 @@ function selamlama(ad,soyAd = "") {
 selamlama("Can", "Yılmaz");
 selamlama("Canan", "Ozturk");
 selamlama("Ayse", );
+
+// *** örenek-3
+
+
+function yasHesapla(isim,dogumTarihi) {
+    const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir`;
+    return sonuc;
+
+}
+const mesaj1 = yasHesapla("Elif Can", 1990);
+console.log(mesaj1)
