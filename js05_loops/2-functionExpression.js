@@ -100,4 +100,9 @@ console.log("******** 2- EXPRESSION*******");
 // console.log(hesapla(4, 3, "/"));
 
 
-
+// ***
+function yazdir () {
+  console.log("merhaba")
+}
+yazdir()
+yazdir()
