@@ -101,8 +101,19 @@ console.log("******** 2- EXPRESSION*******");
 
 
 // ***
-function yazdir () {
-  console.log("merhaba")
-}
-yazdir()
-yazdir()
+// function yazdir () {
+//   console.log("merhaba")
+// }
+// yazdir()
+// yazdir()
+
+// **
+
+function selamla (ad ,soyAd = "") {
+  console.log(`benim adım ${ad} ve soyadım ${soyAd}`)
+};
+
+
+selamla("can","öztürk");
+selamla("canan","öz");
+selamla("canan");
