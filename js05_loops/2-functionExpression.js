@@ -125,4 +125,5 @@ function yasHesapla(isim,tarih) {
   return sonuc;
 }
 const mesaj1 = yasHesapla("elif", "1990")
-console.log(mesaj1)
+console.log(mesaj1);
+console.log(yasHesapla("ali",1453))
