@@ -285,45 +285,63 @@ console.log("****** WHILE *******");
 
 // ***** The swtich statement
 
-const day = prompt("gün giriniz")
+// const day = prompt("gün giriniz")
 
-switch (day) {
-    case 'monday':
-        console.log("Plan course structure");
-        console.log('Go to coding meetup');
-        break;
-    case 'thuesday':
-        console.log("Prepare theory videos");
-        break;
-    case "wednesday":
-    case "thursday" :
-        console.log("Write code examples")
-        break;
-    case "friday":
-        console.log("record videos");
-        break;
-    case "saturday":
-    case  "sunday":
-    console.log("Enjoy the weekend :D")
-        break;
-    default:
-        console.log("not a valid day")
+// switch (day) {
+//     case 'monday':
+//         console.log("Plan course structure");
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'thuesday':
+//         console.log("Prepare theory videos");
+//         break;
+//     case "wednesday":
+//     case "thursday" :
+//         console.log("Write code examples")
+//         break;
+//     case "friday":
+//         console.log("record videos");
+//         break;
+//     case "saturday":
+//     case  "sunday":
+//     console.log("Enjoy the weekend :D")
+//         break;
+//     default:
+//         console.log("not a valid day")
 
-}
+// }
 
-if(day === "monday") {
-    console.log("a");
-} else if (day === "thuesday") {
-    console.log("b")
-} else if (day === "wednesday" || day === "thursday") {
-    console.log("c")
+// if(day === "monday") {
+//     console.log("a");
+// } else if (day === "thuesday") {
+//     console.log("b")
+// } else if (day === "wednesday" || day === "thursday") {
+//     console.log("c")
+// }
+//  else if (day === "wfriday") {
+//    console.log("e")
+// }
+//  else if (day === "saturday" || day === "sunday") {
+//     console.log("f")
+// }
+//  else {
+//     console.log("not a valid day")
+// }
+// *****statements and expressions
+
+// **** Ternary Statement
+
+const age = 23;
+
+// age >= 18 ? console.log("drink wine") : console.log("drink water")
+
+const drink = age >=18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if(age >= 18) {
+    drink2 = "wine";
+} else {
+    drink2 = "water"
 }
- else if (day === "wfriday") {
-   console.log("e")
-}
- else if (day === "saturday" || day === "sunday") {
-    console.log("f")
-}
- else {
-    console.log("not a valid day")
-}
+console.log(drink2)
