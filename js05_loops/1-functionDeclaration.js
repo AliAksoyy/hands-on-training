@@ -74,9 +74,20 @@ console.log("**** FUNC DECLARATION ******");
 // yasYazdır();
 // yasYazdır();
 
-function yasYazdir(ad,tarih) {
-  console.log(`benim adım ${ad} ve ben ${2021- tarih} yasindayim`)
-}
-yasYazdir("murat",1990)
-yasYazdir("ali",1980)
+// function yasYazdir(ad,tarih) {
+//   console.log(`benim adım ${ad} ve ben ${2021- tarih} yasindayim`)
+// }
+// yasYazdir("murat",1990)
+// yasYazdir("ali",1980)
 
+function yasYazdir(ad,tarih) {
+  const yas = 2021 - tarih;
+  console.log(`benim adım ${ad} ve ben ${yas} yasındayim`);
+  return yas;
+}
+yasYazdir("ali",1990);
+
+const yasAli = yasYazdir("ali",1991)
+const yasAhmet = yasYazdir("ahmet",1999)
+
+console.log(`yaslatın ortalamas = ${(yasAli + yasAhmet) / 2}`);
