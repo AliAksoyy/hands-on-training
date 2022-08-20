@@ -24,6 +24,14 @@ console.log("******** 2- EXPRESSION*******");
 
 // console.log(tekCift1(5));
 
+const tekMi = function(x) {
+  return x % 2 ? "tek" : "cift"
+}
+console.log(tekMi(5))
+
+
+
+
 //* ORNEK: 3 sayinin en büyüğünü bulan fonks.
 //******************************************************/
 
