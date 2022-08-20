@@ -73,3 +73,10 @@ console.log("**** FUNC DECLARATION ******");
 // }
 // yasYazdır();
 // yasYazdır();
+
+function yasYazdir(ad,tarih) {
+  console.log(`benim adım ${ad} ve ben ${2021- tarih} yasindayim`)
+}
+yasYazdir("murat",1990)
+yasYazdir("ali",1980)
+
