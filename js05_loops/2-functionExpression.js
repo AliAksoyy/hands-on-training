@@ -149,16 +149,32 @@ console.log("******** 2- EXPRESSION*******");
 
 // ** örnek 3 sayi en büyüğünü bul
 
-const a = prompt("sayi 1 bir gir")
-const b = prompt("sayi 2 bir gir")
-const c = prompt("sayi 3 bir gir")
+// const a = prompt("sayi 1 bir gir")
+// const b = prompt("sayi 2 bir gir")
+// const c = prompt("sayi 3 bir gir")
 
-let enBuyuk = a;
-if(enBuyuk <b) {
-  enBuyuk = b;
+// let enBuyuk = a;
+// if(enBuyuk <b) {
+//   enBuyuk = b;
 
+// }
+// if (enBuyuk < c) {
+//   enBuyuk = c
+// }
+// console.log(`en buyuk sayı ${enBuyuk}`)
+
+const enBuyuk1 = function(n1,n2,n3) {
+  let enBuyuk = a;
+  if (enBuyuk < b) {
+    enBuyuk = b;
+  }
+  if (enBuyuk < c) {
+    enBuyuk = c;
+  }
+  return enBuyuk
 }
-if (enBuyuk < c) {
-  enBuyuk = c
-}
-console.log(`en buyuk sayı ${enBuyuk}`)
+// const a = prompt("sayi 1 bir gir");
+// const b = prompt("sayi 2 bir gir");
+// const c = prompt("sayi 3 bir gir");
+console.log(`girilen sayıların en buyugu ${enBuyuk1(n1,n2,n3)}`)
+// console.log(enBuyuk1(7,6,5,))
