@@ -163,19 +163,54 @@ console.log("******** 2- EXPRESSION*******");
 // }
 // console.log(`en buyuk sayı ${enBuyuk}`)
 
-const buyukBul = function(n1,n2,n3) {
-  let enBuyuk;
-  if(n1 >= n2 && n1 >= n3) {
-    enBuyuk = n1;
-  }else if(n2 >= n1 && n2 >= n3) {
-    enBuyuk = n2;
-  } if(n3 >= n2 && n3 >= n1) {
-    enBuyuk = n3;
-  }
-  return enBuyuk
+// const buyukBul = function(n1,n2,n3) {
+//   let enBuyuk;
+//   if(n1 >= n2 && n1 >= n3) {
+//     enBuyuk = n1;
+//   }else if(n2 >= n1 && n2 >= n3) {
+//     enBuyuk = n2;
+//   } if(n3 >= n2 && n3 >= n1) {
+//     enBuyuk = n3;
+//   }
+//   return enBuyuk
+// }
+// console.log("girilen sayıların en buyugu", buyukBul(1,2,3))
+// console.log("girilen sayıların en buyugu", buyukBul(1,2,""))
+
+// ***
+const hesapla = function(s1,s2,islem) {
+  let sonuc;
+    switch (islem) {
+      case "+":
+      sonuc = topla(s1,s2)
+        break;
+      case "-":
+      sonuc = cıkar(s1,s2)
+        break;
+      case "*":
+      sonuc = carp(s1,s2)
+        break;
+      case "/":
+      sonuc = bol(s1,s2)
+        break;
+    
+    }
+    return sonuc
 }
-console.log("girilen sayıların en buyugu", buyukBul(1,2,3))
-console.log("girilen sayıların en buyugu", buyukBul(1,2,""))
+
+const topla = function(s1,s2) {
+  return s1 + s2;
+}
+const cıkar = function(s1,s2) {
+  return s1 - s2;
+}
+const carp  = function(s1,s2) {
+  return s1 * s2;
+}
+const bol = function(s1,s2) {
+  return s1 / s2;
+}
 
 
 
+console.log(hesapla(3,5,"/"))
