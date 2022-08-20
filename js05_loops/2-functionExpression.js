@@ -163,18 +163,19 @@ console.log("******** 2- EXPRESSION*******");
 // }
 // console.log(`en buyuk sayı ${enBuyuk}`)
 
-const enBuyuk1 = function(n1,n2,n3) {
-  let enBuyuk = a;
-  if (enBuyuk < b) {
-    enBuyuk = b;
-  }
-  if (enBuyuk < c) {
-    enBuyuk = c;
+const buyukBul = function(n1,n2,n3 ="45") {
+  let enBuyuk;
+  if(n1 >= n2 && n1 >= n3) {
+    enBuyuk = n1;
+  }else if(n2 >= n1 && n2 >= n3) {
+    enBuyuk = n2;
+  } if(n3 >= n2 && n3 >= n1) {
+    enBuyuk = n3;
   }
   return enBuyuk
 }
-// const a = prompt("sayi 1 bir gir");
-// const b = prompt("sayi 2 bir gir");
-// const c = prompt("sayi 3 bir gir");
-console.log(`girilen sayıların en buyugu ${enBuyuk1(n1,n2,n3)}`)
-// console.log(enBuyuk1(7,6,5,))
+console.log("girilen sayıların en buyugu", buyukBul(1,2,3))
+console.log("girilen sayıların en buyugu", buyukBul(1,2,""))
+
+
+
