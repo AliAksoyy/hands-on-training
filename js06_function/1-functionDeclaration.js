@@ -38,9 +38,12 @@ selamlama("Ayse", );
 
 
 function yasHesapla(isim,dogumTarihi) {
-    const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir`;
-    return sonuc;
+    // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir`;
+    // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir`;
+    // return sonuc;
+    return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir`;
 
 }
 const mesaj1 = yasHesapla("Elif Can", 1990);
-console.log(mesaj1)
+console.log(mesaj1);
+console.log(yasHesapla("veli Canan",1980))
