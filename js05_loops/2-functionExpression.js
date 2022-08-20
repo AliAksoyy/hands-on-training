@@ -140,6 +140,8 @@ console.log("******** 2- EXPRESSION*******");
 
 // *** 
 
-const hesapla = function(n1,n2) {
-  return
-}
+
+// const tekCift = function(sayi) {
+//   return sayi % 2 ? `${sayi} tek` : `${sayi} cift`
+// }
+// console.log(tekCift(4))
