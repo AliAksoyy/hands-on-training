@@ -98,3 +98,6 @@ console.log("******** 2- EXPRESSION*******");
 
 // hesapla(3, 5, "+");
 // console.log(hesapla(4, 3, "/"));
+
+
+
