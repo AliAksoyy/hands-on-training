@@ -133,6 +133,7 @@ console.log("******** 2- EXPRESSION*******");
 function tekMi(sayi) {
   return sayi % 2 ? `${sayi} tek` : `${sayi} cift`;
 }
-
-console.log(tekMi(5));  
-console.log(tekMi(6));  
+const sayi = prompt("bir sayı gir");
+console.log((tekMi(sayi)))
+// console.log(tekMi(5));  
+// console.log(tekMi(6));  
