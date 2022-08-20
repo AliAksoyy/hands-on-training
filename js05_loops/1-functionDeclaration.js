@@ -80,17 +80,22 @@ console.log("**** FUNC DECLARATION ******");
 // yasYazdir("murat",1990)
 // yasYazdir("ali",1980)
 
-function yasYazdir(ad,tarih) {
-  const yas = 2021 - tarih;
-  console.log(`benim adım ${ad} ve ben ${new Date().getFullYear() - tarih} yasındayim`);
-  return yas;
-}
-yasYazdir("ali",1990);
+// function yasYazdir(ad,tarih) {
+//   const yas = 2021 - tarih;
+//   console.log(`benim adım ${ad} ve ben ${new Date().getFullYear() - tarih} yasındayim`);
+//   return yas;
+// }
+// yasYazdir("ali",1990);
 
-const yasAli = yasYazdir("ali",1991)
-const yasAhmet = yasYazdir("ahmet",1999)
+// const yasAli = yasYazdir("ali",1991)
+// const yasAhmet = yasYazdir("ahmet",1999)
 
-console.log(`yaslatın ortalamas = ${(yasAli + yasAhmet) / 2}`);
+// console.log(`yaslatın ortalamas = ${(yasAli + yasAhmet) / 2}`);
 
 // ** tek mi çift mi çalışması
 
+function tekCift(sayi) {
+  return sayi % 2 ? "tektir" : "cift"
+}
+console.log(tekCift(5)) 
+console.log(tekCift(6)) 
