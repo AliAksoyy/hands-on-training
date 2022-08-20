@@ -163,7 +163,7 @@ console.log("******** 2- EXPRESSION*******");
 // }
 // console.log(`en buyuk sayı ${enBuyuk}`)
 
-const buyukBul = function(n1,n2,n3 ="45") {
+const buyukBul = function(n1,n2,n3) {
   let enBuyuk;
   if(n1 >= n2 && n1 >= n3) {
     enBuyuk = n1;
