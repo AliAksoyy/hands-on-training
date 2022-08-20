@@ -94,8 +94,8 @@ console.log("**** FUNC DECLARATION ******");
 
 // ** tek mi çift mi çalışması
 
-function tekCift(sayi) {
-  return sayi % 2 ? "tektir" : "cift"
-}
-console.log(tekCift(5)) 
-console.log(tekCift(6)) 
+// function tekCift(sayi) {
+//   return sayi % 2 ? "tektir" : "cift"
+// }
+// console.log(tekCift(5)) 
+// console.log(tekCift(6)) 
