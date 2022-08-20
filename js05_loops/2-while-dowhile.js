@@ -331,17 +331,37 @@ console.log("****** WHILE *******");
 
 // **** Ternary Statement
 
-const age = 23;
+// const age = 23;
 
-// age >= 18 ? console.log("drink wine") : console.log("drink water")
+// // age >= 18 ? console.log("drink wine") : console.log("drink water")
 
-const drink = age >=18 ? "wine" : "water";
-console.log(drink);
+// const drink = age >=18 ? "wine" : "water";
+// console.log(drink);
 
-let drink2;
-if(age >= 18) {
-    drink2 = "wine";
-} else {
-    drink2 = "water"
+// let drink2;
+// if(age >= 18) {
+//     drink2 = "wine";
+// } else {
+//     drink2 = "water"
+// }
+// console.log(drink2)
+
+// **** code - challenge 4
+
+const tip1 = 15;
+const tip2 = 20;
+
+let bill = Number(prompt("değer giriniz"));
+if (bill<50) {
+    console.log(`The total value ${bill}`)
+}else if (50<bill<300) {
+    console.log(`The bill was ${bill} the tip was ${bill*0.15}, and the total value ${bill*1.15}`)   
+
+}else {
+      console.log(
+        `The bill was ${bill} the tip was ${bill * 0.2}, and the total value ${bill * 1.2}`);  
 }
-console.log(drink2)
+
+const fatura =275;
+const bahsis = fatura>= 300 && fatura >= 50 ? fatura*0.15 : bill*0.2;
+console.log(`The bill was ${fatura} the tip was ${bahsis}, and the total value ${fatura + bahsis}`)
