@@ -145,3 +145,20 @@ console.log("******** 2- EXPRESSION*******");
 //   return sayi % 2 ? `${sayi} tek` : `${sayi} cift`
 // }
 // console.log(tekCift(4))
+
+
+// ** örnek 3 sayi en büyüğünü bul
+
+const a = prompt("sayi 1 bir gir")
+const b = prompt("sayi 2 bir gir")
+const c = prompt("sayi 3 bir gir")
+
+let enBuyuk = a;
+if(enBuyuk <b) {
+  enBuyuk = b;
+
+}
+if (enBuyuk < c) {
+  enBuyuk = c
+}
+console.log(`en buyuk sayı ${enBuyuk}`)
