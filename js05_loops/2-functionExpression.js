@@ -109,11 +109,20 @@ console.log("******** 2- EXPRESSION*******");
 
 // **
 
-function selamla (ad ,soyAd = "") {
-  console.log(`benim adım ${ad} ve soyadım ${soyAd}`)
-};
+// function selamla (ad ,soyAd = "") {
+//   console.log(`benim adım ${ad} ve soyadım ${soyAd}`)
+// };
 
 
-selamla("can","öztürk");
-selamla("canan","öz");
-selamla("canan");
+// selamla("can","öztürk");
+// selamla("canan","öz");
+// selamla("canan");
+
+// ** örrnek
+
+function yasHesapla(isim,tarih) {
+  const sonuc = `${isim} in yasi ${new Date().getFullYear()-tarih}`;
+  return sonuc;
+}
+const mesaj1 = yasHesapla("elif", "1990")
+console.log(mesaj1)
