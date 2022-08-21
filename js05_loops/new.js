@@ -319,10 +319,17 @@
 //     yarı *((yarı-a) * (yarı-b)* (yarı-c)))
 //     console.log(area)
 // ***
-let a =80
-const f =  (80*9) / 5 +32
-console.log(f)
+// let a =80
+// const f =  (80*9) / 5 +32
+// console.log(f)
 
-let b = 176
-const c = (b-32) *5 / 9
-console.log(c)
+// let b = 176
+// const c = (b-32) *5 / 9
+// console.log(c)
+// *****
+const today = new Date()
+console.log(today)
+console.log(today.getHours())
+console.log(today.getMonth() +1)
+console.log(today.getFullYear())
+console.log(today.getDay()+20)
