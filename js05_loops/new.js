@@ -169,22 +169,34 @@
 // console.log(hesapla(12,3,"/"))
 
 
-const hesapMakinesi = function(n1,n2,islem) {
-    let sonuc;
-    switch(islem) {
-        case "+":
-            sonuc = n1+n2;
-            break;
-        case "-":
-            sonuc = n1-n2;
-            break;
-        case "*":
-            sonuc = n1*n2;
-            break;
-        case "/":
-            sonuc = n1/n2;
-            break;
-    }
-    return sonuc
+// const hesapMakinesi = function(n1,n2,islem) {
+//     let sonuc;
+//     switch(islem) {
+//         case "+":
+//             sonuc = n1+n2;
+//             break;
+//         case "-":
+//             sonuc = n1-n2;
+//             break;
+//         case "*":
+//             sonuc = n1*n2;
+//             break;
+//         case "/":
+//             sonuc = n1/n2;
+//             break;
+//     }
+//     return sonuc
+// }
+// console.log(hesapMakinesi(12,34,"/"))
+// ****
+
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log(6)
+console.log(7)
+for(let i =7; i>=0; i--) {
+    console.log(i)
 }
-console.log(hesapMakinesi(12,34,"/"))
