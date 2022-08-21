@@ -222,9 +222,17 @@ console.log("******** 2- EXPRESSION*******");
 // }
 
 // **
-let sum = 0
-for(let num = 10; num <100; num +=5) {
-  console.log(num);
-  sum +=num;
-}
-console.log(sum ,"toplam değeri")
+// let sum = 0
+// for(let num = 10; num <100; num +=5) {
+//   console.log(num);
+//   sum +=num;
+// }
+// console.log(sum ,"toplam değeri")
+
+// ***
+
+let fruits = ["mango","banana", "apple"];
+
+for(let i = 0; i<3; i++) {
+ console.log(fruits[i])
+} 
