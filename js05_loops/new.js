@@ -216,18 +216,45 @@
 //     console.log(rs)
 // }
 
-const sayi = Number(prompt("bir sayi giriniz",100));
-let asal = true;
-if(sayi <=1) {
-    alert("sayi 1'den büyük olmaldıdır")
-} else {
-    for(let i = 2; i<sayi; i++) {
-        if(sayi % i === 0) {
-         asal = false;
-         break;   
-        }
+// const sayi = Number(prompt("bir sayi giriniz",100));
+// let asal = true;
+// if(sayi <=1) {
+//     alert("sayi 1'den büyük olmaldıdır")
+// } else {
+//     for(let i = 2; i<sayi; i++) {
+//         if(sayi % i === 0) {
+//          asal = false;
+//          break;   
+//         }
 
-    }
-    const sonuc = asal ===true ? "asal" : "asal değildir"
-    console.log(`${sayi} ${sonuc}`)
+//     }
+//     const sonuc = asal ===true ? "asal" : "asal değildir"
+//     console.log(`${sayi} ${sonuc}`)
+// }
+
+// ***
+// let i = 6;
+// while(i<=10) {
+//     console.log(i,"merhaba")
+//     i++;
+// }
+
+// ****
+let not = Number(prompt("sayi gir"));
+
+while(not<0 || not>100) {
+console.log("not 0-100 arasında olmalıdır")
+not = prompt("yeni sayı gir")
 }
+console.log("girdiğiniz not:",not)
+
+
+
+// if(not>100 || not<0) {
+//     alert("girilen deger 0 ila 100 arasında olmalıdır")
+// }else {
+//     let not = 0
+//     while(not <=100) {
+
+//     }
+// }
