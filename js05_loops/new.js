@@ -249,11 +249,32 @@
 // console.log("girdiğiniz not:",not)
 
 // ****
-let not;
+// let not;
+// do {
+//     not = Number(prompt("sayi gir"));
+//     if(not < 0 || not > 100) {
+//         console.log("not 0 ila 100 arası")
+//     }
+// } while (not < 0 || not > 100)
+// console.log("girilen sayı", not)
+// ****
+
+let hak = 5;
+const rastgele = Math.round(Math.random()*100);
+console.log(rastgele)
+let tahmin;
 do {
-    not = Number(prompt("sayi gir"));
-    if(not < 0 || not > 100) {
-        console.log("not 0 ila 100 arası")
-    }
-} while (not < 0 || not > 100)
-console.log("girilen sayı", not)
+let tahmin = Number(prompt("sayi tahmin et"))
+hak -=1;
+if(tahmin ===rastgele) {
+    console.log(`tebrikler ${5-hak} kerede bildiniz`);
+    break;
+} else if (tahmin<rastgele) {
+    console.log("arttır")
+} else {
+    console.log("azalalt")
+}
+}while(hak>0)
+if(rastgele !== tahmin) {
+console.log("üzgünüz kaybettiniz");
+}
