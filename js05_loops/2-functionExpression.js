@@ -238,13 +238,22 @@ console.log("******** 2- EXPRESSION*******");
 // } 
 
 // ***
-let data = {
-  name:"johm",
-  age:28,
-  matitalStatus:true
-}
+// let data = {
+//   name:"johm",
+//   age:28,
+//   matitalStatus:true
+// }
 
-console.log(data["age"])
-for(let elem in data) {
-  console.log(elem, data[elem])
+// console.log(data["age"])
+// for(let elem in data) {
+//   console.log(elem, data[elem])
+// }
+// ******
+
+let num = 20;
+if(num>0) {
+  console.log("the number positive")
+}
+if(num<0) {
+  console.log("the number is negative")
 }
