@@ -29,25 +29,33 @@
 //     num -=1
 // }
     // ***
-    function ali() {
-        console.log("beyda")
-    }
-    ali()
+    // function ali() {
+    //     console.log("beyda")
+    // }
+    // ali()
 
-    function ali1(isim) {
-        console.log(`${isim}`)
-    }
-    ali1("ali")
+    // function ali1(isim) {
+    //     console.log(`${isim}`)
+    // }
+    // ali1("ali")
 
-    function ali2(a,b,c,d) {
-        console.log(a+b+c+4)
-    }
-    ali2(1,2,3,4)
+    // function ali2(a,b,c,d) {
+    //     console.log(a+b+c+4)
+    // }
+    // ali2(1,2,3,4)
 
-    function ali3Array(mango) {
-        for(let i = 0; i<mango.length; i++) {
-            console.log(mango[i])
+    // function ali3Array(mango) {
+    //     for(let i = 0; i<mango.length; i++) {
+    //         console.log(mango[i])
             
-        }
+    //     }
+    // }
+    // ali3Array(["cat","wer","redbull","ayse","are","dfdsf","ere"])
+    // ***
+    function adder(num1,num2) {
+        return num1 + num2;
     }
-    ali3Array(["cat","wer","redbull","ayse","are","dfdsf","ere"])
+    adder(2,4)
+    let result = adder(2,4)*32
+    console.log(result)
+    console.log(adder(2,4))
