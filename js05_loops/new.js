@@ -127,43 +127,64 @@
 // ****
    
 
-const hesapla = function(n1,n2,islem) {
-    let sonuc;
-    switch (islem) {
-        case "+":
-        sonuc = toplam(n1,n2)
-        break;
-    }
-    switch (islem) {
-        case "-":
-        sonuc = cıkart(n1,n2)
-        break;
+// const hesapla = function(n1,n2,islem) {
+//     let sonuc;
+//     switch (islem) {
+//         case "+":
+//         sonuc = toplam(n1,n2)
+//         break;
+//     }
+//     switch (islem) {
+//         case "-":
+//         sonuc = cıkart(n1,n2)
+//         break;
         
-    }
-    switch (islem) {
-        case "/":
-        sonuc = bol(n1,n2)
-        break;
-    }
-    switch (islem) {
-        case "*":
-        sonuc = carp(n1,n2)
-        break;
-    }
-    return sonuc;
-}
+//     }
+//     switch (islem) {
+//         case "/":
+//         sonuc = bol(n1,n2)
+//         break;
+//     }
+//     switch (islem) {
+//         case "*":
+//         sonuc = carp(n1,n2)
+//         break;
+//     }
+//     return sonuc;
+// }
 
-const toplam = function(n1,n2) {
-return n1 + n2
+// const toplam = function(n1,n2) {
+// return n1 + n2
+// }
+// const cıkart = function(n1,n2) {
+// return n1 - n2
+// }
+// const bol = function(n1,n2) {
+// return n1 / n2
+// }
+// const carp = function(n1,n2) {
+// return n1 * n2
+// }
+// console.log(hesapla(12,3,"*"))
+// console.log(hesapla(12,3,"/"))
+
+
+const hesapMakinesi = function(n1,n2,islem) {
+    let sonuc;
+    switch(islem) {
+        case "+":
+            sonuc = n1+n2;
+            break;
+        case "-":
+            sonuc = n1-n2;
+            break;
+        case "*":
+            sonuc = n1*n2;
+            break;
+        case "/":
+            sonuc = n1/n2;
+            break;
+    }
+    return sonuc
 }
-const cıkart = function(n1,n2) {
-return n1 - n2
-}
-const bol = function(n1,n2) {
-return n1 / n2
-}
-const carp = function(n1,n2) {
-return n1 * n2
-}
-console.log(hesapla(12,3,"*"))
-console.log(hesapla(12,3,"/"))
+console.log(hesapMakinesi(12,34,"/"))
