@@ -93,9 +93,15 @@
 
     // *****
 
-    function tekMi(sayi) {
-        const sonuc =sayi % 2 ? `${sayi} tektir` : `${sayi} ciftir`
-        return  sonuc
+    // function tekMi(sayi) {
+    //     const sonuc =sayi % 2 ? `${sayi} tektir` : `${sayi} ciftir`
+    //     return  sonuc
+    // }
+    // console.log(tekMi(5))
+    // console.log(tekMi(6))
+    // ***
+
+    const tekMi = function(sayi) {
+        return sayi % 2 ? "tek" : "cift"
     }
-    console.log(tekMi(5))
-    console.log(tekMi(6))
+    console.log(tekMi(4))
