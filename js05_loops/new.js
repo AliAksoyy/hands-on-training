@@ -89,3 +89,4 @@
     const a =yasHeasapla("ayse",1873)
     console.log(a)
     console.log(yasHeasapla("ali",1998)) 
+    console.log(yasHeasapla("feyza",12))
