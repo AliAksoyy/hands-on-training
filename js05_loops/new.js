@@ -327,9 +327,13 @@
 // const c = (b-32) *5 / 9
 // console.log(c)
 // *****
-const today = new Date()
-console.log(today)
-console.log(today.getHours())
-console.log(today.getMonth() +1)
-console.log(today.getFullYear())
-console.log(today.getDay()+20)
+// const today = new Date()
+// console.log(today)
+// console.log(today.getHours())
+// console.log(today.getMonth() +1)
+// console.log(today.getFullYear())
+// console.log(today.getDay()+20)
+// ***
+let a =33; b = 34; c = 35
+const sonuc = (a%2 === b%2) && (b%2 === c%2) && (a%2 === c%2)
+console.log(sonuc)
