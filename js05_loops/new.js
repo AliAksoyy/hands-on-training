@@ -190,14 +190,22 @@
 // console.log(hesapMakinesi(12,34,"/"))
 // ****
 
-console.log(1)
-console.log(2)
-console.log(3)
-console.log(4)
-console.log(5)
-console.log(6)
-console.log(7)
-for(let i =7; i>=0; i--) {
-    console.log(`${i}`)
+// console.log(1)
+// console.log(2)
+// console.log(3)
+// console.log(4)
+// console.log(5)
+// console.log(6)
+// console.log(7)
+// for(let i =7; i>=0; i--) {
+//     console.log(`${i}`)
+// }
+// console.log(Boolean(""))
+
+const n = 7
+let toplam = 0
+for(let i=1; i<=n; i++) {
+    toplam +=i
+    console.log(toplam,i)
 }
-console.log(Boolean(""))
+console.log("sonuc",toplam)
