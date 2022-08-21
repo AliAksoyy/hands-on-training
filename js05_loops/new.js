@@ -52,10 +52,21 @@
     // }
     // ali3Array(["cat","wer","redbull","ayse","are","dfdsf","ere"])
     // ***
-    function adder(num1,num2) {
-        return num1 + num2;
+    // function adder(num1,num2) {
+    //     return num1 + num2;
+    // }
+    // adder(2,4)
+    // let result = adder(2,4)*32
+    // console.log(result)
+    // console.log(adder(2,4))
+    // *****
+
+    function doesExit(nums,num) {
+        for(let i = 0; i<nums.length; i++) {
+            if(nums[i] ===num) {
+                return true;
+            }
+        }
+    return false
     }
-    adder(2,4)
-    let result = adder(2,4)*32
-    console.log(result)
-    console.log(adder(2,4))
+    console.log(doesExit([2,3,4,5],4))
