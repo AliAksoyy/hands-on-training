@@ -310,8 +310,12 @@ console.log("******** 2- EXPRESSION*******");
 // **
 
 
-let count =1;
-while(count<10) {
-  console.log(count)
-  count +=2
-}
+// let count =1;
+// while(count<10) {
+//   console.log(count)
+//   count +=2
+// }
+// ***
+
+
+  // console.log(randomStuff[x])
