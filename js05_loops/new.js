@@ -198,5 +198,6 @@ console.log(5)
 console.log(6)
 console.log(7)
 for(let i =7; i>=0; i--) {
-    console.log(i)
+    console.log(`${i}`)
 }
+console.log(Boolean(""))
