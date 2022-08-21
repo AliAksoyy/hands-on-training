@@ -106,7 +106,7 @@
     // }
     // console.log(tekMi(4))
 
-    const hesapla = function(a,b,c) {
+    const hesapla = function(a,b,c = -Number.MAX_VALUE) {
 
         let enBuyuk;
          if (a > b && a > c) {
@@ -119,7 +119,8 @@
             return enBuyuk
         }   
 
-    const a =1
-    const b =11
-    const c =4
-    console.log(`girlen sayıların en buyugu ${hesapla(a,b,c)}`)
+    // const a =1
+    // const b =11
+    // const c =4
+    // console.log(`girlen sayıların en buyugu ${hesapla(a,b,c)}`)
+    console.log(`girlen sayıların en buyugu ${hesapla(-8,-9)}`)
