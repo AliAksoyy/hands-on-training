@@ -279,16 +279,20 @@
 // console.log("üzgünüz kaybettiniz");
 // }
 // *****
-const a = 72;
-const b = 54;
-const c = 52
+// const a = -72;
+// const b = -54;
+// const c = -52
 
-enBuyuk = a;
-if(enBuyuk<b) {
-    enBuyuk = b;
-} 
- if (enBuyuk <c) {
-    enBuyuk = c
-}
-console.log(`${enBuyuk} `, typeof enBuyuk)
+// enBuyuk = a;
+// if(enBuyuk<b) {
+//     enBuyuk = b;
+// } 
+//  if (enBuyuk <c) {
+//     enBuyuk = c
+// }
+// console.log(`${enBuyuk} `, typeof enBuyuk)
+// *******
+const hız = 60;
+const mesaj = hız >90 ? "hızlı":(hız >70 ? "yavas" : "cokyavas")
+console.log(mesaj,typeof mesaj)
 
