@@ -305,7 +305,16 @@
 //  console.log(a>26 && cins === "erkek" && sa ? "askerlik yapmalı" : "yapmamalı") 
 
 // ***
-let a = 5;
-let b = 5;
-console.log(a*b)
-console.log(a/b)
+// let a = 5;
+// let b = 5;
+// console.log(a*b)
+// console.log(a/b)
+// ****
+let a = 10
+let b = 12
+let c = 14
+
+const yarı = (a+b+c)/2
+const area = Math.sqrt(
+    yarı *((yarı-a) * (yarı-b)* (yarı-c)))
+    console.log(area)
