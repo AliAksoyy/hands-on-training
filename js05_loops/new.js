@@ -61,12 +61,31 @@
     // console.log(adder(2,4))
     // *****
 
-    function doesExit(nums,num) {
-        for(let i = 0; i<nums.length; i++) {
-            if(nums[i] ===num) {
-                return true;
-            }
-        }
-    return false
+    // function doesExit(nums,num) {
+    //     for(let i = 0; i<nums.length; i++) {
+    //         if(nums[i] ===num) {
+    //             return true;
+    //         }
+    //     }
+    // return false
+    // }
+    // console.log(doesExit([2,3,4,5],4))
+    // **
+    function yazdir(){
+        console.log("merhaba")
     }
-    console.log(doesExit([2,3,4,5],4))
+    yazdir()
+
+    function selamlama(ad,soyAd) {
+        console.log(`merhabalar benim adım ${ad} ${soyAd}`)
+    }
+    selamlama("ali","aksoy")
+
+    function yasHeasapla(isim,tarih) {
+        // const sonuc = `${isim} ${new Date().getFullYear()-tarih}`
+        // return sonuc
+        return `${isim}, ${new Date().getFullYear()-tarih}`
+    }
+    const a =yasHeasapla("ayse",1873)
+    console.log(a)
+    console.log(yasHeasapla("ali",1998)) 
