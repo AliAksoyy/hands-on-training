@@ -231,8 +231,8 @@ console.log("******** 2- EXPRESSION*******");
 
 // ***
 
-let fruits = ["mango","banana", "apple"];
+let fruits = ["mango","banana", "apple","cherry", "ali"];
 
-for(let i = 0; i<3; i++) {
+for(let i = 0; i<fruits.length; i++) {
  console.log(fruits[i])
 } 
