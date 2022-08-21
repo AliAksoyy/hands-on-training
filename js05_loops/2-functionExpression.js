@@ -289,10 +289,21 @@ console.log("******** 2- EXPRESSION*******");
 
 // **
 
-let sum = 0;
-for(let i = 0; i<10; i++) {
-  sum +=i;
-  console.log(sum,i)
+// let sum = 0;
+// for(let i = 0; i<10; i++) {
+//   sum +=i;
+//   console.log(sum,i)
 
+// }
+//   console.log(`total deger ${sum}`);
+
+for(let i = 10; i>=0; i--) {
+  console.log(i)
 }
-  console.log(`total deger ${sum}`);
+
+let sum =0;
+
+for(let i = 100; i>=0; i--){
+  sum +=i
+}
+console.log(sum,)
