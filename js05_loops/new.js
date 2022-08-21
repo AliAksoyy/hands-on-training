@@ -106,15 +106,20 @@
     // }
     // console.log(tekMi(4))
 
-    const a = Number(prompt("sayi 1"));
-    const b = Number(prompt("sayi 2"));
-    const c= Number(prompt("sayi 3"));
+    const hesapla = function(a,b,c) {
 
-  let enBuyuk = a;
-  if(b > enBuyuk) {
-    enBuyuk = b;
-  }
-  if(c > enBuyuk) {
-    enBuyuk =c
-  }
-  console.log(enBuyuk)
+        let enBuyuk;
+         if (a > b && a > c) {
+            enBuyuk = a
+         } else if (b > a && b > c) {
+            enBuyuk = b
+         } else if (c > a && c > b) {
+            enBuyuk = c
+         }
+            return enBuyuk
+        }   
+
+    const a =1
+    const b =11
+    const c =4
+    console.log(`girlen sayıların en buyugu ${hesapla(a,b,c)}`)
