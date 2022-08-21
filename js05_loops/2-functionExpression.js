@@ -277,12 +277,22 @@ console.log("******** 2- EXPRESSION*******");
 // }
 // ***
 
-let name = "ali";
-let age = 17;
-let okul = true;
+// let name = "ali";
+// let age = 17;
+// let okul = true;
 
-if(age>18 || okul ===true) {
-  console.log("iş")
-} else {
-  console.log("olumsuz")
+// if(age>18 || okul ===true) {
+//   console.log("iş")
+// } else {
+//   console.log("olumsuz")
+// }
+
+// **
+
+let sum = 0;
+for(let i = 0; i<10; i++) {
+  sum +=i;
+  console.log(sum,i)
+
 }
+  console.log(`total deger ${sum}`);
