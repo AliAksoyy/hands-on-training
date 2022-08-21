@@ -258,12 +258,20 @@ console.log("******** 2- EXPRESSION*******");
 //   console.log("the number is negative")
 // }
 
-let num = 3
-if(num>0) {
-  console.log("the number positive")
-} else if (num<0) {
-   console.log("negative")
-}
-else {
- console.log("zero")
+// let num = 3
+// if(num>0) {
+//   console.log("the number positive")
+// } else if (num<0) {
+//    console.log("negative")
+// }
+// else {
+//  console.log("zero")
+// }
+
+// ***
+let isRaining = confirm("okey or no")
+if(isRaining == true) {
+  console.log("semsiye")
+}else {
+  console.log("alma")
 }
