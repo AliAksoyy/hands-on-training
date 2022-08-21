@@ -240,21 +240,20 @@
 // }
 
 // ****
-let not = Number(prompt("sayi gir"));
+// let not = Number(prompt("sayi gir"));
 
-while(not<0 || not>100) {
-console.log("not 0-100 arasında olmalıdır")
-not = prompt("yeni sayı gir")
-}
-console.log("girdiğiniz not:",not)
-
-
-
-// if(not>100 || not<0) {
-//     alert("girilen deger 0 ila 100 arasında olmalıdır")
-// }else {
-//     let not = 0
-//     while(not <=100) {
-
-//     }
+// while(not<0 || not>100) {
+// console.log("not 0-100 arasında olmalıdır")
+// not = prompt("yeni sayı gir")
 // }
+// console.log("girdiğiniz not:",not)
+
+// ****
+let not;
+do {
+    not = Number(prompt("sayi gir"));
+    if(not < 0 || not > 100) {
+        console.log("not 0 ila 100 arası")
+    }
+} while (not < 0 || not > 100)
+console.log("girilen sayı", not)
