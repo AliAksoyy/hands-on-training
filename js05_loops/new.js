@@ -106,21 +106,64 @@
     // }
     // console.log(tekMi(4))
 
-    const hesapla = function(a,b,c = -Number.MAX_VALUE) {
+    // const hesapla = function(a,b,c = -Number.MAX_VALUE) {
 
-        let enBuyuk;
-         if (a > b && a > c) {
-            enBuyuk = a
-         } else if (b > a && b > c) {
-            enBuyuk = b
-         } else if (c > a && c > b) {
-            enBuyuk = c
-         }
-            return enBuyuk
-        }   
+    //     let enBuyuk;
+    //      if (a > b && a > c) {
+    //         enBuyuk = a
+    //      } else if (b > a && b > c) {
+    //         enBuyuk = b
+    //      } else if (c > a && c > b) {
+    //         enBuyuk = c
+    //      }
+    //         return enBuyuk
+    //     }   
 
     // const a =1
     // const b =11
     // const c =4
     // console.log(`girlen sayıların en buyugu ${hesapla(a,b,c)}`)
-    console.log(`girlen sayıların en buyugu ${hesapla(-8,-9)}`)
+    // console.log(`girlen sayıların en buyugu ${hesapla(-8,-9)}`)
+// ****
+   
+
+const hesapla = function(n1,n2,islem) {
+    let sonuc;
+    switch (islem) {
+        case "+":
+        sonuc = toplam(n1,n2)
+        break;
+    }
+    switch (islem) {
+        case "-":
+        sonuc = cıkart(n1,n2)
+        break;
+        
+    }
+    switch (islem) {
+        case "/":
+        sonuc = bol(n1,n2)
+        break;
+    }
+    switch (islem) {
+        case "*":
+        sonuc = carp(n1,n2)
+        break;
+    }
+    return sonuc;
+}
+
+const toplam = function(n1,n2) {
+return n1 + n2
+}
+const cıkart = function(n1,n2) {
+return n1 - n2
+}
+const bol = function(n1,n2) {
+return n1 / n2
+}
+const carp = function(n1,n2) {
+return n1 * n2
+}
+console.log(hesapla(12,3,"*"))
+console.log(hesapla(12,3,"/"))
