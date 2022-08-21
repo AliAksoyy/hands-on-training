@@ -250,10 +250,20 @@ console.log("******** 2- EXPRESSION*******");
 // }
 // ******
 
-let num = 20;
+// let num = 20;
+// if(num>0) {
+//   console.log("the number positive")
+// }
+// if(num<0) {
+//   console.log("the number is negative")
+// }
+
+let num = 3
 if(num>0) {
   console.log("the number positive")
+} else if (num<0) {
+   console.log("negative")
 }
-if(num<0) {
-  console.log("the number is negative")
+else {
+ console.log("zero")
 }
