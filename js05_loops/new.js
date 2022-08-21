@@ -71,22 +71,31 @@
     // }
     // console.log(doesExit([2,3,4,5],4))
     // **
-    function yazdir(){
-        console.log("merhaba")
-    }
-    yazdir()
+    // function yazdir(){
+    //     console.log("merhaba")
+    // }
+    // yazdir()
 
-    function selamlama(ad,soyAd) {
-        console.log(`merhabalar benim adım ${ad} ${soyAd}`)
-    }
-    selamlama("ali","aksoy")
+    // function selamlama(ad,soyAd) {
+    //     console.log(`merhabalar benim adım ${ad} ${soyAd}`)
+    // }
+    // selamlama("ali","aksoy")
 
-    function yasHeasapla(isim,tarih) {
-        // const sonuc = `${isim} ${new Date().getFullYear()-tarih}`
-        // return sonuc
-        return `${isim}, ${new Date().getFullYear()-tarih}`
+    // function yasHeasapla(isim,tarih) {
+    //     // const sonuc = `${isim} ${new Date().getFullYear()-tarih}`
+    //     // return sonuc
+    //     return `${isim}, ${new Date().getFullYear()-tarih}`
+    // }
+    // const a =yasHeasapla("ayse",1873)
+    // console.log(a)
+    // console.log(yasHeasapla("ali",1998)) 
+    // console.log(yasHeasapla("feyza",12))
+
+    // *****
+
+    function tekMi(sayi) {
+        const sonuc =sayi % 2 ? `${sayi} tektir` : `${sayi} ciftir`
+        return  sonuc
     }
-    const a =yasHeasapla("ayse",1873)
-    console.log(a)
-    console.log(yasHeasapla("ali",1998)) 
-    console.log(yasHeasapla("feyza",12))
+    console.log(tekMi(5))
+    console.log(tekMi(6))
