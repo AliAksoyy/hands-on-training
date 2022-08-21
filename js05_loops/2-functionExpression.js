@@ -309,8 +309,9 @@ console.log("******** 2- EXPRESSION*******");
 // console.log(sum,)
 // **
 
-let i = 0;
-while (i<10) {
-  console.log(i)
-  i +=2
+
+let count =1;
+while(count<10) {
+  console.log(count)
+  count +=2
 }
