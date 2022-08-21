@@ -310,11 +310,19 @@
 // console.log(a*b)
 // console.log(a/b)
 // ****
-let a = 10
-let b = 12
-let c = 14
+// let a = 10
+// let b = 12
+// let c = 14
 
-const yarı = (a+b+c)/2
-const area = Math.sqrt(
-    yarı *((yarı-a) * (yarı-b)* (yarı-c)))
-    console.log(area)
+// const yarı = (a+b+c)/2
+// const area = Math.sqrt(
+//     yarı *((yarı-a) * (yarı-b)* (yarı-c)))
+//     console.log(area)
+// ***
+let a =80
+const f =  (80*9) / 5 +32
+console.log(f)
+
+let b = 176
+const c = (b-32) *5 / 9
+console.log(c)
