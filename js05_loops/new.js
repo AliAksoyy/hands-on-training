@@ -259,22 +259,36 @@
 // console.log("girilen sayı", not)
 // ****
 
-let hak = 5;
-const rastgele = Math.round(Math.random()*100);
-console.log(rastgele)
-let tahmin;
-do {
-let tahmin = Number(prompt("sayi tahmin et"))
-hak -=1;
-if(tahmin ===rastgele) {
-    console.log(`tebrikler ${5-hak} kerede bildiniz`);
-    break;
-} else if (tahmin<rastgele) {
-    console.log("arttır")
-} else {
-    console.log("azalalt")
+// let hak = 5;
+// const rastgele = Math.round(Math.random()*100);
+// console.log(rastgele)
+// let tahmin;
+// do {
+// let tahmin = Number(prompt("sayi tahmin et"))
+// hak -=1;
+// if(tahmin ===rastgele) {
+//     console.log(`tebrikler ${5-hak} kerede bildiniz`);
+//     break;
+// } else if (tahmin<rastgele) {
+//     console.log("arttır")
+// } else {
+//     console.log("azalalt")
+// }
+// }while(hak>0)
+// if(rastgele !== tahmin) {
+// console.log("üzgünüz kaybettiniz");
+// }
+// *****
+const a = 72;
+const b = 54;
+const c = 52
+
+enBuyuk = a;
+if(enBuyuk<b) {
+    enBuyuk = b;
+} 
+ if (enBuyuk <c) {
+    enBuyuk = c
 }
-}while(hak>0)
-if(rastgele !== tahmin) {
-console.log("üzgünüz kaybettiniz");
-}
+console.log(`${enBuyuk} `, typeof enBuyuk)
+
