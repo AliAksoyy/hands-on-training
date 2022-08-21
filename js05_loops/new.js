@@ -202,10 +202,32 @@
 // }
 // console.log(Boolean(""))
 
-const n = 7
-let toplam = 0
-for(let i=1; i<=n; i++) {
-    toplam +=i
-    console.log(toplam,i)
+// const n = 7
+// let toplam = 0
+// for(let i=1; i<=n; i++) {
+//     toplam +=i
+//     console.log(toplam,i)
+// }
+// console.log("sonuc",toplam)
+
+
+// for(let i = 0; i<10; i++) {
+//     const rs = Math.round((Math.random()*100))
+//     console.log(rs)
+// }
+
+const sayi = Number(prompt("bir sayi giriniz",100));
+let asal = true;
+if(sayi <=1) {
+    alert("sayi 1'den büyük olmaldıdır")
+} else {
+    for(let i = 2; i<sayi; i++) {
+        if(sayi % i === 0) {
+         asal = false;
+         break;   
+        }
+
+    }
+    const sonuc = asal ===true ? "asal" : "asal değildir"
+    console.log(`${sayi} ${sonuc}`)
 }
-console.log("sonuc",toplam)
