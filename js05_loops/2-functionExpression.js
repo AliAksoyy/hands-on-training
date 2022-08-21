@@ -231,8 +231,20 @@ console.log("******** 2- EXPRESSION*******");
 
 // ***
 
-let fruits = ["mango","banana", "apple","cherry", "ali"];
+// let fruits = ["mango","banana", "apple","cherry", "ali"];
 
-for(let i = 0; i<fruits.length; i++) {
- console.log(fruits[i])
-} 
+// for(let i = 0; i<fruits.length; i++) {
+//  console.log(fruits[i])
+// } 
+
+// ***
+let data = {
+  name:"johm",
+  age:28,
+  matitalStatus:true
+}
+
+console.log(data["age"])
+for(let elem in data) {
+  console.log(elem, data[elem])
+}
