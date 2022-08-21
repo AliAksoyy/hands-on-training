@@ -292,7 +292,20 @@
 // }
 // console.log(`${enBuyuk} `, typeof enBuyuk)
 // *******
-const hız = 60;
-const mesaj = hız >90 ? "hızlı":(hız >70 ? "yavas" : "cokyavas")
-console.log(mesaj,typeof mesaj)
+// const hız = 60;
+// const mesaj = hız >90 ? "hızlı":(hız >70 ? "yavas" : "cokyavas")
+// console.log(mesaj,typeof mesaj)
 
+
+// const a =26;
+// const cins = "erkek"
+// const sa = true;
+
+
+//  console.log(a>26 && cins === "erkek" && sa ? "askerlik yapmalı" : "yapmamalı") 
+
+// ***
+let a = 5;
+let b = 5;
+console.log(a*b)
+console.log(a/b)
