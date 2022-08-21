@@ -217,6 +217,14 @@ console.log("******** 2- EXPRESSION*******");
 
 // ***
 
-for(let i = 0; i <=10; i++) {
-  console.log(i);
+// for(let i = 0; i <=10; i++) {
+//   console.log(i);
+// }
+
+// **
+let sum = 0
+for(let num = 10; num <100; num +=5) {
+  console.log(num);
+  sum +=num;
 }
+console.log(sum ,"toplam değeri")
