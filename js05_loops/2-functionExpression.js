@@ -269,9 +269,20 @@ console.log("******** 2- EXPRESSION*******");
 // }
 
 // ***
-let isRaining = confirm("okey or no")
-if(isRaining == true) {
-  console.log("semsiye")
-}else {
-  console.log("alma")
+// let isRaining = confirm("okey or no")
+// if(isRaining == true) {
+//   console.log("semsiye")
+// }else {
+//   console.log("alma")
+// }
+// ***
+
+let name = "ali";
+let age = 17;
+let okul = true;
+
+if(age>18 || okul ===true) {
+  console.log("iş")
+} else {
+  console.log("olumsuz")
 }
