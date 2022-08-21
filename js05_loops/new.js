@@ -100,8 +100,21 @@
     // console.log(tekMi(5))
     // console.log(tekMi(6))
     // ***
+    
+    // const tekMi = function(sayi) {
+    //     return sayi % 2 ? "tek" : "cift"
+    // }
+    // console.log(tekMi(4))
 
-    const tekMi = function(sayi) {
-        return sayi % 2 ? "tek" : "cift"
-    }
-    console.log(tekMi(4))
+    const a = Number(prompt("sayi 1"));
+    const b = Number(prompt("sayi 2"));
+    const c= Number(prompt("sayi 3"));
+
+  let enBuyuk = a;
+  if(b > enBuyuk) {
+    enBuyuk = b;
+  }
+  if(c > enBuyuk) {
+    enBuyuk =c
+  }
+  console.log(enBuyuk)
