@@ -210,8 +210,30 @@ let sayilar = [1,3,5,6,7,4,7,9,12,45]
 // console.log(
 //   sayilar[0] + sayilar[1] + sayilar[2] + sayilar[3] + sayilar[4])
 let toplam = 0
-  for(let i = 0; i<sayilar.length; i++) {
-    toplam += sayilar[i]
+//   for(let i = 0; i<sayilar.length; i++) {
+//     toplam += sayilar[i]
     
-  }
-  console.log(toplam);
+//   }
+//   console.log(toplam);
+
+// for(let i in sayilar) {
+//     toplam += sayilar[i]
+// }
+
+for(let sayi of sayilar) {
+    toplam += sayi
+    
+}
+console.log(toplam)
+
+let user = {
+    "name": "sadık turan",
+    "username" : "sadikturan",
+    "password" : "12345",
+    "email" : "info@sadikturan.com"
+};
+
+for(let key in user) {
+    console.log(key)
+    console.log(user[key])
+}
