@@ -40,3 +40,9 @@ const yas1 = function(tarih) {
 }
 const c = yas(1990)
 console.log(c)
+
+// *** arrow functions
+const yas2 = tarih => 2037 -tarih;
+const d = yas2(1991)
+console.log(d)
+console.log(yas2(1991)) 
