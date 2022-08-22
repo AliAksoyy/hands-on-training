@@ -57,7 +57,7 @@ console.log(  yearsUntilRetirment(1989,"feyza"))
 
 // *** function callin other functions
 
-const  meyveParcaSayisi = fruit => fruit *4
+const  meyveParcaSayisi = fruit => fruit *10
 
 
 const meyveİslem = function(elma,armut) {
@@ -70,3 +70,27 @@ const meyveİslem = function(elma,armut) {
     return g;
 }
 console.log( meyveİslem(3,5))
+
+
+
+// **** örnek 2
+
+const yas3 = function(tarih) {
+    return 2037-tarih
+}
+
+const emeklilik = function(tarih,isim) {
+    const yas4 = yas3(tarih)
+    const emek = 65 -yas4;
+    
+    if(emek >0) {
+        console.log(`${isim} emekliliğe ${emek} kaldı`)
+        return emek
+    } else {
+         console.log(`${isim} emekli oldunuz🤩`);
+         return - 1
+    }
+    
+}
+console.log(emeklilik(1991,"ali"))
+console.log(emeklilik(1951,"ali"))
