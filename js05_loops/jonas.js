@@ -184,14 +184,24 @@
 // }
 // console.log(enBuyuk)
 
-let vize1 = +prompt("sayi1 giriniz");
-let vize2 = +prompt("sayi1 giriniz");
-let final = +prompt("sayi1 giriniz");
-let ort = ((vize1 +vize2) / 2 * (0.4) +(final*0.6)) ;
-console.log(ort)
+// let vize1 = +prompt("sayi1 giriniz");
+// let vize2 = +prompt("sayi1 giriniz");
+// let final = +prompt("sayi1 giriniz");
+// let ort = ((vize1 +vize2) / 2 * (0.4) +(final*0.6)) ;
+// console.log(ort)
 
-if((ort >= 50) && ((final >= 50) || (final == 70))) {
-    console.log("geçti")
-}else {
-    console.log("kaldı")
+// if((ort >= 50) && ((final >= 50) || (final == 70))) {
+//     console.log("geçti")
+// }else {
+//     console.log("kaldı")
+// }
+
+
+// *****
+let toplam = 0
+for(let i = 0; i<=10 ; i++) {
+    toplam += i
+    // console.log("merhaba",i)
+    
 }
+console.log(toplam);
