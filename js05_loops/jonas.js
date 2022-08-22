@@ -206,10 +206,10 @@
 // }
 // console.log(toplam);
 
-let sayilar = [1,3,5,6,7,4,7,9,12,45]
+// let sayilar = [1,3,5,6,7,4,7,9,12,45]
 // console.log(
 //   sayilar[0] + sayilar[1] + sayilar[2] + sayilar[3] + sayilar[4])
-let toplam = 0
+// let toplam = 0
 //   for(let i = 0; i<sayilar.length; i++) {
 //     toplam += sayilar[i]
     
@@ -220,20 +220,27 @@ let toplam = 0
 //     toplam += sayilar[i]
 // }
 
-for(let sayi of sayilar) {
-    toplam += sayi
+// for(let sayi of sayilar) {
+//     toplam += sayi
     
-}
-console.log(toplam)
+// }
+// console.log(toplam)
 
-let user = {
-    "name": "sadık turan",
-    "username" : "sadikturan",
-    "password" : "12345",
-    "email" : "info@sadikturan.com"
-};
+// let user = {
+//     "name": "sadık turan",
+//     "username" : "sadikturan",
+//     "password" : "12345",
+//     "email" : "info@sadikturan.com"
+// };
 
-for(let key in user) {
-    console.log(key)
-    console.log(user[key])
+// for(let key in user) {
+//     console.log(key)
+//     console.log(user[key])
+// }
+// ****
+let toplam = 0
+let sayilar = [1,5,7,15,3,25]
+
+for(let sayi of sayilar) {
+    console.log(sayi *sayi)
 }
