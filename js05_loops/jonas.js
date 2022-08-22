@@ -268,24 +268,39 @@
 //     }
 // }console.log(adet)
 
-let ogrenciler = [
-    {"ad":"yigit","soyad" :"bilgi", "notlar" : [60,70,60]},
-    {"ad":"ada","soyad" :"bilgi", "notlar" : [80,70,80]},
-    {"ad":"cına","soyad" :"turan", "notlar" : [70,70,60]}
-]
-for(let ogrenci of ogrenciler) {
-    let not_toplam = 0
-    let ortalama = 0
-    let adet = 0
-    for(let not of ogrenci.notlar) {
-        not_toplam += not
-        adet++;
-    }
-    ortalama = not_toplam / adet;
-      console.log(`${ogrenci.ad} ${ortalama}`)
-    if(ortalama >= 50) {
-      console.log("başarılı")
-    } else {
-        console.log("başarısız")
-    }
-}   
+// let ogrenciler = [
+//     {"ad":"yigit","soyad" :"bilgi", "notlar" : [60,70,60]},
+//     {"ad":"ada","soyad" :"bilgi", "notlar" : [80,70,80]},
+//     {"ad":"cına","soyad" :"turan", "notlar" : [70,70,60]}
+// ]
+// for(let ogrenci of ogrenciler) {
+//     let not_toplam = 0
+//     let ortalama = 0
+//     let adet = 0
+//     for(let not of ogrenci.notlar) {
+//         not_toplam += not
+//         adet++;
+//     }
+//     ortalama = not_toplam / adet;
+//       console.log(`${ogrenci.ad} ${ortalama}`)
+//     if(ortalama >= 50) {
+//       console.log("başarılı")
+//     } else {
+//         console.log("başarısız")
+//     }
+// }   
+// *****
+// function selamlama (msg) {
+//     console.log(msg)
+// }
+// selamlama("selam")
+// selamlama("merhaba")
+// selamlama("nasılsın")
+// selamlama()
+
+function yasHesapla(tarih) {
+    return new Date().getFullYear() - tarih
+}
+// console.log( yasHesapla(1881))
+const a =yasHesapla(1991)
+console.log(a)
