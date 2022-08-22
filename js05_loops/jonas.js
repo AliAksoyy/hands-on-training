@@ -129,27 +129,43 @@
 // console.log(a.toString() + b.toString())
 // ****
 
-let ogr1 = {
-    name:"ali",
-    dtarihi: 2012,
-    not1:70,
-    not2:70,
-    not3:80
-};
-let ogr2 = {
-    name:"ayse",
-    dtarihi: 2002,
-    not1:40,
-    not2:40,
-    not3:50
-};
-let ogr1yas = new Date().getFullYear() - ogr1.dtarihi
-let ogr2yas = new Date().getFullYear() - ogr2.dtarihi
-let ogr1ort = (ogr1.not1 + ogr1.not2 + ogr1.not3) / 3
-let ogr2ort = (ogr2.not1 + ogr2.not2 + ogr2.not3) / 3
-let ogr1basarılMı = (ogr1ort > 50)
-let ogr2basarılMı = (ogr2ort > 50)
-console.log(ogr1basarılMı)
-console.log(ogr2basarılMı)
-console.log(parseInt(ogr1ort))
-console.log(ogr2ort)
+// let ogr1 = {
+//     name:"ali",
+//     dtarihi: 2012,
+//     not1:70,
+//     not2:70,
+//     not3:80
+// };
+// let ogr2 = {
+//     name:"ayse",
+//     dtarihi: 2002,
+//     not1:40,
+//     not2:40,
+//     not3:50
+// };
+// let ogr1yas = new Date().getFullYear() - ogr1.dtarihi
+// let ogr2yas = new Date().getFullYear() - ogr2.dtarihi
+// let ogr1ort = (ogr1.not1 + ogr1.not2 + ogr1.not3) / 3
+// let ogr2ort = (ogr2.not1 + ogr2.not2 + ogr2.not3) / 3
+// let ogr1basarılMı = (ogr1ort > 50)
+// let ogr2basarılMı = (ogr2ort > 50)
+// console.log(ogr1basarılMı)
+// console.log(ogr2basarılMı)
+// console.log(parseInt(ogr1ort))
+// console.log(ogr2ort)
+
+// ****
+
+// let sayi = prompt("sayi giriniz");
+// if(sayi >10 && sayi<50) {
+//     console.log("doğru")
+// }else {
+//     console.log("yanlıs")
+// }
+
+// let sayi = prompt("sayi giriniz");
+// if((sayi>0) && (sayi%2 ===1) ) {
+//     console.log("sayı pozitif ve tektir")
+// }else {
+//     console.log("yanlıs")
+// }
