@@ -97,27 +97,33 @@
 // *** code challenge
 
 
-const calcAverage = (n1,n2,n3) => (n1+n2+n3) / 3;
-console.log(calcAverage(3,4,5))
-let avgDolphin = calcAverage(44,23,71)
-let avgKoalas = calcAverage(65,54,49)
-console.log(avgDolphin,avgKoalas)
+// const calcAverage = (n1,n2,n3) => (n1+n2+n3) / 3;
+// console.log(calcAverage(3,4,5))
+// let avgDolphin = calcAverage(44,23,71)
+// let avgKoalas = calcAverage(65,54,49)
+// console.log(avgDolphin,avgKoalas)
 
-const chekWinner = function(avgDolphin,avgKoalas) {
-    if(avgDolphin >=  2* avgKoalas) {
-        console.log(`Dolphins win ${avgDolphin} vs ${avgKoalas}`);
-    } else if (avgKoalas >= 2*avgDolphin)  {
-        console.log(`Koala win ${avgDolphin} vs ${avgKoalas}`);
-    }else {
-        console.log(`No teams wins`)
-    }
-}
-chekWinner(avgDolphin,avgKoalas);
+// const chekWinner = function(avgDolphin,avgKoalas) {
+//     if(avgDolphin >=  2* avgKoalas) {
+//         console.log(`Dolphins win ${avgDolphin} vs ${avgKoalas}`);
+//     } else if (avgKoalas >= 2*avgDolphin)  {
+//         console.log(`Koala win ${avgDolphin} vs ${avgKoalas}`);
+//     }else {
+//         console.log(`No teams wins`)
+//     }
+// }
+// chekWinner(avgDolphin,avgKoalas);
 
-chekWinner(49,100)
+// chekWinner(49,100)
 
- avgDolphin = calcAverage(85,54,41);
- avgKoalas = calcAverage(23,34,27);
- console.log(avgDolphin, avgKoalas)
- chekWinner(avgDolphin,avgKoalas)
+//  avgDolphin = calcAverage(85,54,41);
+//  avgKoalas = calcAverage(23,34,27);
+//  console.log(avgDolphin, avgKoalas)
+//  chekWinner(avgDolphin,avgKoalas)
 
+// ****
+
+let a = 10;
+let b = 20;
+console.log(a + b);
+console.log(a.toString() + b.toString())
