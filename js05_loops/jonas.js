@@ -241,6 +241,11 @@
 let toplam = 0
 let sayilar = [1,5,7,15,3,25]
 
-for(let sayi of sayilar) {
-    console.log(sayi *sayi)
+// for(let sayi of sayilar) {
+//     console.log(sayi *sayi)
+// }
+for(let i = 0; i<sayilar.length; i++) {
+    if(sayilar[i] % 5 == 0) {
+        console.log(sayilar[i])
+    }
 }
