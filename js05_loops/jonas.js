@@ -54,3 +54,19 @@ const yearsUntilRetirment = (tarih,firstName) => {
 const e =  yearsUntilRetirment(1991,"ali aksoy")
 console.log(e)
 console.log(  yearsUntilRetirment(1989,"feyza"))
+
+// *** function callin other functions
+
+const  meyveParcaSayisi = fruit => fruit *4
+
+
+const meyveİslem = function(elma,armut) {
+
+    const e = meyveParcaSayisi(elma)
+
+    const f = meyveParcaSayisi(armut)
+  
+    const g = `juice with ${e} elma and ${f} armut`;
+    return g;
+}
+console.log( meyveİslem(3,5))
