@@ -22,3 +22,11 @@ fruit(4,5)
 console.log(fruit(4,5))
 const applejuice = fruit(3,0)
 console.log(applejuice)
+
+
+function yas(tarih) {
+    const a = new Date().getFullYear() -tarih
+    return a
+}
+const b = yas(1991)
+console.log(b)
