@@ -302,5 +302,19 @@ function yasHesapla(tarih) {
     return new Date().getFullYear() - tarih
 }
 // console.log( yasHesapla(1881))
-const a =yasHesapla(1991)
-console.log(a)
+let a =yasHesapla(1985)
+let b = yasHesapla(1987)
+console.log(a,b)
+
+function emek(tarih,isim) {
+    let yas = yasHesapla(tarih)
+    let kalanYıl = 65-yas
+    if(kalanYıl >0 ) {
+        console.log("daha var")
+    } else {
+        console.log("emekli")
+    }
+}
+emek(1985,"a")
+emek(1987,"b")
+emek(1937,"c")
