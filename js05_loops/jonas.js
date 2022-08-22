@@ -169,3 +169,17 @@
 // }else {
 //     console.log("yanlıs")
 // }
+// let enBuyuk;
+// let sayi1 = +prompt("sayi1 giriniz");
+// let sayi2 = +prompt("sayi1 giriniz");
+// let sayi3 = +prompt("sayi1 giriniz");
+
+// enBuyuk = sayi1;
+
+// if(sayi2>enBuyuk) {
+//     enBuyuk = sayi2
+// }
+// if (sayi3 > enBuyuk) {
+//     enBuyuk = sayi3
+// }
+// console.log(enBuyuk)
