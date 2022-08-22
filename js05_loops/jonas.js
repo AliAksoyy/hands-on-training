@@ -42,7 +42,15 @@ const c = yas(1990)
 console.log(c)
 
 // *** arrow functions
-const yas2 = tarih => 2037 -tarih;
+const yas2 = tarih=> 2037-tarih
 const d = yas2(1991)
 console.log(d)
-console.log(yas2(1991)) 
+
+const yearsUntilRetirment = (tarih,firstName) => {
+    const age =new Date().getFullYear() - tarih;
+    const retirement = 65 -age;
+    return  `Benim adım ${firstName}'dir ${age} yaşındayım ve emekliliğime ${retirement} kaldı`
+}
+const e =  yearsUntilRetirment(1991,"ali aksoy")
+console.log(e)
+console.log(  yearsUntilRetirment(1989,"feyza"))
