@@ -238,14 +238,25 @@
 //     console.log(user[key])
 // }
 // ****
-let toplam = 0
-let sayilar = [1,5,7,15,3,25]
+// let toplam = 0
+// let sayilar = [1,5,7,15,3,25,12,24]
 
 // for(let sayi of sayilar) {
 //     console.log(sayi *sayi)
 // }
-for(let i = 0; i<sayilar.length; i++) {
-    if(sayilar[i] % 5 == 0) {
-        console.log(sayilar[i])
-    }
+// for(let i = 0; i<sayilar.length; i++) {
+//     if(sayilar[i] % 5 == 0) {
+//         console.log(sayilar[i])
+//     }
+// }
+// for(let i in sayilar){
+//     if(sayilar[i] %2 == 0) {
+//         toplam += sayilar[i]
+//     }
+// } console.log(toplam)
+// ***
+let urunler = ["iphone 12","samsung s22", "iphone 13", "samsung s23"];
+
+for(let urun of urunler){
+    console.log(urun.toUpperCase())
 }
