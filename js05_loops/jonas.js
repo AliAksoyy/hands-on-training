@@ -23,10 +23,20 @@ console.log(fruit(4,5))
 const applejuice = fruit(3,0)
 console.log(applejuice)
 
-
+// *** function declaration
 function yas(tarih) {
-    const a = new Date().getFullYear() -tarih
-    return a
+    // const a = new Date().getFullYear() -tarih
+    return new Date().getFullYear() -tarih
+
 }
 const b = yas(1991)
 console.log(b)
+
+
+// **** function expression
+
+const yas1 = function(tarih) {
+    return new Date().getFullYear() - tarih
+}
+const c = yas(1990)
+console.log(c)
