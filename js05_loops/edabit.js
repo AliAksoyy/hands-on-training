@@ -151,3 +151,8 @@
 
 // const a = 10;
 // console.log(a > 0 ? "po" : "neg");
+function ali(params) {
+    let a = 5
+    return a
+}
+console.log( ali())
