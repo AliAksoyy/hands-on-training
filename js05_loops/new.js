@@ -340,13 +340,4 @@
 // console.log(sonuc)
 
 
-// **************************
 
-// const hello = () => "hello edabit .com"
-// console.log( hello())
-
-const toplam = function(n1,n2) {
-    return n1 + n2;
-}
-const a =toplam(3,2)
-console.log(a)
