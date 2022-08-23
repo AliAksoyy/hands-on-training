@@ -101,22 +101,31 @@
 // console.log(a)
 // console.log(b)
 
-let root1,root2;
-let a = 1;
-let b = 5
-let c = 7
-let disc = b*b - 4*a*c
-if(disc>0) {
-    root1 = (-b + Math.sqrt(disc)) / (2*a)
-    root1 = (-b - Math.sqrt(disc)) / (2*a)
-    console.log(`realdir ve ${root1} ve ${root2}`)
-} else if(disc === 0) {
-    root1 = root2 = -b / (2*a)
-   console.log(`equation ve ${root1} ve ${root2}`);
-} else {
-    let real = (-b/(2*a)).toFixed(2)
-    let nonreal = (Math.sqrt(-disc)/(2*a)).toFixed(2)
-    console.log(
-      `${real} + ${nonreal}  ve  ${real} - ${nonreal} ve ${real} , ${nonreal}`
-    );
-}
+// let root1,root2;
+// let a = 1;
+// let b = 5
+// let c = 7
+// let disc = b*b - 4*a*c
+// if(disc>0) {
+//     root1 = (-b + Math.sqrt(disc)) / (2*a)
+//     root1 = (-b - Math.sqrt(disc)) / (2*a)
+//     console.log(`realdir ve ${root1} ve ${root2}`)
+// } else if(disc === 0) {
+//     root1 = root2 = -b / (2*a)
+//    console.log(`equation ve ${root1} ve ${root2}`);
+// } else {
+//     let real = (-b/(2*a)).toFixed(2)
+//     let nonreal = (Math.sqrt(-disc)/(2*a)).toFixed(2)
+//     console.log(
+//       `${real} + ${nonreal}  ve  ${real} - ${nonreal} ve ${real} , ${nonreal}`
+//     );
+// }
+
+// const a = 10;
+// const carpım = 0.621371;
+// const donusum = a*carpım
+// console.log(donusum)
+
+const a = 55;
+const sonuc = (a*1.8) +32
+console.log(sonuc)
