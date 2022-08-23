@@ -56,7 +56,23 @@
 // console.log(enUzunKelime("nerelerdeydin sen bu gece"))
 
 // **********8
-const num1 = 5;
-const num2 = 3;
-const sum = num1 + num2;
-console.log(sum)
+// const num1 = 5;
+// const num2 = 3;
+// const sum = num1 + num2;
+// console.log(sum)
+
+// const x = parseInt(prompt("sayı gir"))
+// const  y = parseInt(prompt("sayi 2 gir"))
+// const a = x + y;
+// console.log(a)
+
+
+// const number = prompt("sayi")
+// const result = Math.sqrt(number);
+// console.log(result)
+
+const a = 15;
+const b = "ali"
+const a1 = Math.sqrt(a);
+const b1 = Math.sqrt(b)
+console.log(`${a1} karakökü ve ${b1}`)
