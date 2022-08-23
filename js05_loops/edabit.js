@@ -34,3 +34,9 @@
 // *******5
 // const triArea = (base,height) => (base*height) / 2;
 // console.log(triArea(3,2))
+// *********6
+
+// const circuitPower = (voltage,current) => voltage * current;
+// console.log(circuitPower(230,10))
+// *******7
+
