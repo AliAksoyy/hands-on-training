@@ -39,18 +39,18 @@
 // const circuitPower = (voltage,current) => voltage * current;
 // console.log(circuitPower(230,10))
 // *******7
-function longestWord(str) {
-    let words = str.split(" ")
-    // console.log(words);
-    let longestWord = ""
-
-    for(let word of words) {
-        // console.log(word)
-        if(word.length>longestWord.length) {
-            longestWord = word
+const enUzunKelime = function(uzun) {
+    let word = uzun.split(" ")
+    let enUzunKelime  = ""
+    // console.log(enUzunKelime)
+    // console.log(word)
+    for(let wor of word) {
+        if(wor.length >enUzunKelime.length) {
+            enUzunKelime = wor
         }
     }
-    return longestWord;
+    return enUzunKelime
 }
-console.log(longestWord("ali aksoy ve ben erken kalkarım"))
-console.log( longestWord("Benimadım ayse ve ben geç kalkarım"))
+
+console.log(enUzunKelime("adım ali ben istemiyorum ve seni"))
+console.log(enUzunKelime("nerelerdeydin sen bu gece"))
