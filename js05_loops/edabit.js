@@ -31,3 +31,6 @@
 // const a = (num) => num + 1
 // console.log(a(5))
 // console.log(a(6))
+// *******5
+const triArea = (base,height) => (base*height) / 2;
+console.log(triArea(3,2))
