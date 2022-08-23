@@ -19,3 +19,15 @@
 // }
 // console.log(convert(5))
 // *******4
+// function addition(num) {
+//     let a =num;
+//     a +=1;
+//     return a
+// }
+// console.log(addition(0))
+// console.log(addition(6))
+// console.log(addition(7))
+
+// const a = (num) => num + 1
+// console.log(a(5))
+// console.log(a(6))
