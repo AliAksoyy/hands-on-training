@@ -334,7 +334,13 @@
 // console.log(today.getFullYear())
 // console.log(today.getDay()+20)
 // ***
-let a =34; b = 34; c = 35
-const sonuc = (a%10 === b%10) || (b%10 === c%10)
- || (a%10 === c%10)
-console.log(sonuc)
+// let a =34; b = 34; c = 35
+// const sonuc = (a%10 === b%10) || (b%10 === c%10)
+//  || (a%10 === c%10)
+// console.log(sonuc)
+
+
+// **************************
+
+const hello = () => "hello edabit .com"
+console.log( hello())
