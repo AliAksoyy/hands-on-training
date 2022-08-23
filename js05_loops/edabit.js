@@ -39,18 +39,24 @@
 // const circuitPower = (voltage,current) => voltage * current;
 // console.log(circuitPower(230,10))
 // *******7
-const enUzunKelime = function(uzun) {
-    let word = uzun.split(" ")
-    let enUzunKelime  = ""
-    // console.log(enUzunKelime)
-    // console.log(word)
-    for(let wor of word) {
-        if(wor.length >enUzunKelime.length) {
-            enUzunKelime = wor
-        }
-    }
-    return enUzunKelime
-}
+// const enUzunKelime = function(uzun) {
+//     let word = uzun.split(" ")
+//     let enUzunKelime  = ""
+//     // console.log(enUzunKelime)
+//     // console.log(word)
+//     for(let wor of word) {
+//         if(wor.length >enUzunKelime.length) {
+//             enUzunKelime = wor
+//         }
+//     }
+//     return enUzunKelime
+// }
 
-console.log(enUzunKelime("adım ali ben istemiyorum ve seni"))
-console.log(enUzunKelime("nerelerdeydin sen bu gece"))
+// console.log(enUzunKelime("adım ali ben istemiyorum ve seni"))
+// console.log(enUzunKelime("nerelerdeydin sen bu gece"))
+
+// **********8
+const num1 = 5;
+const num2 = 3;
+const sum = num1 + num2;
+console.log(sum)
