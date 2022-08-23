@@ -126,6 +126,28 @@
 // const donusum = a*carpım
 // console.log(donusum)
 
-const a = 55;
-const sonuc = (a*1.8) +32
-console.log(sonuc)
+
+// const a = 55;
+// const sonuc = (a*1.8) +32
+// console.log(sonuc)
+
+// const a = Math.round(Math.random() *100) 
+// console.log(a)
+
+// const a =10;
+// const b = 17
+// const c = Math.round(Math.random() *7) +10
+// console.log(c)
+
+
+// const a =-70
+// if(a>0) {
+//     console.log("pzi")
+// } else if (a === 0) {
+//     console.log("esitit")
+// }else {
+//     console.log("nega")
+// }
+
+// const a = 10;
+// console.log(a > 0 ? "po" : "neg");
