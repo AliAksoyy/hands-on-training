@@ -71,8 +71,32 @@
 // const result = Math.sqrt(number);
 // console.log(result)
 
-const a = 15;
-const b = "ali"
-const a1 = Math.sqrt(a);
-const b1 = Math.sqrt(b)
-console.log(`${a1} karakökü ve ${b1}`)
+// const a = 15;
+// const b = "ali"
+// const a1 = Math.sqrt(a);
+// const b1 = Math.sqrt(b)
+// console.log(`${a1} karakökü ve ${b1}`)
+
+
+// const a = 5;
+// const yükselik = 10;
+// const alan = (a*yükselik) / 2
+// console.log(alan)
+
+// let a =5, b= 6, c = 6;
+// const s = (a + b+ c) / 2
+// const alan = Math.sqrt(s*(s-a)*(s-b)*(s-c))
+// console.log(alan)
+
+// let a = 11
+// let b = 14
+// let sabit;
+// sabit = a;
+// console.log(sabit)
+// a = b
+// console.log(a)
+// b = sabit
+// console.log(`${a} ${b} ${sabit}`)
+// [a,b] =[b,a,]
+// console.log(a)
+// console.log(b)
