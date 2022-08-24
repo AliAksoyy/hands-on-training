@@ -46,3 +46,10 @@ console.log(str1,str2)
 // ? Assiging ile degişkenin değeri değiştirilir
 str1 = str1.concat(str3, " Path")
 console.log(str1);
+
+
+// ******
+// * toUpperCase toLowerCase
+// *******
+
+
