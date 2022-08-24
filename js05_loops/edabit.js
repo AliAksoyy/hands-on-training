@@ -185,22 +185,30 @@
 // palindrome("Nose Ali ");
 
 // *****
-const cozum = function(word) {
+// const cozum = function(word) {
 
-    let i = 0;
-    let s = [];
+//     let i = 0;
+//     let s = [];
 
-    for(let i = 0; i<word.length; i++) {
+//     for(let i = 0; i<word.length; i++) {
 
-        let yeni =[];
-        for(let j = i; j<word.length; j++) {
-            yeni.push(word[j]);
-            // console.log(yeni)
-            let enyeni = yeni.join("");
-            s.push(enyeni)
-            console.log(enyeni)
-        }
-    }
-    return s
+//         let yeni =[];
+//         for(let j = i; j<word.length; j++) {
+//             yeni.push(word[j]);
+//             // console.log(yeni)
+//             let enyeni = yeni.join("");
+//             s.push(enyeni)
+//             console.log(enyeni)
+//         }
+//     }
+//     return s
+// }
+// cozum("ali")
+
+// *****
+
+const sıralama = function(x) {
+    let a = x.split("").sort().join("")
+   return a
 }
-cozum("ali")
+console.log( sıralama("abewrgs"))
