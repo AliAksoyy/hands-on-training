@@ -151,8 +151,15 @@
 
 // const a = 10;
 // console.log(a > 0 ? "po" : "neg");
-function ali(params) {
-    let a = 5
-    return a
+// function ali(params) {
+//     let a = 5
+//     return a
+// }
+// console.log( ali())
+// ******
+
+const donusum = function(n) {
+    n = n + "";
+    return n.split("").reverse().join("")
 }
-console.log( ali())
+console.log(donusum(322433))
