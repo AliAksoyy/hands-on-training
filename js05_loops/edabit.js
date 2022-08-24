@@ -214,15 +214,31 @@
 // console.log( sıralama("abewrgs"))
 // ******
 
-const donusum = function(str) {
-let a = str.split(" ")
-let newa = []
-    for(let i = 0; i<a.length; i++) {
-        newa.push(a[i].charAt(0).toUpperCase() + a[i].slice(1))
-        console.log(newa)
+// const donusum = function(str) {
+// let a = str.split(" ")
+// let newa = []
+//     for(let i = 0; i<a.length; i++) {
+//         newa.push(a[i].charAt(0).toUpperCase() + a[i].slice(1))
+//         console.log(newa)
+//     }
+
+// return newa.join(" ")
+
+// }
+// console.log( donusum("the quick brown fox"))
+
+// **********
+const uzun = function(str) {
+
+    let a = str.match(/\w[az]{0,}/gi); 
+    // console.log(a)
+    let sonuc =a[0];
+    for (let i = 1; i<a.length; i++) {
+        if(sonuc.length < a[i].length) {
+            sonuc = a[i]
+        }
     }
 
-return newa.join(" ")
-
+    return sonuc
 }
-console.log( donusum("the quick brown fox"))
+console.log( uzun("sen ve ben develepor olabildik"))
