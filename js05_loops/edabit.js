@@ -193,13 +193,13 @@ const cozum = function(word) {
     for(let i = 0; i<word.length; i++) {
 
         let yeni =[];
-        for(let j = 0; j<word.length; j++) {
+        for(let j = i; j<word.length; j++) {
             yeni.push(word[j]);
+            // console.log(yeni)
             let enyeni = yeni.join("");
             s.push(enyeni)
             console.log(enyeni)
         }
-
     }
     return s
 }
