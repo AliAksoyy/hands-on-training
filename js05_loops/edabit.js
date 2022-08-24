@@ -219,6 +219,7 @@ let a = str.split(" ")
 let newa = []
     for(let i = 0; i<a.length; i++) {
         newa.push(a[i].charAt(0).toUpperCase() + a[i].slice(1))
+        console.log(newa)
     }
 
 return newa.join(" ")
