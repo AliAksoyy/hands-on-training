@@ -145,5 +145,18 @@ console.log(word2.endsWith("acar",23));
 //* ----------------------------------------------------------
 //*  replace(searchFor, replaceWith) --immutable
 //* ----------------------------------------------------------
-let oku = "Oku Baban gibi, saf olma"
-console.log(oku.replace("saf olma", "akılli ol")) //* orjinalı değişmiyor
+let oku = "Oku Baban gibi, saf olma, saf olma";
+// console.log(oku.replace("saf olma", "basarili ol"));
+oku = oku.replace("saf olma", "basarili ol");
+console.log(oku)
+oku = oku.replace(/saf olma/gi, "basarili ol");
+console.log(oku);
+
+oku = oku.replace(/BASARILI/gi, "Zengin");
+console.log(oku);
+
+//! NOT: replace metodu eger Regex ile aksi belirtilmiyorsa (g) sadece ilk buldugunu degistirir.
+
+let degistir = "daglar daglar yol ver gecem"
+degistir = degistir.replaceAll("daglar", "Daglar")
+console.log(degistir);
