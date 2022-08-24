@@ -92,3 +92,11 @@ console.log(str6.charAt(14))
 
 // *** Length bir property (objenin değişkendiri ve stringin karakter sayısını tutar)
 console.log(str6.charAt(str6.length -1))
+
+// *****
+// *****include()  -case sentive
+// ***********
+const word = "To be or not to be, that is the question"
+console.log(word.includes("to be"))
+console.log(word.includes("That"))
+console.log(word.includes(""))
