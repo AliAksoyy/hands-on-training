@@ -87,3 +87,6 @@ console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
 
 const str6 = "Full Stack Path"
 console.log(str6.charAt(3))
+console.log(str6.charAt()) //* ilk değeri dondurur
+console.log(str6.charAt(14))
+console.log(str6.)
