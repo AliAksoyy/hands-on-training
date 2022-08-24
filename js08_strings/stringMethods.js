@@ -184,7 +184,15 @@ console.log(veysel.slice(-23,-19))
 console.log(veysel.substring(17,30))
 console.log(veysel.substring(-10))  //** eksii çalışmıyor sub */
 
+// **** split
+
 
 const tarkan = "Gel gunduzle gece olalım"
 const splited = tarkan.split(" ");
-console.log(splited)
+console.log(splited, typeof splited)
+//***Bosluklara göre ayirarak Array'e cevirdi.
+
+
+const chars = tarkan.split("");
+console.log(chars); 
+//* null karakterine göre harfleri ayırarark bir char dizisi oluşturdu
