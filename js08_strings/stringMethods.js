@@ -52,4 +52,10 @@ console.log(str1);
 // * toUpperCase toLowerCase
 // *******
 
+const myName = "Noah Adams"
+console.log(myName.toUpperCase())
+console.log(myName.toLowerCase());
 
+let yourName = "ali"
+yourName = yourName.toLocaleUpperCase()
+console.log(yourName)
