@@ -170,16 +170,18 @@
 //     let kelime = word.toLowerCase().replace()
 
 // }
-const palindrome = (w) => {
+// const palindrome = (w) => {
 
-let lw = w.toLowerCase().replace(" ","");
-let sw = lw.split("").reverse().join("");
- if(lw ===sw) {
-     console.log("This string is a palindrome");
- }else {
-        console.log("This string is not a palindrome");
- }
-}
-palindrome("Eye");
-palindrome("nurses run");
-palindrome("Nose Ali ");
+// let lw = w.toLowerCase().replace(" ","");
+// let sw = lw.split("").reverse().join("");
+//  if(lw ===sw) {
+//      console.log("This string is a palindrome");
+//  }else {
+//         console.log("This string is not a palindrome");
+//  }
+// }
+// palindrome("Eye");
+// palindrome("nurses run");
+// palindrome("Nose Ali ");
+
+// *****
