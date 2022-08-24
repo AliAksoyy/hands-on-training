@@ -207,8 +207,9 @@
 
 // *****
 
-const sıralama = function(x) {
-    let a = x.split("").sort().join("")
-   return a
-}
-console.log( sıralama("abewrgs"))
+// const sıralama = function(x) {
+//     let a = x.split("").sort().join("")
+//    return a
+// }
+// console.log( sıralama("abewrgs"))
+// ******
