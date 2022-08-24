@@ -80,3 +80,10 @@ console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
 //? 'BASE: a ≠ b, a = á, a = A'
 //? 'ACCENT: a ≠ b, a ≠ á, a = A'
 //? 'CASE: a ≠ b, a = á, a ≠ A'
+
+// *****
+// *****charAt()
+// ***********
+
+const str6 = "Full Stack Path"
+console.log(str6.charAt(3))
