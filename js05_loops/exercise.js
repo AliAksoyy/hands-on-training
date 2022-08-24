@@ -9,9 +9,10 @@
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
 
 // *********3*************
-// 3. Write a JavaScript function that generates all combinations of a string. 
-// Example string : 'dog'
-// Expected Output : d,do,dog,o,og,g
+// 3. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. 
+// Example string : 'Web Development Tutorial'
+// Expected Output : 'Development'
+
 
 // *********4*************
 // 4. Write a JavaScript function that returns a passed string with letters in alphabetical order. 
@@ -25,9 +26,9 @@
 // Expected Output : 'The Quick Brown Fox '
 
 // *********6*************
-// 6. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. 
-// Example string : 'Web Development Tutorial'
-// Expected Output : 'Development'
+// 3. Write a JavaScript function that generates all combinations of a string. 
+// Example string : 'dog'
+// Expected Output : d,do,dog,o,og,g
 
 // *********7*************
 // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. 
