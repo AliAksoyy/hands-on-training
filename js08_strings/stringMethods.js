@@ -61,5 +61,9 @@ yourName = yourName.toLocaleUpperCase()
 console.log(yourName)
 
 const esitMi = function(str1,str2){
-    str1.toLowerCase() === str2.toLowerCase ? "true": "false"
+   return str1.toLowerCase() === str2.toLowerCase() ? 
+   `${str1} ile ${str2} Esittir`:
+    `${str1} ile ${str2} Esit degildir`
 }
+console.log(esitMi("Merhaba" ,"MERHABA"))
+console.log(esitMi("Hello" ,"Hell"))
