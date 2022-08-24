@@ -114,4 +114,5 @@ console.log(toBe)
 const be = word.indexOf("be")
 console.log(be)
 console.log(word.lastIndexOf("be"))
+console.log(word.lastIndexOf("Be"))
 
