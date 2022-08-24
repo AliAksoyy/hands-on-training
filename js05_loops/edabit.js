@@ -185,3 +185,23 @@
 // palindrome("Nose Ali ");
 
 // *****
+function cozum(x) {
+
+let i = 0;
+let cıktı = [];
+
+for(let i = 0; i<x.length; i++) {
+    let yenicıkti = [];
+    // console.log(yenicıkti)
+    for (let k = i; k < x.length; k++) {
+      yenicıkti.push(x[k]);
+      console.log(yenicıkti);
+      let yeni = yenicıkti.join("");
+      cıktı.push(yeni);
+    }
+}
+return yeni
+
+
+}
+console.log(cozum("ali"))
