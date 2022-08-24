@@ -160,3 +160,12 @@ console.log(oku);
 let degistir = "daglar daglar yol ver gecem"
 degistir = degistir.replaceAll("daglar", "Daglar")
 console.log(degistir);
+
+//?Regex de kullanilabilir.
+let degistir2 =
+  "No woman, no cry" +
+  " No woman, no cry, eh, yeah" +
+  " Little darling, don't shed no tears" +
+  " No woman, no cry, eh";
+
+console.log(degistir2.replaceAll(/no/gi, "Hayir"));
