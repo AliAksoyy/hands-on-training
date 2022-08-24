@@ -196,3 +196,20 @@ console.log(splited, typeof splited)
 const chars = tarkan.split("");
 console.log(chars); 
 //* null karakterine göre harfleri ayırarark bir char dizisi oluşturdu
+
+/* ----------------------------------------------------------
+//* trim();
+//* ----------------------------------------------------------
+const ramazan = "    Hoş geldin ya şehri Ramazan     ";
+console.log(ramazan);
+console.log(ramazan.length); // 36
+console.log(ramazan.trim());
+console.log(ramazan.trim().length); //27
+
+//! ODEV1: tarkan string'indeki kelimelerin sayisini donduren
+//! bir fonksiyon yaziniz.
+
+//! ODEV2:
+//! ----------------------------------------------------------
+// https://www.youtube.com/watch?v=b7vfp5G4brE
+// https://youtu.be/b7vfp5G4brE
