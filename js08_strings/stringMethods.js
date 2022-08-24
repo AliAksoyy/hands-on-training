@@ -67,3 +67,7 @@ const esitMi = function(str1,str2){
 }
 console.log(esitMi("Merhaba" ,"MERHABA"))
 console.log(esitMi("Hello" ,"Hell"))
+
+// ****localeCompare()
+
+
