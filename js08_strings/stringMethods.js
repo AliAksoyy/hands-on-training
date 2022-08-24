@@ -59,3 +59,7 @@ console.log(myName.toLowerCase());
 let yourName = "ali"
 yourName = yourName.toLocaleUpperCase()
 console.log(yourName)
+
+const esitMi = function(str1,str2){
+    str1.toLowerCase() === str2.toLowerCase ? "true": "false"
+}
