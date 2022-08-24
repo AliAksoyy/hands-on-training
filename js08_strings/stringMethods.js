@@ -169,3 +169,22 @@ let degistir2 =
   " No woman, no cry, eh";
 
 console.log(degistir2.replaceAll(/no/gi, "Hayir"));
+
+// **** slice(beginIndex, endIndex)
+// *** substring(beginIndex  , endIndex)
+
+const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
+const sliced = veysel.slice(33)
+console.log(sliced, typeof sliced)
+console.log(veysel.slice(17,30))
+console.log(veysel.slice(-10))
+console.log(veysel.slice(-23,-19))
+
+// !! substring
+console.log(veysel.substring(17,30))
+console.log(veysel.substring(-10))  //** eksii çalışmıyor sub */
+
+
+const tarkan = "Gel gunduzle gece olalım"
+const splited = tarkan.split(" ");
+console.log(splited)
