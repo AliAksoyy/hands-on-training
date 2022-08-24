@@ -158,8 +158,28 @@
 // console.log( ali())
 // ******
 
-const donusum = function(n) {
-    n = n + "";
-    return n.split("").reverse().join("")
+// const donusum = function(n) {
+//     n = n + "";
+//     return n.split("").reverse().join("")
+// }
+// console.log(donusum(322433));
+
+// ******
+// const palinddrome = function(word) {
+
+//     let kelime = word.toLowerCase().replace()
+
+// }
+const palindrome = (w) => {
+
+let lw = w.toLowerCase().replace(" ","");
+let sw = lw.split("").reverse().join("");
+ if(lw ===sw) {
+     console.log("This string is a palindrome");
+ }else {
+        console.log("This string is not a palindrome");
+ }
 }
-console.log(donusum(322433))
+palindrome("Eye");
+palindrome("nurses run");
+palindrome("Nose Ali ");
