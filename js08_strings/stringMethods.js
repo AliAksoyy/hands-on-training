@@ -100,3 +100,18 @@ const word = "To be or not to be, that is the question"
 console.log(word.includes("to be"))
 console.log(word.includes("That"))
 console.log(word.includes(""))
+console.log(word.includes("to be",13))
+
+//! NOT: case insentive kullanmak icin str baslangicta kucuk veya
+//! buyuk harfe cevirilerek arama yapilabilir.
+
+// *****
+// ***** indexOf(), LastIndexOf() - case sensitive
+// ***********
+
+const toBe = word.indexOf("or")
+console.log(toBe)
+const be = word.indexOf("be")
+console.log(be)
+console.log(word.lastIndexOf("be"))
+
