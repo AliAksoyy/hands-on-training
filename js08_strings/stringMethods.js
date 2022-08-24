@@ -12,7 +12,7 @@ console.log("*** STRING METHODS ***");
 
 //!1- Klasik yöntem (String Literals) ile string tanimlanirsa bu string
 //! bir primitive degiskendir.
-const str1 = "Clarusway";
+let str1 = "Clarusway";
 //Char => C, l, a,....
 const str2 = " Hello";
 const str3 = " Full Stack";
@@ -41,3 +41,8 @@ console.log(str5, typeof str5);
 //* ---------------------------------------------------
 //*  concat() - immutable
 //* --------------------------------------------------
+console.log( str1.concat(str2))
+console.log(str1,str2)
+// ? Assiging ile degişkenin değeri değiştirilir
+str1 = str1.concat(str3, " Path")
+console.log(str1);
