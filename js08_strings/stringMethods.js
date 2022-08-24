@@ -117,5 +117,33 @@ console.log(word.lastIndexOf("be"))
 console.log(word.lastIndexOf("Be"))
 
 // *****
-// ***** indexOf(), LastIndexOf() - case sensitive
+// ***** serach()   regular expression
 // ***********
+
+const buyukHarf = /[A-Z]/;
+const nokta = /[.]/;
+const virgul = /[,]/;
+console.log(word.search(buyukHarf)); //? ilk buyuk harfin indeksi 0
+console.log(word.search(virgul)); //?  18
+console.log(word.search(nokta)); //? -1
+
+
+// ******
+//* startsWidth() , endsWith() - case sensitive
+//* ----------------------------------------------------------
+
+
+
+let word2 = "Sen gulunce guller acar gul pembe!"
+console.log(new String(word2))
+console.log(word2.startsWith("Sen"));
+console.log(word2.startsWith("gulunce"));
+console.log(word2.startsWith("gulunce",4));
+console.log(word2.endsWith("!"));
+console.log(word2.endsWith("acar",23));
+
+//* ----------------------------------------------------------
+//*  replace(searchFor, replaceWith) --immutable
+//* ----------------------------------------------------------
+let oku = "Oku Baban gibi, saf olma"
+console.log(oku.replace("saf olma", "akılli ol")) //* orjinalı değişmiyor
