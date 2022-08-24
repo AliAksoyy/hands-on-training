@@ -116,3 +116,6 @@ console.log(be)
 console.log(word.lastIndexOf("be"))
 console.log(word.lastIndexOf("Be"))
 
+// *****
+// ***** indexOf(), LastIndexOf() - case sensitive
+// ***********
