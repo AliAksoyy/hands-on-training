@@ -341,3 +341,5 @@
 
 
 
+const friends = ["ali", "veli", "ayse"]
+console.log(friends)
