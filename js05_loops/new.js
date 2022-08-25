@@ -394,3 +394,4 @@ console.log(friends)
 friends.unshift("Canan")
 console.log(friends);
 
+friends.pop()
