@@ -371,6 +371,14 @@ const zaman = 1991
 
 console.log(hesapla(1991))
 
+const age1 = hesapla(tarih[0])
+const age2 = hesapla(tarih[1])
+const age3 = hesapla(tarih[tarih.length-1])
+console.log(age1,age2,age3)
+
+
+const ages = [hesapla(tarih[0]), hesapla(tarih[1]), hesapla(tarih[tarih.length-1])]
+console.log(ages)
 
 console.log(hesapla(tarih[3]))
 console.log(hesapla(tarih[tarih.length -1]))
