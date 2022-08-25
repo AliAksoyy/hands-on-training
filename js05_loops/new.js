@@ -342,44 +342,55 @@
 // *************array ler
 
 
-const friends = ["ali", "veli", "ayse",1991, true]
+// const friends = ["ali", "veli", "ayse",1991, true]
+// console.log(friends);
+
+// const years = new Array(1991,2004,2020,1964)
+// console.log(years)
+// console.log(friends[0])
+// console.log(friends[2])
+// console.log(friends.length)
+// console.log(friends[friends.length-1])
+
+// friends[2] = "Ahmet"
+// console.log(friends);
+
+
+// const firsName = "ali"
+// const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
+// console.log(ali)
+// console.log(ali.length)
+// console.log(ali[4])
+
+// // ************* örnek
+
+// const hesapla = (yas) => 2037-yas
+
+// const tarih = [1990, 1967, 2002, 2010, 2018]
+// const zaman = 1991
+
+
+// console.log(hesapla(1991))
+
+// const age1 = hesapla(tarih[0])
+// const age2 = hesapla(tarih[1])
+// const age3 = hesapla(tarih[tarih.length-1])
+// console.log(age1,age2,age3)
+
+
+// const ages = [hesapla(tarih[0]), hesapla(tarih[1]), hesapla(tarih[tarih.length-1])]
+// console.log(ages)
+
+// console.log(hesapla(tarih[3]))
+// console.log(hesapla(tarih[tarih.length -1]))
+
+// **** array exercise
+
+const friends = ["ali","ayse","beyda","feyza"]
+
+friends.push("Jay")
+console.log(friends)
+
+friends.unshift("Canan")
 console.log(friends);
 
-const years = new Array(1991,2004,2020,1964)
-console.log(years)
-console.log(friends[0])
-console.log(friends[2])
-console.log(friends.length)
-console.log(friends[friends.length-1])
-
-friends[2] = "Ahmet"
-console.log(friends);
-
-
-const firsName = "ali"
-const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
-console.log(ali)
-console.log(ali.length)
-console.log(ali[4])
-
-// ************* örnek
-
-const hesapla = (yas) => 2037-yas
-
-const tarih = [1990, 1967, 2002, 2010, 2018]
-const zaman = 1991
-
-
-console.log(hesapla(1991))
-
-const age1 = hesapla(tarih[0])
-const age2 = hesapla(tarih[1])
-const age3 = hesapla(tarih[tarih.length-1])
-console.log(age1,age2,age3)
-
-
-const ages = [hesapla(tarih[0]), hesapla(tarih[1]), hesapla(tarih[tarih.length-1])]
-console.log(ages)
-
-console.log(hesapla(tarih[3]))
-console.log(hesapla(tarih[tarih.length -1]))
