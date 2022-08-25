@@ -350,3 +350,11 @@ console.log(friends[0])
 console.log(friends[2])
 console.log(friends.length)
 console.log(friends[friends.length-1])
+
+friends[2] = "Ahmet"
+console.log(friends);
+
+
+const firsName = "ali"
+const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
+console.log(ali)
