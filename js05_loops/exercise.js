@@ -155,7 +155,11 @@
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
+const vowel = function(str) {
 
+  return str.match(/[a,e,i,o,u]/gi).length
+}
+ console.log( vowel("The quick brown fox"));
 
 
 
