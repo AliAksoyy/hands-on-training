@@ -409,3 +409,6 @@ console.log(friends)
 console.log(friends.indexOf("ali"))
 console.log(friends.indexOf("Ali"))
 
+
+console.log(friends.includes("ali"))
+console.log(friends.includes("Ali"))
