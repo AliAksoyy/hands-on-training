@@ -124,29 +124,9 @@
 
 
 // *********6*************
-// 3. Write a JavaScript function that generates all combinations of a string. 
+// 6. Write a JavaScript function that generates all combinations of a string. 
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
-
-// const combi = function (str) {
-
-//     let a = ""
-//     for(let i = 0; i<str.length; i++){
-        
-//         let b = "";
-//         for(let j=i; j<str.length ;j++) {
-//             b += str[j];
-//             a +=b + ","
-            
-//         }
-//     }
-//     return a
-
-
-// }
-// console.log( combi("dog"))
-
-
 
 
 // *********7*************
@@ -155,43 +135,11 @@
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
-// const vowel = function(str) {
-
-//   return str.match(/[a,e,i,o,u]/gi).length
-// }
-//  console.log( vowel("The quick brown fox"));
-
-
-
-
 
 // *********8*************
 // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not. 
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
-const asalSayı = function(num) {
-
-    if(num === 1) {
-        return false
-    } else if (num ===2) {
-        return true
-    } else {
-        for(let i = 2; i<num; i++) {
-            if(num % i === 0) {
-                return false
-            }
-             
-        }
-        return true
-    } 
-
-
-
-}
-
-console.log( asalSayı(13))
-console.log( asalSayı(14))
-console.log( asalSayı(-12))
 
 // *********9*************
 // 9. Write a JavaScript function which accepts an argument and returns the type. 
