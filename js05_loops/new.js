@@ -341,5 +341,12 @@
 
 
 
-const friends = ["ali", "veli", "ayse"]
-console.log(friends)
+const friends = ["ali", "veli", "ayse",1991, true]
+console.log(friends);
+
+const years = new Array(1991,2004,2020,1964)
+console.log(years)
+console.log(friends[0])
+console.log(friends[2])
+console.log(friends.length)
+console.log(friends[friends.length-1])
