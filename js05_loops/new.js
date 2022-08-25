@@ -386,33 +386,44 @@
 
 // **** array exercise
 
-const friends = ["ali","ayse","beyda","feyza"]
+// const friends = ["ali","ayse","beyda","feyza"]
 
-const new1 =friends.push("Jay","celil","halil")
-console.log(new1)
-console.log(friends)
+// const new1 =friends.push("Jay","celil","halil")
+// console.log(new1)
+// console.log(friends)
 
-const b =friends.unshift("Canan")
-console.log(b)
-console.log(friends);
+// const b =friends.unshift("Canan")
+// console.log(b)
+// console.log(friends);
 
-const c =friends.pop()
-console.log(c)
-friends.pop()
-friends.pop()
-console.log(friends)
+// const c =friends.pop()
+// console.log(c)
+// friends.pop()
+// friends.pop()
+// console.log(friends)
 
-const d =friends.shift()
-console.log(d)
-console.log(friends)
+// const d =friends.shift()
+// console.log(d)
+// console.log(friends)
 
-console.log(friends.indexOf("ali"))
-console.log(friends.indexOf("Ali"))
+// console.log(friends.indexOf("ali"))
+// console.log(friends.indexOf("Ali"))
 
-friends.push("23")
-console.log(friends.includes("ali"))
-console.log(friends.includes("Ali"))
-console.log(friends.includes(23))
-if(friends.includes("ali")) {
-    console.log("okey")
+// friends.push("23")
+// console.log(friends.includes("ali"))
+// console.log(friends.includes("Ali"))
+// console.log(friends.includes(23))
+// if(friends.includes("ali")) {
+//     console.log("okey")
+// }
+
+// **** exercise arrays
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <=300 ? bill*0.15 : bill*0.2
 }
+const bill = [125,555,44]
+const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]
+const toplam = [bill[0] + tip[1], bill[0] + tip[1], bill[1] + tip[1]];
+console.log(bill,tip,toplam)
