@@ -100,26 +100,26 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'thE quicK browN foX '
 
-    const buyuk = function(sentence) {
+    // const buyuk = function(sentence) {
         
-        let a= sentence.split(" ");
-        for(let i = 0 ;i<a.length ;i++) {
-            let b = a[i].split("").reverse()
-            let c = "";
-            for(let j = 0; j<b.length; j++) {
-                 if(j==0) {
-                    c += b[0].toUpperCase();
-                 } else {
-                      c += b[j];
-                 }   
-            }
-            c = c.split("").reverse().join("")
-            a[i]= c   
-        }
+    //     let a= sentence.split(" ");
+    //     for(let i = 0 ;i<a.length ;i++) {
+    //         let b = a[i].split("").reverse()
+    //         let c = "";
+    //         for(let j = 0; j<b.length; j++) {
+    //              if(j==0) {
+    //                 c += b[0].toUpperCase();
+    //              } else {
+    //                   c += b[j];
+    //              }   
+    //         }
+    //         c = c.split("").reverse().join("")
+    //         a[i]= c   
+    //     }
 
-        console.log(a.join(" "))
-    }
-    buyuk("the quick brown fox");
+    //     console.log(a.join(" "))
+    // }
+    // buyuk("the quick brown fox");
 
 
 
@@ -127,6 +127,27 @@
 // 3. Write a JavaScript function that generates all combinations of a string. 
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
+
+const combi = function (str) {
+
+    let a = ""
+    for(let i = 0; i<str.length; i++){
+        
+        let b = "";
+        for(let j=i; j<str.length ;j++) {
+            b += str[j];
+            a +=b + ","
+            
+        }
+    }
+    return a
+
+
+}
+console.log( combi("dog"))
+
+
+
 
 // *********7*************
 // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. 
