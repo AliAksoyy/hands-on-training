@@ -402,3 +402,10 @@ friends.pop()
 friends.pop()
 console.log(friends)
 
+const d =friends.shift()
+console.log(d)
+console.log(friends)
+
+console.log(friends.indexOf("ali"))
+console.log(friends.indexOf("Ali"))
+
