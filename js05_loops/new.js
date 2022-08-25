@@ -420,10 +420,39 @@
 // **** exercise arrays
 
 
-const calcTip = function (bill) {
-    return bill >= 50 && bill <=300 ? bill*0.15 : bill*0.2
+// const calcTip = function (bill) {
+//     return bill >= 50 && bill <=300 ? bill*0.15 : bill*0.2
+// }
+// const bill = [125,555,44]
+// const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]
+// const toplam = [bill[0] + tip[1], bill[0] + tip[1], bill[1] + tip[1]];
+// console.log(bill,tip,toplam)
+
+// ***************object issue
+
+const ali = [
+    "ali",
+    "aksoy",
+    2037-1991,
+    "teacher",
+    ["ayse", "beyda", "feyza"]
+]
+console.log(ali)
+
+const ali1 = {
+  firstName: "ali",
+  lastName: "aksoy",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["ayse", "beyda", "feyza"]
 }
-const bill = [125,555,44]
-const tip = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]
-const toplam = [bill[0] + tip[1], bill[0] + tip[1], bill[1] + tip[1]];
-console.log(bill,tip,toplam)
+console.log(ali1)
+
+console.log(ali1.lastName)
+console.log(ali1["lastName"]);
+
+const nameKey = "Name"
+console.log(ali1[`first` + nameKey])
+console.log(ali1[`last` + nameKey])
+
+
