@@ -388,10 +388,17 @@
 
 const friends = ["ali","ayse","beyda","feyza"]
 
-friends.push("Jay")
+const new1 =friends.push("Jay","celil","halil")
+console.log(new1)
 console.log(friends)
 
-friends.unshift("Canan")
+const b =friends.unshift("Canan")
+console.log(b)
 console.log(friends);
 
+const c =friends.pop()
+console.log(c)
 friends.pop()
+friends.pop()
+console.log(friends)
+
