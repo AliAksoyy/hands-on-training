@@ -370,4 +370,7 @@ const zaman = 1991
 
 
 console.log(hesapla(1991))
-console.log(hesapla(tarih))
+
+
+console.log(hesapla(tarih[3]))
+console.log(hesapla(tarih[tarih.length -1]))
