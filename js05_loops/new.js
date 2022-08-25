@@ -342,24 +342,32 @@
 // *************array ler
 
 
-const friends = ["ali", "veli", "ayse",1991, true]
-console.log(friends);
+// const friends = ["ali", "veli", "ayse",1991, true]
+// console.log(friends);
 
-const years = new Array(1991,2004,2020,1964)
-console.log(years)
-console.log(friends[0])
-console.log(friends[2])
-console.log(friends.length)
-console.log(friends[friends.length-1])
+// const years = new Array(1991,2004,2020,1964)
+// console.log(years)
+// console.log(friends[0])
+// console.log(friends[2])
+// console.log(friends.length)
+// console.log(friends[friends.length-1])
 
-friends[2] = "Ahmet"
-console.log(friends);
+// friends[2] = "Ahmet"
+// console.log(friends);
 
 
-const firsName = "ali"
-const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
-console.log(ali)
-console.log(ali.length)
+// const firsName = "ali"
+// const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
+// console.log(ali)
+// console.log(ali.length)
 
 // ************* örnek
 
+const hesapla = (yas) => 2037-yas
+
+const tarih = [1990, 1967, 2002, 2010, 2018]
+const zaman = 1991
+
+
+console.log(hesapla(1991))
+console.log(hesapla(tarih))
