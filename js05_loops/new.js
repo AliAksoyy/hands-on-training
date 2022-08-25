@@ -339,6 +339,7 @@
 //  || (a%10 === c%10)
 // console.log(sonuc)
 
+// *************array ler
 
 
 const friends = ["ali", "veli", "ayse",1991, true]
@@ -358,3 +359,7 @@ console.log(friends);
 const firsName = "ali"
 const ali = [firsName, "aksoy", 2037-1991, "engenieer",friends, years]
 console.log(ali)
+console.log(ali.length)
+
+// ************* örnek
+
