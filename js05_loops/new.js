@@ -409,6 +409,10 @@ console.log(friends)
 console.log(friends.indexOf("ali"))
 console.log(friends.indexOf("Ali"))
 
-
+friends.push("23")
 console.log(friends.includes("ali"))
 console.log(friends.includes("Ali"))
+console.log(friends.includes(23))
+if(friends.includes("ali")) {
+    console.log("okey")
+}
