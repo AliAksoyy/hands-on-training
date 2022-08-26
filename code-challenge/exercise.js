@@ -254,9 +254,19 @@
 // }
 
 
+
    
 // console.log( baslık("ali ve ayse aksoy"))
 
+
+// const baslık1 = function(str) {
+
+//     const a = str.toLowerCase().split(" ").map(function(elem) {
+//      return   elem[0].toUpperCase() + elem.slice(1)
+//     })
+//     return a.join(" ")
+// }
+// console.log( baslık1("aLi ve aYse"))
 
  
 
