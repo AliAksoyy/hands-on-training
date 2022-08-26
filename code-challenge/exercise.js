@@ -147,3 +147,9 @@
 
 // *********10*************
 // 10. Write a JavaScript function which returns the n rows by n columns identity matrix. 
+
+// ***********11***********
+
+//11 .Reverse String
+
+
