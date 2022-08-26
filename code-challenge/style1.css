@@ -14,8 +14,11 @@ section {
 header {
     /* height: 10vh; */
     /* width: 100%; */
-    background-color:rgb(72, 72, 248);
+    background-color:rgb(72, 72, 248,0.637);
     /* margin-bottom: 1rem; */
+    color: white;
+    padding: 2rem;
+    font-size: 2rem;
 
 }
 .container {
@@ -25,6 +28,7 @@ header {
     height: auto;
     margin: auto;
     grid-gap: 1rem 1rem;
+    /* border: 2px solid red; */
     /* grid-template-rows: auto; */
     
     grid-template-areas: "header header header header"
@@ -40,29 +44,47 @@ header {
 .div1 {
     grid-area: box-1;
     height: 30vh;
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .div2 {
     grid-area: box-2;
     height: 30vh;
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .div3 {
     grid-area: box-3;
     height: 30vh;
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .div4 {
     grid-area: side-bar;
-    height: 60vh;
+    height: 62vh;
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .div5 {
     grid-area: main;
     height: 30vh;
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .footer {
     grid-area:footer ;
     height: 20vh;
-    background-color: rgb(72, 72, 248);;
+    background-color: rgb(72, 72, 248,0.637);
+    color: white;
+    padding: 1rem;
+    font-size: 1.7rem;
 }
 .div {
-    background-color: rgb(72, 72, 248);
+    background-color: rgba(72, 72, 248, 0.637);
     
 }
