@@ -196,8 +196,21 @@
 // console.log( palidnrome("ayse"))
 
 
+// const palidnrome = function(str) {
+//     const reg= /[\W]/g;
 
+//     const newStr = str.toLowerCase().replace(reg, "")
+//     const c = newStr.split("").reverse().join("")
+//     if(c === newStr) {
+//         return true
+//     }else {
+//         false
+//     }
+   
+// }
+// console.log( palidnrome("123A32*1"))
 
 // ************14*************
+
 
 
