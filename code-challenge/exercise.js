@@ -152,4 +152,10 @@
 
 //11 .Reverse String
 
+const reverseString = function(str) {
 
+    return str.toLowerCase().split("").reverse().join("")
+    
+
+}
+console.log(reverseString("Aksoy"))
