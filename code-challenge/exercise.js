@@ -159,7 +159,23 @@
 // *********10*************
 // 11. Write a JavaScript function which returns the n rows by n columns identity matrix. 
 
+// ******11*****************
 
+
+// const donusum = (str) => str.split("").reverse().join("")
  
+
+
+// console.log( donusum("clarusway Rocks!"))
+
+// ********12************
+// const donusum = (str) => str.split(" ").reverse().join(" ");
+
+// console.log(donusum("clarusway Rocks!"));
+// console.log(donusum("clarusway"));
+// console.log(donusum("Little things make big days"));
+
+// ************13*************
+
 
 
