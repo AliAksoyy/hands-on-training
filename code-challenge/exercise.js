@@ -152,16 +152,31 @@
 
 //11 .Reverse String
 
-const reverseString = function(str) {
+// const reverseString = function(str) {
 
-    return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
+//     return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
 
-    //*2çözüm
-    let result =""
-    for(let i = str.length-1; i>=0; i--) {
-        result +=str[i]
-        console.log(result,i)
+//     //*2çözüm
+//     let result =""
+//     for(let i = str.length-1; i>=0; i--) {
+//         result +=str[i]
+//         console.log(result,i)
+//     }
+//     return result
+// }
+// console.log(reverseString("Aksoy"))
+
+// ****************12**********
+
+// 12. faktoriyel sorusu
+
+const faktor =(num) => {
+    let newNum=1
+    for(let i = 1; i<=num ;i++ ) {
+        
+        newNum = newNum *i
+        // console.log(newNum,i)
     }
-    return result
+    return newNum
 }
-console.log(reverseString("Aksoy"))
+console.log( faktor(5))
