@@ -214,24 +214,36 @@
 
 //14 soru Find Longest Word
 
- const uzun = function(sentence) {
-    const newWord = sentence.split(" ");
-    let enUzun = "";
-    let hafiza = 0
-    for(let i = 0; i<newWord.length; i++) {
+//  const uzun = function(sentence) {
+//     const newWord = sentence.split(" ");
+//     let enUzun = "";
+//     let hafiza = 0
+//     for(let i = 0; i<newWord.length; i++) {
        
-        if(newWord[i].length>enUzun) {
-            enUzun = newWord[i].length;
-            hafiza = i
-            console.log(newWord,i)
-        }
+//         if(newWord[i].length>enUzun) {
+//             enUzun = newWord[i].length;
+//             hafiza = i
+//             console.log(newWord,i)
+//         }
                 
         
-    }
-    return newWord[hafiza]
+//     }
+//     return newWord[hafiza]
 
- }
-console.log(uzun("ali aksoy"))
+//  }
+// console.log(uzun("ali aksoy"))
+
+// function enUzun (str) {
+//     return str.split(" ").sort(function(a,b) {return b.length -a.length})[0]
+//     console.log(a)
+
+    
+}
+console.log(enUzun("ali aksoy"));
+// ********************15***********
+
+// 15 soru Titlecase yani başlık
+
 
  
 
