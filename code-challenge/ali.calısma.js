@@ -283,4 +283,17 @@
 
 // Confirm the Endding
 
+const confrimEnd = function(str, n){
 
+    const word = str.split("")
+    const word1 = word.slice(word.length-1).join("")
+    
+    if(word1 === n){
+        return true
+    }
+
+    return false
+}
+console.log( confrimEnd("Ayse", "e"))
+console.log( confrimEnd("Ali", "i"))
+console.log( confrimEnd("Aliy", "i"))
