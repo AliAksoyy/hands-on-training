@@ -197,7 +197,7 @@ const chars = tarkan.split("");
 console.log(chars); 
 //* null karakterine göre harfleri ayırarark bir char dizisi oluşturdu
 
-/* ----------------------------------------------------------
+
 //* trim();
 //* ----------------------------------------------------------
 const ramazan = "    Hoş geldin ya şehri Ramazan     ";
