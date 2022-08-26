@@ -268,6 +268,29 @@
 // }
 // console.log( baslık1("aLi ve aYse"))
 
+// ******************16*********
+
+// 16 soru Array deki en büyük sayıyı bulma
+
+
+const enBuyuk = function(arr) {
+
+ let newDeger = []
+
+
+    for(let i = 0; i<arr.length; i++) {
+    
+        for(let j = 0; j<arr[i].length; j++) {
+           
+            console.log(arr[i],[j])
+        }
+        
+
+
+    }
+
+}
+enBuyuk([[4,5,1,3,5],[13,27,18,26,],[32,35,37,39],[1000,1001,857,1]])
  
 
 
