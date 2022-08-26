@@ -142,158 +142,24 @@
 
 
 // *********9*************
-// 9. Write a JavaScript function which accepts an argument and returns the type. 
+// 9. soru Array deki en büyük sayıları bulma ekrana yazdırma
+// [
+//   [4, 5, 1, 3, 7],
+//   [13, 27, 18, 26],
+//   [32, 35, 37, 39],
+//   [1000, 1001, 857, 1],
+// ];
+
+
+// **************10**********
+
+// 10. Write a JavaScript function which accepts an argument and returns the type. 
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
 // *********10*************
-// 10. Write a JavaScript function which returns the n rows by n columns identity matrix. 
-
-// ***********11***********
-
-//11 .Reverse String
-
-// const reverseString = function(str) {
-
-//     return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
-
-//     //*2çözüm
-//     let result =""
-//     for(let i = str.length-1; i>=0; i--) {
-//         result +=str[i]
-//         console.log(result,i)
-//     }
-//     return result
-// }
-// console.log(reverseString("Aksoy"))
-
-// ****************12**********
-
-// 12. faktoriyel sorusu
-
-// const faktor =(num) => {
-//     let newNum=1
-//     for(let i = 1; i<=num ;i++ ) {
-        
-//         newNum = newNum *i
-//         // console.log(newNum,i)
-//     }
-//     return newNum
-// }
-// console.log( faktor(5))
-
-// *********13**************
-
-// 13 .Palindromes
+// 11. Write a JavaScript function which returns the n rows by n columns identity matrix. 
 
 
-// const palidnrome = function(str) {
-
-//     return str === str.split("").reverse().join("") ? `${str} Palindrome` : `${str} NOT Palidnrome`
-
-
-// }
-// console.log( palidnrome("kazak"))
-// console.log( palidnrome("ayse"))
-
-
-// const palidnrome = function(str) {
-//     const reg= /[\W]/g;
-
-//     const newStr = str.toLowerCase().replace(reg, "")
-//     const c = newStr.split("").reverse().join("")
-//     if(c === newStr) {
-//         return true
-//     }else {
-//         false
-//     }
-   
-// }
-// console.log( palidnrome("123A32*1"))
-
-// ************14*************
-
-//14 soru Find Longest Word
-
-//  const uzun = function(sentence) {
-//     const newWord = sentence.split(" ");
-//     let enUzun = "";
-//     let hafiza = 0
-//     for(let i = 0; i<newWord.length; i++) {
-       
-//         if(newWord[i].length>enUzun) {
-//             enUzun = newWord[i].length;
-//             hafiza = i
-//             console.log(newWord,i)
-//         }
-                
-        
-//     }
-//     return newWord[hafiza]
-
-//  }
-// console.log(uzun("ali aksoy"))
-
-// function enUzun (str) {
-//     return str.split(" ").sort(function(a,b) {return b.length -a.length})[0]
-//     console.log(a)
-
-
-// console.log(enUzun("ali aksoy"));
-// ********************15***********
-
-// 15 soru Titlecase yani başlık Upper yap
-
-// const baslık = function(sentece){
-//      const word = sentece.split(" ")
-    
-//     for(let i = 0; i<word.length; i++) {
-//         word[i] =word[i][0].toUpperCase() +word[i].slice(1)
-//     }
-//     let a =word.join(" ")
-// return a
-// }
-
-
-
-   
-// console.log( baslık("ali ve ayse aksoy"))
-
-
-// const baslık1 = function(str) {
-
-//     const a = str.toLowerCase().split(" ").map(function(elem) {
-//      return   elem[0].toUpperCase() + elem.slice(1)
-//     })
-//     return a.join(" ")
-// }
-// console.log( baslık1("aLi ve aYse"))
-
-// ******************16*********
-
-// 16 soru Array deki en büyük sayıyı bulma
-
-
-const enBuyuk = function(arr) {
-
- let newDeger = []
-
-
-    for(let i = 0; i<arr.length; i++) {
-        
-        let buyuk =arr[i][0]
-        for(let j = 0; j<arr[i].length; j++) {
-           let mevcut= arr[i][j]
-            if(mevcut>=buyuk) {
-                buyuk = mevcut
-            }
-        }
-        
-        newDeger.push(buyuk)
-
-    }
-    return newDeger
-}
-console.log( enBuyuk([[4,5,1,3,7],[13,27,18,26,],[32,35,37,39],[1000,1001,857,1]]))
  
 
 
