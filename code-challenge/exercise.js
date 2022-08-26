@@ -212,5 +212,27 @@
 
 // ************14*************
 
+//14 soru Find Longest Word
+
+ const uzun = function(sentence) {
+    const newWord = sentence.split(" ");
+    let enUzun = "";
+    let hafiza = 0
+    for(let i = 0; i<newWord.length; i++) {
+       
+        if(newWord[i].length>enUzun) {
+            enUzun = newWord[i].length;
+            hafiza = i
+            console.log(newWord,i)
+        }
+                
+        
+    }
+    return newWord[hafiza]
+
+ }
+console.log(uzun("ali aksoy"))
+
+ 
 
 
