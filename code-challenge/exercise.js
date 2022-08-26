@@ -170,13 +170,34 @@
 
 // 12. faktoriyel sorusu
 
-const faktor =(num) => {
-    let newNum=1
-    for(let i = 1; i<=num ;i++ ) {
+// const faktor =(num) => {
+//     let newNum=1
+//     for(let i = 1; i<=num ;i++ ) {
         
-        newNum = newNum *i
-        // console.log(newNum,i)
-    }
-    return newNum
-}
-console.log( faktor(5))
+//         newNum = newNum *i
+//         // console.log(newNum,i)
+//     }
+//     return newNum
+// }
+// console.log( faktor(5))
+
+// *********13**************
+
+// 13 .Palindromes
+
+
+// const palidnrome = function(str) {
+
+//     return str === str.split("").reverse().join("") ? `${str} Palindrome` : `${str} NOT Palidnrome`
+
+
+// }
+// console.log( palidnrome("kazak"))
+// console.log( palidnrome("ayse"))
+
+
+
+
+// ************14*************
+
+
