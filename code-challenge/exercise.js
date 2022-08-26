@@ -243,19 +243,19 @@
 
 // 15 soru Titlecase yani başlık Upper yap
 
-const baslık = function(sentece){
-     const word = sentece.split(" ")
+// const baslık = function(sentece){
+//      const word = sentece.split(" ")
     
-    for(let i = 0; i<word.length; i++) {
-        word[i] =word[i][0].toUpperCase() +word[i].slice(1)
-    }
-    let a =word.join(" ")
-return a
-}
+//     for(let i = 0; i<word.length; i++) {
+//         word[i] =word[i][0].toUpperCase() +word[i].slice(1)
+//     }
+//     let a =word.join(" ")
+// return a
+// }
 
 
    
-console.log( baslık("ali ve ayse aksoy"))
+// console.log( baslık("ali ve ayse aksoy"))
 
 
  
