@@ -237,12 +237,25 @@
 //     return str.split(" ").sort(function(a,b) {return b.length -a.length})[0]
 //     console.log(a)
 
-    
-}
-console.log(enUzun("ali aksoy"));
+
+// console.log(enUzun("ali aksoy"));
 // ********************15***********
 
-// 15 soru Titlecase yani başlık
+// 15 soru Titlecase yani başlık Upper yap
+
+const baslık = function(sentece){
+     const word = sentece.split(" ")
+    
+    for(let i = 0; i<word.length; i++) {
+        word[i] =word[i][0].toUpperCase() +word[i].slice(1)
+    }
+    let a =word.join(" ")
+return a
+}
+
+
+   
+console.log( baslık("ali ve ayse aksoy"))
 
 
  
