@@ -154,7 +154,9 @@
 
 const reverseString = function(str) {
 
-    // return str.toLowerCase().split("").reverse().join("")
+    return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
+
+    //*2çözüm
     let result =""
     for(let i = str.length-1; i>=0; i--) {
         result +=str[i]
