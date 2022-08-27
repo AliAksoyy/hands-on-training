@@ -341,8 +341,8 @@
 // Truncate String yani kesmek
 
 function truncatestring (str,num) {
-  return str.slice(num)
+  return str.slice(num,15) + " ....."
     
 
 }
-console.log( truncatestring("ali aksoy ve beyda kızım",9))
+console.log( truncatestring("ali aksoy ve beyda kızım",10))
