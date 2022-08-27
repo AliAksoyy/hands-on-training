@@ -340,9 +340,25 @@
 
 // Truncate String yani kesmek
 
-function truncatestring (str,num) {
-  return str.slice(num,15) + " ....."
+// function truncatestring (str,num) {
+//   return str.slice(num,15) + " ....."
     
 
+// }
+// console.log( truncatestring("ali aksoy ve beyda kızım",10))
+
+// **************20**********
+// Chunky Monkey
+
+const chunkyArray = function(arr,size) {
+
+    const newGrup = []
+    while(arr.length>0) {
+        newGrup.push(arr.slice(0,size))
+        console.log(newGrup)
+    }
+    return newGrup
 }
-console.log( truncatestring("ali aksoy ve beyda kızım",10))
+
+
+console.log( chunkyArray("a,b,c,d,e,f,g,h,j,",3))
