@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:200px 20vh calc(100vh - (200px + 30vh)) 10vh;
+}
+.header {
+    background-image: url("https://picsum.photos/id/684/600/400");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: span 12;
+}
+nav {
+    background-color:rgb(133, 133, 199);
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside {
+    background-color:rgb(196, 110, 13);
+    grid-column: span 3;
+}
+main {
+    background-color:tomato;
+    grid-column: span 9;
+}
+footer {
+    background-color:rgb(9, 255, 0);
+    grid-column: span 12;
+    
+}
