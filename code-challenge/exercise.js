@@ -128,13 +128,19 @@
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
-const wordComb = (str) => {
-    let newStr = str.split("")
-    for(let i =0; i<newStr.length;i++) {
-        console.log(newStr[i])
-    }
+const combinations = (str= '') => {
+let temp='';
+for (let i = 0; i < str.length; i++) {
+let int = '';
+for (let j=i; j < str.length; j++) {
+int += str[j];
+temp += int + ',' ;
 }
-    wordComb("kitap")
+}
+return temp;
+}
+
+console.log( combinations('dog')) 
 
 
 // *********7*************
