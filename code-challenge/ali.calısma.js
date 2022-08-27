@@ -300,13 +300,29 @@
 
 // 2. çözüm
 
-const son = function(word,x) {
-    if(word.endsWith(x)){
-        return true
+// const son = function(word,x) {
+//     if(word.endsWith(x)){
+//         return true
+//     }
+//     return false
+
+// }
+// console.log( son("Ayse", "e"))
+// console.log( son("Ali", "i"))
+// console.log( son("Aliy", "i"));
+
+// ************18*********
+//  Repeat a string Num Times ??
+
+const repeatTimes = function(str,num){
+
+    for(let i = 0; 0<num; i++) {
+
+        const a = str.concat(str);
+        console.log(a)
     }
-    return false
+    
+    
 
 }
-console.log( son("Ayse", "e"))
-console.log( son("Ali", "i"))
-console.log( son("Aliy", "i"));
+repeatTimes("abcd",7)
