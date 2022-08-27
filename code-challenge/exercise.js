@@ -128,6 +128,14 @@
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
+const wordComb = (str) => {
+    let newStr = str.split("")
+    for(let i =0; i<newStr.length;i++) {
+        console.log(newStr[i])
+    }
+}
+    wordComb("kitap")
+
 
 // *********7*************
 // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string. 
