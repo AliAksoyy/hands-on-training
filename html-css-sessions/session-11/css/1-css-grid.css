@@ -7,11 +7,16 @@
   display: grid;
   /*!Sırasıyla 200px, 40vw ve 20rem'lik 3 adet sütun tanımlama*/
   grid-template-columns: 200px 40vw 20rem;
-  justify-content: center;
+
   /*! Sırasıyla 100px, 200px,20vh ve 4rem'lik yüksekliğe sahip 4 adet satır tanımla (4x3 Grid)*/
   grid-template-rows: 100px 200px 20vh 4rem;
+
+  /*! grid seviyesinde hizalama */
   justify-content: center;
-  /* align-items: center; */ /*! içerik kadar ayrlar yükselik
+
+  /*! Tum gridleri kendi grid alanlarina gore dikey olarak hizalar */
+  /*? center'da itemlar auto height alir*/
+  /* align-items: flex-end; */
 }
 .content {
   background-color: wheat;
