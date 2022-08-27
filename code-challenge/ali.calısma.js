@@ -350,16 +350,29 @@
 // **************20**********
 // Chunky Monkey
 
-const chunkyArray = function(arr,size) {
+// const chunkyArray = function(arr,size) {
 
-    const newGrup = []
-    while(arr.length>0) {
-        newGrup.push(arr.slice(0,size))
-        arr = arr.slice(size)
-        console.log(newGrup)
-    }
-    return newGrup
+//     const newGrup = []
+//     while(arr.length>0) {
+//         newGrup.push(arr.splice(0,size))
+//         arr = arr.slice(size)
+//         // console.log(newGrup)ö
+//     }
+//     return newGrup
+// }
+
+
+// console.log( chunkyArray(["a", "b", "c", "d"],2))
+
+// **************21***********
+
+// Slasher
+
+const slasher = function(arr,num) {
+
+    arr.splice(0,num)
+    return arr
 }
 
 
-console.log( chunkyArray(["a", "b", "c", "d",2]))
+console.log(slasher(["a","b","c","d"],2))
