@@ -281,19 +281,32 @@
 
 // ****************17***************
 
-// Confirm the Endding
+//17 soru  Confirm the Endding 
 
-const confrimEnd = function(str, n){
+// const confrimEnd = function(str, n){
 
-    const word = str.split("")
-    const word1 = word.slice(word.length-1).join("")
+//     const word = str.split("")
+//     const word1 = word.slice(word.length-1).join("")
     
-    if(word1 === n){
+//     if(word1 === n){
+//         return true
+//     }
+
+//     return false
+// }
+// console.log( confrimEnd("Ayse", "e"))
+// console.log( confrimEnd("Ali", "i"))
+// console.log( confrimEnd("Aliy", "i"));
+
+// 2. çözüm
+
+const son = function(word,x) {
+    if(word.endsWith(x)){
         return true
     }
-
     return false
+
 }
-console.log( confrimEnd("Ayse", "e"))
-console.log( confrimEnd("Ali", "i"))
-console.log( confrimEnd("Aliy", "i"))
+console.log( son("Ayse", "e"))
+console.log( son("Ali", "i"))
+console.log( son("Aliy", "i"));
