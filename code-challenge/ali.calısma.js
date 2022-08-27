@@ -329,4 +329,10 @@
 
 // 2 çözüm
 
+const repeatTimes = function(str,num){
+
+    if(num<0) return ""
+    return str.repeat(num)
+}
+console.log(repeatTimes("abcd", 7));
 
