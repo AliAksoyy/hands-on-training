@@ -314,15 +314,19 @@
 // ************18*********
 //  Repeat a string Num Times ??
 
-const repeatTimes = function(str,num){
-    let final = ""
-    if(num<0) return ""
-    for(let i = 0; i<num; i++) {
-        final +=str
+// const repeatTimes = function(str,num){
+//     let final = ""
+//     if(num<0) return ""
+//     for(let i = 0; i<num; i++) {
+//         final +=str
         
-    }
-    return final
+//     }
+//     return final
     
 
-}
-console.log( repeatTimes("abcd",7))
+// }
+// console.log( repeatTimes("abcd",7))
+
+// 2 çözüm
+
+
