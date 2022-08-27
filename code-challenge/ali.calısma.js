@@ -329,10 +329,20 @@
 
 // 2 çözüm
 
-const repeatTimes = function(str,num){
+// const repeatTimes = function(str,num){
 
-    if(num<0) return ""
-    return str.repeat(num)
+//     if(num<0) return ""
+//     return str.repeat(num)
+// }
+// console.log(repeatTimes("abcd", 7));
+
+// ************19*************
+
+// Truncate String yani kesmek
+
+function truncatestring (str,num) {
+  return str.slice(num)
+    
+
 }
-console.log(repeatTimes("abcd", 7));
-
+console.log( truncatestring("ali aksoy ve beyda kızım",9))
