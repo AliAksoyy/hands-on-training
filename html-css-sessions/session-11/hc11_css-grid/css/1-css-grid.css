@@ -11,6 +11,7 @@
   /*! Sırasıyla 100px, 200px,20vh ve 4rem'lik yüksekliğe sahip 4 adet satır tanımla (4x3 Grid)*/
   grid-template-rows: 100px 200px 20vh 4rem;
   justify-content: center;
+  /* align-items: center; */ /*! içerik kadar ayrlar yükselik
 }
 .content {
   background-color: wheat;
