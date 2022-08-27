@@ -355,10 +355,11 @@ const chunkyArray = function(arr,size) {
     const newGrup = []
     while(arr.length>0) {
         newGrup.push(arr.slice(0,size))
+        arr = arr.slice(size)
         console.log(newGrup)
     }
     return newGrup
 }
 
 
-console.log( chunkyArray("a,b,c,d,e,f,g,h,j,",3))
+console.log( chunkyArray(["a", "b", "c", "d",2]))
