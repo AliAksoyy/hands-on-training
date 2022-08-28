@@ -185,19 +185,27 @@
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
-    const numVowel = function(str) {
+    // const numVowel = function(str) {
     
-        const vowel= "aeiou"
-        let cnt =0
-        for(let i = 0; i<str.length ;i++) {
-            if(vowel.includes(str[i])) {
-                cnt++
-            }
-        }
-        return cnt
-    }
-    console.log( numVowel("The quick brown fox"));
+    //     const vowel= "aeiou"
+    //     let cnt =0
+    //     for(let i = 0; i<str.length ;i++) {
+    //         if(vowel.includes(str[i])) {
+    //             cnt++
+    //         }
+    //     }
+    //     return cnt
+    // }
+    // console.log( numVowel("The quick brown fox"));
 
+    // 2çözüm
+
+//     const a = (str) => {
+//         let arr = [];
+//         arr = str.match(/[aeiou]/gi);
+//         return arr.length
+//     }
+// console.log(a("The quick brown fox"));
 
 
 // *********8*************
