@@ -128,19 +128,55 @@
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
-const combinations = (str= '') => {
-let temp='';
-for (let i = 0; i < str.length; i++) {
-let int = '';
-for (let j=i; j < str.length; j++) {
-int += str[j];
-temp += int + ',' ;
-}
-}
-return temp;
-}
+// const combinations = (str= '') => {
+// let temp='';
+// for (let i = 0; i < str.length; i++) {
+// let int = '';
+// for (let j=i; j < str.length; j++) {
+// int += str[j];
+// temp += int + ',' ;
+// }
+// }
+// return temp;
+// }
 
-console.log( combinations('dog')) 
+// console.log( combinations('dog')) 
+
+// 2 çözüm
+
+// const comb = (str) => {
+//     let newStr= ""
+//     for(let i= 0; i<str.length; i++) {
+//         let a = str.slice(i,str.length)
+//         newStr += a + " ,"
+//         console.log(newStr)
+//         for(let j=i; j<newStr.length; j++) {
+//             newStr.slice()
+
+//         }
+//     }
+// }
+// comb("dog")
+// 2 çözüm
+// const wordComb = (str) => {
+//   let newStr = [];
+//   let final = "";
+//   for (let i = 0; i < str.length; i++) {
+//     let word = str.slice(i, str.length);
+//     newStr.push(word);
+//     // console.log(newStr)
+//     for (j = word.length - 1; j > 0; j--) {
+//       let word1 = word.slice(0, j);
+//       newStr.push(word1);
+//     }
+//   }
+//   // console.log(newStr)
+//   // for(k=0; k < newStr.length;k++){
+//   //     final = final.concat(newStr[k] , ',');
+//   // }
+//   return (final = newStr.join(","));
+// };
+// console.log(wordComb("kitap"));
 
 
 // *********7*************
@@ -148,6 +184,20 @@ console.log( combinations('dog'))
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
 // Example string : 'The quick brown fox'
 // Expected Output : 5
+
+    const numVowel = function(str) {
+    
+        const vowel= "aeiou"
+        let cnt =0
+        for(let i = 0; i<str.length ;i++) {
+            if(vowel.includes(str[i])) {
+                cnt++
+            }
+        }
+        return cnt
+    }
+    console.log( numVowel("The quick brown fox"));
+
 
 
 // *********8*************
