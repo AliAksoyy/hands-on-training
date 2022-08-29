@@ -143,11 +143,11 @@
 
 //11 .Reverse String
 
-const reverseString = function(str) {
+// const reverseString = function(str) {
 
     // return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
 
-    //*2çözüm
+    // *2çözüm
 //     let result =""
 //     for(let i = str.length-1; i>=0; i--) {
 //         result +=str[i]
@@ -188,6 +188,7 @@ const reverseString = function(str) {
 //     const reg= /[\W]/g;
 
 //     const newStr = str.toLowerCase().replace(reg, "")
+//     console.log(newStr)
 //     const c = newStr.split("").reverse().join("")
 //     if(c === newStr) {
 //         return true
