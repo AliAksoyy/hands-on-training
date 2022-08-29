@@ -370,27 +370,27 @@
 
 // Slasher
 
-const slasher = function(arr,num) {
+// const slasher = function(arr,num) {
 
-    arr.splice(0,num)
-    return arr
-}
+//     arr.splice(0,num)
+//     return arr
+// }
 
 
-console.log(slasher(["a","b","c","d"],2))
+// console.log(slasher(["a","b","c","d"],2))
 
 // ***************22****************
 
 // Mutation
-const degisim = function(arr) {
+// const degisim = function(arr) {
 
-        let a = arr[0].toLowerCase()
-        let b = arr[1].toLowerCase()
+//         let a = arr[0].toLowerCase()
+//         let b = arr[1].toLowerCase()
 
-        for(let i = 0; i<arr[1].length;  i++) {
-            if(a.indexOf(b[i]) === -1) return false
-        }
+//         for(let i = 0; i<arr[1].length;  i++) {
+//             if(a.indexOf(b[i]) === -1) return false
+//         }
     
-        return true
-}
-console.log(degisim(["hello","heo"]))
+//         return true
+// }
+// console.log(degisim(["hello","heo"]))

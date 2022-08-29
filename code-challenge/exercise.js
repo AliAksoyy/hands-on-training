@@ -249,5 +249,70 @@
 
 // ************13*************
 
+// Asal Sayı BUlma
+
+// const asalSayi =function(num) {
+
+//       if(num<=1) {
+//         return false;
+//       }
+        
+//     else {
+//         for(let i = 2; i<num; i++) {
+//             if(num % i  ===0 ) {
+//                 return false;
+                
+//             }
+//         } return true;
+//     }
+      
+    
+
+// }
+// console.log(asalSayi(23) ? "asaldır" : "asal değildir")
+// console.log(asalSayi(2) ? "asaldır" : "asal değildir")
+// console.log(asalSayi(27) ? "asaldır" : "asal değildir")
+
+// ************14****************
+// tip belirleme yazma
+
+// const arg = (str) =>  typeof str;
+
+// console.log(arg(12))
+// console.log(arg(true))
+// console.log(arg("ali"))
+// console.log(arg([]))
+// console.log(arg())
+// console.log(arg( function abc() {return 2}))
+
+
+// let fonk = function(str) { return str
+
+// }
+// console.log(arg(fonk("str")))
+
+// ****************15****************
+
+const identity = function(x) {
+    let arr = [];
+    for(let i= 0 ;i<x ;i++){
+        let newArr = [];
+         for(let j = 0; j<x ;j++) {
+            if(i===j) {
+                newArr.push(1)
+            }else {
+                newArr.push(0)
+            }
+            
+         }
+         arr.push(newArr)
+    }
+    return arr
+
+}
+console.log(identity(3))
+console.log(identity(5))
+
+
 
 
