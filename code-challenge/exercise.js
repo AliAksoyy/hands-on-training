@@ -292,26 +292,67 @@
 // console.log(arg(fonk("str")))
 
 // ****************15****************
-
-const identity = function(x) {
-    let arr = [];
-    for(let i= 0 ;i<x ;i++){
-        let newArr = [];
-         for(let j = 0; j<x ;j++) {
-            if(i===j) {
-                newArr.push(1)
-            }else {
-                newArr.push(0)
-            }
+// dizi içerisinde aynı index değerlerini bulma
+// const identity = function(x) {
+//     let arr = [];
+//     for(let i= 0 ;i<x ;i++){
+//         let newArr = [];
+//          for(let j = 0; j<x ;j++) {
+//             if(i===j) {
+//                 newArr.push(1)
+//             }else {
+//                 newArr.push(0)
+//             }
             
-         }
-         arr.push(newArr)
-    }
-    return arr
+//          }
+//          arr.push(newArr)
+//     }
+//     return arr
 
-}
-console.log(identity(3))
-console.log(identity(5))
+// }
+// console.log(identity(3))
+// console.log(identity(5))
+
+// **************************16*******************
+//Dizi de ki enbüyük 2 inci ve en kücük 2 elemanı bul
+
+// const sirala =function(arr) {
+//     arr.sort((a,b) => {
+//         if(a>b) return 1;
+//         if(a<b) return -1;
+//         return 0   ;     
+//     })
+
+//     const newArr = [];
+//     newArr.push(arr[1], arr[arr.length-2])
+//     return newArr
+// }
+// console.log( sirala([3,5,12,56,31,9]))
+
+// ************************17****************
+// perfect number bölenleriini toplamı kendisine eşit olan sayı
+
+// const perfectNum = function(num) {
+        
+
+//     let sum = 0;
+//     for(let i= 1; i<num ;i++){
+//         if(num%i ===0) {
+//             sum+=i
+//         }
+//         console.log(sum)
+//     }
+//     if(sum===num) return `${sum} perfect num'dır`
+//     else return `${num} perfect num değildir`;
+        
+// }
+// console.log( perfectNum(6))
+// console.log( perfectNum(11))
+// console.log( perfectNum(28))
+// console.log( perfectNum(496))
+
+// ****************18****************
+
 
 
 
