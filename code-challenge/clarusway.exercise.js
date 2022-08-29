@@ -56,3 +56,6 @@ const absoluteResult = (num) => {
 }
    console.log( absoluteResult(15))
    console.log( absoluteResult(35))
+
+//    ***********4****************
+
