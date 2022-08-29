@@ -284,21 +284,21 @@
 
 //17 soru  Confirm the Endding 
 
-const confrimEnd = function(str, n){
+// const confrimEnd = function(str, n){
 
-    const word = str.split("")
-    const word1 = word.slice(word.length-1).join("")
-    console.log(word1)
+//     const word = str.split("")
+//     const word1 = word.slice(word.length-1).join("")
+//     console.log(word1)
     
-    if(word1 === n){
-        return true
-    }
+//     if(word1 === n){
+//         return true
+//     }
 
-    return false
-}
-console.log( confrimEnd("Ayse", "e"))
-console.log( confrimEnd("Ali", "i"))
-console.log( confrimEnd("Aliy", "i"));
+//     return false
+// }
+// console.log( confrimEnd("Ayse", "e"))
+// console.log( confrimEnd("Ali", "i"))
+// console.log( confrimEnd("Aliy", "i"));
 
 // 2. çözüm
 
@@ -358,7 +358,7 @@ console.log( confrimEnd("Aliy", "i"));
 //     while(arr.length>0) {
 //         newGrup.push(arr.splice(0,size))
 //         arr = arr.slice(size)
-//         // console.log(newGrup)ö
+//         // console.log(newGrup)
 //     }
 //     return newGrup
 // }
@@ -370,27 +370,27 @@ console.log( confrimEnd("Aliy", "i"));
 
 // Slasher
 
-// const slasher = function(arr,num) {
+const slasher = function(arr,num) {
 
-//     arr.splice(0,num)
-//     return arr
-// }
+    arr.splice(0,num)
+    return arr
+}
 
 
-// console.log(slasher(["a","b","c","d"],2))
+console.log(slasher(["a","b","c","d"],2))
 
 // ***************22****************
 
 // Mutation
-// const degisim = function(arr) {
+const degisim = function(arr) {
 
-//         let a = arr[0].toLowerCase()
-//         let b = arr[1].toLowerCase()
+        let a = arr[0].toLowerCase()
+        let b = arr[1].toLowerCase()
 
-//         for(let i = 0; i<arr[1].length;  i++) {
-//             if(a.indexOf(b[i]) === -1) return false
-//         }
+        for(let i = 0; i<arr[1].length;  i++) {
+            if(a.indexOf(b[i]) === -1) return false
+        }
     
-//         return true
-// }
-// console.log(degisim(["hello","heo"]))
+        return true
+}
+console.log(degisim(["hello","heo"]))
