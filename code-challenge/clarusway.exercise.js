@@ -36,4 +36,23 @@ function leapYear(year) {
 }
 
 // *********************************2******************
+// üçgenin alanı 3 kenarı bilinen
 
+const areaOfTriangle = (a,b,c) => {
+    let s =(a+b+c) / 2;
+
+    return (s*(s-a)*(s-b)*(s-c)) **0.5
+}
+console.log( areaOfTriangle(3,4,5))
+
+// ******************3********************
+
+const absoluteResult = (num) => {
+    if(num<20) {
+        return 20 - num
+    } else {
+        return Math.abs((20-num) * 2)
+    }
+}
+   console.log( absoluteResult(15))
+   console.log( absoluteResult(35))
