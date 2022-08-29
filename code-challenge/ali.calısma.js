@@ -4,12 +4,12 @@
 // Example x = 32243;
 // Expected Output : 34223
 
-// const donusum = function(number) {
-//     let a = number.split("").reverse().join("")
+const donusum = function(number) {
+    let a = number.split("").reverse().join("")
 
-//     return a
-// }
-// console.log(donusum("32243"))
+    return a
+}
+console.log(donusum("32243"))
 
 // *********2*************
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not?
