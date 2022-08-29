@@ -16,7 +16,7 @@
 //   true,
 //   false,
 //   undefined,
-//   ["appşe", "ball", "cat"],
+//   ["apple", "ball", "cat"],
 //   2,
 //   4,
 //   "lastobject",
@@ -430,29 +430,29 @@
 
 // ***************object issue
 
-const ali = [
-    "ali",
-    "aksoy",
-    2037-1991,
-    "teacher",
-    ["ayse", "beyda", "feyza"]
-]
-console.log(ali)
+// const ali = [
+//     "ali",
+//     "aksoy",
+//     2037-1991,
+//     "teacher",
+//     ["ayse", "beyda", "feyza"]
+// ]
+// console.log(ali)
 
-const ali1 = {
-  firstName: "ali",
-  lastName: "aksoy",
-  age: 2037 - 1991,
-  job: "teacher",
-  friends: ["ayse", "beyda", "feyza"]
-}
-console.log(ali1)
+// const ali1 = {
+//   firstName: "ali",
+//   lastName: "aksoy",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["ayse", "beyda", "feyza"]
+// }
+// console.log(ali1)
 
-console.log(ali1.lastName)
-console.log(ali1["lastName"]);
+// console.log(ali1.lastName)
+// console.log(ali1["lastName"]);
 
-const nameKey = "Name"
-console.log(ali1[`first` + nameKey])
-console.log(ali1[`last` + nameKey])
+// const nameKey = "Name"
+// console.log(ali1[`first` + nameKey])
+// console.log(ali1[`last` + nameKey])
 
 
