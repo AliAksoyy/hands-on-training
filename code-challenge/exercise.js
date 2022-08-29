@@ -124,59 +124,7 @@
 
 
 // *********6*************
-// 6. Write a JavaScript function that generates all combinations of a string. 
-// Example string : 'dog'
-// Expected Output : d,do,dog,o,og,g
 
-// const combinations = (str= '') => {
-// let temp='';
-// for (let i = 0; i < str.length; i++) {
-// let int = '';
-// for (let j=i; j < str.length; j++) {
-// int += str[j];
-// temp += int + ',' ;
-// }
-// }
-// return temp;
-// }
-
-// console.log( combinations('dog')) 
-
-// 2 çözüm
-
-// const comb = (str) => {
-//     let newStr= ""
-//     for(let i= 0; i<str.length; i++) {
-//         let a = str.slice(i,str.length)
-//         newStr += a + " ,"
-//         console.log(newStr)
-//         for(let j=i; j<newStr.length; j++) {
-//             newStr.slice()
-
-//         }
-//     }
-// }
-// comb("dog")
-// 2 çözüm
-// const wordComb = (str) => {
-//   let newStr = [];
-//   let final = "";
-//   for (let i = 0; i < str.length; i++) {
-//     let word = str.slice(i, str.length);
-//     newStr.push(word);
-//     // console.log(newStr)
-//     for (j = word.length - 1; j > 0; j--) {
-//       let word1 = word.slice(0, j);
-//       newStr.push(word1);
-//     }
-//   }
-//   // console.log(newStr)
-//   // for(k=0; k < newStr.length;k++){
-//   //     final = final.concat(newStr[k] , ',');
-//   // }
-//   return (final = newStr.join(","));
-// };
-// console.log(wordComb("kitap"));
 
 
 // *********7*************
@@ -185,28 +133,7 @@
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
-    // const numVowel = function(str) {
     
-    //     const vowel= "aeiou"
-    //     let cnt =0
-    //     for(let i = 0; i<str.length ;i++) {
-    //         if(vowel.includes(str[i])) {
-    //             cnt++
-    //         }
-    //     }
-    //     return cnt
-    // }
-    // console.log( numVowel("The quick brown fox"));
-
-    // 2çözüm
-
-//     const a = (str) => {
-//         let arr = [];
-//         arr = str.match(/[aeiou]/gi);
-//         return arr.length
-//     }
-// console.log(a("The quick brown fox"));
-
 
 // *********8*************
 // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not. 
@@ -249,107 +176,19 @@
 
 // ************13*************
 
-// Asal Sayı BUlma
 
-// const asalSayi =function(num) {
-
-//       if(num<=1) {
-//         return false;
-//       }
-        
-//     else {
-//         for(let i = 2; i<num; i++) {
-//             if(num % i  ===0 ) {
-//                 return false;
-                
-//             }
-//         } return true;
-//     }
-      
-    
-
-// }
-// console.log(asalSayi(23) ? "asaldır" : "asal değildir")
-// console.log(asalSayi(2) ? "asaldır" : "asal değildir")
-// console.log(asalSayi(27) ? "asaldır" : "asal değildir")
 
 // ************14****************
-// tip belirleme yazma
 
-// const arg = (str) =>  typeof str;
-
-// console.log(arg(12))
-// console.log(arg(true))
-// console.log(arg("ali"))
-// console.log(arg([]))
-// console.log(arg())
-// console.log(arg( function abc() {return 2}))
-
-
-// let fonk = function(str) { return str
-
-// }
-// console.log(arg(fonk("str")))
 
 // ****************15****************
-// dizi içerisinde aynı index değerlerini bulma
-// const identity = function(x) {
-//     let arr = [];
-//     for(let i= 0 ;i<x ;i++){
-//         let newArr = [];
-//          for(let j = 0; j<x ;j++) {
-//             if(i===j) {
-//                 newArr.push(1)
-//             }else {
-//                 newArr.push(0)
-//             }
-            
-//          }
-//          arr.push(newArr)
-//     }
-//     return arr
 
-// }
-// console.log(identity(3))
-// console.log(identity(5))
 
 // **************************16*******************
-//Dizi de ki enbüyük 2 inci ve en kücük 2 elemanı bul
 
-// const sirala =function(arr) {
-//     arr.sort((a,b) => {
-//         if(a>b) return 1;
-//         if(a<b) return -1;
-//         return 0   ;     
-//     })
-
-//     const newArr = [];
-//     newArr.push(arr[1], arr[arr.length-2])
-//     return newArr
-// }
-// console.log( sirala([3,5,12,56,31,9]))
 
 // ************************17****************
-// perfect number bölenleriini toplamı kendisine eşit olan sayı
 
-// const perfectNum = function(num) {
-        
-
-//     let sum = 0;
-//     for(let i= 1; i<num ;i++){
-//         if(num%i ===0) {
-//             sum+=i
-//         }
-//         console.log(sum)
-//     }
-//     if(sum===num) return `${sum} perfect num'dır`
-//     else return `${num} perfect num değildir`;
-        
-// }
-// console.log( perfectNum(6))
-// console.log( perfectNum(11))
-// console.log( perfectNum(28))
-// console.log( perfectNum(496))
 
 // ****************18****************
 

@@ -21,7 +21,7 @@
 //     let c =a.split("")
 //     let b = c.reverse().join("")
 
-//     // console.log(b)
+    // console.log(b)
 //     if(b===a) {
 //         console.log("palindrome");
 
@@ -122,22 +122,213 @@
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
+
+// const combinations = (str= '') => {
+// let temp='';
+// for (let i = 0; i < str.length; i++) {
+// let int = '';
+// for (let j=i; j < str.length; j++) {
+// int += str[j];
+// temp += int + ',' ;
+// }
+// }
+// return temp;
+// }
+
+// console.log( combinations('dog')) 
+
+// 2 çözüm
+
+// const comb = (str) => {
+//     let newStr= ""
+//     for(let i= 0; i<str.length; i++) {
+//         let a = str.slice(i,str.length)
+//         newStr += a + " ,"
+//         console.log(newStr)
+//         for(let j=i; j<newStr.length; j++) {
+//             newStr.slice()
+
+//         }
+//     }
+// }
+// comb("dog")
+// 2 çözüm
+// const wordComb = (str) => {
+//   let newStr = [];
+//   let final = "";
+//   for (let i = 0; i < str.length; i++) {
+//     let word = str.slice(i, str.length);
+//     newStr.push(word);
+    // console.log(newStr)
+//     for (j = word.length - 1; j > 0; j--) {
+//       let word1 = word.slice(0, j);
+//       newStr.push(word1);
+//     }
+//   }
+  // console.log(newStr)
+  // for(k=0; k < newStr.length;k++){
+  //     final = final.concat(newStr[k] , ',');
+  // }
+//   return (final = newStr.join(","));
+// };
+// console.log(wordComb("kitap"))
+
+
+
 // *********7*************
 // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
 // Example string : 'The quick brown fox'
 // Expected Output : 5
 
+// const numVowel = function(str) {
+    
+    //     const vowel= "aeiou"
+    //     let cnt =0
+    //     for(let i = 0; i<str.length ;i++) {
+    //         if(vowel.includes(str[i])) {
+    //             cnt++
+    //         }
+    //     }
+    //     return cnt
+    // }
+    // console.log( numVowel("The quick brown fox"));
+
+    // 2çözüm
+
+//     const a = (str) => {
+//         let arr = [];
+//         arr = str.match(/[aeiou]/gi);
+//         return arr.length
+//     }
+// console.log(a("The quick brown fox"));
+
+
 // *********8*************
 // 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+// Asal Sayı BUlma
+
+// const asalSayi =function(num) {
+
+//       if(num<=1) {
+//         return false;
+//       }
+        
+//     else {
+//         for(let i = 2; i<num; i++) {
+//             if(num % i  ===0 ) {
+//                 return false;
+                
+//             }
+//         } return true;
+//     }
+      
+    
+
+// }
+// console.log(asalSayi(23) ? "asaldır" : "asal değildir")
+// console.log(asalSayi(2) ? "asaldır" : "asal değildir")
+// console.log(asalSayi(27) ? "asaldır" : "asal değildir")
+
+
 
 // *********9*************
 // 9. Write a JavaScript function which accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
+// tip belirleme yazma
+
+// const arg = (str) =>  typeof str;
+
+// console.log(arg(12))
+// console.log(arg(true))
+// console.log(arg("ali"))
+// console.log(arg([]))
+// console.log(arg())
+// console.log(arg( function abc() {return 2}))
+
+
+// let fonk = function(str) { return str
+
+// }
+// console.log(arg(fonk("str")))
+
+
+
 // *********10*************
 // 10. Write a JavaScript function which returns the n rows by n columns identity matrix.
+// dizi içerisinde aynı index değerlerini bulma
+
+// const identity = function(x) {
+//     let arr = [];
+//     for(let i= 0 ;i<x ;i++){
+//         let newArr = [];
+//          for(let j = 0; j<x ;j++) {
+//             if(i===j) {
+//                 newArr.push(1)
+//             }else {
+//                 newArr.push(0)
+//             }
+            
+//          }
+//          arr.push(newArr)
+//     }
+//     return arr
+
+// }
+// console.log(identity(3))
+// console.log(identity(5))
+
+// ***********11***********
+
+// 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively. Go to the editor
+// Sample array : [1,2,3,4,5]
+// Expected Output : 2,4
+
+//Dizi de ki enbüyük 2 inci ve en kücük 2 elemanı bul
+
+// const sirala =function(arr) {
+//     arr.sort((a,b) => {
+//         if(a>b) return 1;
+//         if(a<b) return -1;
+//         return 0   ;     
+//     })
+
+//     const newArr = [];
+//     newArr.push(arr[1], arr[arr.length-2])
+//     return newArr
+// }
+// console.log( sirala([3,5,12,56,31,9]))
+
+// ****************12**************
+//  Write a JavaScript function which says whether a number is perfect. Go to the editor
+// According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
+// Example : The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128.
+
+// perfect number bölenleriini toplamı kendisine eşit olan sayı
+
+// const perfectNum = function(num) {
+        
+
+//     let sum = 0;
+//     for(let i= 1; i<num ;i++){
+//         if(num%i ===0) {
+//             sum+=i
+//         }
+//         console.log(sum)
+//     }
+//     if(sum===num) return `${sum} perfect num'dır`
+//     else return `${num} perfect num değildir`;
+        
+// }
+// console.log( perfectNum(6))
+// console.log( perfectNum(11))
+// console.log( perfectNum(28))
+// console.log( perfectNum(496))
+
+
 
 // ***********11***********
 

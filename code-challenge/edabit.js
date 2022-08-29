@@ -228,20 +228,20 @@
 // console.log( donusum("the quick brown fox"))
 
 // **********
-const uzun = function(str) {
+// const uzun = function(str) {
 
-    let a = str.match(/\w[az]{0,}/gi); 
-    // console.log(a)
-    let sonuc =a[0];
-    for (let i = 1; i<a.length; i++) {
-        if(sonuc.length < a[i].length) {
-            sonuc = a[i]
-        }
-    }
+//     let a = str.match(/\w[az]{0,}/gi); 
+//     // console.log(a)
+//     let sonuc =a[0];
+//     for (let i = 1; i<a.length; i++) {
+//         if(sonuc.length < a[i].length) {
+//             sonuc = a[i]
+//         }
+//     }
 
-    return sonuc
-}
-console.log( uzun("sen ve ben develepor olabildik"))
+//     return sonuc
+// }
+// console.log( uzun("sen ve ben develepor olabildik"))
 
 // 3. Write a JavaScript function that generates all combinations of a string. 
 // Example string : 'dog'
