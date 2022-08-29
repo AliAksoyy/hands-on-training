@@ -54,7 +54,7 @@
 //      }
 //    };
 
-   console.log(isPalindrome("aiTopiNonAverevanoNipotia"));
+//    console.log(isPalindrome("aiTopiNonAverevanoNipotia"));
 
 // *********3*************
 // 3. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
@@ -143,19 +143,19 @@
 
 //11 .Reverse String
 
-// const reverseString = function(str) {
+const reverseString = function(str) {
 
-//     return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
+    return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
 
-//     //*2çözüm
-//     let result =""
-//     for(let i = str.length-1; i>=0; i--) {
-//         result +=str[i]
-//         console.log(result,i)
-//     }
-//     return result
-// }
-// console.log(reverseString("Aksoy"))
+    //*2çözüm
+    let result =""
+    for(let i = str.length-1; i>=0; i--) {
+        result +=str[i]
+        console.log(result,i)
+    }
+    return result
+}
+console.log(reverseString("Aksoy"))
 
 // ****************12**********
 
