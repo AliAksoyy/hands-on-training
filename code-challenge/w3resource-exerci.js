@@ -1,3 +1,5 @@
+// !!!!!!!!!!!!!!!!FUNCTİONS CHALLENGE!!!!!!!!!!!!!!!!!!!!!!
+// ????????????????????????????????????????????????
 // *******1******************
 
 // 1. Write a JavaScript function that reverse a number.
@@ -432,258 +434,95 @@
 
 
 
-//!1 ***********************************
-
-//11 .Reverse String
-
-// const reverseString = function(str) {
-
-    // return str.toLowerCase().split("").reverse().join("") //**1 çözüm */
-
-    // *2çözüm
-//     let result =""
-//     for(let i = str.length-1; i>=0; i--) {
-//         result +=str[i]
-//         console.log(result,i)
-//     }
-//     return result
-// }
-// console.log(reverseString("Aksoy"))
-
-// ****************12**********
-
-// 12. faktoriyel sorusu
-
-// const faktor =(num) => {
-//     let newNum=1
-//     for(let i = 1; i<=num ;i++ ) {
-
-//         newNum = newNum *i
-//         // console.log(newNum,i)
-//     }
-//     return newNum
-// }
-// console.log( faktor(5))
-
-// *********13**************
-
-// 13 .Palindromes
-
-// const palidnrome = function(str) {
-
-//     return str === str.split("").reverse().join("") ? `${str} Palindrome` : `${str} NOT Palidnrome`
-
-// }
-// console.log( palidnrome("kazak"))
-// console.log( palidnrome("ayse"))
-
-// const palidnrome = function(str) {
-//     const reg= /[\W]/g;
-
-//     const newStr = str.toLowerCase().replace(reg, "")
-//     console.log(newStr)
-//     const c = newStr.split("").reverse().join("")
-//     if(c === newStr) {
-//         return true
-//     }else {
-//         false
-//     }
-
-// }
-// console.log( palidnrome("123A32*1"))
-
-// ************14*************
-
-//14 soru Find Longest Word
-
-//  const uzun = function(sentence) {
-//     const newWord = sentence.split(" ");
-//     let enUzun = "";
-//     let hafiza = 0
-//     for(let i = 0; i<newWord.length; i++) {
-
-//         if(newWord[i].length>enUzun) {
-//             enUzun = newWord[i].length;
-//             hafiza = i
-//             console.log(newWord,i)
-//         }
-
-//     }
-//     return newWord[hafiza]
-
-//  }
-// console.log(uzun("ali aksoy"))
-
-// function enUzun (str) {
-//     return str.split(" ").sort(function(a,b) {return b.length -a.length})[0]
-//     console.log(a)
-
-// console.log(enUzun("ali aksoy"));
-// ********************15***********
-
-// 15 soru Titlecase yani başlık Upper yap
-
-// const baslık = function(sentece){
-//      const word = sentece.split(" ")
-
-//     for(let i = 0; i<word.length; i++) {
-//         word[i] =word[i][0].toUpperCase() +word[i].slice(1)
-//     }
-//     let a =word.join(" ")
-// return a
-// }
-
-// console.log( baslık("ali ve ayse aksoy"))
-
-// const baslık1 = function(str) {
-
-//     const a = str.toLowerCase().split(" ").map(function(elem) {
-//      return   elem[0].toUpperCase() + elem.slice(1)
-//     })
-//     return a.join(" ")
-// }
-// console.log( baslık1("aLi ve aYse"))
-
-// ******************16*********
-
-// 16 soru Array deki en büyük sayıyı bulma
-
-// const enBuyuk = function (arr) {
-//   let newDeger = [];
-
-//   for (let i = 0; i < arr.length; i++) {
-//     let buyuk = arr[i][0];
-//     for (let j = 0; j < arr[i].length; j++) {
-//       let mevcut = arr[i][j];
-//       if (mevcut >= buyuk) {
-//         buyuk = mevcut;
-//       }
-//     }
-
-//     newDeger.push(buyuk);
-//   }
-//   return newDeger;
-// };
-// console.log(
-//   enBuyuk([
-//     [4, 5, 1, 3, 7],
-//     [13, 27, 18, 26],
-//     [32, 35, 37, 39],
-//     [1000, 1001, 857, 1],
-//   ])
-// );
-
-// ****************17***************
-
-//17 soru  Confirm the Endding 
-
-// const confrimEnd = function(str, n){
-
-//     const word = str.split("")
-//     const word1 = word.slice(word.length-1).join("")
-//     console.log(word1)
-    
-//     if(word1 === n){
-//         return true
-//     }
-
-//     return false
-// }
-// console.log( confrimEnd("Ayse", "e"))
-// console.log( confrimEnd("Ali", "i"))
-// console.log( confrimEnd("Aliy", "i"));
-
-// 2. çözüm
-
-// const son = function(word,x) {
-//     if(word.endsWith(x)){
-//         return true
-//     }
-//     return false
-
-// }
-// console.log( son("Ayse", "e"))
-// console.log( son("Ali", "i"))
-// console.log( son("Aliy", "i"));
-
-// ************18*********
-//  Repeat a string Num Times ??
-
-// const repeatTimes = function(str,num){
-//     let final = ""
-//     if(num<0) return ""
-//     for(let i = 0; i<num; i++) {
-//         final +=str
-        
-//     }
-//     return final
-    
-
-// }
-// console.log( repeatTimes("abcd",7))
-
-// 2 çözüm
-
-// const repeatTimes = function(str,num){
-
-//     if(num<0) return ""
-//     return str.repeat(num)
-// }
-// console.log(repeatTimes("abcd", 7));
-
-// ************19*************
-
-// Truncate String yani kesmek
-
-// function truncatestring (str,num) {
-//   return str.slice(num,15) + " ....."
-    
-
-// }
-// console.log( truncatestring("ali aksoy ve beyda kızım",10))
-
-// **************20**********
-// Chunky Monkey
-
-// const chunkyArray = function(arr,size) {
-
-//     const newGrup = []
-//     while(arr.length>0) {
-//         newGrup.push(arr.splice(0,size))
-//         arr = arr.slice(size)
-//         // console.log(newGrup)
-//     }
-//     return newGrup
-// }
-
-
-// console.log( chunkyArray(["a", "b", "c", "d"],2))
-
-// **************21***********
-
-// Slasher
-
-// const slasher = function(arr,num) {
-
-//     arr.splice(0,num)
-//     return arr
-// }
-
-
-// console.log(slasher(["a","b","c","d"],2))
-
-// ***************22****************
-
-// Mutation
-// const degisim = function(arr) {
-
-//         let a = arr[0].toLowerCase()
-//         let b = arr[1].toLowerCase()
-
-//         for(let i = 0; i<arr[1].length;  i++) {
-//             if(a.indexOf(b[i]) === -1) return false
-//         }
-    
-//         return true
-// }
-// console.log(degisim(["hello","heo"]))
+// ??????????????????????????????????????????????
+// !!!!!!!!!!!!!!!!!!!!!!!ARRAY CHALLENGE!!!!!!!!!!!!!!!!!!!!
+
+// *******************1********************
+
+// 1.Write a JavaScript function to check whether an `input` is an array or not. Go to the editor
+// Test Data :
+// console.log(is_array('w3resource'));
+// console.log(is_array([1, 2, 4, 0]));
+// false
+// true
+
+// const isArray = (input) => Array.isArray(input);
+// console.log(isArray({ as: 112, asd: 12 }));
+// console.log(isArray({ as: 112, asd: 12 }));
+// console.log(isArray([1, 2, 4, 0]))
+
+
+
+// *******************2********************
+// 2. Write a JavaScript function to clone an array. Go to the editor
+// Test Data :
+// console.log(array_Clone([1, 2, 4, 0]));
+// console.log(array_Clone([1, 2, [4, 0]]));
+// [1, 2, 4, 0]
+// [1, 2, [4, 0]]
+// Click me to see the solution
+
+// *******************3********************
+// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+// Test Data :
+// console.log(first([7, 9, 0, -2]));
+// console.log(first([],3));
+// console.log(first([7, 9, 0, -2],3));
+// console.log(first([7, 9, 0, -2],6));
+// console.log(first([7, 9, 0, -2],-3));
+// Expected Output :
+// 7
+// []
+// [7, 9, 0]
+// [7, 9, 0, -2]
+// []
+// Click me to see the solution
+
+// *******************4********************
+// 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
+// Test Data :
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
+// Expected Output :
+// -2
+// [9, 0, -2]
+// [7, 9, 0, -2]
+// Click me to see the solution
+// *******************5********************
+// 5. Write a simple JavaScript program to join all elements of the following array into a string. Go to the editor
+// Sample array : myColor = ["Red", "Green", "White", "Black"];
+// Expected Output :
+// "Red,Green,White,Black"
+// "Red,Green,White,Black"
+// "Red+Green+White+Black"
+// Click me to see the solution
+// *******************6********************
+// 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
+// Click me to see the solution
+// *******************7********************
+// 7. Write a JavaScript program to sort the items of an array. Go to the editor
+// Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+// Sample Output : -4,-3,1,2,3,5,6,7,8
+// Click me to see the solution
+// *******************8********************
+// 8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
+// Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// Sample Output : a ( 5 times )
+// Click me to see the solution
+// *******************9********************
+// 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
+// Click me to see the solution
+// *******************10********************
+// 10. Write a JavaScript program which prints the elements of the following array. Go to the editor
+// Note : Use nested for loops.
+// Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+// Sample Output :
+// "row 0"
+// " 1"
+// " 2"
+// " 1"
+// " 24"
+// "row 1"
+
+// Click me to see the solution
