@@ -468,6 +468,11 @@
 // }
 // console.log(cloneArray([1, 2, 4, 0]));
 
+// diger yöntemler
+// let y = x.map.((i) => i)
+// let y = Array.from(x)
+// let y = [...x]
+
 
 
 // *******************3********************
