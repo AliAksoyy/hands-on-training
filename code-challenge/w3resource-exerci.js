@@ -544,11 +544,13 @@
 // Click me to see the solution
 
 
-const myColor = (arr) => {
+// const a = (arr) => {
+// return arr.join("+");
+// }
 
- return arr.join("+")
-}
- console.log( myColor["Red", "Green", "White", "Black"]);
+
+// myColor =["Red", "Green", "White", "Black"];
+// console.log(a(myColor))
 
 // *******************6********************
 // 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
