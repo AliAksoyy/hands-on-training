@@ -611,6 +611,23 @@
 // *******************9********************
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
 // Click me to see the solution
+
+const buyuk = (str) => {
+    
+    const newBuyuk =str.toUpperCase().split(" ")
+    const newBuyuk1 []
+    for(let i = 0; i<newBuyuk.length; i++) {     
+     let a = [newBuyuk[i][0].toLowerCase()]
+     console.log(a)
+        newBuyuk1.unshift(a[i])
+    }
+
+    console.log(newBuyuk)
+
+}
+buyuk("The Quick Brown Fox")
+
+
 // *******************10********************
 // 10. Write a JavaScript program which prints the elements of the following array. Go to the editor
 // Note : Use nested for loops.
