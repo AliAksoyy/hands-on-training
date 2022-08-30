@@ -542,9 +542,23 @@
 // "Red,Green,White,Black"
 // "Red+Green+White+Black"
 // Click me to see the solution
+
+
+const myColor = (arr) => 
+
+    arr.join("+")
+
+ const myColor1 = ["Red", "Green", "White", "Black"]
+ console.log(myColor1(myColor))
+
 // *******************6********************
 // 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
-// Click me to see the solution
+
+
+
+
+
+
 // *******************7********************
 // 7. Write a JavaScript program to sort the items of an array. Go to the editor
 // Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
