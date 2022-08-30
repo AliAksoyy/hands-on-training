@@ -517,21 +517,21 @@
 // [9, 0, -2]
 // [7, 9, 0, -2]
 
-const lastElement = (arr, n = null) => {
-    if(n<0) {
-        return []
-    } else if (arr === []) {
-        return arr
-    } else if (n>0 && n<arr.length) {
-        return arr.slice(-n)
-    } else if (n>arr.length) {
-        return arr.slice(0)
-    } else if(n === null) {
-        return arr.at(-1)
-    }
-}
-console.log(lastElement([7, 9, 0, -2],6));
-console.log(lastElement([7, 9, 0, -2]));
+// const lastElement = (arr, n = null) => {
+//     if(n<0) {
+//         return []
+//     } else if (arr === []) {
+//         return arr
+//     } else if (n>0 && n<arr.length) {
+//         return arr.slice(-n)
+//     } else if (n>arr.length) {
+//         return arr.slice(0)
+//     } else if(n === null) {
+//         return arr.at(-1)
+//     }
+// }
+// console.log(lastElement([7, 9, 0, -2],6));
+// console.log(lastElement([7, 9, 0, -2]));
 
 
 // *******************5********************
