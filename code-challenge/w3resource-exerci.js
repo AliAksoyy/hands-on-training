@@ -573,18 +573,20 @@ const myColor = (arr) => {
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
 
-const sortNum = (arr) => {
-  return arr.sort((a, b) => a - b).join();
-};
-var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
-console.log(sortNum(arr1));
+// const sortNum = (arr) => {
+//   return arr.sort((a, b) => a - b).join();
+// };
+// var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+// console.log(sortNum(arr1));
 
 
 // *******************8********************
 // 8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
-// Click me to see the solution
+
+
+
 // *******************9********************
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
 // Click me to see the solution
