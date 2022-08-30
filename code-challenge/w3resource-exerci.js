@@ -476,7 +476,7 @@
 
 
 // *******************3********************
-// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. Go to the editor
+// 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array. 
 // Test Data :
 // console.log(first([7, 9, 0, -2]));
 // console.log(first([],3));
@@ -489,7 +489,22 @@
 // [7, 9, 0]
 // [7, 9, 0, -2]
 // []
-// Click me to see the solution
+
+const firstArr = (arr, n) => {
+    if(n<0) {
+        return []
+    } else if (arr === []) {
+        return arr
+    } else if (n>0 && n<arr.length) {
+        return arr.slice(0,n)
+    } else if (n>arr.length) {
+        return arr.slice(0)
+    } else if(n === null) {
+        return arr.at(0)
+    }
+}
+console.log(firstArr([7, 9, 0, -2]));
+console.log(firstArr([7, 9, 0, -2],-3));
 
 // *******************4********************
 // 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
