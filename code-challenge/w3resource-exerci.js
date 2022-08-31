@@ -336,6 +336,21 @@
 // 13. Write a JavaScript function to compute the factors of a positive integer. Go to the editor
 // Click me to see the solution.
 
+
+// let positiveInteger = (num) => {
+//   let arr = new Array();
+//   for (let i = 1; i < num + 1; i++) {
+//     if (num % i === 0) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr;
+// };
+
+// console.log(positiveInteger(12));
+// console.log(positiveInteger(15));
+// console.log(positiveInteger(17));
+
 // ****************14***************
 // 14. Write a JavaScript function to convert an amount to coins. Go to the editor
 // Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
