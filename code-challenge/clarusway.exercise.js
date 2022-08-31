@@ -125,6 +125,23 @@
 //! Q-2
 //? Write a JavaScript program to compute the greatest common divisor (GCD) (OBEB) of two positive integers.
 
+const ebobBul = (num1,num2) => {
+
+  let ebob ;
+      if(num1 ===0 || num2 ===0) {
+        return "Please enter a valid number"
+      }
+      for(let i = 0; i<= num1; i++) {
+        if(num1 %i === 0 && num2 % i === 0) {
+
+          ebob = i
+        }
+      }
+
+  return ebob
+}
+console.log( ebobBul(4,12))
+
 
 //! Q-3
 //? Write a code that displays the factors (tam bolen) of a number entered by the user.
