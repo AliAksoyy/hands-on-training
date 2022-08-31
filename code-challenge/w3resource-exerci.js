@@ -736,6 +736,37 @@
 // - - - - - - - - - - - - -
 // Note : Use ordinal numbers to tell their position.
 // Click me to see the solution
+//1 çözüm
+// color = ["Blue", "Green", "Yellow", "Orange"];
+// order = ["th", "st", "nd", "rd"];
+// for (i = 0; i < color.length - 1; i++) {
+//   x = i + 1;
+//   var output = x + order[x] + " color is " + color[i];
+//   console.log(output);
+
+//   2 çözüm
+
+  function getColors(clrs, suffx) {
+    for (var i = 0; i < clrs.length; i++) {
+      if (i == 0) {
+        console.log("" + 1 + suffx[1] + " choice is " + clrs[i] + ".");
+      } else if (i == 1) {
+        console.log("" + 2 + suffx[2] + " choice is " + clrs[i] + ".");
+      } else if (i == 2) {
+        console.log("" + 3 + suffx[3] + " choice is " + clrs[i] + ".");
+      } else {
+        console.log("" + (i + 1) + suffx[0] + " choice is " + clrs[i] + ".");
+      }
+    }
+    console.log("- - - - - - - - - - - - -");
+  }
+  console.log(
+    getColors(
+      ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "],
+      ["th", "st", "nd", "rd"]
+    )
+  );
+
 
 // *******************************16*************************
 
