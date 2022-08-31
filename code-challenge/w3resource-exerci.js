@@ -408,33 +408,46 @@
 
 // 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string. Go to the editor
 // Click me to see the solution.
-function countChar(s) {
-  let lst = new Set(s.split(""))
-  console.log(lst)
-    resoult = new Map(),
-    count = 0;
-  for (compare of lst) {
-    for (var i = 0; i < s.length; i++) {
-      if (compare === s[i]) {
-        count++;
-      }
-    }
-    resoult.set(compare, count);
-    count = 0;
-  }
-  console.log(resoult);
-}
-countChar("abacabd");
+// function countChar(s) {
+//   let lst = new Set(s.split(""))
+//   console.log(lst)
+//     resoult = new Map(),
+//     count = 0;
+//   for (compare of lst) {
+//     for (var i = 0; i < s.length; i++) {
+//       if (compare === s[i]) {
+//         count++;
+//       }
+//     }
+//     resoult.set(compare, count);
+//     count = 0;
+//   }
+//   console.log(resoult);
+// }
+// countChar("abacabd");
 // *******************18*********
 
 // 18. Write a function for searching JavaScript arrays with a binary search. Go to the editor
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
 // Click me to see the solution.
 
+
+
 // ***************19**************
 
 // 19. Write a JavaScript function that returns array elements larger than a number. Go to the editor
-// Click me to see the solution.
+
+function ex17(arr, nr) {
+  var res = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] > nr) {
+      res.push(arr[i]);
+    }
+  }
+  return res;
+}
+
+console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
 
 // *****************20************
 
