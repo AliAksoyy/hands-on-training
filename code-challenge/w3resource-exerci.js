@@ -682,23 +682,23 @@
 // 12. Write a JavaScript program to compute the sum and product of an array of integers. Go to the editor
 
 
-const toplam = (arr) => {
-    let toplam = 0
-    for(let i = 0; i<arr.length ;i++) {
-        toplam += arr[i]
-    }
-    return toplam
-}
-console.log(toplam([1,2,3,4]));
+// const toplam = (arr) => {
+//     let toplam = 0
+//     for(let i = 0; i<arr.length ;i++) {
+//         toplam += arr[i]
+//     }
+//     return toplam
+// }
+// console.log(toplam([1,2,3,4]));
 
-const carpım = (arr) => {
-    let sonuc = 1;
-    for(let i = 0; i<arr.length ;i++) {
-      sonuc *= arr[i] 
-    }
-    return sonuc
-}
-console.log(carpım([10, 5, 3, 4]));
+// const carpım = (arr) => {
+//     let sonuc = 1;
+//     for(let i = 0; i<arr.length ;i++) {
+//       sonuc *= arr[i] 
+//     }
+//     return sonuc
+// }
+// console.log(carpım([10, 5, 3, 4]));
 
 
 
@@ -708,6 +708,24 @@ console.log(carpım([10, 5, 3, 4]));
 // Sample Screen :
 // add elements in an blank array
 
+
+
+
+
 // *******************************14*************************
 
 // 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity). Go to the editor
+
+// const sameStatement =(arr) => {
+//         arr.sort()
+//         console.log(arr)
+//         const newdeger = []
+//         for(let i =0 ;i<arr.length; i++) {
+//             if(arr[i+1] !== arr[i]) {
+//                 newdeger.push(arr[i].toString())
+//             }
+
+//         }
+//         return newdeger
+// }
+// console.log( sameStatement([1,1,2,3,3,4,6,8,2,5,7,7]))
