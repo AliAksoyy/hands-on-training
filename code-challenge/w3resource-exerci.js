@@ -746,16 +746,16 @@
 
 // 16. Write a JavaScript program to find the leap years in a given range of years. Go to the editor
 
-(function (x, y) {
-  for (let i = x; i <= y; i++) {
-    if ((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0) {
-      console.log(i);
-    }
-  }
-})(1990, 2019);
+// (function (x, y) {
+//   for (let i = x; i <= y; i++) {
+//     if ((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0) {
+//       console.log(i);
+//     }
+//   }
+// })(1990, 2019);
 
 
-// leapYear([2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012])
+
 // *******************************17*************************
 
 // 17. Write a JavaScript program to shuffle an array. Go to the editor
