@@ -357,10 +357,24 @@
 // Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
 // Output : 25, 10, 10, 1
 // Click me to see the solution.
+
+
 // ****************15*******************
 
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result. Go to the editor
 // Click me to see the solution.
+// 1 çözüm
+
+
+
+// const hesapla =(b,n) => b**n
+// console.log( hesapla(4,2))
+// 2 çözüm
+// const a = function(b,n) {
+//   return Math.pow(b, n);
+// }
+//  console.log(a(4,2))
+
 
 // *******************16*************
 
