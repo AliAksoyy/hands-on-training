@@ -783,18 +783,54 @@
 // Expected Output :
 // [4, 5, 8, 10, 12, 13]
 
-const deger =(arr1,arr2) => {
+// const deger =(arr1,arr2) => {
 
-    let sonuc = []
+//     let sonuc = []
 
-    for(let i= 0; i<(arr1.length,arr2.length); i++) {
+//     for(let i= 0; i<(arr1.length,arr2.length); i++) {
        
-        sonuc.push(arr1[i] +arr2[i])
-    }
-    return sonuc
-}
-console.log(deger([1,0,2,3,4],[3,4,8,10,12,13]))
+//         sonuc.push(arr1[i] + arr2[i])
+//     }
+//     return sonuc
+// }
+// console.log(deger([1,0,2,3,4],[3,5,6,7,8]))
+
+// (function (array1, array2) {
+//   const result = [];
+
+//   if (array1.length > array2.length) {
+//     array1.forEach((item, index) => {
+//       result[index] = item + (array2[index] || 0);
+//     });
+//   } else {
+//     array2.forEach((item, index) => {
+//       result[index] = item + (array1[index] || 0);
+//     });
+//   }
+//   console.log(result);
+// })([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]);
 
 // *******************************20*************************
 
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array. Go to the editor
+
+// function find_duplicate_in_array(arr) {
+//   var resultArr = [];
+//   arr = arr.sort();
+
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i + 1] == arr[i]) {
+//       resultArr.push("" + arr[i + 1]);
+//     }
+//   }
+// //   returns only unique values
+//   return [...new Set(resultArr)];
+// }
+// console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
+
+// function find_duplicate_in_array1(arr) {
+//   const x = [...new Set(arr)];
+//   console.log(x);
+// }
+
+// find_duplicate_in_array1([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
