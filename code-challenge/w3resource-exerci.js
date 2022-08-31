@@ -707,11 +707,6 @@
 // 13. Write a JavaScript program to add items in an blank array and display the items. Go to the editor
 // Sample Screen :
 // add elements in an blank array
-
-
-
-
-
 // *******************************14*************************
 
 // 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity). Go to the editor
@@ -754,12 +749,11 @@
 //   }
 // })(1990, 2019);
 
-
-
 // *******************************17*************************
 
 // 17. Write a JavaScript program to shuffle an array. Go to the editor
 
+   
 // *******************************18*************************
 
 // 18. Write a JavaScript program to perform a binary search. Go to the editor
@@ -770,6 +764,16 @@
 // console.log(binary_Search(items, 1)); //0
 // console.log(binary_Search(items, 5)); //4
 
+ 
+// function binary_Search(items, value) {
+//   const a = items.sort();
+//   return a.indexOf(value);
+// }
+
+// const items = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+// console.log(binary_Search(items, 1));
+// console.log(binary_Search(items, 5));
+
 // *******************************19*************************
 
 // 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. Go to the editor
@@ -778,6 +782,18 @@
 // array2 = [3,5,6,7,8,13];
 // Expected Output :
 // [4, 5, 8, 10, 12, 13]
+
+const deger =(arr1,arr2) => {
+
+    let sonuc = []
+
+    for(let i= 0; i<(arr1.length,arr2.length); i++) {
+       
+        sonuc.push(arr1[i] +arr2[i])
+    }
+    return sonuc
+}
+console.log(deger([1,0,2,3,4],[3,4,8,10,12,13]))
 
 // *******************************20*************************
 
