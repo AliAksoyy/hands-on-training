@@ -643,6 +643,7 @@
 // console.log(swapCase("The Quick Brown Fox"));
 
 
+
 // *******************10********************
 // 10. Write a JavaScript program which prints the elements of the following array. Go to the editor
 // Note : Use nested for loops.
