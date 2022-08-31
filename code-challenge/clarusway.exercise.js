@@ -180,21 +180,32 @@
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
-const divisible = () => {
-  let arr = []
+// const divisible = () => {
+//   let arr = []
 
-  for(let i = 100; i<1000 ; i++) {
-    if(i%3 === 0 && i % 5 === 0) {
-      arr.push(i)
-    }
-  }
-  return arr
-}
- console.log( divisible())
+//   for(let i = 100; i<1000 ; i++) {
+//     if(i%3 === 0 && i % 5 === 0) {
+//       arr.push(i)
+//     }
+//   }
+//   return arr
+// }
+//  console.log( divisible())
 
 //! Q-6
 //? Write a code that prints a multiplication table of numbers 1 to 10.
 
+const multiplication = () => {
+    let arr = []
+    for(let i = 1; i<=10; i++) {
+      arr.push(`multipllication table of ${i}`)
+      for(let j =0; j<=10; j++ ) {
+        arr.push(`${i} * ${j} = ${i*j}`)
+      }
+    }
+    return arr
+}
+console.log( multiplication())
 
 //! Q-7
 //? Write a code to draw Whiteball and Powerball numbers for the Powerball lottery game. 
