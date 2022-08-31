@@ -232,6 +232,12 @@
 
 //! Q-1
 //? Write a Function that takes 2 parameters (amount and rate) to convert currency.
+// ?Examples Amount 1000 ve rate = 1.5
+
+const currency = (amount,rate) => {
+  return amount*rate
+}
+console.log( currency(1000,1.5))
 
 //! Q-2
 //? Write a JavaScript function that accepts an argument and returns the type.
