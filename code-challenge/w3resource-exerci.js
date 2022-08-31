@@ -641,4 +641,24 @@
 // " 24"
 // "row 1"
 
-// Click me to see the solution
+// const a = [
+//   [1, 2, 1, 24],
+//   [8, 11, 9, 4],
+//   [7, 0, 7, 27],
+//   [7, 4, 28, 14],
+//   [3, 10, 26, 7],
+// ];
+
+// for (const i in a) {
+//   console.log(`row ${i}`);
+//   for (const j in a[i]) {
+//     console.log(` ${a[i][j]}`);
+//   }
+// }
+
+
+// *******************11********************
+
+// 11 Write a JavaScript program to find the sum of squares of a numeric vector.
+
+
