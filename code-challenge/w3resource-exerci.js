@@ -163,16 +163,16 @@
 //   for (let i = 0; i < str.length; i++) {
 //     let word = str.slice(i, str.length);
 //     newStr.push(word);
-    // console.log(newStr)
+//     console.log(newStr)
 //     for (j = word.length - 1; j > 0; j--) {
 //       let word1 = word.slice(0, j);
 //       newStr.push(word1);
 //     }
 //   }
-  // console.log(newStr)
-  // for(k=0; k < newStr.length;k++){
-  //     final = final.concat(newStr[k] , ',');
-  // }
+//   console.log(newStr)
+//   for(k=0; k < newStr.length;k++){
+//       final = final.concat(newStr[k] , ',');
+//   }
 //   return (final = newStr.join(","));
 // };
 // console.log(wordComb("kitap"))
@@ -187,16 +187,16 @@
 
 // const numVowel = function(str) {
     
-    //     const vowel= "aeiou"
-    //     let cnt =0
-    //     for(let i = 0; i<str.length ;i++) {
-    //         if(vowel.includes(str[i])) {
-    //             cnt++
-    //         }
-    //     }
-    //     return cnt
-    // }
-    // console.log( numVowel("The quick brown fox"));
+//         const vowel= "aeiou"
+//         let cnt =0
+//         for(let i = 0; i<str.length ;i++) {
+//             if(vowel.includes(str[i])) {
+//                 cnt++
+//             }
+//         }
+//         return cnt
+//     }
+//     console.log( numVowel("The quick brown fox"));
 
     // 2çözüm
 
