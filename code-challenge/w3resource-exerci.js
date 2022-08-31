@@ -569,6 +569,7 @@
 
 // const dashedNum = (num) => {
 //     const arr =("0" + num.toString()).split("");
+//     console.log(arr)
 //     for(let i=0; i<arr.length; i++){
 //          if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
 //             arr.splice(i+1,0,'-')
