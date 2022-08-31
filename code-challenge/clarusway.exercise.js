@@ -163,23 +163,34 @@
 //! Q-4
 //? Write a code to calculate the factorial of a number entered by the user.
 
-  const faktoriyel = (num) => {
+  // const faktoriyel = (num) => {
 
-      if(num<0) return -1
+  //     if(num<0) return -1
 
-      if(num ===0) {
-        return 1
-      } else {
-        return num* faktoriyel(num-1)
-      }
+  //     if(num ===0) {
+  //       return 1
+  //     } else {
+  //       return num* faktoriyel(num-1)
+  //     }
 
     
-  }
+  // }
 
-  console.log( faktoriyel(6))
+  // console.log( faktoriyel(6))
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
+const divisible = () => {
+  let arr = []
+
+  for(let i = 100; i<1000 ; i++) {
+    if(i%3 === 0 && i % 5 === 0) {
+      arr.push(i)
+    }
+  }
+  return arr
+}
+ console.log( divisible())
 
 //! Q-6
 //? Write a code that prints a multiplication table of numbers 1 to 10.
