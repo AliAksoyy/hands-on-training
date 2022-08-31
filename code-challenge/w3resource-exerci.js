@@ -676,3 +676,38 @@
 //   return vector.reduce((sum, num) => (sum += num * num), 0);
 // }
 // console.log(sumOfSquares([1, 2, 3, 4]));
+
+// *******************************12*************************
+
+// 12. Write a JavaScript program to compute the sum and product of an array of integers. Go to the editor
+
+
+const toplam = (arr) => {
+    let toplam = 0
+    for(let i = 0; i<arr.length ;i++) {
+        toplam += arr[i]
+    }
+    return toplam
+}
+console.log(toplam([1,2,3,4]));
+
+const carpım = (arr) => {
+    let sonuc = 1;
+    for(let i = 0; i<arr.length ;i++) {
+      sonuc *= arr[i] 
+    }
+    return sonuc
+}
+console.log(carpım([10, 5, 3, 4]));
+
+
+
+// *******************************13*************************
+
+// 13. Write a JavaScript program to add items in an blank array and display the items. Go to the editor
+// Sample Screen :
+// add elements in an blank array
+
+// *******************************14*************************
+
+// 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity). Go to the editor
