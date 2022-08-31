@@ -723,6 +723,23 @@
 
 // console.log(swapCase("The Quick Brown Fox"));
 
+//  2 çözüm
+// const wordSwap = (str) => {
+//   const arr = str.toUpperCase().split(" ");
+//   let newArr = [];
+//   for (let word of arr) {
+//     let newWord = "";
+//     for (let i in word) {
+//       if (i == 0) {
+//         newWord += word[i].toLowerCase() + word.slice(i + 1);
+//       }
+//     }
+//     newArr.push(newWord);
+//   }
+//   return newArr.join(" ");
+// };
+// console.log(wordSwap("The Quick Brown Fox"));
+
 
 
 // *******************10********************

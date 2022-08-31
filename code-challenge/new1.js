@@ -7,28 +7,28 @@
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 
-// const hesapla =(nums,target) => {
+const hesapla =(nums,target) => {
 
-//         let newNums = []
+        let newNums = []
 
-//         for(let i =0; i<nums.length; i++) {
+        for(let i =0; i<nums.length; i++) {
 
-//             let fark = target - nums[i];
+            let fark = target - nums[i];
 
-//                 for(let j = 0; j<nums.length; j++) {
+                for(let j = 0; j<nums.length; j++) {
 
-//                     if(fark === nums[j]) {
-//                           newNums.push(nums.indexOf(nums[i]))
-//                           newNums.push(nums.indexOf(nums[j]))
-//                           return newNums
-//                     }
+                    if(fark === nums[j]) {
+                          newNums.push(nums.indexOf(nums[i]))
+                          newNums.push(nums.indexOf(nums[j]))
+                          return newNums
+                    }
                    
-//                 }
+                }
                 
-//         }
+        }
         
-// }
-//  hesapla([2,7,11,15],9)
+}
+ hesapla([2,7,11,15],9)
 
 
 
@@ -54,14 +54,14 @@
 // const palindrome = (num) => {
 //    const a =  Number(num.toString().split("").reverse().join(""))
 
-//    if(a===num) {
-//     console.log("palindrome")
-//     return true
-//    }else {
-//     return false
-//    }
-// }  
-// console.log( palindrome(122))
+   if(a===num) {
+    console.log("palindrome")
+    return true
+   }else {
+    return false
+   }
+}  
+console.log( palindrome(122))
 
 
 
@@ -100,30 +100,30 @@
 // Output: 1994
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
-let roman = {
-    I :1,
-    V : 5,
-    X : 10,
-    L : 50,
-    C : 100,
-    D : 500,
-    M : 1000
+// let roman = {
+//     I :1,
+//     V : 5,
+//     X : 10,
+//     L : 50,
+//     C : 100,
+//     D : 500,
+//     M : 1000
 
-};
+// };
 
-        const hesapla =(rom) => {
+//         const hesapla =(rom) => {
 
-            let total = 0
-            const arr = rom.split("");
-            console.log(arr)
+//             let total = 0
+//             const arr = rom.split("");
+//             console.log(arr)
 
-            for(let i = 0; i<arr.length; i++ ) {
-                if(roman[arr[i]] < roman[arr[i+1]]) {
-                    total -= roman[arr[i]]
-                }else {
-                    total += roman[arr[i]]
-                }             
-            }
-             return total     
-        }
-        console.log( hesapla("MCMXCIV"))
+//             for(let i = 0; i<arr.length; i++ ) {
+//                 if(roman[arr[i]] < roman[arr[i+1]]) {
+//                     total -= roman[arr[i]]
+//                 }else {
+//                     total += roman[arr[i]]
+//                 }             
+//             }
+//              return total     
+//         }
+//         console.log( hesapla("MCMXCIV"))
