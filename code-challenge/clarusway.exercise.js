@@ -261,9 +261,6 @@
 //     for(let i = 0 ;i<str.length; i++) {
 //       if(str[i] === char) {
 
-//         // if(str[i] === char) {
-//         //   count++
-//         // }
 //         count++
 //       }
 
@@ -271,6 +268,15 @@
 //     return `${char} occurs ${count} times in ${str}`
 // }
 // console.log(times("Clarusway", "a"))
+
+// 2 çözüm
+
+// const times = (str,char) => {
+
+//   return str.split(char).length -1
+// }
+// console.log(times("Clarusway", "a"))
+
 
 //! Q-4
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
