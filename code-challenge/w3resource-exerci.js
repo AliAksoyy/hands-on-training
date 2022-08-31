@@ -437,17 +437,17 @@
 
 // 19. Write a JavaScript function that returns array elements larger than a number. Go to the editor
 
-function ex17(arr, nr) {
-  var res = [];
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > nr) {
-      res.push(arr[i]);
-    }
-  }
-  return res;
-}
+// function ex17(arr, nr) {
+//   var res = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     if (arr[i] > nr) {
+//       res.push(arr[i]);
+//     }
+//   }
+//   return res;
+// }
 
-console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
+// console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
 
 // *****************20************
 
