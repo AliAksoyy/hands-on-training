@@ -122,12 +122,8 @@ let roman = {
                     total -= roman[arr[i]]
                 }else {
                     total += roman[arr[i]]
-                }
-               
-               
+                }             
             }
-
-             return total
-          
+             return total     
         }
         console.log( hesapla("MCMXCIV"))
