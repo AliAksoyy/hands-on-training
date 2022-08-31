@@ -729,3 +729,56 @@
 //         return newdeger
 // }
 // console.log( sameStatement([1,1,2,3,3,4,6,8,2,5,7,7]))
+// *******************************15*************************
+
+// 15. We have the following arrays : Go to the editor
+// color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// o = ["th","st","nd","rd"]
+// Write a JavaScript program to display the colors in the following way :
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+// - - - - - - - - - - - - -
+// Note : Use ordinal numbers to tell their position.
+// Click me to see the solution
+
+// *******************************16*************************
+
+// 16. Write a JavaScript program to find the leap years in a given range of years. Go to the editor
+
+(function (x, y) {
+  for (let i = x; i <= y; i++) {
+    if ((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0) {
+      console.log(i);
+    }
+  }
+})(1990, 2019);
+
+
+// leapYear([2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012])
+// *******************************17*************************
+
+// 17. Write a JavaScript program to shuffle an array. Go to the editor
+
+// *******************************18*************************
+
+// 18. Write a JavaScript program to perform a binary search. Go to the editor
+// Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
+// Sample array :
+// var items = [1, 2, 3, 4, 5, 7, 8, 9];
+// Expected Output :
+// console.log(binary_Search(items, 1)); //0
+// console.log(binary_Search(items, 5)); //4
+
+// *******************************19*************************
+
+// 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. Go to the editor
+// Sample array :
+// array1 = [1,0,2,3,4];
+// array2 = [3,5,6,7,8,13];
+// Expected Output :
+// [4, 5, 8, 10, 12, 13]
+
+// *******************************20*************************
+
+// 20. Write a JavaScript program to find duplicate values in a JavaScript array. Go to the editor
