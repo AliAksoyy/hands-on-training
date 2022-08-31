@@ -468,10 +468,21 @@
 // }
 // console.log(cloneArray([1, 2, 4, 0]));
 
+// // 2 çözüm
+// let x = [1, 2, 3, 4];
+// console.log("Original array:");
+// console.log(x);
+// let y = [...x];
+// console.log("Clone of the said array:");
+// console.log(y);
+
+// let a = [1,2,3]
+// let b =[...a]
+// console.log(b)
 // diger yöntemler
 // let y = x.map.((i) => i)
-// let y = Array.from(x)
-// let y = [...x]
+// let y1 = Array.from(x)
+// let y2 = [...x]
 
 
 
@@ -490,7 +501,7 @@
 // [7, 9, 0, -2]
 // []
 
-// const firstArr = (arr, n) => {
+// const firstArr = (arr, n =null) => {
 //     if(n<0) {
 //         return []
 //     } else if (arr === []) {
@@ -505,6 +516,7 @@
 // }
 // console.log(firstArr([7, 9, 0, -2]));
 // console.log(firstArr([7, 9, 0, -2],-3));
+// console.log(firstArr([7, 9, 0, -2],3));
 
 // *******************4********************
 // 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
@@ -746,26 +758,26 @@
 
 //   2 çözüm
 
-  function getColors(clrs, suffx) {
-    for (var i = 0; i < clrs.length; i++) {
-      if (i == 0) {
-        console.log("" + 1 + suffx[1] + " choice is " + clrs[i] + ".");
-      } else if (i == 1) {
-        console.log("" + 2 + suffx[2] + " choice is " + clrs[i] + ".");
-      } else if (i == 2) {
-        console.log("" + 3 + suffx[3] + " choice is " + clrs[i] + ".");
-      } else {
-        console.log("" + (i + 1) + suffx[0] + " choice is " + clrs[i] + ".");
-      }
-    }
-    console.log("- - - - - - - - - - - - -");
-  }
-  console.log(
-    getColors(
-      ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "],
-      ["th", "st", "nd", "rd"]
-    )
-  );
+//   function getColors(clrs, suffx) {
+//     for (var i = 0; i < clrs.length; i++) {
+//       if (i == 0) {
+//         console.log("" + 1 + suffx[1] + " choice is " + clrs[i] + ".");
+//       } else if (i == 1) {
+//         console.log("" + 2 + suffx[2] + " choice is " + clrs[i] + ".");
+//       } else if (i == 2) {
+//         console.log("" + 3 + suffx[3] + " choice is " + clrs[i] + ".");
+//       } else {
+//         console.log("" + (i + 1) + suffx[0] + " choice is " + clrs[i] + ".");
+//       }
+//     }
+//     console.log("- - - - - - - - - - - - -");
+//   }
+//   console.log(
+//     getColors(
+//       ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "],
+//       ["th", "st", "nd", "rd"]
+//     )
+//   );
 
 
 // *******************************16*************************
