@@ -146,23 +146,37 @@
 //! Q-3
 //? Write a code that displays the factors (tam bolen) of a number entered by the user.
 
-const tamBolen =(num)=> {
-  let arr = []
+// const tamBolen =(num)=> {
+//   let arr = []
 
-  for(let i = 0; i<= num; i++) {
-    if(num% i ===0) {
-      arr.push(i)
-    }
-  }
+//   for(let i = 0; i<= num; i++) {
+//     if(num% i ===0) {
+//       arr.push(i)
+//     }
+//   }
 
 
-  return  arr
-} 
-console.log(tamBolen(12))
+//   return  arr
+// } 
+// console.log(tamBolen(12))
 
 //! Q-4
 //? Write a code to calculate the factorial of a number entered by the user.
 
+  const faktoriyel = (num) => {
+
+      if(num<0) return -1
+
+      if(num ===0) {
+        return 1
+      } else {
+        return num* faktoriyel(num-1)
+      }
+
+    
+  }
+
+  console.log( faktoriyel(6))
 //! Q-5
 //? Write a code to find numbers that are divisible by 3 and 5, between 100 and 1000.
 
