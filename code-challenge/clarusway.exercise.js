@@ -242,18 +242,35 @@
 //! Q-2
 //? Write a JavaScript function that accepts an argument and returns the type.
 
-const type = (x) => {
-  return typeof x
-}
-console.log( type("ali"))
-console.log( type(2))
-console.log( type(true))
+// const type = (x) => {
+//   return typeof x
+// }
+// console.log( type("ali"))
+// console.log( type(2))
+// console.log( type(true))
 
 //! Q-3
 //? You are given a string and character. Write a function to check the string and find how many
 //? times this character occurs in this string.
 //? Example:
 //? str = "Clarusway"         char = "a"       ===> result = 2 as "a" occurs 2 times in Clarusway
+
+// const times = (str,char) => {
+
+//     let count = 0;
+//     for(let i = 0 ;i<str.length; i++) {
+//       if(str[i] === char) {
+
+//         // if(str[i] === char) {
+//         //   count++
+//         // }
+//         count++
+//       }
+
+//     }
+//     return `${char} occurs ${count} times in ${str}`
+// }
+// console.log(times("Clarusway", "a"))
 
 //! Q-4
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
