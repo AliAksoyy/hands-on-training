@@ -282,7 +282,34 @@
 //? Write a JS code to display Perfect Numbers from 1 to 1000.
 //? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
 //? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
+//! Q-4
+//? Write a JS code to display Perfect Numbers from 1 to 1000.
+//? A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
+//? For instance, 6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
 
+// const perfectNums = () => {
+//     let arr = []
+
+//     for (let i = 1; i <= 1000; i++){
+//         sum = 0;
+
+//         for (let k = 1; k < i; k++){
+//             if (!(i % k)) {
+//                 sum += k;
+//             }
+//         }
+
+//         if (sum === i){
+//             arr.push(i)
+//         }
+
+//     }
+
+//     return arr
+// }
+
+
+// console.log(perfectNums());
 
 //! Q-5
 //? Develop a guessing game. Randomly generate a number between 0-100. Ask the user to guess that number.
