@@ -383,11 +383,48 @@
 // Expected Output : "thequickbrownfxjmpsvlazydg"
 // Click me to see the solution.
 
+// 1 çözüm
+
+// function unique_characters(str) {
+//   let unique = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (unique.indexOf(str[i]) === -1) {
+//       unique += str[i];
+//     }
+//   }
+//   return unique;
+// }
+
+// console.log(unique_characters("thequickbrownfoxjumpsoverthelazydog"));;
+
+// 2 çözüm
+// function checkChar(str) {
+//   let str1 = Array.from(new Set(str));
+//   return str1.join("");
+// }
+// console.log(checkChar("thequickbrownfoxjumpsoverthelazydog"));
+
 // *********************17**********
 
 // 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string. Go to the editor
 // Click me to see the solution.
-
+function countChar(s) {
+  let lst = new Set(s.split(""))
+  console.log(lst)
+    resoult = new Map(),
+    count = 0;
+  for (compare of lst) {
+    for (var i = 0; i < s.length; i++) {
+      if (compare === s[i]) {
+        count++;
+      }
+    }
+    resoult.set(compare, count);
+    count = 0;
+  }
+  console.log(resoult);
+}
+countChar("abacabd");
 // *******************18*********
 
 // 18. Write a function for searching JavaScript arrays with a binary search. Go to the editor
