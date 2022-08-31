@@ -606,26 +606,29 @@
 // };
 // console.log(mostFreq([3, "b", 2, "a", 2, 3, 3, "a", 2, 4, 9, 2]));
 
-
+// for (let j = 0; j < newBuyuk.length; j++) {
+//   newBuyuk2 = newBuyuk[i][0].toLowerCase();
+// }
 
 // *******************9********************
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
 // Click me to see the solution
 
-const buyuk = (str) => {
+// function swapCase(phrase) {
+//   const newPhrase = [];
+//   for (let word of phrase) {
+//     if (word === word.toUpperCase()) {
+//       newPhrase.push(word.toLowerCase());
+      
+//     } else {
+//       newPhrase.push(word.toUpperCase());
     
-    const newBuyuk =str.toUpperCase().split(" ")
-    const newBuyuk1 []
-    for(let i = 0; i<newBuyuk.length; i++) {     
-     let a = [newBuyuk[i][0].toLowerCase()]
-     console.log(a)
-        newBuyuk1.unshift(a[i])
-    }
+//     }
+//   }
+//   return newPhrase.join(" ");
+// }
 
-    console.log(newBuyuk)
-
-}
-buyuk("The Quick Brown Fox")
+// console.log(swapCase("The Quick Brown Fox"));
 
 
 // *******************10********************
