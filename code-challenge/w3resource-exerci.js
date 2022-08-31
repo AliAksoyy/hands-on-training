@@ -23,7 +23,7 @@
 //     let c =a.split("")
 //     let b = c.reverse().join("")
 
-    // console.log(b)
+//     console.log(b)
 //     if(b===a) {
 //         console.log("palindrome");
 
@@ -103,6 +103,7 @@
 //     let a= sentence.split(" ");
 //     for(let i = 0 ;i<a.length ;i++) {
 //         let b = a[i].split("").reverse()
+//         console.log(b)
 //         let c = "";
 //         for(let j = 0; j<b.length; j++) {
 //              if(j==0) {
@@ -110,6 +111,7 @@
 //              } else {
 //                   c += b[j];
 //              }
+//              console.log(c)
 //         }
 //         c = c.split("").reverse().join("")
 //         a[i]= c
