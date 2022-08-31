@@ -234,13 +234,20 @@
 //? Write a Function that takes 2 parameters (amount and rate) to convert currency.
 // ?Examples Amount 1000 ve rate = 1.5
 
-const currency = (amount,rate) => {
-  return amount*rate
-}
-console.log( currency(1000,1.5))
+// const currency = (amount,rate) => {
+//   return amount*rate
+// }
+// console.log( currency(1000,1.5))
 
 //! Q-2
 //? Write a JavaScript function that accepts an argument and returns the type.
+
+const type = (x) => {
+  return typeof x
+}
+console.log( type("ali"))
+console.log( type(2))
+console.log( type(true))
 
 //! Q-3
 //? You are given a string and character. Write a function to check the string and find how many
