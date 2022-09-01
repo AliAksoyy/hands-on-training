@@ -360,3 +360,29 @@
 //     toplam += notlar[i]
 // }
 // console.log("ORTALAMA :" + " " +toplam / notlar.length)
+
+// //*-------------------------------------------------------
+// //* SORU: Ogrenciler dizisinde ogrenci isimleri saklanmaktadir.
+// //* ogrencileri aramamizi saglayacak ve aranilan ogrenciden
+// //* ne kadar sayida bulunuldugunu  ana programa döndürecek bir
+// //* fonksiyonu yaziniz. Eger aranilan isimde bir ogrenci yok ise
+// //* fonksiyon "ogrenci bulunamadi" dondurulmelidir.
+// //*--------------------------------------------------------
+
+// const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
+
+// const findStudents = (arr,search) => {
+//     let counter = 0
+//     for(let i in arr) {
+//         if(search === arr[i]) {
+//             counter++
+//         }
+//     }
+//     if(!counter) {
+//         return `${search} can not be found`
+//     } else {
+//         return `${search} found ${counter} times`
+//     }
+// }
+// const name = prompt("Please enter a name").toLowerCase()
+// console.log( findStudents(students,name))
