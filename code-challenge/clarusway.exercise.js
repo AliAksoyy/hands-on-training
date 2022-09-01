@@ -598,3 +598,22 @@
 // console.log( yasArray.find((a) => a>=30))
 // console.log( yasArray.findLast((a) => a>=30))
 // console.log( yasArray.findIndex((a) => a>=30))
+
+const a = "ali aksoy ali"
+
+console.log(a.charAt(6))
+console.log(a.charAt())
+console.log(a.charAt(a.length-1))
+console.log(a.includes("ali"))
+console.log(a.indexOf("a"))
+
+console.log(a.search("l"))
+console.log(a.replace("ali", "ayse"))
+console.log(a.replaceAll("ali","bwyda"))
+console.log(a.replace(/ali/gi, "feyza"))
+
+console.log(a.slice(2,8))
+console.log(a.substring(1,3))
+
+console.log(a.split(" "),typeof a)
+
