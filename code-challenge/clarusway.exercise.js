@@ -533,4 +533,37 @@
 // karısık[2][2]++
 // console.log(karısık)
 
+//?---------------- Ornekleri
 
+
+// const arabalar = ["BMW", "Mercedes", "Fiat", "Anadolu"];
+
+// const a = arabalar.pop()
+// console.log(a,arabalar)
+
+// const b = arabalar.push("12")
+// console.log(b,arabalar)
+// arabalar.unshift("11")
+// console.log(arabalar)
+// const c = arabalar.shift()
+// console.log(c)
+
+// arabalar.reverse()
+// console.log(arabalar)
+
+// arabalar.splice(0,0,"ali","beyda")
+
+// console.log(arabalar)
+// arabalar.splice(0, 1, "ali", "beyda");
+// console.log(arabalar);
+
+// const x = [1,4,7,3,9,0]
+// console.log(arabalar)
+// x.sort((a,b) => b-a)
+// console.log(x)
+
+// const array1 = [1,2,3,4]
+// array1.fill(0)
+// console.log(array1)
+// array1.fill(2,2,4)
+// console.log(array1)
