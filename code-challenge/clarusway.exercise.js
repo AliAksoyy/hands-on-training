@@ -493,3 +493,16 @@
 
 // const range = salaries.filter((a) => a>=6000 && a<10000)
 // console.log(range)
+
+
+//?----------------Ornek
+//? Maasi 9000'den az olanlara %10 zam yaparak bu degerleri
+//? yeni diziye saklayalim.
+
+// const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+
+// const less9000 = salaries
+// .filter((m) => m<9000)
+// .map((a) => a*1.1)
+// .forEach((s) => console.log(s))
+ 
