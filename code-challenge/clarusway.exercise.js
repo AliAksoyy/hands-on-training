@@ -441,3 +441,16 @@
 
 // const bigNames = names.map((name) => name.toUpperCase())
 // console.log(names,bigNames)
+
+
+//?-------------- ÖRNEK -------------------
+//? tlPrices dizisindeki rakamlarin Euro ve dolar
+//? karsiliklarini hesaplatarak yeni dizelere kaydediniz
+
+const euro = 18.23;
+const dolar = 18.19;
+const tlPrices = [100, 150, 100, 50, 80];
+
+console.log(tlPrices.map((tl) => Number((tl / dolar).toFixed(2))))
+const a =tlPrices.map((ali) => Number((ali /euro).toPrecision(3)))
+console.log(a)
