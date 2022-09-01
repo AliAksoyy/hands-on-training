@@ -386,3 +386,24 @@
 // }
 // const name = prompt("Please enter a name").toLowerCase()
 // console.log( findStudents(students,name))
+
+// //?-------------- ÖRNEK -------------------
+// ? For of ile yukarida ki soruyu çözme
+
+// const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
+
+// const findStudents = (arr,search) => {
+//     let counter = 0
+//     for(let item of arr) {
+
+//         search === item && counter++
+//     }
+//     return  !counter ?
+//     `${search} can not be found`
+//     : `${search} found ${counter} times`
+
+// }
+
+// const name = prompt("Please enter a name ?").toLowerCase()
+//  console.log(    findStudents(students,name))
+
