@@ -509,26 +509,28 @@
 //?----------------Karışık Array Ornekleri
 
 
-const isimler = ["ahmet", "ismet", "can", "canan", "matheww"];
-const a = new Array(1,2,3)
-console.log(a[a.length -1])
-a[a.length -1]++
-console.log(a)
-console.log(isimler)
-console.log(isimler.at(-1))
-console.log(isimler[isimler.length-1])
-console.log(typeof isimler,isimler)
-console.log(isimler.length)
-const arabalar = new Array("tofaş","BMW")
-console.log(arabalar)
-const esyalar = Array.of("a","b")
-console.log(esyalar)
+// const isimler = ["ahmet", "ismet", "can", "canan", "matheww"];
+// const a = new Array(1,2,3)
+// console.log(a[a.length -1])
+// a[a.length -1]++
+// console.log(a)
+// console.log(isimler)
+// console.log(isimler.at(-1))
+// console.log(isimler[isimler.length-1])
+// console.log(typeof isimler,isimler)
+// console.log(isimler.length)
+// const arabalar = new Array("tofaş","BMW")
+// console.log(arabalar)
+// const esyalar = Array.of("a","b")
+// console.log(esyalar)
 
-console.log(esyalar[0])
-esyalar[0] ="c"
-console.log(esyalar)
-const karısık =["a", "b", a, isimler]
-console.log(karısık)
-console.log(karısık[2][2])
-karısık[2][2]++
-console.log(karısık)
+// console.log(esyalar[0])
+// esyalar[0] ="c"
+// console.log(esyalar)
+// const karısık =["a", "b", a, isimler]
+// console.log(karısık)
+// console.log(karısık[2][2])
+// karısık[2][2]++
+// console.log(karısık)
+
+
