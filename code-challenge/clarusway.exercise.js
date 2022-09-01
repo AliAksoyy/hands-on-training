@@ -482,13 +482,14 @@
 // console.log(c)
 
 
-const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+// const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
 
-//?-------------- ÖRNEK -------------------
-//? Maasi 10000'den buyuk olanlari ayri bir diziye saklayalim
+// //?-------------- ÖRNEK -------------------
+// //? Maasi 10000'den buyuk olanlari ayri bir diziye saklayalim
 
-const bigThan = salaries.filter((s) => s > 10000);
-console.log(bigThan, salaries);
+// const bigThan = salaries.filter((s) => s>10000)
+// console.log(bigThan);
+// console.log(salaries)
 
-const range = salaries.filter((s) => s >= 6000 && s <= 10000);
-console.log(range);
+// const range = salaries.filter((a) => a>=6000 && a<10000)
+// console.log(range)
