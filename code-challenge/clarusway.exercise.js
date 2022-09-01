@@ -567,3 +567,21 @@
 // console.log(array1)
 // array1.fill(2,2,4)
 // console.log(array1)
+
+
+//?---------------- Ornekleri
+
+// const sayilar1 = [3, 5, 2, "2", "uc", 2, "3", "bes", "5"];
+
+
+// console.log(sayilar1.includes(3))
+// console.log(sayilar1.includes(5))
+// console.log(sayilar1.indexOf("2"))
+// console.log(sayilar1.indexOf(2))
+// console.log(sayilar1.lastIndexOf(2))
+
+// console.log(sayilar1.join(" "))
+// console.log(sayilar1.slice(-2))
+// console.log(sayilar1)
+
+// console.log(sayilar1.concat(1,2,"2", [1,2]))
