@@ -455,3 +455,28 @@
 // const a =tlPrices.map((ali) => Number((ali /euro).toPrecision(3)))
 // console.log(a)
 
+
+//?-------------- ÖRNEK -------------------
+//? products dizisinin icerisindeki her urunu (Orjinal dizideki)
+//? buyuk harf olarak degistirelim.
+
+// const products = [
+//   "Iphone12",
+//   "samsungS20",
+//   "lenovo",
+//   "macbook pro",
+//   "mac air",
+//   "Galaxy tablet",
+//   "macbook",
+//   "Iphone12",
+//   "mac air",
+//   "lenovo",
+//   "macbook pro",
+//   "samsungS20",
+// ];
+// //?For UpperCase
+// // products.map((p,i,a) => (a[i] = p.toUpperCase()))
+// // console.log(products)
+// //?For Capitilize
+// const c =products.map((p,i,arr) => arr[i] =p[0].toUpperCase() + p.slice(1))
+// console.log(c)
