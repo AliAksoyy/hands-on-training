@@ -321,3 +321,7 @@
 //? If user can't find the number in 5 guess then game is lost and display the random number.
 //? Hint: you can use this code to generate random number 0-100
 //? const winingNumber = Math.round(Math.random() * 100);
+
+
+
+

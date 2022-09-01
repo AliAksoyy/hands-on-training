@@ -233,5 +233,3 @@ console.log(yasIlk30, yasSon30);
 
 //?Ornek: Yasi 30 dan buyuk olan ilk elemanin indexini yazdirin
 
-const foundIndex = yasArray.findIndex((yas) => yas >= 30);
-console.log(foundIndex);
