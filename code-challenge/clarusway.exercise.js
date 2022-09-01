@@ -435,3 +435,9 @@
 // console.log(prices)
 
 
+//?-------------- ÖRNEK -------------------
+//? Bir dizideki tüm isimleri BÜYÜK harfe dönüştüren uygulamayı yazınız.
+// let names = ["Mustafa", "Murat", "Ahmet", "Mustafa", "Ayşe", "canan"];
+
+// const bigNames = names.map((name) => name.toUpperCase())
+// console.log(names,bigNames)
