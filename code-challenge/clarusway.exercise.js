@@ -412,3 +412,9 @@
 
 // const prices = [100, 250, 50, 89];
 // prices.forEach((p) => console.log(p))
+
+//? ORNEK: prices dizisindekilerin toplamini konsola yazdiriniz */
+// const prices = [100, 250, 50, 89];
+// let sum = 0
+// prices.forEach((a) => sum +=a)
+// console.log("SUM : " ,sum)
