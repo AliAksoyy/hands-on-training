@@ -585,3 +585,16 @@
 // console.log(sayilar1)
 
 // console.log(sayilar1.concat(1,2,"2", [1,2]))
+
+//?---------------- Ornekleri
+
+
+// const yasArray = [18, 22, 78, 34, 78, 79, 15];
+
+// const b =  yasArray.every((a) => a>18)
+// b ? console.log("doğru") : console.log("yanlış")
+// console.log( yasArray.some((a) => a>18))
+
+// console.log( yasArray.find((a) => a>=30))
+// console.log( yasArray.findLast((a) => a>=30))
+// console.log( yasArray.findIndex((a) => a>=30))
