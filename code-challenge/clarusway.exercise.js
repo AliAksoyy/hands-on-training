@@ -664,7 +664,25 @@
 // console.log(`${r} ve ${h} değeri =>> ${hesapla(r,h)}` )
 
 
+//* ORNEK: Girilen n. terime kadar Fibonacci sayilarinin toplamini
+//* hesaplayarak yazdiran fonksiyonu dongu ile kodlayiniz.
+//? FIBONACCI terimleri:  1, 1, 2, 3, 5, 8, 13, 21, ...
 
+
+// const fibonacci =(num) => {
+//     let toplam = 0
+//     let fib1 = 1
+//     let fib2 = 1
+    
+//     for(let i = 2; i<num; i++) {
+//         toplam = fib1 + fib2
+//         fib1 = fib2
+//         fib2 =toplam
+
+//     }
+//     return fib2
+// }
+// console.log("fibonancı" + " " + fibonacci(8))
 
 
 
