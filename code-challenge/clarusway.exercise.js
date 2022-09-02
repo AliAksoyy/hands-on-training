@@ -637,5 +637,8 @@
 
 //   console.log(degistir2.replace(/no/gi, "hayırr"))
 
+// const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
+// console.log(veysel.slice(1))
+
 
 
