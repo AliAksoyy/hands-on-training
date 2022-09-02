@@ -323,7 +323,7 @@
 //? const winingNumber = Math.round(Math.random() * 100);
 
 
-
+// !111111111111111111111 DERS 10 ARRAY2-1111111111111111
 
 // //?-------------- ÖRNEK -------------------
 // const dizi = [-5, 15, 22, -4, 45, 78];
@@ -507,6 +507,7 @@
 // .forEach((s) => console.log(s))
  
 //?----------------Karışık Array Ornekleri
+// !111111111111111111111 DERS 9 ARRAY-1111111111111111
 
 
 // const isimler = ["ahmet", "ismet", "can", "canan", "matheww"];
@@ -586,6 +587,9 @@
 
 // console.log(sayilar1.concat(1,2,"2", [1,2]))
 
+// !111111111111111111111 DERS 8 STRİNG METHOD 1111111111111
+
+
 //?---------------- Ornekleri
 
 
@@ -644,10 +648,10 @@
 // console.log(a)
 // console.log(tarkan)
 
-const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
+// const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
 
-arabalar.splice(3, 1, "Honda", "Toyota");
-console.log(arabalar);
+// arabalar.splice(3, 1, "Honda", "Toyota");
+// console.log(arabalar);
 
 
 
