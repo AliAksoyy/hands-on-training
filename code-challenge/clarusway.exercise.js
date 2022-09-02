@@ -625,5 +625,17 @@
 
 // console.log(oku.replace(/BAsarılı/gi , "saf olma"))
 
+// let degistir = "daglar daglar yol ver gecem..";
+
+// console.log(degistir.replaceAll("daglar", "yollar"))
+
+// let degistir2 =
+//   "No woman, no cry" +
+//   " No woman, no cry, eh, yeah" +
+//   " Little darling, don't shed no tears" +
+//   " No woman, no cry, eh";
+
+//   console.log(degistir2.replace(/no/gi, "hayırr"))
+
 
 
