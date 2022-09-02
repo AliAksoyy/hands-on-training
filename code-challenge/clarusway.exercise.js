@@ -667,7 +667,7 @@
 //* ORNEK: Girilen n. terime kadar Fibonacci sayilarinin toplamini
 //* hesaplayarak yazdiran fonksiyonu dongu ile kodlayiniz.
 //? FIBONACCI terimleri:  1, 1, 2, 3, 5, 8, 13, 21, ...
-
+//  1 çözüm
 
 // const fibonacci =(num) => {
 //     let toplam = 0
@@ -684,5 +684,19 @@
 // }
 // console.log("fibonancı" + " " + fibonacci(8))
 
+// 2çözüm recursive
 
+// const fibo =(n) => {
+
+//     if(n<=0) {
+//         return 0
+//     } else if(n ===1 || n===2) {
+//         return 1
+    
+//     } else {
+//         return fibo(n-1) + fibo(n-2)
+//     }
+// }
+// const n = +prompt("n gir")
+// console.log(`FİBO(${n}) = ${fibo(n)}`)
 
