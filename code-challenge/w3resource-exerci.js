@@ -139,25 +139,20 @@
 
 //  2 çözüm
 
-function uppercase(str) {
-  let arr = str.trim().split(" ");
+// function uppercase(str) {
+//   let arr = str.trim().split(" ");
   
-  return arr.map(function (el) {
-      return el[0].toUpperCase() + el.slice(1);
-    })
-    .join("")
-}
+//   return arr.map(function (el) {
+//       return el[0].toUpperCase() + el.slice(1);
+//     })
+//     .join("")
+// }
 
-console.log(uppercase("the quick brown fox"));
+// console.log(uppercase("the quick brown fox"));
 
 // 3 çözüm
-function capitalize(str) {
-return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
-
-
-
-
-
+// function capitalize(str) {
+// return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
 
 
 
@@ -165,6 +160,9 @@ return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
 // 6. Write a JavaScript function that generates all combinations of a string.
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
+
+
+
 
 
 // const combinations = (str= '') => {
@@ -196,7 +194,7 @@ return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
 //     }
 // }
 // comb("dog")
-// 2 çözüm
+// 3çözüm
 // const wordComb = (str) => {
 //   let newStr = [];
 //   let final = "";
@@ -236,7 +234,19 @@ return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
 //         }
 //         return cnt
 //     }
-//     console.log( numVowel("The quick brown fox"));
+    // console.log( numVowel("The quick brown fox"));
+
+// const sesli = (str) => {
+
+//           let arr = []
+//           arr=str.match(/[aeiou]/gi)
+//           console.log(arr)
+//           return arr.length
+
+
+// }
+//     console.log(sesli("The quick brown fox"));
+
 
     // 2çözüm
 
