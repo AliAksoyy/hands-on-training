@@ -654,6 +654,17 @@
 // console.log(arabalar);
 
 
+// !111111111111111111111 DERS 7 FUNCTİON-2 STRİNG METHOD 111111111
+
+
+// const r = Number(prompt("yaricap giriniz:"));
+// const h = Number(prompt("yukseklik giriniz:"));
+
+// const hesapla = (r,h) => r*r*h*Math.PI
+// console.log(`${r} ve ${h} değeri =>> ${hesapla(r,h)}` )
+
+
+
 
 
 
