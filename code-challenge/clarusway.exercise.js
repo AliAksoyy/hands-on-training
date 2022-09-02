@@ -828,3 +828,34 @@
 // if (tahmin !== rastgele) {
 //   console.log("Uzgunuz oyunu kaybettiniz 😔😔");
 // }
+
+// !111111111111111111111 DERS 4 CONDITIONS 111111111
+
+//? ORNEK1: Console'dan girilen bir sayisinin pozitif,negatif
+//? yada 0 oldugunu tespit ederek yazdiriniz.
+
+// const sayi = Number(prompt("Bir sayi giriniz:"));
+// if(sayi>0) {
+//     console.log(`${sayi} pozitif`)
+// }else {
+//     console.log(`${sayi} negaitif`);
+    
+// }
+
+//? ORNEK2: console'dan 3 tamsayi alarak bunlarin en buyugunu
+//? yazdiriniz.
+// const n1 = +prompt("Sayi1:");
+// const n2 = +prompt("Sayi2:");
+// const n3 = +prompt("Sayi3:");
+
+// let enByuk = n1
+// if(n2>enByuk) {
+//     enByuk = n2
+// }else if (n3>enByuk) {
+//     enByuk = n3
+// }
+// console.log(enByuk)
+
+//? ORNEK5: Kaldi-Gecti
+// const not = +prompt("Notunuzu giriniz:");
+// let sonuc = not >= 50 ? "geçti" : "kaldı"
