@@ -565,6 +565,12 @@
 
 // console.log(biggerElements([11, 45, 4, 31, 64, 10]));
 
+// 3 çözüm
+
+// function limit(arr, num) {
+//  return arr.filter((b) => b>num)
+// }
+// console.log( limit([2,3,4,5,6,5],3))
 // *****************20************
 
 
