@@ -639,6 +639,11 @@
 
 // const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
 // console.log(veysel.slice(1))
+// const tarkan = "Gel gunduzle gece olalim";
+// const a = tarkan.split(" ",)
+// console.log(a)
+// console.log(tarkan)
+
 
 
 
