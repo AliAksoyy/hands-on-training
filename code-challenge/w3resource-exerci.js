@@ -13,6 +13,11 @@
 // }
 // console.log(donusum("32243"))
 
+// 2 çözüm
+
+// const donusum =(num) => num.toString().split("").reverse().join("")
+// console.log(donusum(123456789))
+
 // *********2*************
 // 2. Write a JavaScript function that checks whether a passed string is palindrome or not?
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
