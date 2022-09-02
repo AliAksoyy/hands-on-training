@@ -508,11 +508,37 @@
 //   console.log(resoult);
 // }
 // countChar("abacabd");
+// 2 çözüm
+// function ex17(str) {
+//   var count = {};
+//   str.split("").forEach(function (s) {
+//     count[s] = count[s] ? count[s] + 1 : 1;
+//   });
+//   return count;
+// }
+
+// console.log(ex17("abbcccdde"));
 // *******************18*********
 
 // 18. Write a function for searching JavaScript arrays with a binary search. Go to the editor
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
 // Click me to see the solution.
+
+// function array_binarySearch(arr, elem) {
+//   let start = 0,
+//     end = arr.length - 1;
+//   while (start <= end) {
+//     let mid = Math.floor((start + end) / 2);
+//     if (arr[mid] === elem) return mid;
+//     else if (arr[mid] < elem) start = mid + 1;
+//     else end = mid - 1;
+//   }
+
+//   return "Element not found";
+// }
+
+// var myArray = [1, 2, 3,4,5];
+// console.log(array_binarySearch(myArray,2));
 
 
 
@@ -531,6 +557,13 @@
 // }
 
 // console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
+//  2 çözüm
+
+// function biggerElements(arr) {
+//   return arr.filter((k) => k>10)
+// }
+
+// console.log(biggerElements([11, 45, 4, 31, 64, 10]));
 
 // *****************20************
 
