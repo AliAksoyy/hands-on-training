@@ -644,6 +644,12 @@
 // console.log(a)
 // console.log(tarkan)
 
+const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
+
+arabalar.splice(3, 1, "Honda", "Toyota");
+console.log(arabalar);
+
+
 
 
 
