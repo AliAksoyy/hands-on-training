@@ -594,19 +594,19 @@
 // console.log(id());
 
 
-function makeId(n) {
-  let lstChar =
-      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ0123456789!@#$%^&*",
-    id = "";
+// function makeId(n) {
+//   let lstChar =
+//       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ0123456789!@#$%^&*",
+//     id = "";
 
-  for (var i = 0; i < n; i++) {
-    let rnd = Math.floor(lstChar.length * Math.random());
-    console.log(rnd)
-    id += lstChar.charAt(rnd);
-  }
-  console.log(id);
-}
-makeId(4);
+//   for (var i = 0; i < n; i++) {
+//     let rnd = Math.floor(lstChar.length * Math.random());
+//     console.log(rnd)
+//     id += lstChar.charAt(rnd);
+//   }
+//   console.log(id);
+// }
+// makeId(4);
 
 
 // *******************21***********
