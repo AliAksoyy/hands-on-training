@@ -654,7 +654,7 @@
 // console.log(arabalar);
 
 
-// !111111111111111111111 DERS 7 FUNCTİON-2 STRİNG METHOD 111111111
+// !111111111111111111111 DERS 7 FUNCTİON-2 111111111
 
 
 // const r = Number(prompt("yaricap giriniz:"));
@@ -700,3 +700,17 @@
 // const n = +prompt("n gir")
 // console.log(`FİBO(${n}) = ${fibo(n)}`)
 
+
+// !111111111111111111111 DERS 6 FUNCTİON- 111111111
+
+
+/* ORNEK4:
+//*****************************************************/
+
+// function tekCift(n) {
+//     return n %2 ? " tektir" : " cift"
+// }
+
+
+// console.log(tekCift(5));
+// console.log(tekCift(2));
