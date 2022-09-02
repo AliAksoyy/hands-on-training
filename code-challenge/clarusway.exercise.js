@@ -714,3 +714,23 @@
 
 // console.log(tekCift(5));
 // console.log(tekCift(2));
+
+//* ORNEK: 3 sayinin en büyüğünü bulan fonks.
+//******************************************************/
+
+// const buyukBul = function (n1, n2, n3 = -Number.MAX_VALUE) {
+
+//     let enBuyuk= 0
+//     if(n1>n2 && n1>n3) {
+//         enBuyuk = n1
+//     }else if (n2>n1 && n2>n3) {
+//         enBuyuk = n2
+//     }else {
+//         enBuyuk = n3
+//     }
+//    return enBuyuk
+// }
+
+// console.log( buyukBul(-13,-5,-6))
+
+  
