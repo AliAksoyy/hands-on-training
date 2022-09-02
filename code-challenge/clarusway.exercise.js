@@ -617,5 +617,13 @@
 
 // console.log(a.split(" "),typeof a)
 
+// let oku = "Oku Baban gibi, saf olma, saf olma";
+
+// console.log(oku.replace("saf olma", "basarili ol"))
+
+// console.log(oku.replace(/saf olma/gi, "basarili ol"))
+
+// console.log(oku.replace(/BAsarılı/gi , "saf olma"))
+
 
 
