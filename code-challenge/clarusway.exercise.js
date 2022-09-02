@@ -733,4 +733,14 @@
 
 // console.log( buyukBul(-13,-5,-6))
 
-  
+// !111111111111111111111 DERS 5 LOOPS- 111111111
+
+//? Ornek: 1 den n kadar sayiları toplayan kodu yaziniz.
+
+// const n = Number(prompt("Bir sayi girniz:"));
+// let t = 0
+// for(let i = 1; i<=n; i++) {
+//   t += i
+// }
+// console.log(t)
+
