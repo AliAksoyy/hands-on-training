@@ -95,16 +95,18 @@
 
 
 // *********4*************
-4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
-Example string : 'webmaster'
-Expected Output : 'abeemrstw'
-Assume punctuation and numbers symbols are not included in the passed string.
+// 4. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+// Example string : 'webmaster'
+// Expected Output : 'abeemrstw'
+// Assume punctuation and numbers symbols are not included in the passed string.
 
 const sırala = function(word) {
 
     return word.split("").sort().join("")
 }
 console.log(  sırala("webmaster"));
+
+
 
 // *********5*************
 // 5. Write a JavaScript function that accepts a string as a parameter and converts the last letter of each word of the string in upper case.
