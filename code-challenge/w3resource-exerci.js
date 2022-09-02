@@ -137,6 +137,25 @@
 // }
 // buyuk("the quick brown fox");
 
+//  2 çözüm
+
+function uppercase(str) {
+  let arr = str.trim().split(" ");
+  
+  return arr.map(function (el) {
+      return el[0].toUpperCase() + el.slice(1);
+    })
+    .join("")
+}
+
+console.log(uppercase("the quick brown fox"));
+
+// 3 çözüm
+function capitalize(str) {
+return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+
+
+
 
 
 
