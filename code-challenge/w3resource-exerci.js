@@ -234,7 +234,7 @@
 //         }
 //         return cnt
 //     }
-    // console.log( numVowel("The quick brown fox"));
+//     console.log( numVowel("The quick brown fox"));
 
 // const sesli = (str) => {
 
@@ -263,6 +263,7 @@
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
 
 // Asal Sayı BUlma
+
 
 // const asalSayi =function(num) {
 
@@ -293,6 +294,7 @@
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
 // tip belirleme yazma
+
 
 // const arg = (str) =>  typeof str;
 
@@ -334,6 +336,8 @@
 // }
 // console.log(identity(3))
 // console.log(identity(5))
+
+
 
 // ***********11***********
 
@@ -408,6 +412,35 @@
 // Output : 25, 10, 10, 1
 // Click me to see the solution.
 
+// const amountToCoins = (n, arr) => {
+//   if (n === 0 || n < 0) return 0;
+
+//   return arr.reduce((acc, cur) => {
+//     while (n >= cur) {
+//       acc.push(cur);
+//       n -= cur;
+//     }
+//     return acc;
+//   }, []);
+// };
+// console.log( amountToCoins(46,[25,10,5,2,1]))
+
+// 2 çözüm
+
+// function amountToCoins(amount, coins) {
+//   var res = [];
+
+//   for (var i = 0; i < coins.length; i++) {
+//     while (amount >= coins[i]) {
+//       amount -= coins[i];
+//       res.push(coins[i]);
+//     }
+//   }
+
+//   return res.join(",");
+// }
+
+// console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
 
 // ****************15*******************
 
@@ -419,7 +452,7 @@
 
 // const hesapla =(b,n) => b**n
 // console.log( hesapla(4,2))
-// 2 çözüm
+// // 2 çözüm
 // const a = function(b,n) {
 //   return Math.pow(b, n);
 // }
