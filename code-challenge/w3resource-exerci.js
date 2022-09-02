@@ -100,11 +100,11 @@
 // Expected Output : 'abeemrstw'
 // Assume punctuation and numbers symbols are not included in the passed string.
 
-const sırala = function(word) {
+// const sırala = function(word) {
 
-    return word.split("").sort().join("")
-}
-console.log(  sırala("webmaster"));
+//     return word.split("").sort().join("")
+// }
+// console.log(  sırala("webmaster"));
 
 
 
@@ -116,6 +116,7 @@ console.log(  sırala("webmaster"));
 // const buyuk = function(sentence) {
 
 //     let a= sentence.split(" ");
+//     console.log(a)
 //     for(let i = 0 ;i<a.length ;i++) {
 //         let b = a[i].split("").reverse()
 //         console.log(b)
@@ -135,6 +136,11 @@ console.log(  sırala("webmaster"));
 //     console.log(a.join(" "))
 // }
 // buyuk("the quick brown fox");
+
+
+
+
+
 
 // *********6*************
 // 6. Write a JavaScript function that generates all combinations of a string.
