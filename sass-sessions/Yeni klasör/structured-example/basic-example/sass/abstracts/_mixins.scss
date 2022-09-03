@@ -1,3 +1,7 @@
+@import "variables";
+
+
+
 @mixin myBox($backColor, $color) {
   background-color: $backColor;
   color: $color;

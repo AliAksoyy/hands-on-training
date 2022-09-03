@@ -1,4 +1,9 @@
 
+@import "./basic-example/sass/base/reset";
+
+@import "./basic-example/sass/abstracts/variables";
+
+@import "./basic-example/sass/components/index";
 body {
   font-family: $fontFamily;
   background-color: $bgColor;
