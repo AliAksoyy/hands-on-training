@@ -869,6 +869,26 @@
 // }
 // console.log(dashedNum(025468))
 
+// 2çözüm
+
+// const sayı = (number) => {
+    
+//      const arr =("0" + number.toString()).split("")
+//     console.log(arr)
+//     for(let i = 0 ; i<arr.length; i++) {
+
+//         if(arr[i] % 2 === 0 && arr[i+1] % 2 ===0) {
+//             arr.splice(i+1,0,"-")
+//         }
+
+//     }
+//     return arr.join("")
+// }
+
+
+// console.log(sayı(025468));
+
+
 
 
 
