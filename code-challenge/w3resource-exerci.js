@@ -770,6 +770,9 @@
 // console.log(firstArr([7, 9, 0, -2],-3));
 // console.log(firstArr([7, 9, 0, -2],3));
 
+
+
+
 // *******************4********************
 // 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array.
 // Test Data :
