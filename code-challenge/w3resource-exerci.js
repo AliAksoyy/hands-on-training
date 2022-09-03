@@ -1026,6 +1026,8 @@
 // }
 
 
+
+
 // *******************11********************
 
 // 11 Write a JavaScript program to find the sum of squares of a numeric vector.
