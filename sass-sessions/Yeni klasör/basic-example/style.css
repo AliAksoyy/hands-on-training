@@ -119,25 +119,39 @@ header a {
   border-color: green;
 }
 
-footer .social1 {
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
   width: 20%;
   background-color: #ff1a1a;
+  font-size: 1rem;
+  color: red;
 }
-footer .social2 {
+footer .social-icons .social2 {
   width: 20%;
   background-color: #ff3333;
+  font-size: 2rem;
+  color: pink;
 }
-footer .social3 {
+footer .social-icons .social3 {
   width: 20%;
   background-color: #ff4d4d;
+  font-size: 3rem;
+  color: yellow;
 }
-footer .social4 {
+footer .social-icons .social4 {
   width: 20%;
   background-color: #ff6666;
+  font-size: 4rem;
+  color: blue;
 }
-footer .social5 {
+footer .social-icons .social5 {
   width: 20%;
   background-color: #ff8080;
+  font-size: 5rem;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
