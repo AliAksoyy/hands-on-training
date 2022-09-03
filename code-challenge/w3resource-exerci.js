@@ -801,6 +801,29 @@
 // console.log(lastElement([7, 9, 0, -2]));
 
 
+// 2 çözüm
+
+// const last = (arr,n) => {
+
+//     for(let i in arr) {
+        
+//         if(arr.length<n) {
+//            return arr.slice(0)
+//         }else if(arr.length >n) {
+//             return arr.slice(0,n)
+//         }else if (n === undefined) {
+//             return arr.at(-1)
+//         }
+
+//     }
+    
+// }
+
+
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2], 3));
+// console.log(last([7, 9, 0, -2], 6));
+
 // *******************5********************
 // 5. Write a simple JavaScript program to join all elements of the following array into a string. Go to the editor
 // Sample array : myColor = ["Red", "Green", "White", "Black"];
