@@ -939,6 +939,11 @@
 
 
 
+
+   
+
+
+
 // *******************9********************
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'. Go to the editor
 // Click me to see the solution
@@ -976,6 +981,21 @@
 // };
 // console.log(wordSwap("The Quick Brown Fox"));
 
+// 3 çözüm
+
+// const wordSwap = (arr) => {
+
+//     let newArr= arr.toUpperCase().split(" ")
+    
+//     for(let i in newArr) {
+//     newArr = newArr.map((x) => x[0].toLowerCase() + x.slice(1))
+       
+//     }
+
+//     return newArr.join(" ")
+// }
+
+// console.log(wordSwap("The Quick Brown Fox"));
 
 
 // *******************10********************
