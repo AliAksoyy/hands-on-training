@@ -904,6 +904,13 @@
 // var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
 // console.log(sortNum(arr1));
 
+// 2 çözüm
+
+
+// var arr1 = [3, 8, 7, 6, 5, -4, 3, 2, 1];
+ 
+// const newArr= arr1.sort((a,b) => a-b)
+// console.log(newArr.join(" ,"))
 
 // *******************8********************
 // 8. Write a JavaScript program to find the most frequent item of an array. Go to the editor
