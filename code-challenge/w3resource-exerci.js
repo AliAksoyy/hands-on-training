@@ -688,11 +688,11 @@
 // 2 çözüm
 
 
-const a = "w3resoure"
-const b = [1,2,3]
+// const a = "w3resoure"
+// const b = [1,2,3]
 
-console.log(Array.isArray(a))
-console.log(Array.isArray(b))
+// console.log(Array.isArray(a))
+// console.log(Array.isArray(b))
 
 
 
@@ -712,7 +712,7 @@ console.log(Array.isArray(b))
 // }
 // console.log(cloneArray([1, 2, 4, 0]));
 
-// // 2 çözüm
+// 2 çözüm
 // let x = [1, 2, 3, 4];
 // console.log("Original array:");
 // console.log(x);
@@ -727,6 +727,14 @@ console.log(Array.isArray(b))
 // let y = x.map.((i) => i)
 // let y1 = Array.from(x)
 // let y2 = [...x]
+
+// 3 çözüm
+
+// const a = [1,2,3,4,5]
+// const b = a.copyWithin(0)
+// console.log(b)
+
+
 
 
 
