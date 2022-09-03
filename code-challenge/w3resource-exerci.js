@@ -685,6 +685,17 @@
 // console.log(isArray([1, 2, 4, 0]))
 
 
+// 2 çözüm
+
+
+const a = "w3resoure"
+const b = [1,2,3]
+
+console.log(Array.isArray(a))
+console.log(Array.isArray(b))
+
+
+
 
 // *******************2********************
 // 2. Write a JavaScript function to clone an array.
