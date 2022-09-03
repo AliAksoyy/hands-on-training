@@ -6,6 +6,59 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: pink;
+  font-size: 1.2rem;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #30a7c3;
+  padding: 1rem;
+  border-radius: 10px;
+}
+header img {
+  width: 80px;
+  border: 2px solid brown;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: hotpink;
+  align-items: center;
+  padding: 1rem;
+  line-height: 2;
+}
+.banner aside button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #30a7c3;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+}
+.banner img {
+  width: 30%;
 }
 
 /*# sourceMappingURL=style.css.map */

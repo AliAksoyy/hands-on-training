@@ -1,9 +1,81 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
+
+// *****************************Variable Declaration
+$bgColor:pink;
+$fontSize:1.2rem;
+$fontColor:white;
+$navBgColor:#30a7c3;
+$fontFamily:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$bannerBgColor:hotpink;
+$myBorder:2px solid brown;
+// ********************Variable Usage
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:$fontFamily;
+    background-color:$bgColor;
+    font-size: $fontSize;
+    color: $fontColor;
+}
+
+// ********************header
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:$navBgColor;
+    padding: 1rem;
+    border-radius: 10px;
+    img{
+        width: 80px;
+        border: $myBorder;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            display: inline-block;
+             padding: 0.5rem;
+            &:hover{
+                text-decoration: underline;
+            }
+
+        }
+    }
+
+    a {
+        color: $fontColor;
+        text-decoration: none;
+    }
+}
+
+// *******************banner
+
+.banner {
+display: flex;
+justify-content: space-between;
+background-color:$bannerBgColor;
+align-items: center;
+padding: 1rem;
+line-height: 2;
+    aside{
+      button {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        background-color:$navBgColor;
+        margin-top: 1rem;
+        margin-right: 0.5rem;
+
+        &:hover {
+            background-color: pink;
+        }
+      }  
+    }
+    img {
+        width: 30%;
+    }
 }
