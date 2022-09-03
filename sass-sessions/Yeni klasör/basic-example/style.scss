@@ -114,6 +114,8 @@ line-height: 2;
     .card4{
         @include myBox(rgb(97, 225, 94),white);
 
+   
+   
     }
 }
 
@@ -130,7 +132,8 @@ line-height: 2;
         border: 1px solid black;
         height: 10rem;
         border-radius: 5px;
-    }
+   }
+   
     .article2 {
         @extend .article1;
         background-color: hotpink;
@@ -139,19 +142,9 @@ line-height: 2;
     }
 }
 // *****************footer
-$text: red,pink,yellow,blue, black;
-footer {
-    .social-icons {
-        display: flex;
-        height: 10rem;
+ııkkuuuuuuuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeetyyuj8ş9ğğ17/*5-+
 
-        @for $i from 1 to 6 {
-         .social#{$i}{
-        width: 20%;
-        background-color: lighten(red, $i*5);
-        font-size: $i * 1rem;
-        color: nth($text, $i );
-         }
-         }
-         }
-        }
+
+
+
+
