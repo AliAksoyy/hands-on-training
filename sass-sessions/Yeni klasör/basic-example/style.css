@@ -119,4 +119,25 @@ header a {
   border-color: green;
 }
 
+footer .social1 {
+  width: 20%;
+  background-color: #ff1a1a;
+}
+footer .social2 {
+  width: 20%;
+  background-color: #ff3333;
+}
+footer .social3 {
+  width: 20%;
+  background-color: #ff4d4d;
+}
+footer .social4 {
+  width: 20%;
+  background-color: #ff6666;
+}
+footer .social5 {
+  width: 20%;
+  background-color: #ff8080;
+}
+
 /*# sourceMappingURL=style.css.map */
