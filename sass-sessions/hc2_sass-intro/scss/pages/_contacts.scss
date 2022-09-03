@@ -1,0 +1,20 @@
+.contact-bg-Img-container {
+    @include bgImgage(100vh, $main-bgImage-path);
+
+    nav {
+        height: 40vh;
+    }
+
+
+}
+
+.contact {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: nowrap;
+    
+
+}
