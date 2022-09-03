@@ -66,6 +66,8 @@ header a {
 
 .cards {
   display: flex;
+  gap: 0.5rem;
+  padding: 0.8rem;
 }
 .cards .card1 {
   background-color: green;
@@ -98,6 +100,23 @@ header a {
   height: 15rem;
   border: 2px solid brown;
   border-radius: 5px;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  width: 50%;
+  border: 1px solid black;
+  height: 10rem;
+  border-radius: 5px;
+}
+.articles .article2 {
+  background-color: hotpink;
+  border-color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

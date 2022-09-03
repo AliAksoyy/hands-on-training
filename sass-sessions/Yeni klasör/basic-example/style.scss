@@ -97,6 +97,8 @@ line-height: 2;
 
 .cards {
     display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem;
     .card1{
         @include myBox(green,white);
         
@@ -112,5 +114,34 @@ line-height: 2;
     .card4{
         @include myBox(rgb(97, 225, 94),white);
 
+    }
+}
+
+
+// ***************article extend
+
+.articles {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    .article1 {
+        background-color:grey;
+        width: 50%;
+        border: 1px solid black;
+        height: 10rem;
+        border-radius: 5px;
+    }
+    .article2 {
+        @extend .article1;
+        background-color: hotpink;
+        border-color: green;
+    
+    }
+}
+// *****************footer
+
+footer {
+    .social-icons {
+        
     }
 }
