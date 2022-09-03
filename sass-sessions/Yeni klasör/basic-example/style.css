@@ -56,9 +56,11 @@ header a {
 }
 .banner aside button:hover {
   background-color: pink;
+  cursor: pointer;
 }
 .banner img {
-  width: 30%;
+  min-width: 250px;
+  max-width: 400px;
 }
 
 /*# sourceMappingURL=style.css.map */
