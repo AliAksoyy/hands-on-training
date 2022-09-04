@@ -920,18 +920,23 @@
 // const mostFreq = (arr) => {
 //   let cnt = 0;
 //   let newArr = [];
-//   for (let i = 0; i < arr.length; i++) {
+//   for (let i = 0; i <arr.length; i++) {
     
 //     for (let j = i; j < arr.length; j++) {
+        
 //       if (arr[i] === arr[j]) {
 //         cnt++;
 //       }
 //     }
-//     newArr.push(cnt);
+//     newArr.push(cnt)
+//     console.log(newArr)
+    
 //     cnt = 0;
 //   }
-//   console.log(newArr);
+// //   console.log(newArr);
 //   const max = Math.max(...newArr);
+ 
+  
 //   const index = newArr.indexOf(max);
 //   return `${arr[index]} , ${max} times`;
 // };
