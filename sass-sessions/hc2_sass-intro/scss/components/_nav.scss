@@ -1,37 +1,27 @@
-//*****************************************************
-//*   NAV
-//*****************************************************
 
-//* Grandparent class (nav)
-
-.nav{
-    // border: 2px solid red;
+.nav {
     padding: 1rem;
-    height: 10vh;
+   height: 10vh; 
+   &__list {
+    text-align: center;
+   }
+   &__item {
+    display: inline;
+    padding: 1rem;
+   }
+   &__link {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family:$font-family;
+    @include transition(1s);
 
-    &__list{
-        text-align: right;
+    &:hover{
+        color: blue;
     }
-    &__item{
-        display: inline;
-        padding: 1rem;
+    &--active {
+        color:$secondary-color;
+        
     }
-    &__link{
-        font-size: 1rem;
-        text-transform: uppercase;
-        font-weight: 500;
-        font-family: $font-family;
-        // transition: all 1s;
-        @include transition(1s);
-
-
-        &:hover{
-            color: blue;
-        }
-
-        &--active{
-            color: $secondary-color;
-        }
-    }
-
+   }
 }
