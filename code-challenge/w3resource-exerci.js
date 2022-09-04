@@ -1032,21 +1032,21 @@
 
 // 2.çözüm
 
-let a = [
-  [1, 2, 1, 24],
-  [8, 11, 9, 4],
-  [7, 0, 7, 27],
-  [7, 4, 28, 14],
-  [3, 10, 26, 7],
-];
+// let a = [
+//   [1, 2, 1, 24],
+//   [8, 11, 9, 4],
+//   [7, 0, 7, 27],
+//   [7, 4, 28, 14],
+//   [3, 10, 26, 7],
+// ];
 
 
-a.forEach((item, index) => {
-  console.log(`row ${index}`);
-  for (let value of item) {
-    console.log(value);
-  }
-});
+// a.forEach((item, index) => {
+//   console.log(`row ${index}`);
+//   for (let value of item) {
+//     console.log(value);
+//   }
+// });
 
 
 
@@ -1071,6 +1071,16 @@ a.forEach((item, index) => {
 //   return vector.reduce((sum, num) => (sum += num * num), 0);
 // }
 // console.log(sumOfSquares([1, 2, 3, 4]));
+
+// 3çözüm
+
+// let a = [1,2,3,4];
+// let sum = 0;
+// let b = a.map((x) => {
+//      sum  += x*x
+    
+// } )
+//  console.log(sum);
 
 // *******************************12*************************
 
