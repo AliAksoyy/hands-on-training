@@ -1134,6 +1134,10 @@
 // 13. Write a JavaScript program to add items in an blank array and display the items. Go to the editor
 // Sample Screen :
 // add elements in an blank array
+
+
+
+
 // *******************************14*************************
 
 // 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity). Go to the editor
@@ -1151,6 +1155,44 @@
 //         return newdeger
 // }
 // console.log( sameStatement([1,1,2,3,3,4,6,8,2,5,7,7]))
+
+// 2 çözüm
+
+// var dublicate = [1, 2, "a", 2, "a", 2, 1, "a", 2, "a", "b", "b"];
+// var new_Array = [...new Set(dublicate)];
+// console.log(new_Array);
+
+// 3 çözüm
+
+// const arr = [1, 1, 2, 3, 4, 5, 6, 6, 6, 7];
+
+// const newArray = arr.reduce((previous, actual) => {
+//   if (!previous.includes(actual)) {
+//     previous.push(actual);
+//   }
+//   return previous;
+// }, []);
+// console.log(newArray);
+
+// 4 çözüm
+
+
+// const arr = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 3, 6];
+
+// const removeDuplicates = (arr) => {
+//   let newArr = new Set(arr);
+//   return Array.from(newArr).sort((item1, item2) => item1 - item2);
+// };
+// console.log(removeDuplicates(arr));
+
+
+// 5 çözüm
+
+
+// const arr = [1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6];
+// const x = [...new Set(arr)].sort();
+// console.log(x);
+
 // *******************************15*************************
 
 // 15. We have the following arrays : Go to the editor
