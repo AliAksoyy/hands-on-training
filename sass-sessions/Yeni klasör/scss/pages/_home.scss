@@ -9,11 +9,15 @@
   justify-content: center;
   text-align: center;
 
+  h2{
+    font-size: 2.5rem;
+  }
+
   &__name {
-    font-size: 5rem;
+    font-size: 6rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #fff;
+    border-bottom: 5px solid #fff;
 
     &--last {
         color: red;
