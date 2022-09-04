@@ -1,21 +1,24 @@
-.about-bgImg-container {
+//*****************************************************
+//*   ABOUT PAGE
+//*****************************************************
 
+.about-bgImg-container{
+    // border: 2px solid red;
     @include bgImage(50vh, $main-bgImage-path);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-direction: column;
-    .about__bio-image {
-    text-align: center;
-    h2{
-        font-size: 2rem;
-        color:$secondary-color;
+    .about__bio-image{
+        text-align: center;
+        h2{
+            font-size: 3rem;
+            color:$secondary-color;
+        }
+        p{
+            font-size: 1.2rem;
+            margin: 2rem;
+        }
     }
-    p {
-        font-size: 1.2rem;
-        margin: 2rem;
-    }
-    }
-    
 }
 
 .about{
