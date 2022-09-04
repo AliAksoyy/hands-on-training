@@ -1236,6 +1236,21 @@
 //     )
 //   );
 
+// 3 çözüm
+
+let color = ["Blue ", "Green", "Red", "Orange"];
+order = ["th", "st", "nd", "rd"];
+
+    color.map((x,i) =>{
+        let c = `{${i +1}${order[i]} choice is ${x}}`
+    console.log(c);
+
+    })
+   
+    
+
+
+
 
 // *******************************16*************************
 
