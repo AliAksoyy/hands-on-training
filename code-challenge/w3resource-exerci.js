@@ -1082,6 +1082,23 @@
 // } )
 //  console.log(sum);
 
+// 4çözüm
+// function sum_sq(array) {
+//   var sum = 0,
+//     i = array.length;
+//   while (i--) {
+//     sum += Math.pow(array[i], 2);
+//   }
+//   return sum;
+// }
+
+// console.log(sum_sq([0, 1, 2, 3, 4]));
+
+// 5 çözüm
+
+// let array = [1, 2, 1, 24, 6];
+// console.log(array.reduce((sum, item) => sum + item * item));
+
 // *******************************12*************************
 
 // 12. Write a JavaScript program to compute the sum and product of an array of integers. Go to the editor
@@ -1105,6 +1122,11 @@
 // }
 // console.log(carpım([10, 5, 3, 4]));
 
+// 2 çözüm
+
+// let a = [1,4,6,8,10];
+// console.log(a.reduce((sum,x) => sum +x));
+// console.log(a.reduce((sum,x,) => sum*x))
 
 
 // *******************************13*************************
