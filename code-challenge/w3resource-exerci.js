@@ -1270,6 +1270,10 @@
 // 17. Write a JavaScript program to shuffle an array. Go to the editor
 
 let a = [1,4,6,8,4,0,10]
+for(let i = 0; i<a.length; i++) {
+    a.splice(i+4,0)
+}
+
 
 
    
