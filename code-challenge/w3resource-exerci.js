@@ -1409,6 +1409,26 @@
 // Sample Data :
 // console.log(union([1, 2, 3], [100, 2, 1, 10]));
 // [1, 2, 3, 10, 100]
+
+// function union(arr1, arr2) {
+//   let arr3 = arr1.concat(arr2);
+
+//   return [...new Set(arr3)];
+// }
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+
+// 2çözüm
+
+// function union(arr1, arr2) {
+//     let arr = arr1.concat(arr2)
+//     return arr.filter(function (val, index) {
+//       return arr.indexOf(val) === index;
+//     });
+// }
+// console.log(union([1, 2, 3], [100, 2, 1, 10])); //[1, 2, 3, 10, 100]
+
+
+
 // ********************************23*****************************
 
 
@@ -1420,6 +1440,55 @@
 // ["6"]
 // console.log(difference([1, 2, 3], [100, 2, 1, 10]));
 // ["3", "10", "100"]
+
+
+// 1 çözüm
+
+// (function (arr1, arr2) {
+//   const arr3 = [];
+//   const length = arr1.length >= arr2.length ? arr1.length : arr2.length;
+//   arr1 = arr1.toString().split(",");
+//   console.log(arr1)
+//   arr2 = arr2.toString().split(",");
+//   for (let i = 0; i <= length; i++) {
+//     if (arr1.indexOf(arr2[i]) === -1 && arr2[i] !== undefined)
+//       arr3.push(arr2[i]);
+//     if (arr2.indexOf(arr1[i]) === -1 && arr1[i] !== undefined)
+//       arr3.push(arr1[i]);
+//   }
+//   console.log(arr3.sort((a, b) => a - b));
+// })  ([1, 2, 3], [100, 2, 1, 10]);
+
+// 2çözüm
+// function difference(a, b) {
+//   const arr = [...a, ...b];
+  
+//   const duplicate = [];
+
+//   arr.flat(Infinity).forEach((item, index, arr) => {
+//     if (arr.lastIndexOf(item) === arr.indexOf(item)) {
+//       duplicate.push(item);
+//     }
+//   });
+
+//   return duplicate;
+// }
+
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+
+// 3 çözüm
+// function ex23(a, b) {
+//   var res = "";
+//   let inA = a.filter((x) => !b.includes(x));
+//   let inB = b.filter((y) => !a.includes(y));
+//   res = inA + "," + inB.sort();
+//   return res;
+// }
+// console.log(ex23([1, 2, 3], [100, 2, 1, 10]));
+
+
 
 // ********************************24*****************************
 
