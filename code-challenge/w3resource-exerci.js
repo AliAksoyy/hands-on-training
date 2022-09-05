@@ -1309,6 +1309,13 @@
 // console.log(binary_Search(items, 1));
 // console.log(binary_Search(items, 5));
 
+
+
+
+
+
+
+
 // *******************************19*************************
 
 // 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. Go to the editor
@@ -1330,6 +1337,7 @@
 // }
 // console.log(deger([1,0,2,3,4],[3,5,6,7,8]))
 
+
 // (function (array1, array2) {
 //   const result = [];
 
@@ -1345,6 +1353,8 @@
 //   console.log(result);
 // })([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]);
 
+
+
 // *******************************20*************************
 
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array. Go to the editor
@@ -1358,7 +1368,7 @@
 //       resultArr.push("" + arr[i + 1]);
 //     }
 //   }
-// //   returns only unique values
+//   returns only unique value
 //   return [...new Set(resultArr)];
 // }
 // console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
@@ -1369,3 +1379,10 @@
 // }
 
 // find_duplicate_in_array1([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
+
+
+
+
+
+
+// ****************************************21*******************************
