@@ -1381,8 +1381,48 @@
 // find_duplicate_in_array1([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]);
 
 
+// ********************************21*****************************
+
+
+
+// 21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level. Go to the editor
+// Sample Data :
+// console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
+// [1, 2, 3, 4, 5, 6]
+// console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
+// [1, 2, 3, [[4]], 5, 6]
+
+// function flat(arr, deep) {
+//   let result = arr.flat(deep);
+//   return result;
+// }
+// console.log(flat([1, [2], [3, [[4]]], [5, 6]], true));
+// console.log(flat([1, [2], [3, [[4]]], [5, 6]], 3));
 
 
 
 
-// ****************************************21*******************************
+// ********************************22*****************************
+
+
+// 22. Write a JavaScript program to compute the union of two arrays. Go to the editor
+// Sample Data :
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+// [1, 2, 3, 10, 100]
+// ********************************23*****************************
+
+
+// 23. Write a JavaScript function to find the difference of two arrays. Go to the editor
+// Test Data :
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// ["3", "10", "100"]
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+// ["6"]
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// ["3", "10", "100"]
+
+// ********************************24*****************************
+
+// 24. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array. Go to the editor
+// Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result : [15, -22, 47]
