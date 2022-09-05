@@ -10,3 +10,5 @@
 //? Herhangi bir veriyi erismek icin property (key) adi kullanilir.
 
 console.log("******* Objects *********");
+
+
