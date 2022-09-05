@@ -19,3 +19,13 @@ arabalar.lpg = true
 console.log(arabalar)
 console.log(arabalar.lpg)
 console.log(arabalar["model"])
+
+const worker = {
+    name: "Can",
+    surname: "Canan",
+    age:33,
+    job: "developer",
+    languages:["C++", "Java", "Javascript", "Pyhton", "Go"],
+    salary:40000,
+}
+console.log(first)
