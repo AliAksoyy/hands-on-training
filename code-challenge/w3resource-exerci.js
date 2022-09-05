@@ -42,6 +42,8 @@
 // palindrome("iTopiNonAvevanoNipoti");
 // palindrome("madam");
 
+
+
 //    const isPalindrome = (str) => {
 //      str = str.toLowerCase();
 //      let cnt = 0;
@@ -52,6 +54,7 @@
 //          if (str.charAt(i) == str.charAt(str.length - (i + 1))) {
 //            cnt++;
 //          }
+         
 //        }
 //        if (str.length % 2 == 0) {
 //          return cnt === Math.floor(str.length / 2) ? true : false;
@@ -81,6 +84,7 @@
 
 //         if(a[i].length > enUzunKelime) {
 //             enUzunKelime = a[i].length
+            
 //             hafiza = i;
 //         }
   
@@ -113,29 +117,29 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'thE quicK browN foX '
 
-// const buyuk = function(sentence) {
+const buyuk = function(sentence) {
 
-//     let a= sentence.split(" ");
-//     console.log(a)
-//     for(let i = 0 ;i<a.length ;i++) {
-//         let b = a[i].split("").reverse()
-//         console.log(b)
-//         let c = "";
-//         for(let j = 0; j<b.length; j++) {
-//              if(j==0) {
-//                 c += b[0].toUpperCase();
-//              } else {
-//                   c += b[j];
-//              }
-//              console.log(c)
-//         }
-//         c = c.split("").reverse().join("")
-//         a[i]= c
-//     }
+    let a= sentence.split(" ");
+    console.log(a)
+    for(let i = 0 ;i<a.length ;i++) {
+        let b = a[i].split("").reverse()
+        console.log(b)
+        let c = "";
+        for(let j = 0; j<b.length; j++) {
+             if(j==0) {
+                c += b[0].toUpperCase();
+             } else {
+                  c += b[j];
+             }
+             console.log(c)
+        }
+        c = c.split("").reverse().join("")
+        a[i]= c
+    }
 
-//     console.log(a.join(" "))
-// }
-// buyuk("the quick brown fox");
+    console.log(a.join(" "))
+}
+buyuk("the quick brown fox");
 
 //  2 çözüm
 
@@ -1495,3 +1499,30 @@
 // 24. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array. Go to the editor
 // Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
 // Expected result : [15, -22, 47]
+
+// function flt(arr) {
+//   return arr.filter(function myFunction(value, index, array) {
+//     return value;
+//   });
+// }
+// console.log(flt([NaN, 0, 15, false, -22, "", undefined, 47, null]));
+
+
+// 2 çözüm
+// function ex24(arr) {
+//   var res = [];
+//   for (var i = 0; i < arr.length; i++) {
+//     if (
+//       arr[i] > -23 &&
+//       arr[i] < 48 &&
+//       arr[i] !== false &&
+//       arr[i] != null &&
+//       arr[i] != 0 &&
+//       arr[i] != undefined
+//     ) {
+//       res += arr[i] + ", ";
+//     }
+//   }
+//   return res;
+// }
+// console.log(ex24([NaN, 0, 15, false, 22, "", undefined, 47, null]);
