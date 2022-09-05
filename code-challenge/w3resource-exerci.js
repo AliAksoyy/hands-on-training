@@ -1269,11 +1269,23 @@
 
 // 17. Write a JavaScript program to shuffle an array. Go to the editor
 
-let a = [1,4,6,8,4,0,10]
-for(let i = 0; i<a.length; i++) {
-    a.splice(i+4,0)
-}
 
+// (function (array) {
+//   array.sort(() => 0.5 - Math.random());
+//   console.log(array);
+// })([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+// 2çözüm
+// function shuffle(arr) {
+//   for (let i = arr.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * i);
+//     let k = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = k;
+//   }
+//   return arr;
+// }
+// console.log(shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
 
    
