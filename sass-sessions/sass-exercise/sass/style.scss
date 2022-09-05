@@ -1,0 +1,13 @@
+@import "./abstract/mixin", "./abstract/variable";
+@import "./base/reset.scss";
+@import "./components/cards", "./components/header";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+body {
+
+    background-color:$lightGray;
+    // text-align: center;
+    padding: 10rem 5rem;
+
+}

@@ -1238,14 +1238,14 @@
 
 // 3 çözüm
 
-let color = ["Blue ", "Green", "Red", "Orange"];
-order = ["th", "st", "nd", "rd"];
+// let color = ["Blue ", "Green", "Red", "Orange"];
+// order = ["th", "st", "nd", "rd"];
 
-    color.map((x,i) =>{
-        let c = `{${i +1}${order[i]} choice is ${x}}`
-    console.log(c);
+//     color.map((x,i) =>{
+//         let c = `{${i +1}${order[i]} choice is ${x}}`
+//     console.log(c);
 
-    })
+//     })
    
     
 
@@ -1264,9 +1264,13 @@ order = ["th", "st", "nd", "rd"];
 //   }
 // })(1990, 2019);
 
+
 // *******************************17*************************
 
 // 17. Write a JavaScript program to shuffle an array. Go to the editor
+
+let a = [1,4,6,8,4,0,10]
+
 
    
 // *******************************18*************************
