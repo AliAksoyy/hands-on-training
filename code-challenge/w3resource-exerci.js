@@ -248,7 +248,7 @@
 
 //           let arr = []
 //           arr=str.match(/[aeiou]/gi)
-//           console.log(arr)
+//           console.log(arr.join(","))
 //           return arr.length
 
 
