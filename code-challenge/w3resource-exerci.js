@@ -158,9 +158,9 @@
 
 // 3 çözüm
 // function capitalize(str) {
-// return str.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
+// return str.split(' ').map((e) => e.charAt(0).toUpperCase() + e.slice(1)).join(' ')
 
-
+// console.log(capitalize("the quick brown fox"))
 
 // *********6*************
 // 6. Write a JavaScript function that generates all combinations of a string.
@@ -184,6 +184,8 @@
 // }
 
 // console.log( combinations('dog')) 
+
+
 
 // 2 çözüm
 
