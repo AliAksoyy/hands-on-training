@@ -207,28 +207,28 @@
 // }
 // comb("dog")
 // 3çözüm
-const wordComb = (str) => {
-  let newStr = [];
-  let final = "";
-  for (let i = 0; i < str.length; i++) {
-    let word = str.slice(i, str.length);
-    console.log(word)
-    newStr.push(word);
-    console.log(newStr)
-    for (j = word.length - 1; j > 0; j--) {
-      let word1 = word.slice(0, j);
-      console.log(word1)
-      newStr.push(word1);
-    }
-  }
-  return (newStr.join())
-//   for(k=0; k < newStr.length;k++){
-//       final = final.concat(newStr[k] , ',');
-//       console.log(final)
+// const wordComb = (str) => {
+//   let newStr = [];
+//   let final = "";
+//   for (let i = 0; i < str.length; i++) {
+//     let word = str.slice(i, str.length);
+//     console.log(word)
+//     newStr.push(word);
+//     console.log(newStr)
+//     for (j = word.length - 1; j > 0; j--) {
+//       let word1 = word.slice(0, j);
+//       console.log(word1)
+//       newStr.push(word1);
+//     }
 //   }
-//   return (final = newStr.join(","));
-};
-console.log(wordComb("kitap"))
+//   return (newStr.join())
+// //   for(k=0; k < newStr.length;k++){
+// //       final = final.concat(newStr[k] , ',');
+// //       console.log(final)
+// //   }
+// //   return (final = newStr.join(","));
+// };
+// console.log(wordComb("kitap"))
 
 
 
@@ -334,6 +334,7 @@ console.log(wordComb("kitap"))
 
 // const identity = function(x) {
 //     let arr = [];
+//     console.log(arr)
 //     for(let i= 0 ;i<x ;i++){
 //         let newArr = [];
 //          for(let j = 0; j<x ;j++) {
@@ -342,6 +343,7 @@ console.log(wordComb("kitap"))
 //             }else {
 //                 newArr.push(0)
 //             }
+//         console.log(newArr);
             
 //          }
 //          arr.push(newArr)
@@ -382,21 +384,22 @@ console.log(wordComb("kitap"))
 
 // perfect number bölenleriini toplamı kendisine eşit olan sayı
 
-// const perfectNum = function(num) {
+const perfectNum = function(num) {
         
 
-//     let sum = 0;
-//     for(let i= 1; i<num ;i++){
-//         if(num%i ===0) {
-//             sum+=i
-//         }
-//         console.log(sum)
-//     }
-//     if(sum===num) return `${sum} perfect num'dır`
-//     else return `${num} perfect num değildir`;
+    let sum = 0;
+    for(let i= 1; i<num ;i++){
+        if(num%i ===0) {
+            sum+=i
+            
+        }
+        console.log(sum)
+    }
+    if(sum===num) return `${sum} perfect num'dır`
+    else return `${num} perfect num değildir`;
         
-// }
-// console.log( perfectNum(6))
+}
+console.log( perfectNum(6))
 // console.log( perfectNum(11))
 // console.log( perfectNum(28))
 // console.log( perfectNum(496))
