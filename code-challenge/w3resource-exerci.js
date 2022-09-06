@@ -446,23 +446,23 @@
 
 // 2 çözüm
 
-function amountToCoins(amount, coins) {
-  var res = [];
+// function amountToCoins(amount, coins) {
+//   var res = [];
 
-  for (var i = 0; i < coins.length; i++) {
-    while (amount >= coins[i]) {
-        console.log(i)
+//   for (var i = 0; i < coins.length; i++) {
+//     while (amount >= coins[i]) {
+//         console.log(i)
 
-      amount -= coins[i];
-      res.push(coins[i]);
-      console.log(res)
-    }
-  }
+//       amount -= coins[i];
+//       res.push(coins[i]);
+//       console.log(res)
+//     }
+//   }
 
-  return res.join(",");
-}
+//   return res.join(",");
+// }
 
-console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
+// console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
 
 // ****************15*******************
 
@@ -494,7 +494,9 @@ console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
 //   let unique = "";
 //   for (let i = 0; i < str.length; i++) {
 //     if (unique.indexOf(str[i]) === -1) {
+//         console.log(unique)
 //       unique += str[i];
+//       console.log(unique)
 //     }
 //   }
 //   return unique;
