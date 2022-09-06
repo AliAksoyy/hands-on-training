@@ -1116,21 +1116,24 @@ for (const i in a) {
 
 // 11 Write a JavaScript program to find the sum of squares of a numeric vector.
 
-//    function ex11(arr) {
-//      var res = 0;
-//      for (var i = 0; i < arr.length; i++) {
-//        res += arr[i] * arr[i];
-//      }
-//      return res;
-//    }
-//    console.log(ex11([1, 2, 3, 4]));
+  //  function ex11(arr) {
+  //    var res = 0;
+  //    for (var i = 0; i < arr.length; i++) {
+  //      res += arr[i] * arr[i];
+  //      console.log(res)
+  //    }
+  //    return res;
+  //  }
+  //  console.log(ex11([1, 2, 3, 4]));
 
 
 // 2 yöntem
-// function sumOfSquares(vector) {
-//   return vector.reduce((sum, num) => (sum += num * num), 0);
-// }
-// console.log(sumOfSquares([1, 2, 3, 4]));
+function sumOfSquares(vector) {
+  return vector.reduce(function(pre,curr){
+    return pre += curr*curr
+  })
+}
+console.log(sumOfSquares([1, 2, 3, 4]));
 
 // 3çözüm
 
