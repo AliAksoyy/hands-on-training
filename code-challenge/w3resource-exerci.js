@@ -516,6 +516,7 @@
 // 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string. Go to the editor
 // Click me to see the solution.
 // function countChar(s) {
+  
 //   let lst = new Set(s.split(""))
 //   console.log(lst)
 //     resoult = new Map(),
@@ -532,9 +533,11 @@
 //   console.log(resoult);
 // }
 // countChar("abacabd");
+
 // 2 çözüm
 // function ex17(str) {
 //   var count = {};
+//   console.log(str.split(""))
 //   str.split("").forEach(function (s) {
 //     count[s] = count[s] ? count[s] + 1 : 1;
 //   });
@@ -562,7 +565,7 @@
 // }
 
 // var myArray = [1, 2, 3,4,5];
-// console.log(array_binarySearch(myArray,2));
+// console.log(array_binarySearch(myArray,3));
 
 
 
@@ -583,11 +586,11 @@
 // console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
 //  2 çözüm
 
-// function biggerElements(arr) {
-//   return arr.filter((k) => k>10)
-// }
+function biggerElements(arr) {
+  return arr.filter(function(k){return k>10})
+}
 
-// console.log(biggerElements([11, 45, 4, 31, 64, 10]));
+console.log(biggerElements([11, 45, 4, 31, 64, 10]));
 
 // 3 çözüm
 
