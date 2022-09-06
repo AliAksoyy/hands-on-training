@@ -1128,22 +1128,22 @@ for (const i in a) {
 
 
 // 2 yöntem
-function sumOfSquares(vector) {
-  return vector.reduce(function(pre,curr){
-    return pre += curr*curr
-  })
-}
-console.log(sumOfSquares([1, 2, 3, 4]));
+// function sumOfSquares(vector) {
+//   return vector.reduce(function(pre,curr){
+//     return pre += curr*curr
+//   })
+// }
+// console.log(sumOfSquares([1, 2, 3, 4]));
 
 // 3çözüm
 
-// let a = [1,2,3,4];
-// let sum = 0;
-// let b = a.map((x) => {
-//      sum  += x*x
+let a = [1,2,3,4];
+let sum = 0;
+let b = a.map((x) => {
+     sum  += x*x
     
-// } )
-//  console.log(sum);
+} )
+ console.log(sum);
 
 // 4çözüm
 // function sum_sq(array) {
