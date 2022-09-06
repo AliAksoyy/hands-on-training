@@ -605,20 +605,20 @@
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters. Go to the editor
 // Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
-function id(len) {
-    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    len = len || 32;
-    let str_id = "";
+// function id(len) {
+//     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+//     len = len || 32;
+//     let str_id = "";
 
-    for (let i = 0; i < len; i++) {
-        str_id += str.charAt(Math.floor(Math.random() * str.length));
-    }
-    return str_id;
-}
+//     for (let i = 0; i < len; i++) {
+//         str_id += str.charAt(Math.floor(Math.random() * str.length));
+//     }
+//     return str_id;
+// }
 
-console.log(id(7));
-console.log(id(10));
-console.log(id());
+// console.log(id(7));
+// console.log(id(10));
+// console.log(id());
 
 
 // function makeId(n) {
@@ -655,6 +655,21 @@ console.log(id());
 // Sample arguments : 'abacddbec'
 // Expected output : 'e'
 // Click me to see the solution
+
+const repeat = (str) => {
+    str = str.split("").sort()
+    console.log(str)
+   let counter = 0
+    for(let i = 0; i<str.length; i+=2) {
+      if(str[i] === str[i+1]) {
+          counter++
+          console.log(counter)
+      }
+
+    }
+    return str[(2*counter) +1]
+}
+console.log( repeat('abacddbec'))
 
 // ******************24*****************
 
