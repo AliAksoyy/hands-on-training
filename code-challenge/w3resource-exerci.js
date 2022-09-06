@@ -384,22 +384,22 @@
 
 // perfect number bölenleriini toplamı kendisine eşit olan sayı
 
-const perfectNum = function(num) {
+// const perfectNum = function(num) {
         
 
-    let sum = 0;
-    for(let i= 1; i<num ;i++){
-        if(num%i ===0) {
-            sum+=i
+//     let sum = 0;
+//     for(let i= 1; i<num ;i++){
+//         if(num%i ===0) {
+//             sum+=i
             
-        }
-        console.log(sum)
-    }
-    if(sum===num) return `${sum} perfect num'dır`
-    else return `${num} perfect num değildir`;
+//         }
+//         console.log(sum)
+//     }
+//     if(sum===num) return `${sum} perfect num'dır`
+//     else return `${num} perfect num değildir`;
         
-}
-console.log( perfectNum(6))
+// }
+// console.log( perfectNum(6))
 // console.log( perfectNum(11))
 // console.log( perfectNum(28))
 // console.log( perfectNum(496))
@@ -436,29 +436,33 @@ console.log( perfectNum(6))
 //   return arr.reduce((acc, cur) => {
 //     while (n >= cur) {
 //       acc.push(cur);
+//       console.log(acc)
 //       n -= cur;
 //     }
 //     return acc;
-//   }, []);
+//   },[]);
 // };
 // console.log( amountToCoins(46,[25,10,5,2,1]))
 
 // 2 çözüm
 
-// function amountToCoins(amount, coins) {
-//   var res = [];
+function amountToCoins(amount, coins) {
+  var res = [];
 
-//   for (var i = 0; i < coins.length; i++) {
-//     while (amount >= coins[i]) {
-//       amount -= coins[i];
-//       res.push(coins[i]);
-//     }
-//   }
+  for (var i = 0; i < coins.length; i++) {
+    while (amount >= coins[i]) {
+        console.log(i)
 
-//   return res.join(",");
-// }
+      amount -= coins[i];
+      res.push(coins[i]);
+      console.log(res)
+    }
+  }
 
-// console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
+  return res.join(",");
+}
+
+console.log(amountToCoins(46, [25, 10, 5, 2, 1]));
 
 // ****************15*******************
 
