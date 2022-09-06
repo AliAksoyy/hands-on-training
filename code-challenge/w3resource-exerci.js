@@ -911,18 +911,18 @@
 // *******************6********************
 // 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
 
-const dashedNum = (num) => {
-    const arr =("0" + num.toString()).split("");
-    console.log(arr)
-    for(let i=0; i<arr.length; i++){
-         if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
-            arr.splice(i+1,0,'-')
-            console.log(arr)
-         }
-     }
-      return arr.join("")
-}
-console.log(dashedNum(025468))
+// const dashedNum = (num) => {
+//     const arr =("0" + num.toString()).split("");
+//     console.log(arr)
+//     for(let i=0; i<arr.length; i++){
+//          if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
+//             arr.splice(i+1,0,'-')
+//             console.log(arr)
+//          }
+//      }
+//       return arr.join("")
+// }
+// console.log(dashedNum(025468))
 
 // 2çözüm
 
@@ -953,10 +953,11 @@ console.log(dashedNum(025468))
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
 
-// const sortNum = (arr) => {
-//   return arr.sort((a, b) => a - b).join();
-// };
-// var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+// const sortNum = (arr) =>{
+//   return arr.sort((a,b) =>a-b)
+//   }
+
+// var arr1 = [-13, 8, 7, 6, 5, -4, 3, 2, 11];
 // console.log(sortNum(arr1));
 
 // 2 çözüm
@@ -988,7 +989,7 @@ console.log(dashedNum(025468))
     
 //     cnt = 0;
 //   }
-// //   console.log(newArr);
+//   console.log(newArr);
 //   const max = Math.max(...newArr);
  
   
