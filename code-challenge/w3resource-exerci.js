@@ -586,11 +586,11 @@
 // console.log(ex17([1, 2, 3, 4, 5, 6, 7], 3));
 //  2 çözüm
 
-function biggerElements(arr) {
-  return arr.filter(function(k){return k>10})
-}
+// function biggerElements(arr) {
+//   return arr.filter(function(k){return k>10})
+// }
 
-console.log(biggerElements([11, 45, 4, 31, 64, 10]));
+// console.log(biggerElements([11, 45, 4, 31, 64, 10]));
 
 // 3 çözüm
 
@@ -605,20 +605,20 @@ console.log(biggerElements([11, 45, 4, 31, 64, 10]));
 // 20. Write a JavaScript function that generates a string id (specified length) of random characters. Go to the editor
 // Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
-// function id(len) {
-//     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-//     len = len || 32;
-//     let str_id = "";
+function id(len) {
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    len = len || 32;
+    let str_id = "";
 
-//     for (let i = 0; i < len; i++) {
-//         str_id += str.charAt(Math.floor(Math.random() * str.length));
-//     }
-//     return str_id;
-// }
+    for (let i = 0; i < len; i++) {
+        str_id += str.charAt(Math.floor(Math.random() * str.length));
+    }
+    return str_id;
+}
 
-// console.log(id(7));
-// console.log(id(10));
-// console.log(id());
+console.log(id(7));
+console.log(id(10));
+console.log(id());
 
 
 // function makeId(n) {
