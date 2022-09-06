@@ -117,34 +117,34 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'thE quicK browN foX '
 
-const buyuk = function(sentence) {
+// const buyuk = function(sentence) {
 
-    let a= sentence.split(" ");
-    console.log(a)
-    for(let i = 0 ;i<a.length ;i++) {
-        let b = a[i].split("").reverse()
-        console.log(b)
-        let c = "";
-        for(let j = 0; j<b.length; j++) {
-             if(j==0) {
-                c += b[0].toUpperCase();
-                console.log(c)
-             } else {
-                  addc += b[j];
-                  console.log(c)
-             }
-             console.log(c)
-        }
-        console.log(c)
-        c = c.split("").reverse().join("")
-        console.log(c)
+//     let a= sentence.split(" ");
+//     console.log(a)
+//     for(let i = 0 ;i<a.length ;i++) {
+//         let b = a[i].split("").reverse()
+//         console.log(b)
+//         let c = "";
+//         for(let j = 0; j<b.length; j++) {
+//              if(j==0) {
+//                 c += b[0].toUpperCase();
+//                 console.log(c)
+//              } else {
+//                   c += b[j];
+//                   console.log(c)
+//              }
+//              console.log(c)
+//         }
+//         console.log(c)
+//         c = c.split("").reverse().join("")
+//         console.log(c)
         
-        a[i]= c
-    }
+//         a[i]= c
+//     }
 
-    return a.join(" ")
-}
-console.log( buyuk("the quick brown fox"));
+//     return a.join(" ")
+// }
+// console.log( buyuk("the quick brown fox"));
 
 //  2 çözüm
 
@@ -177,9 +177,11 @@ console.log( buyuk("the quick brown fox"));
 // let temp='';
 // for (let i = 0; i < str.length; i++) {
 // let int = '';
+// console.log(temp)
 // for (let j=i; j < str.length; j++) {
 // int += str[j];
 // temp += int + ',' ;
+// console.log(int)
 // }
 // }
 // return temp;
@@ -205,25 +207,28 @@ console.log( buyuk("the quick brown fox"));
 // }
 // comb("dog")
 // 3çözüm
-// const wordComb = (str) => {
-//   let newStr = [];
-//   let final = "";
-//   for (let i = 0; i < str.length; i++) {
-//     let word = str.slice(i, str.length);
-//     newStr.push(word);
-//     console.log(newStr)
-//     for (j = word.length - 1; j > 0; j--) {
-//       let word1 = word.slice(0, j);
-//       newStr.push(word1);
-//     }
-//   }
-//   console.log(newStr)
+const wordComb = (str) => {
+  let newStr = [];
+  let final = "";
+  for (let i = 0; i < str.length; i++) {
+    let word = str.slice(i, str.length);
+    console.log(word)
+    newStr.push(word);
+    console.log(newStr)
+    for (j = word.length - 1; j > 0; j--) {
+      let word1 = word.slice(0, j);
+      console.log(word1)
+      newStr.push(word1);
+    }
+  }
+  return (newStr.join())
 //   for(k=0; k < newStr.length;k++){
 //       final = final.concat(newStr[k] , ',');
+//       console.log(final)
 //   }
 //   return (final = newStr.join(","));
-// };
-// console.log(wordComb("kitap"))
+};
+console.log(wordComb("kitap"))
 
 
 
