@@ -1137,13 +1137,13 @@ for (const i in a) {
 
 // 3çözüm
 
-let a = [1,2,3,4];
-let sum = 0;
-let b = a.map((x) => {
-     sum  += x*x
+// let a3 = [1,2,3,4];
+// let sum = 0;
+// let b = a3.map((x) => {
+//      sum  += x*x
     
-} )
- console.log(sum);
+// } )
+//  console.log(sum);
 
 // 4çözüm
 // function sum_sq(array) {
@@ -1160,7 +1160,7 @@ let b = a.map((x) => {
 // 5 çözüm
 
 // let array = [1, 2, 1, 24, 6];
-// console.log(array.reduce((sum, item) => sum + item * item));
+// console.log(array.reduce((sum, item) => sum + item * item),);
 
 // *******************************12*************************
 
