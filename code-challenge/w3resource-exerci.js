@@ -755,24 +755,14 @@
 // console.log(cloneArray([1, 2, 4, 0]));
 
 // 2 çözüm
-const arr = [1,2,3,4]
-const arr2 =[...arr]
-console.log(arr2)
-arr2.push(5)
-console.log(arr2)
-const a = [[1], [2], [3]];
-const b = [...a]
-console.log(b)
-b.shift().shift()
-console.log(b)
-console.log(a)
-
-let a1 =[1,2,3]
-let a2 = [4,5,6]
-// a1 =a1.concat(a2)
-a1 = [...a1,...a2]
-console.log(a1)
-
+// let x =[1,2,3,4]
+// let b =[...x]
+// console.log(b)
+// let c =x.map((a) => 1*a)
+// console.log(c)
+let d = [1,2,3]
+let d1 = Array.of(d)
+console.log(d1)
 
 // let x = [1, 2, 3, 4];
 // console.log("Original array:");
