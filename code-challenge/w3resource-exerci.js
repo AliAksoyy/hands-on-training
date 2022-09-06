@@ -760,9 +760,12 @@
 // console.log(b)
 // let c =x.map((a) => 1*a)
 // console.log(c)
-let d = [1,2,3]
-let d1 = Array.of(d)
-console.log(d1)
+// let d = [1,2,3]
+// let d1 = Array.of(d)
+// console.log(d1)
+// let d3 = [1,2,3]
+// let d4 = Array.from(d)
+// console.log(d1)
 
 // let x = [1, 2, 3, 4];
 // console.log("Original array:");
@@ -908,17 +911,18 @@ console.log(d1)
 // *******************6********************
 // 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
 
-// const dashedNum = (num) => {
-//     const arr =("0" + num.toString()).split("");
-//     console.log(arr)
-//     for(let i=0; i<arr.length; i++){
-//          if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
-//             arr.splice(i+1,0,'-')
-//          }
-//      }
-//       return arr.join("")
-// }
-// console.log(dashedNum(025468))
+const dashedNum = (num) => {
+    const arr =("0" + num.toString()).split("");
+    console.log(arr)
+    for(let i=0; i<arr.length; i++){
+         if(Number(arr[i])%2 ===0 && Number(arr[i+1])%2===0){
+            arr.splice(i+1,0,'-')
+            console.log(arr)
+         }
+     }
+      return arr.join("")
+}
+console.log(dashedNum(025468))
 
 // 2çözüm
 
