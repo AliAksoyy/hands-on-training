@@ -1010,6 +1010,7 @@
 // Click me to see the solution
 
 // function swapCase(phrase) {
+  
 //   const newPhrase = [];
 //   for (let word of phrase) {
 //     if (word === word.toUpperCase()) {
@@ -1020,7 +1021,7 @@
     
 //     }
 //   }
-//   return newPhrase.join(" ");
+//   return newPhrase.join("");
 // }
 
 // console.log(swapCase("The Quick Brown Fox"));
@@ -1028,6 +1029,7 @@
 //  2 çözüm
 // const wordSwap = (str) => {
 //   const arr = str.toUpperCase().split(" ");
+//   console.log(arr)
 //   let newArr = [];
 //   for (let word of arr) {
 //     let newWord = "";
@@ -1037,6 +1039,7 @@
 //       }
 //     }
 //     newArr.push(newWord);
+//     console.log(newArr)
 //   }
 //   return newArr.join(" ");
 // };
@@ -1047,6 +1050,7 @@
 // const wordSwap = (arr) => {
 
 //     let newArr= arr.toUpperCase().split(" ")
+//     console.log(newArr)
     
 //     for(let i in newArr) {
 //     newArr = newArr.map((x) => x[0].toLowerCase() + x.slice(1))
