@@ -117,34 +117,34 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'thE quicK browN foX '
 
-// const buyuk = function(sentence) {
+const buyuk = function(sentence) {
 
-//     let a= sentence.split(" ");
-//     console.log(a)
-//     for(let i = 0 ;i<a.length ;i++) {
-//         let b = a[i].split("").reverse()
-//         console.log(b)
-//         let c = "";
-//         for(let j = 0; j<b.length; j++) {
-//              if(j==0) {
-//                 c += b[0].toUpperCase();
-//                 console.log(c)
-//              } else {
-//                   c += b[j];
-//                   console.log(c)
-//              }
-//              console.log(c)
-//         }
-//         console.log(c)
-//         c = c.split("").reverse().join("")
-//         console.log(c)
+    let a= sentence.split(" ");
+    console.log(a)
+    for(let i = 0 ;i<a.length ;i++) {
+        let b = a[i].split("").reverse()
+        console.log(b)
+        let c = "";
+        for(let j = 0; j<b.length; j++) {
+             if(j==0) {
+                c += b[0].toUpperCase();
+                console.log(c)
+             } else {
+                  addc += b[j];
+                  console.log(c)
+             }
+             console.log(c)
+        }
+        console.log(c)
+        c = c.split("").reverse().join("")
+        console.log(c)
         
-//         a[i]= c
-//     }
+        a[i]= c
+    }
 
-//     return a.join(" ")
-// }
-// console.log( buyuk("the quick brown fox"));
+    return a.join(" ")
+}
+console.log( buyuk("the quick brown fox"));
 
 //  2 çözüm
 
