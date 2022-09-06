@@ -656,20 +656,20 @@
 // Expected output : 'e'
 // Click me to see the solution
 
-const repeat = (str) => {
-    str = str.split("").sort()
-    console.log(str)
-   let counter = 0
-    for(let i = 0; i<str.length; i+=2) {
-      if(str[i] === str[i+1]) {
-          counter++
-          console.log(counter)
-      }
+// const repeat = (str) => {
+//     str = str.split("").sort()
+//     console.log(str)
+//    let counter = 0
+//     for(let i = 0; i<str.length; i+=2) {
+//       if(str[i] === str[i+1]) {
+//           counter++
+//           console.log(counter)
+//       }
 
-    }
-    return str[(2*counter) +1]
-}
-console.log( repeat('abacddbec'))
+//     }
+//     return str[(2*counter)]
+// }
+// console.log( repeat('abacddbec'))
 
 // ******************24*****************
 
