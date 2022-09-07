@@ -264,9 +264,20 @@ const ages = team.map((p) => p.age + 1);
 // })
 // console.log(teamFullName)
 
-const teamUnder22 = team.filter((p) => p.age <= 22).forEach((p) => console.log( p.name))
-console.log(teamUnder22)
+// const teamUnder22 = team.filter((p) => p.age <= 22).forEach((p) => console.log( p.name))
+// console.log(teamUnder22)
 
+
+const car = {
+  name: "bmw",
+  model:1990,
+  engine:1.6
+}
+const name1 = car.name
+const model1 = car["model"]
+
+const {name,model,engine} = car
+console.log(name,model,engine)
 
 
 
