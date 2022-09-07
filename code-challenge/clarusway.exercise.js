@@ -849,9 +849,19 @@ itScholl.name="ayşe"
 itScholl["location"] = "Kırıkkale"
 
 delete itScholl["established"]
-console.log(itScholl)
+// console.log(itScholl)
 
-
+const student = {
+    name:"ali",
+    age: 20,
+    marks:{
+        science:70,
+        math: 75
+    }
+}
+// console.log(student)
+// console.log(student["marks"].math)
+console.log(student.marks["math"])
 
 
 
