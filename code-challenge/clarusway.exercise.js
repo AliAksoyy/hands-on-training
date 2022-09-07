@@ -823,19 +823,32 @@
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
 
-const salaries = [5500,8000,6500,9000,10000,15000,25000]
-// const a = salaries.reduce(function(acc,val,i){
-//      return `${i +-6} ${acc + val}`;
-// },0)
-// console.log(`${a} sum`)
+const arabalar = new Object()
+arabalar.marka = "bmw";
+arabalar.motor = "1.3";
+arabalar.model = 2022;
+arabalar.lpg = true;
+console.log(arabalar)
+console.log(arabalar.lpg)
+console.log(arabalar["lpg"])
 
-const a = salaries
-.filter((x)=> x<=9000)
-.map((a) => Math.trunc(a*1.1))
-.reduce((acc,d) => acc+d,0)
+const a = "motor"
+console.log(arabalar[a])
 
-console.log(a)
+arabalar.motor = "1.6"
+console.log(arabalar)
 
+function Personel(id,ad,maas) {
+    this.perId = id;
+    this.PerAd = ad;
+    this.maas = maas;
+    console.log(this)
+
+}
+const kisi1 = new Personel("1234","ali",15000)
+// console.log(kisi1)
+console.log(kisi1.PerAd)
+console.log(kisi1["perId"])
 
 
 // !111111111111111111111 DERS 10 ARRAY2-1111111111111111
