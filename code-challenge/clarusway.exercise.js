@@ -824,12 +824,17 @@
 
 
 const salaries = [5500,8000,6500,9000,10000,15000,25000]
-const a = salaries.reduce(function(acc,val){
-     return acc +val
-},0)
-console.log(`${a} sum`)
+// const a = salaries.reduce(function(acc,val,i){
+//      return `${i +-6} ${acc + val}`;
+// },0)
+// console.log(`${a} sum`)
 
+const a = salaries
+.filter((x)=> x<=9000)
+.map((a) => Math.trunc(a*1.1))
+.reduce((acc,d) => acc+d,0)
 
+console.log(a)
 
 
 
