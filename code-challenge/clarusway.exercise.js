@@ -860,11 +860,13 @@ const people = {
 // }
 
 for(let [k,v] of Object.entries(people)) {
-    console.log(k,v.salary)
-    console.log(Object.values(people))
+    // console.log(k,v.salary)
+    // console.log(Object.values(people))
+    // console.log(Object.entries(people))
 }
 
-
+// Object.keys(people).forEach((p) => console.log(p))
+Object.values(people).map((a) => console.log(a["name"]))
 
 
 
