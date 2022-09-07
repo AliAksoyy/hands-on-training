@@ -822,18 +822,27 @@
 
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
-const worker = {
-    ad:"ali",
-    yaş:123,
-}
-console.log(worker)
-let a = JSON.parse(JSON.stringify(worker));
-console.log( JSON.stringify((worker)))
-// console.log("a",a)
-a["yaş"] = 321;
-console.log(a)
-console.log(worker)
 
+
+const people = {
+  person1: {
+    name: "can",
+    surname: "canan",
+    dob: 1990,
+    job: "developer",
+    salary: 140000,
+    drivingLicense: true,
+  },
+  person2: {
+    name: "ali",
+    surname: "aksoy",
+    dob: 1991,
+    job: "Tester",
+    salary: 150000,
+    drivingLicense: false,
+  },
+};
+console.log(people)
 
 
 
