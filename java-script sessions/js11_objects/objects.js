@@ -249,13 +249,24 @@ const ages = team.map((p) => p.age + 1);
 //* arttirarak age key'ine saklayan ve olusan diziyi donduren kodu yazınız.
 
 
-const teamFullName = team.map((p) =>{
-  return { teamFullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
-  age: p.age + 5
+// const teamFullName = team.map((p) =>{
+//   return { teamFullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+//   age: p.age + 5
 
-  }
-})
-console.log(teamFullName)
+//   }
+// })
+// console.log(teamFullName)
+// const teamFullName = team.map((p) =>{
+//   return {
+//     fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+//     age: p.age + 5
+//   }
+// })
+// console.log(teamFullName)
+
+const teamUnder22 = team.filter((p) => p.age <= 22).forEach((p) => console.log( p.name))
+console.log(teamUnder22)
+
 
 
 
