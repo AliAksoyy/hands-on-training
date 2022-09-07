@@ -853,8 +853,21 @@ const people = {
 // console.log(people)
 
 // console.log(people.person2["salary"])
-const a = people.person2["salary"];
-console.log(a)
+
+// for (let a in people) {
+//     console.log(a)
+//     console.log(people[a])
+// }
+
+
+
+
+
+
+
+
+
+
 // !111111111111111111111 DERS 10 ARRAY2-1111111111111111
 
 // //?-------------- ÖRNEK -------------------
