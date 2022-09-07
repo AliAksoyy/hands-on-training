@@ -861,6 +861,7 @@ const people = {
 
 for(let [k,v] of Object.entries(people)) {
     console.log(k,v.salary)
+    console.log(Object.values(people))
 }
 
 
