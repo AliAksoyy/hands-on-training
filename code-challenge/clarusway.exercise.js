@@ -834,8 +834,12 @@ const worker = {
 };
 worker.dob =1990
 worker.email="@gmail"
-worker["salary"] *=1.1 
+worker["salary"] *=1.1.toFixed(2)
 // console.log(worker.job)
+// console.log(worker)
+const person = worker
+// console.log(person)
+person.age =123
 console.log(worker)
 
 
