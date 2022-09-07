@@ -823,7 +823,11 @@
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
 
-
+const salaries = [5500,8000,6500,9000,10000,15000,25000]
+const a = salaries.reduce(function(acc,val){
+     return acc +val
+},0)
+console.log(`${a} sum`)
 
 
 
