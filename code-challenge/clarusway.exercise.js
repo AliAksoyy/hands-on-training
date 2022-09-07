@@ -841,11 +841,20 @@ const people = {
     salary: 150000,
     drivingLicense: false,
   },
+  person3: {
+    name: "aliyy",
+    surname: "aksoyyy",
+    dob: 1991,
+    job: "QA",
+    salary: 90000,
+    drivingLicense: false,
+  },
 };
-console.log(people)
+// console.log(people)
 
-
-
+// console.log(people.person2["salary"])
+const a = people.person2["salary"];
+console.log(a)
 // !111111111111111111111 DERS 10 ARRAY2-1111111111111111
 
 // //?-------------- ÖRNEK -------------------
