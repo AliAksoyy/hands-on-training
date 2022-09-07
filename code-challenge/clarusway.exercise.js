@@ -836,15 +836,15 @@
 // }
 // console.log(ali)
 
-let ali1 = {
-    a:"s",
-    b:"a",
+let itScholl = {
+    name : "ali",
+    location: "clarusway",
+    established: "2019",
 };
-console.log(ali1)
-const person = new Object();
-person.firstName = "John";
-person.lastName = "fsdf"
-console.log(person)
+console.log(itScholl.established, typeof itScholl)
+
+
+
 
 
 
