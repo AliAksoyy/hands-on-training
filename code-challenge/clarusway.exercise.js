@@ -881,14 +881,38 @@
 // person.greet2()
 // person.fullName()
 
-function Person () {
+// function Person () {
 
-    this.name = "ali",
-    this.age = 23;
-    console.log("ad")
+//     this.name = "ali",
+//     this.age = 23;
+//     console.log("ad")
+//     }
+//     const a = new Person()
+
+// function Person () {
+//     this.name = 'John',
+//     this.age = 23
+// }
+// const person = new Person();
+// // checking the prototype value
+// console.log(Person.prototype); // {
+
+function User(email, name){
+    this.email= email;
+    this.name = name;
+    this.online = false;
+    this.login = function() {
+        console.log(this.email, "has logged in")
     }
-    const a = new Person()
-
+}
+User.prototype.login = function() {
+    this.online = true;
+    console.log(this.email, "has logged in")
+}
+User.prototype.logout = function() {
+    this.online = false;
+    console.log(this.email, "has logged out")
+}
 
 
 
