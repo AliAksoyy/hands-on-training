@@ -823,29 +823,23 @@
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
 
-const arabalar = new Object()
-arabalar.marka = "bmw";
-arabalar.motor = "1.3";
-arabalar.model = 2022;
-arabalar.lpg = true;
-console.log(arabalar)
-console.log(arabalar.lpg)
-console.log(arabalar["lpg"])
 
-const a = "motor"
-console.log(arabalar[a])
+const worker = {
+    name: "ali",
+    surname: "aksoy",
+    age: 33,
+    job: "developer",
+    languages: ["alis","beyda"],
+    salary:1400
+};
+worker.dob =1990
+worker.email="@gmail"
+worker["salary"] *=1.1 
+// console.log(worker.job)
+console.log(worker)
 
-arabalar.motor = "1.6"
-console.log(arabalar)
 
-function Ali(a,b,c){
-    this.ad= a,
-    this.soy=b,
-    this.yas=c
-    console.log(this)
-}
-const ali1 = new Ali("ali","aksoy", 31)
-// console.log(ali1)
+
 
 
 // !111111111111111111111 DERS 10 ARRAY2-1111111111111111
