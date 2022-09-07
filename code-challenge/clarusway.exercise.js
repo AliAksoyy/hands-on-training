@@ -864,22 +864,30 @@
 // console.log(student.marks["math"])
 
 
-const person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  fullName: function() {
-    // return this.firstName + " " + this.lastName;
-    // or using template lateral notation
-    // return `${this.firstName} ${this.lastName} `;
-    console.log("ali baba")
-  },
-  greet: function(a) { console.log("hello + aa " ) },
-  greet2 : function () {console.log("hello2")}
-}
-// console.log(person.fullName())
-person.greet()
-person.greet2()
-person.fullName()
+// const person = {
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   fullName: function() {
+//     // return this.firstName + " " + this.lastName;
+//     // or using template lateral notation
+//     // return `${this.firstName} ${this.lastName} `;
+//     console.log("ali baba")
+//   },
+//   greet: function(a) { console.log("hello + aa " ) },
+//   greet2 : function () {console.log("hello2")}
+// }
+// // console.log(person.fullName())
+// person.greet()
+// person.greet2()
+// person.fullName()
+
+function Person () {
+
+    this.name = "ali",
+    this.age = 23;
+    console.log("ad")
+    }
+    const a = new Person()
 
 
 
