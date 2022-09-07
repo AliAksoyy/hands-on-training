@@ -845,7 +845,7 @@ const people = {
     name: "aliyy",
     surname: "aksoyyy",
     dob: 1991,
-    job: "QA",
+    job: "developer",
     salary: 90000,
     drivingLicense: false,
   },
@@ -867,7 +867,9 @@ for(let [k,v] of Object.entries(people)) {
 
 // Object.keys(people).forEach((p) => console.log(p))
 Object.values(people).map((a) => console.log(a["name"]))
-
+Object.values(people)
+.filter((p) => p.job === "developer")
+.forEach((s) => console.log(s["dob"]) )
 
 
 
