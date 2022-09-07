@@ -822,26 +822,17 @@
 
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
-
-
 const worker = {
-    name: "ali",
-    surname: "aksoy",
-    age: 33,
-    job: "developer",
-    languages: ["alis","beyda"],
-    salary:1400
-};
-worker.dob =1990
-worker.email="@gmail"
-worker["salary"] *=1.1.toFixed(2)
-// console.log(worker.job)
-// console.log(worker)
-const person = worker
-// console.log(person)
-person.age =123
+    ad:"ali",
+    yaş:123,
+}
 console.log(worker)
-
+let a = JSON.parse(JSON.stringify(worker));
+console.log( JSON.stringify((worker)))
+// console.log("a",a)
+a["yaş"] = 321;
+console.log(a)
+console.log(worker)
 
 
 
