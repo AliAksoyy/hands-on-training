@@ -229,20 +229,20 @@
 //* JSON => Javascript Object Notation
 //********************************************************
 
-const team = [
-  { name: "Josh", surname: "Adams", job: "developer", age: 30 },
-  { name: "Mary", surname: "Bary", job: "tester", age: 22 },
-  { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
-]; //* JSON
+// const team = [
+//   { name: "Josh", surname: "Adams", job: "developer", age: 30 },
+//   { name: "Mary", surname: "Bary", job: "tester", age: 22 },
+//   { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
+// ]; //* JSON
 
-console.log(team);
-console.log(team[2]);
+// console.log(team);
+// console.log(team[2]);
 
-//* Ornek1: team dizisindeki job'lari tek tek yazdiriniz.
-team.forEach((person) => console.log(person.job));
+// //* Ornek1: team dizisindeki job'lari tek tek yazdiriniz.
+// team.forEach((person) => console.log(person.job));
 
-//* Ornek2: age'leri bir artirarak yeni bir diziye saklayiniz.
-const ages = team.map((p) => p.age + 1);
+// //* Ornek2: age'leri bir artirarak yeni bir diziye saklayiniz.
+// const ages = team.map((p) => p.age + 1);
 
 //* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
 //* bunu fullName key'i olarak saklayan, ayni zamanda age degerlerini 5
@@ -268,17 +268,18 @@ const ages = team.map((p) => p.age + 1);
 // console.log(teamUnder22)
 
 
-const car = {
-  name: "bmw",
-  model:1990,
-  engine:1.6
+const  getInfo = () => {
+
+  return  {
+    id:1,
+    product:"ıphone",
+    price: 30000,
+  }
 }
-const name1 = car.name
-const model1 = car["model"]
-
-const {name,model,engine} = car
-console.log(name,model,engine)
-
+console.log( getInfo())
+const {product, price} = getInfo()
+console.log(product)
+console.log(price)
 
 
 
