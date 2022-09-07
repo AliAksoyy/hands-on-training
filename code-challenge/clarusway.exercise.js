@@ -841,7 +841,18 @@ let itScholl = {
     location: "clarusway",
     established: "2019",
 };
-console.log(itScholl.established, typeof itScholl)
+itScholl.firstlumniYear = "2020"
+// console.log(itScholl.established, typeof itScholl)
+// console.log(itScholl["name"])
+
+itScholl.name="ayşe"
+itScholl["location"] = "Kırıkkale"
+
+delete itScholl["established"]
+console.log(itScholl)
+
+
+
 
 
 
