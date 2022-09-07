@@ -859,6 +859,10 @@ const people = {
 //     console.log(people[a])
 // }
 
+for(let [k,v] of Object.entries(people)) {
+    console.log(k,v.salary)
+}
+
 
 
 
