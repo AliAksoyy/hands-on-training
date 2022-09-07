@@ -826,8 +826,12 @@
 const ali = {
     firstName:"Ali",
     lastName:"Aksoy",
+    birthYear:1970,
     fullNmae: function() {
         return  `${this.firstName} ve ${this.lastName}`
+    },
+    age(){
+        return new Date().getFullYear() - this.birthYear
     }
 }
 console.log(ali)
