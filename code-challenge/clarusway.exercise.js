@@ -913,6 +913,8 @@ User.prototype.logout = function() {
     this.online = false;
     console.log(this.email, "has logged out")
 }
+let userOne = new User("ali@gmail.com", "Ali")
+let userTwo = new User("dad@fa", "Ayşe")
 
 
 
