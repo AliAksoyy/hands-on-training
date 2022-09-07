@@ -823,18 +823,28 @@
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
 
-const ali = {
-    firstName:"Ali",
-    lastName:"Aksoy",
-    birthYear:1970,
-    fullNmae: function() {
-        return  `${this.firstName} ve ${this.lastName}`
-    },
-    age(){
-        return new Date().getFullYear() - this.birthYear
-    }
-}
-console.log(ali)
+// const ali = {
+//     firstName:"Ali",
+//     lastName:"Aksoy",
+//     birthYear:1970,
+//     fullNmae: function() {
+//         return  `${this.firstName} ve ${this.lastName}`
+//     },
+//     age(){
+//         return new Date().getFullYear() - this.birthYear
+//     }
+// }
+// console.log(ali)
+
+let ali1 = {
+    a:"s",
+    b:"a",
+};
+console.log(ali1)
+const person = new Object();
+person.firstName = "John";
+person.lastName = "fsdf"
+console.log(person)
 
 
 
