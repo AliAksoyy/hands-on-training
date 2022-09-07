@@ -838,17 +838,14 @@ console.log(arabalar[a])
 arabalar.motor = "1.6"
 console.log(arabalar)
 
-function Personel(id,ad,maas) {
-    this.perId = id;
-    this.PerAd = ad;
-    this.maas = maas;
+function Ali(a,b,c){
+    this.ad= a,
+    this.soy=b,
+    this.yas=c
     console.log(this)
-
 }
-const kisi1 = new Personel("1234","ali",15000)
-// console.log(kisi1)
-console.log(kisi1.PerAd)
-console.log(kisi1["perId"])
+const ali1 = new Ali("ali","aksoy", 31)
+// console.log(ali1)
 
 
 // !111111111111111111111 DERS 10 ARRAY2-1111111111111111
