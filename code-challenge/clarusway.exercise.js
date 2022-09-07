@@ -836,33 +836,50 @@
 // }
 // console.log(ali)
 
-let itScholl = {
-    name : "ali",
-    location: "clarusway",
-    established: "2019",
-};
-itScholl.firstlumniYear = "2020"
-// console.log(itScholl.established, typeof itScholl)
-// console.log(itScholl["name"])
+// let itScholl = {
+//     name : "ali",
+//     location: "clarusway",
+//     established: "2019",
+// };
+// itScholl.firstlumniYear = "2020"
+// // console.log(itScholl.established, typeof itScholl)
+// // console.log(itScholl["name"])
 
-itScholl.name="ayşe"
-itScholl["location"] = "Kırıkkale"
+// itScholl.name="ayşe"
+// itScholl["location"] = "Kırıkkale"
 
-delete itScholl["established"]
-// console.log(itScholl)
+// delete itScholl["established"]
+// // console.log(itScholl)
 
-const student = {
-    name:"ali",
-    age: 20,
-    marks:{
-        science:70,
-        math: 75
-    }
-}
+// const student = {
+//     name:"ali",
+//     age: 20,
+//     marks:{
+//         science:70,
+//         math: 75
+//     }
+// }
 // console.log(student)
 // console.log(student["marks"].math)
-console.log(student.marks["math"])
+// console.log(student.marks["math"])
 
+
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullName: function() {
+    // return this.firstName + " " + this.lastName;
+    // or using template lateral notation
+    // return `${this.firstName} ${this.lastName} `;
+    console.log("ali baba")
+  },
+  greet: function(a) { console.log("hello + aa " ) },
+  greet2 : function () {console.log("hello2")}
+}
+// console.log(person.fullName())
+person.greet()
+person.greet2()
+person.fullName()
 
 
 
