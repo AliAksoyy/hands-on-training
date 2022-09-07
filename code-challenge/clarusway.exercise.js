@@ -823,7 +823,14 @@
 // !111111111111111111111 DERS 11 Object 2-1111111111111111
 
 
-
+const ali = {
+    firstName:"Ali",
+    lastName:"Aksoy",
+    fullNmae: function() {
+        return  `${this.firstName} ve ${this.lastName}`
+    }
+}
+console.log(ali)
 
 
 
