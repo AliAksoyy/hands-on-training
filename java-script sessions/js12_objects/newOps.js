@@ -183,5 +183,6 @@ const team1 = [
     age: 32,
   },
 ];
-console.log(team1)
+// console.log(team1)
+console.log(team1[team1.length-1])
 
