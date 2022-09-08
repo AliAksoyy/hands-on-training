@@ -183,9 +183,11 @@ const team1 = [
     age: 32,
   },
 ];
-// console.log(team1)
-// console.log(team1[team1.length-1])
-// team1.forEach((s) => console.log(s.age))
-const a = team1.map((s) => s.age +1)
-console.log(a)
+const a = team.map((p) => {
+  return {
+    full:p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+    age: p.age + 5
+  }
+})
+console.log(teamFullName)
 
