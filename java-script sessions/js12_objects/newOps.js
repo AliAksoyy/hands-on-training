@@ -169,5 +169,19 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*  SPREAD (...)
 //* ======================================================
 
-const team1 = [{},{}]
+const team1 = [
+  {
+    name: "ali",
+    age: 30,
+  },
+  {
+    name: "aliww",
+    age: 31,
+  },
+  {
+    name: "aliyy",
+    age: 32,
+  },
+];
+console.log(team1)
 
