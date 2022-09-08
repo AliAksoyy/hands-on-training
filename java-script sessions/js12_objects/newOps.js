@@ -169,23 +169,15 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*  SPREAD (...)
 //* ======================================================
 
-const team1 = [
-  {
-    name: "ali",
-    age: 30,
-  },
-  {
-    name: "aliww",
-    age: 31,
-  },
-  {
-    name: "aliyy",
-    age: 32,
-  },
-];
 
-const a = team1.filter((a) => a.age<=31).forEach((p) => console.log(p.name))
-const b = team1.filter((c) => c.age <=31).map((w) => w.name)
-console.log(b)
-const c =team1.reduce((acc,cur) => (acc += cur.age),0) / team1.length
-console.log(c)
+
+const a = {
+  name:"ali",
+  soy:"aksoy",
+  aw:[1,2,4]
+}
+const c =a.name
+const d =a["soy"]
+console.log(c,d)
+const {aw} =a
+console.log(aw)
