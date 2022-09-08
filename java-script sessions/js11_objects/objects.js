@@ -277,3 +277,15 @@ const avgAges =
 console.log(avgAges);
 
 
+
+
+const note = {
+  id: 1,
+  title: "My first note",
+  date: "01/01/1970",
+  author: {
+    firstName: "John",
+    lastName: "Doe",
+    email: "johndoe@example.com",
+  },
+};
