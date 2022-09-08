@@ -878,32 +878,32 @@ combine(objA, objB) // Returns { a: 13, b: 20, c: 36, d: 3 }
 
 
 
-const people = {
-  person1: {
-    name: "can",
-    surname: "canan",
-    dob: 1990,
-    job: "developer",
-    salary: 140000,
-    drivingLicense: true,
-  },
-  person2: {
-    name: "ali",
-    surname: "aksoy",
-    dob: 1991,
-    job: "Tester",
-    salary: 150000,
-    drivingLicense: false,
-  },
-  person3: {
-    name: "aliyy",
-    surname: "aksoyyy",
-    dob: 1991,
-    job: "developer",
-    salary: 90000,
-    drivingLicense: false,
-  },
-};
+// const people = {
+//   person1: {
+//     name: "can",
+//     surname: "canan",
+//     dob: 1990,
+//     job: "developer",
+//     salary: 140000,
+//     drivingLicense: true,
+//   },
+//   person2: {
+//     name: "ali",
+//     surname: "aksoy",
+//     dob: 1991,
+//     job: "Tester",
+//     salary: 150000,
+//     drivingLicense: false,
+//   },
+//   person3: {
+//     name: "aliyy",
+//     surname: "aksoyyy",
+//     dob: 1991,
+//     job: "developer",
+//     salary: 90000,
+//     drivingLicense: false,
+//   },
+// };
 // console.log(people)
 
 // console.log(people.person2["salary"])
@@ -913,17 +913,17 @@ const people = {
 //     console.log(people[a])
 // }
 
-for(let [k,v] of Object.entries(people)) {
+// for(let [k,v] of Object.entries(people)) {
     // console.log(k,v.salary)
     // console.log(Object.values(people))
     // console.log(Object.entries(people))
-}
+// }
 
-// Object.keys(people).forEach((p) => console.log(p))
-Object.values(people).map((a) => console.log(a["name"]))
-Object.values(people)
-.filter((p) => p.job === "developer")
-.forEach((s) => console.log(s["dob"]) )
+// // Object.keys(people).forEach((p) => console.log(p))
+// Object.values(people).map((a) => console.log(a["name"]))
+// Object.values(people)
+// .filter((p) => p.job === "developer")
+// .forEach((s) => console.log(s["dob"]) )
 
 
 
@@ -1693,3 +1693,5 @@ Object.values(people)
 // };
 // let dizi1 = ["ali", "veli", "ali", "veli", "veli", "2", 2, 2, 2];
 // console.log(count(dizi1));
+
+
