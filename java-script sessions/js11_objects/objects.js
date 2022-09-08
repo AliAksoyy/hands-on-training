@@ -279,17 +279,3 @@ console.log(avgAges);
 
 
 
-const note = {
-  id: 1,
-  title: "My first note",
-  date: "01/01/1970",
-  author: {
-    firstName: "John",
-    lastName: "Doe",
-    email: "johndoe@example.com",
-  },
-};
-
-const  {author:{firstName},id,title} =note
-// console.log(firstName)
-console.log(id,firstName,note["date"],title)
