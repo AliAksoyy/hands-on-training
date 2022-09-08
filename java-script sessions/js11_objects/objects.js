@@ -277,8 +277,13 @@ const avgAges =
 console.log(avgAges);
 
 
-let a = [1,2,3]
-let b = [...a]
-a.push(4)
+
+
+const person23 = {
+  name: "John",
+  age: 30,
+};
+
+const a = {...person23,
+city:"kırıkkale"}
 console.log(a)
-console.log(b)
