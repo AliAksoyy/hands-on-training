@@ -277,5 +277,3 @@ const avgAges =
 console.log(avgAges);
 
 
-
-
