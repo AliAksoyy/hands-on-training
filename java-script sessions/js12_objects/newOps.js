@@ -185,3 +185,10 @@ const citrus = ["orange","lime", "lemon"]
 const fruits = ["apple", "banana", ...citrus, "chery", "pear"];
 console.log(fruits)
 
+const a = [3,4,2,1]
+const b = [...a]
+console.log(a)
+a.push(21)
+console.log(a)
+console.log(b)
+
