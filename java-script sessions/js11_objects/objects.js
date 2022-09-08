@@ -277,14 +277,5 @@ const avgAges =
 console.log(avgAges);
 
 
-function a (num) {
-  let b = []
-  for(let n of num) {
-    if(n % 2 ==0) {
-      b.push(n)
-    }
-  }
-  return b
-}
-let num = [1,2,3,4,5,6,7]
-console.log(a(num))
+
+
