@@ -26,6 +26,17 @@
       font-weight: 600;
  
 }
+.carousel-item .btn {
+    width: 10rem;
+}
+.carousel-indicator button {
+
+  background-color:red !important;
+  height: 0.4rem !important;
+  width: 3rem !important;
+  margin-right: 0.5rem !important;
+
+}
 /*! ------------ 3- ABOUT SECTION ----------- */
 
 /*! ------------- 4- INSTRUCTORS -------------*/
