@@ -169,30 +169,3 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*  SPREAD (...)
 //* ======================================================
 
-
-
-const team3 = [
-  {
-    name: "Josh",
-    surname: "Barry",
-    job: "developer",
-    age: 30,
-  },
-  {
-    name: "Josh",
-    surname: "Barry",
-    job: "tester",
-    age: 45,
-  },
-  {
-    name: "Hazel",
-    surname: "Nut",
-    job: "team lead",
-    age: 40,
-  },
-];
-
-team3.forEach((p) => {
-  const {name,surname,job,age} = p
-  console.log(name,job,age)
-})
