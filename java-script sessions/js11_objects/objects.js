@@ -279,11 +279,7 @@ console.log(avgAges);
 
 
 
-const person23 = {
-  name: "John",
-  age: 30,
-};
+const arrValue = ['My', 'name', 'is', 'Jack'];
 
-const a = {...person23,
-city:"kırıkkale"}
-console.log(a)
+console.log(arrValue)
+console.log(...arrValue)
