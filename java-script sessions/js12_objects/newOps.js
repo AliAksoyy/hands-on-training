@@ -171,13 +171,28 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 
 
 
-const a = {
-  name:"ali",
-  soy:"aksoy",
-  aw:[1,2,4]
-}
-const c =a.name
-const d =a["soy"]
-console.log(c,d)
-const {aw} =a
-console.log(aw)
+const team3 = [
+  {
+    name: "Josh",
+    surname: "Barry",
+    job: "developer",
+    age: 30,
+  },
+  {
+    name: "Josh",
+    surname: "Barry",
+    job: "tester",
+    age: 45,
+  },
+  {
+    name: "Hazel",
+    surname: "Nut",
+    job: "team lead",
+    age: 40,
+  },
+];
+
+team3.forEach((p) => {
+  const {name,surname,job,age} = p
+  console.log(name,job,age)
+})
