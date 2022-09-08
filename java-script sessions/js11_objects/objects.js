@@ -279,7 +279,10 @@ console.log(avgAges);
 
 
 
-const arrValue = ['My', 'name', 'is', 'Jack'];
+let rivers = ["Nile", "Ganges", "Yangte"];
+let moreRivers = ["Danube", "Amazon"];
+[].push.apply(rivers,moreRivers)
+rivers.push(...moreRivers)
+console.log(rivers)
 
-console.log(arrValue)
-console.log(...arrValue)
+
