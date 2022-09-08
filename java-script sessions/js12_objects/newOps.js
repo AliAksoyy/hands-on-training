@@ -184,5 +184,8 @@ const team1 = [
   },
 ];
 // console.log(team1)
-console.log(team1[team1.length-1])
+// console.log(team1[team1.length-1])
+// team1.forEach((s) => console.log(s.age))
+const a = team1.map((s) => s.age +1)
+console.log(a)
 
