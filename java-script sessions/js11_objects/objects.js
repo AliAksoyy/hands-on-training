@@ -276,3 +276,14 @@ const avgAges =
   team.reduce((sum, person) => (sum += person.age), 0) / team.length;
 console.log(avgAges);
 
+
+
+const student = {
+  name: "John",
+  age: 20,
+  marks: {
+    science: 70,
+    math: 75,
+  },
+};
+console.log(student.marks["math"])
