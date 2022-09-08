@@ -289,3 +289,7 @@ const note = {
     email: "johndoe@example.com",
   },
 };
+
+const  {author:{firstName},id,title} =note
+// console.log(firstName)
+console.log(id,firstName,note["date"],title)
