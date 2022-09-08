@@ -169,7 +169,3 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*  SPREAD (...)
 //* ======================================================
 
-const s = ({id,price}) => {
-  console.log(price*15)
-}
-s({id:1,price:3000})
