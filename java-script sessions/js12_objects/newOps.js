@@ -183,11 +183,9 @@ const team1 = [
     age: 32,
   },
 ];
-const a = team.map((p) => {
-  return {
-    full:p.name.toUpperCase() + " " + p.surname.toUpperCase(),
-    age: p.age + 5
-  }
-})
-console.log(teamFullName)
 
+const a = team1.filter((a) => a.age<=31).forEach((p) => console.log(p.name))
+const b = team1.filter((c) => c.age <=31).map((w) => w.name)
+console.log(b)
+const c =team1.reduce((acc,cur) => (acc += cur.age),0) / team1.length
+console.log(c)
