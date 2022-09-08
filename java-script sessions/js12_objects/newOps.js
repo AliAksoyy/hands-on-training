@@ -184,3 +184,4 @@ console.log(allVehicles)
 const citrus = ["orange","lime", "lemon"]
 const fruits = ["apple", "banana", ...citrus, "chery", "pear"];
 console.log(fruits)
+
