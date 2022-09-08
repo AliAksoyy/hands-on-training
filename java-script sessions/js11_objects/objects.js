@@ -286,3 +286,8 @@ const note = {
   tags: ['personal', 'writing', 'investigations'],
 };
 console.log(note)
+
+const {author:{firstName},tags:[personalTag]} =note
+console.log(firstName)
+console.log(title)
+console.log(personalTag)
