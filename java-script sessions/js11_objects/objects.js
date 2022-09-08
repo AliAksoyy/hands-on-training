@@ -277,17 +277,18 @@ const avgAges =
 console.log(avgAges);
 
 
-const note = {
-  title: 'My first note',
-  author: {
-    firstName: 'Sherlock',
-    lastName: 'Holmes',
-  },
-  tags: ['personal', 'writing', 'investigations'],
-};
-console.log(note)
-
-const {author:{firstName},tags:[personalTag]} =note
-console.log(firstName)
-console.log(title)
-console.log(personalTag)
+function sum(...args) {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(1, 2, 3, 4, 5)); // 15
+// only calculate number values
+function sum2(...args) {
+  return args
+    .filter(function (e) {
+      return typeof e === 'number';
+    })
+    .reduce(function (prev, curr) {
+      return prev + curr;
+    }, 0);
+}
+console.log(sum2(1, 2, 3, 4, 5, 'aa')); // 1515
