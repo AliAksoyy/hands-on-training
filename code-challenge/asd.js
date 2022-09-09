@@ -20,29 +20,34 @@
         
 //     }
 
-    function degisim(num) {
-        const romanNum = {
-           1:I,
-           5: V,
-           10: X,
-           50:L,
-          100:C,
-           500: D,
-          1000: M
-        };
-        const a = Object.keys(romanNum);
-        console.log(a);
+    function degisim (num) {
+        const romanRaklam = {
+            M:1000,
+            CM:900,
+            D:500,
+            CD:400,
+            C:100,
+            XC:90,
+            L:50,
+            XL:40,
+            X:10,
+            IX:9,
+            V:5,
+            IV:4,
+            I:1,
+        }
         let empty = []
-        let empty1 =""
-        for(let i= 0; i<a.length; i++) {
-            if(num<a[i]) {
-                 num -= a[i-1]
-                empty.push(romanNum.a[i-1])
+        for(let roman of Object.keys(romanRaklam)) {
+            while(num>=romanRaklam[roman]) {
+                empty.push(roman)
+                num -=romanRaklam[roman]
+
             }
         }
-     
+        return empty.join("")
     }
-    console.log( degisim(5))
+    console.log(degisim(12))
+   
     
         
     
