@@ -32,6 +32,7 @@
   font-weight: 600;
 }
 
+
 .carousel-item .btn {
   width: 7rem;
   margin-bottom: 1rem;
@@ -48,7 +49,7 @@
 
 /*! ------------ 3- ABOUT SECTION ----------- */
 
-/*! ------------- 4- INSTRUCTORS -------------*/
+/*! ------------- 4- CHEFS -------------*/
 section#instructors .card {
   transition: transform 0.5s;
 }
@@ -64,11 +65,17 @@ section#instructors .socials i {
 section#instructors .socials i:hover {
   opacity: 0.5;
 }
+.card img {
+  height: 15rem;
+}
 
-/*! ----------- 4- STUDENTS SECTION ----------*/
+/*! ----------- 4- CUSTOMERS SECTION ----------*/
 
-/*! ----------- 5- COURSES SECTION ----------- */
-
+/*! ----------- 5- MEALS SECTION ----------- */
+.tab-pane img {
+  height: 20rem;
+  width: 20rem !important;
+}
 
 .nav-pills .nav-item .nav-link.active {
   background-color: var(--red);
