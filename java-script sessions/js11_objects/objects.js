@@ -29,8 +29,8 @@ console.log(arabalar);
 
 // //? Square bracket yonteminin en buyuk avantaji key degerini
 // //? degisken olarak kullanabilmemizdir.
-// const key = "mark";
-// console.log(arabalar[key]);
+const key = "mark";
+console.log(arabalar[key]);
 
 // arabalar.motor = "1.6";
 // console.log(arabalar);
@@ -44,12 +44,12 @@ console.log(arabalar);
 //   this.id = id;
 //   this.ad = ad;
 //   this.maas = maas;
-//   // console.log(this); //! Personel objesine baglanmistir (binded)
+//   console.log(this); //! Personel objesine baglanmistir (binded)
 // }
 
 // const kisi1 = new Personel("1234567890", "Mustafa", 15000);
 // const kisi2 = new Personel("177567890", "Canan", 25000);
-// // console.log(kisi1);
+// console.log(kisi1);
 // console.log(kisi1.ad);
 // console.log(kisi2.maas);
 // console.log(kisi2["id"]);
