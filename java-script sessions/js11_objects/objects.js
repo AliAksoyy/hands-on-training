@@ -55,7 +55,7 @@ console.log(kisi2.maas);
 console.log(kisi2["id"]);
 
 // //? Global alanda window objesini gosterir.
-// console.log(this);
+console.log(this);
 // window.alert("Merhaba");
 
 //* ---------------------------------------------------------
