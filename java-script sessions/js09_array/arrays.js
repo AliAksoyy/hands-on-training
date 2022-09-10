@@ -5,6 +5,7 @@
 console.log("***** ARRAYS ******");
 
 //* Dizi Tanimlama
+
 //* ---------------------------------------------------------
 
 // ! 1.Yöntem (Array Literal) - Tercih edilen yöntem
