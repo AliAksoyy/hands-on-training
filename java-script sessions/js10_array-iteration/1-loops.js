@@ -86,7 +86,7 @@ const findStudentsOf = (arr, search) => {
     search === item && counter++;
 
     //! Short-circuit yöntemi: || => kosul yanlis (false) ise ifadeyi çalıştır.
-    search === item || counter++;
+    // search === item || counter++;
   }
 
   return !counter

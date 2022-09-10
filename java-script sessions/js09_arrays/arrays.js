@@ -5,7 +5,6 @@
 console.log("***** ARRAYS ******");
 
 //* Dizi Tanimlama
-
 //* ---------------------------------------------------------
 
 // ! 1.Yöntem (Array Literal) - Tercih edilen yöntem
@@ -226,7 +225,6 @@ const yasIlk30 = yasArray.find((yas) => yas >= 30);
 const yasSon30 = yasArray.findLast((yas) => yas >= 30);
 console.log(yasIlk30, yasSon30);
 
-
 //* findIndex()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
@@ -235,3 +233,5 @@ console.log(yasIlk30, yasSon30);
 
 //?Ornek: Yasi 30 dan buyuk olan ilk elemanin indexini yazdirin
 
+const foundIndex = yasArray.findIndex((yas) => yas >= 30);
+console.log(foundIndex);

@@ -275,14 +275,3 @@ console.log(teamUnder22);
 const avgAges =
   team.reduce((sum, person) => (sum += person.age), 0) / team.length;
 console.log(avgAges);
-
-
-
-
-let rivers = ["Nile", "Ganges", "Yangte"];
-let moreRivers = ["Danube", "Amazon"];
-[].push.apply(rivers,moreRivers)
-rivers.push(...moreRivers)
-console.log(rivers)
-
-
