@@ -41,4 +41,15 @@ const myListArray = Array.from(myList)
 myListArray.forEach((item) => console.log(item.innerText));
 [...myList].forEach((a)=> console.log(a.innerText));
 
-[...myList].forEach((k)=> console.log(k.style.color = "red"))
+[...myList].forEach((k)=> console.log(k.style.color = "red"));
+
+
+const myLi =document.querySelector("li")
+console.log(myLi.innertext)
+myLi.style.color = "yellowgreen";
+
+const itemList = document.querySelector(".item-list")
+itemList.style.background = "grey;"
+const input = document.querySelector("#input");
+console.log(input.value)
+document.querySelector("#btn").style.cursor = "pointer"
