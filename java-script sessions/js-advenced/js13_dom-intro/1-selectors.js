@@ -60,4 +60,9 @@ itemH2.style.color ="purple"
 const myBtn = document.querySelector("input[type='button']")
 console.log(myBtn)
 
-const list = document.querySelectorAll("ul li")
+const lists = document.querySelectorAll("ul li")
+
+console.log(lists)
+
+lists.forEach((li) => console.log(li.innerText));
+console.log(document.querySelectorAll("section ul li:nth-child(4)").innerText)
