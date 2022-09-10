@@ -51,10 +51,7 @@
     
    
     
-      const team = [{name :"ali", surname: "aksoy", age:30      },
-                    {name: "ayşe",surname:"akus", age:32}]
-    
-
+   
 
 
 
