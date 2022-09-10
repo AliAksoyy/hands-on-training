@@ -38,9 +38,9 @@ console.log("****** FUNC DECLARATION *********");
 
 
 // function yasHesapla(isim,dogumTarihi) {
-//     // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir`;
-//     // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir`;
-//     // return sonuc;
+    // const sonuc = `${isim} in yasi ${2022 - dogumTarihi} dir`;
+    // const sonuc = `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir`;
+    // return sonuc;
 //     return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir`;
 
 // }
