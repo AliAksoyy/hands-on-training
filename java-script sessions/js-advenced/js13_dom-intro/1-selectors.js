@@ -33,4 +33,10 @@ console.log("***** SELECTORS *****");
       list[4].innerText = "Django /Flask"
       console.log(list[1].textContent)
       console.log(list[1].innerHTML)
-      list[4].innerHTML = "<a href="https://www.clarusway.com"> clarusway</a>
+     
+    const myList = document.getElementsByClassName("list")
+console.log(myList[0].innerText)
+
+const myListArray = Array.from(myList)
+myListArray.forEach((item) => console.log(item.innerText));
+[...myList].forEach((a)=> console.log(a.innerText))
