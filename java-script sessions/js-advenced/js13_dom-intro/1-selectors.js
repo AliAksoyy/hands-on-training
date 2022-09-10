@@ -84,3 +84,12 @@ h2.style.color = "blue"
 
 console.log(addItem.parentNode.parentNode.children[0])
 
+const myList = ul.children;
+console.log(myList);
+const javascript= myList [2]
+const css = javascript.previousElementSibling
+console.log(css.innerText)
+const react = javascript.nextElementSibling
+console.log(react.textContent)
+
+console.log(javasript.previousElementSibling.previousElementSibling.innerText)
