@@ -73,3 +73,11 @@ ul.style.border = "2px solid red"
 console.log(list.parentNode.parentNode.parentNode)
 console.log(list.parentElement)
 
+console.log(list.closest("section"))
+const itemListSec =list.closest("section")
+itemListSec.style.background = "grey"
+
+const addItem = document.querySelector(".add-item")
+console.log(addItem.children)
+const h2 = addItem.children[0]
+h2.style.color = "blue"
