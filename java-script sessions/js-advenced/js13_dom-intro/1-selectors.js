@@ -39,4 +39,6 @@ console.log(myList[0].innerText)
 
 const myListArray = Array.from(myList)
 myListArray.forEach((item) => console.log(item.innerText));
-[...myList].forEach((a)=> console.log(a.innerText))
+[...myList].forEach((a)=> console.log(a.innerText));
+
+[...myList].forEach((k)=> console.log(k.style.color = "red"))
