@@ -226,6 +226,7 @@ const yasIlk30 = yasArray.find((yas) => yas >= 30);
 const yasSon30 = yasArray.findLast((yas) => yas >= 30);
 console.log(yasIlk30, yasSon30);
 
+
 //* findIndex()
 //*-----------------------------------------------------------
 //? Aldigi callback fonksiyonuna gore test gerceklestirir.
