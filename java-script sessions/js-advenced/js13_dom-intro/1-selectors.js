@@ -31,3 +31,5 @@ console.log("***** SELECTORS *****");
       elementThree.textContent = "React / Vue / Angular"
 
       list[4].innerText = "Django /Flask"
+      console.log(list[1].textContent)
+      console.log(list[1].innerHTML)
