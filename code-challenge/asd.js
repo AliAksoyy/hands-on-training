@@ -55,10 +55,7 @@
                     {name: "ayşe",surname:"akus", age:32}]
     
 
-const a = {
-    fullName: team.name.toUpperCase() + team.name.toUpperCase()
-}
-console.log(a)
+
 
 
 
