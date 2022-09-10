@@ -65,4 +65,5 @@ const lists = document.querySelectorAll("ul li")
 console.log(lists)
 
 lists.forEach((li) => console.log(li.innerText));
-console.log(document.querySelectorAll("section ul li:nth-child(4)").innerText)
+console.log(document.querySelectorAll("section ul li:nth-child(4)")[0].innerText)
+
