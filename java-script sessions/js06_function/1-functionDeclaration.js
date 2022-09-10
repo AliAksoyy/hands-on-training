@@ -14,7 +14,7 @@ console.log("****** FUNC DECLARATION *********");
 
 
 // yazdir();
-// // !fonksiyonun tanımlanması (declaration)
+// !fonksiyonun tanımlanması (declaration)
 // function yazdir () {
 //     console.log("merhaba");
 // }
