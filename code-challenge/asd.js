@@ -48,9 +48,7 @@
     // }
     // console.log(degisim(12))
 
-    ş
-
-    a
+    
    
     
         
