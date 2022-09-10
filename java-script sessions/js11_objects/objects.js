@@ -40,19 +40,19 @@ console.log(arabalar[key]);
 // //* ---------------------------------------------------------
 
 // //? Object Constructure
-// function Personel(id, ad, maas) {
-//   this.id = id;
-//   this.ad = ad;
-//   this.maas = maas;
-//   console.log(this); //! Personel objesine baglanmistir (binded)
-// }
+function Personel(id, ad, maas) {
+  this.id = id;
+  this.ad = ad;
+  this.maas = maas;
+  console.log(this); //! Personel objesine baglanmistir (binded)
+}
 
-// const kisi1 = new Personel("1234567890", "Mustafa", 15000);
-// const kisi2 = new Personel("177567890", "Canan", 25000);
-// console.log(kisi1);
-// console.log(kisi1.ad);
-// console.log(kisi2.maas);
-// console.log(kisi2["id"]);
+const kisi1 = new Personel("1234567890", "Mustafa", 15000);
+const kisi2 = new Personel("177567890", "Canan", 25000);
+console.log(kisi1);
+console.log(kisi1.ad);
+console.log(kisi2.maas);
+console.log(kisi2["id"]);
 
 // //? Global alanda window objesini gosterir.
 // console.log(this);
