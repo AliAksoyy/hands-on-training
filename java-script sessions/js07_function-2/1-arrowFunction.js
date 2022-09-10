@@ -49,7 +49,7 @@ console.log("**** ARROW ******");
 // //* alternatif
 // const yasHesaplaKisa = (tarih) => new Date().getFullYear() - tarih;
 
-// // console.log("YASINIZ:" + yasHesapla(tarih));
+// console.log("YASINIZ:" + yasHesapla(tarih));
 // console.log("YASINIZ:" + yasHesaplaKisa(tarih));
 // ******** 
 //* ORNEK: Girilen n. terime kadar Fibonacci sayilarinin toplamini
