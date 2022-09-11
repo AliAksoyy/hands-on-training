@@ -12,6 +12,8 @@
 // h1.style.color = "white";
 // h1.style.background = "red";
 
+
+
 // //* EXAMPLE-2
 // //*-------------------------------------------
 
