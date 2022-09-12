@@ -167,18 +167,29 @@
 
 
 
+// const list = document.querySelector(".list")
+// const ul = list.parentNode
+// console.log(ul)
+// ul.style.border = "1px solid red"
+// console.log(list.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
+
+// const a = list.closest("section")
+// a.style.backgroundColor = "red"
+
+// const addItem = document.querySelector(".add-item")
+// console.log(addItem.children)
+// const h2 = addItem.children[0];
+// h2.style.color = "blue"
+// const c2 =addItem.parentNode.parentNode.children[0].children[0]
+// c2.style.color ="blue"
+
 const list = document.querySelector(".list")
 const ul = list.parentNode
-console.log(ul)
-ul.style.border = "1px solid red"
-console.log(list.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
-
-const a = list.closest("section")
-a.style.backgroundColor = "red"
-
-const addItem = document.querySelector(".add-item")
-console.log(addItem.children)
-const h2 = addItem.children[0];
-h2.style.color = "blue"
-const c2 =addItem.parentNode.parentNode.children[0].children[0]
-c2.style.color ="blue"
+const myList  = ul.children
+console.log(myList)
+const java = myList[2]
+console.log(java)
+const css = java.previousElementSibling
+console.log(css.innerText)
+const react = java.nextElementSibling
+console.log(react.innerText)
