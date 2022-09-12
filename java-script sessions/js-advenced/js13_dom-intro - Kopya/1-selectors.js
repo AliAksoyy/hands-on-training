@@ -159,3 +159,9 @@ itemH2.style.color = "purple";
 
 const a =document.querySelector("input[type='button']")
 console.log(a.value)
+
+const lists = document.querySelectorAll("ul li")
+console.log(lists)
+
+lists.forEach((a) => console.log(a.innerText))
+
