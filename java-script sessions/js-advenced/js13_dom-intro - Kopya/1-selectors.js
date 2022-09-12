@@ -175,3 +175,5 @@ console.log(list.parentNode.parentNode.parentNode.parentNode.parentNode.parentNo
 
 const a = list.closest("section")
 a.style.backgroundColor = "red"
+
+
