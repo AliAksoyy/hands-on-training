@@ -143,27 +143,35 @@
 // console.log(document.querySelector("section ul li:nth-child(3)").innerText);
 
 
-const myLi =document.querySelector("li")
-console.log(myLi.innerText)
-myLi.style.color = "red"
+// const myLi =document.querySelector("li")
+// console.log(myLi.innerText)
+// myLi.style.color = "red"
 
-const itemList = document.querySelector(".item-list")
-itemList.style.background = "green"
+// const itemList = document.querySelector(".item-list")
+// itemList.style.background = "green"
 
-const id = document.querySelector("#input")
-console.log(id.value)
-document.querySelector("#btn").style.cursor = "pointer"
+// const id = document.querySelector("#input")
+// console.log(id.value)
+// document.querySelector("#btn").style.cursor = "pointer"
 
-const itemH2 = document.querySelector(".item-list h2")
-itemH2.style.color = "purple";
+// const itemH2 = document.querySelector(".item-list h2")
+// itemH2.style.color = "purple";
 
-const a =document.querySelector("input[type='button']")
-console.log(a.value)
+// const a =document.querySelector("input[type='button']")
+// console.log(a.value)
 
-const lists = document.querySelectorAll("ul li")
-console.log(lists)
+// const lists = document.querySelectorAll("ul li")
+// console.log(lists)
 
-lists.forEach((a) => console.log(a.innerText))
+// lists.forEach((a) => console.log(a.innerText))
 
 
 
+const list = document.querySelector(".list")
+const ul = list.parentNode
+console.log(ul)
+ul.style.border = "1px solid red"
+console.log(list.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode)
+
+const a = list.closest("section")
+a.style.backgroundColor = "red"
