@@ -183,16 +183,17 @@
 // const c2 =addItem.parentNode.parentNode.children[0].children[0]
 // c2.style.color ="blue"
 
-const list = document.querySelector(".list")
-const ul = list.parentNode
-const myList  = ul.children
-console.log(myList)
-const java = myList[2]
-console.log(java)
-const css = java.previousElementSibling
-console.log(css.innerText)
-const react = java.nextElementSibling
-console.log(react.innerText)
-console.log(java.previousElementSibling.previousElementSibling.innerText)
-console.log(ul.firstElementChild.innerText)
-console.log(ul.lastElementChild.textContent)
+// const list = document.querySelector(".list")
+// const ul = list.parentNode
+// const myList  = ul.children
+// console.log(myList)
+// const java = myList[2]
+// console.log(java)
+// const css = java.previousElementSibling
+// console.log(css.innerText)
+// const react = java.nextElementSibling
+// console.log(react.innerText)
+// console.log(java.previousElementSibling.previousElementSibling.innerText)
+// console.log(ul.firstElementChild.innerText)
+// console.log(ul.lastElementChild.textContent)
+
