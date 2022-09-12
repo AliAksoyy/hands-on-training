@@ -176,4 +176,9 @@ console.log(list.parentNode.parentNode.parentNode.parentNode.parentNode.parentNo
 const a = list.closest("section")
 a.style.backgroundColor = "red"
 
-
+const addItem = document.querySelector(".add-item")
+console.log(addItem.children)
+const h2 = addItem.children[0];
+h2.style.color = "blue"
+const c2 =addItem.parentNode.parentNode.children[0].children[0]
+c2.style.color ="blue"
