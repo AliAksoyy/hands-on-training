@@ -50,8 +50,9 @@ list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway</a>"
 const myList = document.getElementsByClassName("list")
 console.log(myList)
 console.log(myList[0].innerText)
-
-myList.forEach((li) => console.log(li.innerText))
+const myArr = Array.from(myList)
+console.log(myArr)
+myArr.forEach((li) => console.log(li.innerText))
 
 // //*===========================================
 // //*          GETELEMENTSBYTAGNAME()
