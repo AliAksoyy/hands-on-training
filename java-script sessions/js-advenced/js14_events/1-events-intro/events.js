@@ -58,3 +58,7 @@ li.style.fontSize = "1rem"
 li.style.transform = "translateX(-10px)"
 }
 })
+
+window.onload = function () {
+    document.querySelector("#btn").focus()
+}
