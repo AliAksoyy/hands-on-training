@@ -193,3 +193,4 @@ const css = java.previousElementSibling
 console.log(css.innerText)
 const react = java.nextElementSibling
 console.log(react.innerText)
+console.log(java.previousElementSibling.previousElementSibling.innerText)
