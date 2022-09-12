@@ -12,26 +12,26 @@
 // h1.style.color = "white";
 // h1.style.background = "red";
 
-const h1 =document.getElementById("header")
-console.log(h1)
-h1.style.color = "white";
-h1.style.background = "red"
+// const h1 =document.getElementById("header")
+// console.log(h1)
+// h1.style.color = "white";
+// h1.style.background = "red"
 
-const input =document.getElementsByTagName("input")
-console.log(input)
-input[0].style.border ="1px solid red"
+// const input =document.getElementsByTagName("input")
+// console.log(input)
+// input[0].style.border ="1px solid red"
 
-const list =document.getElementsByTagName("li")
-console.log(list)
-list[2].style.color = "red";
-const elemanthree =list.item(3)
-elemanthree.textContent = "React / Vue / Angular"
-list[4].innerText = "Django / Flask"
+// const list =document.getElementsByTagName("li")
+// console.log(list)
+// list[2].style.color = "red";
+// const elemanthree =list.item(3)
+// elemanthree.textContent = "React / Vue / Angular"
+// list[4].innerText = "Django / Flask"
 
-console.log(list[1].textContent)
-console.log(list[1].innerText)
+// console.log(list[1].textContent)
+// console.log(list[1].innerText)
 
-list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway</a>"
+// list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway</a>"
 
 // //* EXAMPLE-2
 // //*-------------------------------------------
@@ -47,13 +47,13 @@ list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway</a>"
 // button.style.fontSize = "1.1rem";
 // myInput.style.padding = "1rem";
 
-const myList = document.getElementsByClassName("list")
-console.log(myList)
-console.log(myList[0].innerText)
-const myArr = Array.from(myList)
-myArr.forEach((a) => console.log(a.textContent))
+// const myList = document.getElementsByClassName("list")
+// console.log(myList)
+// console.log(myList[0].innerText)
+// const myArr = Array.from(myList)
+// myArr.forEach((a) => console.log(a.textContent))
 
-myArr.forEach((d)=> d.style.color ="red")
+// myArr.forEach((d)=> d.style.color ="red")
 
 
 // //*===========================================
@@ -141,3 +141,14 @@ myArr.forEach((d)=> d.style.color ="red")
 //   document.querySelectorAll("section ul li:nth-child(3)")[0].innerText
 // );
 // console.log(document.querySelector("section ul li:nth-child(3)").innerText);
+
+
+const myLi =document.querySelector("li")
+console.log(myLi.innerText)
+myLi.style.color = "red"
+
+const itemList = document.querySelector(".item-list")
+itemList.style.background = "green"
+
+const id = document.querySelector("#input")
+console.log(id.value)
