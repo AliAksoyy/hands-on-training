@@ -12,8 +12,14 @@
 // h1.style.color = "white";
 // h1.style.background = "red";
 
-const h1 = document.getElementById("header")
+const h1 =document.getElementById("header")
 console.log(h1)
+h1.style.color = "white";
+h1.style.background = "red"
+
+const input =document.getElementsByTagName("input")
+console.log(input)
+input[0].style.border ="1px solid red"
 
 // //* EXAMPLE-2
 // //*-------------------------------------------
