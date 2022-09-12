@@ -152,3 +152,10 @@ itemList.style.background = "green"
 
 const id = document.querySelector("#input")
 console.log(id.value)
+document.querySelector("#btn").style.cursor = "pointer"
+
+const itemH2 = document.querySelector(".item-list h2")
+itemH2.style.color = "purple";
+
+const a =document.querySelector("input[type='button']")
+console.log(a.value)
