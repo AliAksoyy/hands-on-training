@@ -24,7 +24,12 @@ input[0].style.border ="1px solid red"
 const list =document.getElementsByTagName("li")
 console.log(list)
 list[2].style.color = "red";
-list.item(3).style.color ="blue"
+const elemanthree =list.item(3)
+elemanthree.textContent = "React / Vue / Angular"
+list[4].innerText = "Django / Flask"
+
+console.log(list[1].textContent)
+console.log(list[1].innerText)
 
 // //* EXAMPLE-2
 // //*-------------------------------------------
