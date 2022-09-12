@@ -51,8 +51,10 @@ const myList = document.getElementsByClassName("list")
 console.log(myList)
 console.log(myList[0].innerText)
 const myArr = Array.from(myList)
-console.log(myArr)
-myArr.forEach((li) => console.log(li.innerText))
+myArr.forEach((a) => console.log(a.textContent))
+
+myArr.forEach((d)=> d.style.color ="red")
+
 
 // //*===========================================
 // //*          GETELEMENTSBYTAGNAME()
