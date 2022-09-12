@@ -12,7 +12,8 @@
 // h1.style.color = "white";
 // h1.style.background = "red";
 
-
+const h1 = document.getElementById("header")
+console.log(h1)
 
 // //* EXAMPLE-2
 // //*-------------------------------------------
