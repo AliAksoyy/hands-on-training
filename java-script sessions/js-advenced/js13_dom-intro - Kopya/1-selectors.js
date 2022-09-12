@@ -194,3 +194,5 @@ console.log(css.innerText)
 const react = java.nextElementSibling
 console.log(react.innerText)
 console.log(java.previousElementSibling.previousElementSibling.innerText)
+console.log(ul.firstElementChild.innerText)
+console.log(ul.lastElementChild.textContent)
