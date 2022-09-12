@@ -31,6 +31,8 @@ list[4].innerText = "Django / Flask"
 console.log(list[1].textContent)
 console.log(list[1].innerText)
 
+list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway</a>"
+
 // //* EXAMPLE-2
 // //*-------------------------------------------
 
@@ -44,6 +46,12 @@ console.log(list[1].innerText)
 // button.style.padding = "1rem";
 // button.style.fontSize = "1.1rem";
 // myInput.style.padding = "1rem";
+
+const myList = document.getElementsByClassName("list")
+console.log(myList)
+console.log(myList[0].innerText)
+
+myList.forEach((li) => console.log(li.innerText))
 
 // //*===========================================
 // //*          GETELEMENTSBYTAGNAME()
