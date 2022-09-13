@@ -36,3 +36,7 @@ list.forEach((li) => {
         li.style.transform = "translateX(-10px)"
     }
 })
+
+window.onload = function () {
+    document.querySelector("#input").focus()
+}
