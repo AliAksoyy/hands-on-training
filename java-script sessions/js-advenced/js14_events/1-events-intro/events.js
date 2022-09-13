@@ -23,3 +23,16 @@ document.getElementById("btn").addEventListener("click", function () {
     input.value = ""
 })
 
+const list = document.querySelectorAll('.list');
+list.forEach((li) => {
+    li.style.transition = "font-size 1s"
+    li.style.lineHeight = "2rem"
+    li.onmouseover = ()=> {
+        li.style.fontSize = "2rem"
+        li.style.transform = "translateX(10px)"
+    }
+    li.onmouseout = () => {
+        li.style.fontSize = "1rem"
+        li.style.transform = "translateX(-10px)"
+    }
+})
