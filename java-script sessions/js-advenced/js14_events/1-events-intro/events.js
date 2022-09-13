@@ -14,5 +14,11 @@ h1.addEventListener("click", function () {
 
 document.getElementById("btn").addEventListener("click", function () {
     const input = document.querySelector("#input")
-    if(input.value)
+    // if(!input.value) {
+    //     alert("please enter an item")
+    // }else {
+    //     alert(`${input.value} entered`)
+    // }
+    !input.value ? alert("sd") : alert("sw")
+    input.value = ""
 })
