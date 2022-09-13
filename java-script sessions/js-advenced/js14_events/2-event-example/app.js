@@ -25,3 +25,11 @@ deleteBtn.addEventListener("click", () => {
 ?  newUl.removeChild(newUl.lastElementChild) :
 alert("There is no item to delete")
 })
+
+
+langInput.addEventListener("keydown", function (event) {
+  console.log(event)
+  if(event ===13) {
+    
+  }
+})
