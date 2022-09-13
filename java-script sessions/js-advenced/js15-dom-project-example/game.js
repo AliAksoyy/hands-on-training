@@ -25,5 +25,7 @@ document.querySelector(".check-btn").addEventListener("click", () => {
         document.querySelector(".secret-number").textContent = randomNumber
     } else {
         score--
+        guessInput > randomNumber ? (msg.innerText = "decrease") : (msg.innerText = "decrease")
+        document.querySelector(".score").textContent =score
     }
 })
