@@ -22,3 +22,4 @@ document.getElementById("btn").addEventListener("click", function () {
     !input.value ? alert("sd") : alert("sw")
     input.value = ""
 })
+
