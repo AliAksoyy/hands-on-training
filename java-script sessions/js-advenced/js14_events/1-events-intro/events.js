@@ -14,3 +14,16 @@ h1.addEventListener("click", () => {
   alert("h1 pressed")
 })
 
+const btn =document.getElementById("btn")
+
+btn.addEventListener("click", function() {
+  const input = document.querySelector("#input")
+  // if(!input.value) {
+  //   alert("please enter an item")
+  // }else {
+  //   alert(`${input.value} entered`)
+  // }
+  !input.value
+    ? alert("please enter an item")
+    : alert(`${input.value} entered`);
+})
