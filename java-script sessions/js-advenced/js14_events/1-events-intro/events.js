@@ -45,3 +45,9 @@ list.forEach((li) => {
   }
 })
 
+const myInput = document.querySelector("#input")
+
+myInput.onmouseover = function () {
+  myInput.focus()
+}
+
