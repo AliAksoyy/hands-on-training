@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
-  <body>
+  <body id="body">
     <!-- NAVBAR -->
 
     <!-- <nav class="navbar navbar-expand-lg bg-danger bg-gradient navbar-dark"> -->
@@ -521,7 +521,7 @@
                 </a>
               </div>
               <div class="col-md-6 col-lg-3">
-                <a data-fslightbox href="./img/thumbnail/ops4.jpg">
+                <a data-fslightbox href="./img/thumbnail/ops.jpg">
                   <img
                     src="./img/thumbnail/ops4.jpg"
                     class="img-thumbnail"
@@ -537,63 +537,111 @@
       <!-- CONTACT -->
       <section id="contact" class="container bg-light p-3">
         <h2 class="display-6 text-danger">CONTACT</h2>
+
         <article id="form">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus natus temporibus voluptatem officia culpa. Illum, iste saepe! Libero, distinctio esse praesentium error soluta maiores quod quos quas laudantium consequatur. Fugiat.</p>
-          <div class="row gap-2 justify-content-center">
-            <div class="col-md-3">
-              <i class="fas fa-phone fa-2x"></i>
-              <h4>Telephon</h4>
-              <a href="tel:+905301323819">+905301323819</a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, sit nulla numquam sunt esse aliquam? Quae, delectus!
+            Saepe, explicabo dolor!
+          </p>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <i class="fas fa-phone fa-2x text-danger"></i>
+              <h4>Telephone</h4>
+              <a href="tel:+90234556565">+90234556565</a>
             </div>
-            <div class="col-md-3">
-              <i class="fab fa-whatsapp fa-2x"></i>
+            <div class="col-md-4">
+              <i class="fab fa-whatsapp fa-3x text-danger"></i>
               <h4>Whatsapp</h4>
-              <a href="https://wa.me">+905301323819</a>
+              <a href="https://wa.me/+90234556565">+90234556565</a>
             </div>
-            <div class="col-md-3">
-              <i class="fas fa-envelope fa-2x"></i>
-              <h4>Telephon</h4>
-              <a href="mailto:info@clarusway">info@clarusway</a>
+            <div class="col-md-4">
+              <i class="fas fa-envelope fa-2x text-danger"></i>
+              <h4>email</h4>
+              <a href="mailto:info@clarusway.com">info@clarusway</a>
             </div>
           </div>
+
+          <form class="row g-3 mt-4">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="enter your email"
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="text"
+                class="form-control"
+                id="subject"
+                placeholder="Enter your subject"
+              />
+            </div>
+
+            <div class="col-12 form-floating">
+              <textarea
+                type="text"
+                class="form-control"
+                id="comment"
+                placeholder="Enter your comments"
+              ></textarea>
+              <label for="comment">Comments</label>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-danger" style="width: 7rem">
+                Submit
+              </button>
+            </div>
+          </form>
         </article>
-        <form class="row g-3 mt-4">
-  <div class="col-md-6">
-    <input type="text" class="form-control" id="name" placeholder="enter your name">
-  </div>
-  <div class="col-md-6">
-    <input type="email" class="form-control" id="email" placeholder="enter your email">
-  </div>
-  <div class="col-12">
-    <input type="text" class="form-control" id="subject" placeholder="enter your subject">
-  </div>
- <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" aria-placeholder="enter your comment"></textarea>
-  <label for="floatingTextarea">Comments</label>
-</div>
-  
-  
-  
-  
-  <div class="col-12">
-    <button type="submit" class="btn btn-danger " style="width:7rem;">Submit</button>
-  </div>
-</form>
 
-
-
-        <article id="location">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385398.58996790065!2d28.731981284770033!3d41.00498225502279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1663183682049!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>" 
+        <article id="location" class="mt-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192698.5521395148!2d28.871754336967353!3d41.005236293762124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1sen!2str!4v1663183693965!5m2!1sen!2str"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen="true"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </article>
-
       </section>
     </main>
 
     <!-- FOOTER -->
+    <footer class="bg-dark text-center text-white p-4">
+      <article>
+        <a href="#"> <i class="fab fa-facebook-f"></i></a>
+        <a href="#"> <i class="fab fa-youtube"></i></a>
+        <a href="#"> <i class="fab fa-linkedin"></i></a>
+        <a href="#"> <i class="fab fa-instagram"></i></a>
+      </article>
 
-    <footer></footer>
+      <article class="p-4 h6">
+        &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Copyright by Clarusway
+      </article>
+    </footer>
 
     <!-- UP-BTN -->
+    <a class="btn-up" href="#body">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- SCRIPTS -->
     <script
