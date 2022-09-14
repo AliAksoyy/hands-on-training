@@ -19,9 +19,15 @@ console.log(addItem.firstChild)
 const myL = ul.children
 console.log(myL)
 
-const java = myL[2]
-console.log(java.innerText)
-java.innerHTML = "JAVA"
+// const java = myL[2]
+// console.log(java.innerText)
+// java.innerHTML = "JAVA"
 
-const css = java.previousElementSibling
-console.log(css.innerText)
+// const css = java.previousElementSibling
+// console.log(css.innerText)
+
+// console.log(.previousElementSibling.previousElementSibling.innertext)
+
+console.log(ul.firstChild)
+console.log(ul.firstElementChild.innerText)
+console.log(ul.lastElementChild.innerText)
