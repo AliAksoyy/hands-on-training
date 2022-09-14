@@ -15,7 +15,9 @@ window.addEventListener("load", ()=> {
 addBtn.addEventListener("click", () => {
   if(!langInput.value) {
     alert("please enter a language")
-  }else {
+  }else if(langInput.value === "javascript")  {
+ langInput.style.color ="red"
+    }  else {
     newUl.innerHTML += `<li>${langInput.value}</li>`;
     langInput.value = ""
   langInput.focus();
@@ -30,7 +32,7 @@ deleteBtn.addEventListener("click", function () {
 
 
 langInput.addEventListener("keydown", (event)=> {
-  // console.log(event)
+  console.log(event)
   // console.log(event.target)
   // console.log(event.keyCode)
   // console.log(event.code)
@@ -42,4 +44,5 @@ langInput.addEventListener("keydown", (event)=> {
   if(event.code === "Delete") {
     deleteBtn.click()
   }
+
 })
