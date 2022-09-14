@@ -30,3 +30,25 @@ myArr.forEach((k) => console.log(k.innerText))
 
 
 // [...myList].forEach((a) => console.log(a.innerText))
+
+
+const myLi = document.querySelector("li")
+console.log(myLi.innerText)
+
+const itemList = document.querySelector(".item-list")
+itemList.style.background = "grey"
+
+const input = document.querySelector("#input")
+console.log(input.value)
+
+document.querySelector("#btn").style.cursor = "pointer"
+
+const h2 = document.querySelectorAll("section ul li")
+console.log(h2)
+
+// const myBtn = document.querySelector("input[type='button']")
+// console.log(myBtn.value)
+
+h2.forEach((li) => console.log(li.innerText) )
+
+console.log(document.querySelectorAll("section ul li:nth-child(2).innerText"))
