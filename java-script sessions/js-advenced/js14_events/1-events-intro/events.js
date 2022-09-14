@@ -1,53 +1,78 @@
+//* ======================================================
+//*                        EVENTS
+//* ======================================================
 
-const h1 =document.querySelector("#header h1");
-h1.onmouseover = function() {
-  h1.style.color = "red"
-  h1.style.fontWeight = "200"
-}
+console.log("****** EVENTS *******");
+
+//* EXAMPLE-1 (Mouse Over, Mouse Out )
+//* -------------------------------------------------------
+
+const h1 = document.querySelector("#header h1");
+
+//? 3 .method
+h1.onmouseover = function () {
+  h1.style.color = "red";
+  h1.style.fontWeight = "300";
+  console.log("onmouseover");
+};
 
 h1.onmouseout = () => {
-  h1.style.color = "black"
-  h1.style.fontWeight = 800
-}
+  h1.style.color = "black";
+  h1.style.fontWeight = "900";
+  console.log("onmouseout");
+};
 
+//? 4.method (addEventListener)
 h1.addEventListener("click", () => {
-  alert("h1 pressed")
-})
+  alert("H1 pressed");
+});
 
-const btn =document.getElementById("btn")
+//* EXAMPLE-2 (addEventListener())
+//* -------------------------------------------------
 
-btn.addEventListener("click", function() {
-  const input = document.querySelector("#input")
-  // if(!input.value) {
-  //   alert("please enter an item")
-  // }else {
-  //   alert(`${input.value} entered`)
+document.getElementById("btn").addEventListener("click", function () {
+  const input = document.querySelector("#input");
+  // if (!input.value) {
+  //   alert("Please enter an item");
+  // } else {
+  //   alert(`${input.value} entered`);
   // }
-  !input.value
-    ? alert("please enter an item")
-    : alert(`${input.value} entered`);
-    input.value = ""
-})
 
-const list = document.querySelectorAll(".list")
+  !input.value
+    ? alert("Please enter an item")
+    : alert(`${input.value} entered`);
+
+  input.value = "";
+  document.querySelector("#input").focus();
+});
+
+//* EXAMPLE-3
+//* -------------------------------------------------
+const list = document.querySelectorAll(".list"); //?nodelist
 
 list.forEach((li) => {
-  // console.log(li.innerText)
-  li.style.transition = "all 1s"
+  li.style.transition = "all 0.8s";
+  li.style.lineHeight = "2rem";
+
   li.onmouseover = () => {
-    li.style.fontSize = "2rem"
-    li.style.transform = "translateX(10px)"
-  }
+    li.style.fontSize = "2rem";
+    li.style.transform = "translateX(10px)";
+  };
 
   li.onmouseout = () => {
-    li.style.fontSize = "1rem"
-    li.style.transform = "translateX(-10px)"
-  }
-})
+    li.style.fontSize = "1rem";
+    li.style.transform = "translateX(-10px)";
+  };
+});
 
-const myInput = document.querySelector("#input")
-
+//* EXAMPLE-4 (onload)
+//* -------------------------------------------------
 window.onload = function () {
-  myInput.focus()
-}
+  document.querySelector("#input").focus();
+};
 
+const print = () => {
+  console.log("Starting");
+};
+
+print();

@@ -1,21 +1,27 @@
-const newP = document.createElement("p")
-newP.id = "new-par"
-newP.setAttribute("class", "new-class")
+console.log("**** CREATE NODE ****");
 
+//?Yeni bir P elementi olusturalim
+const newP = document.createElement("p");
+newP.id = "new-par";
+newP.setAttribute("class", "new-class");
+const text = document.createTextNode("This is a new p element");
+newP.appendChild(text);
+console.log(newP);
 
-const text = document.createTextNode("This is a paragraf")
-newP.appendChild(text)
-console.log(newP)
+const h2 = document.querySelector(".item-list h2");
+h2.after(newP);
 
-const h2 = document.querySelector(".item-list h2")
+//? getAttribute()
+console.log(newP.getAttribute("class"));
+console.log(newP.getAttribute("id"));
+console.log(newP.getAttribute("name"));
 
-h2.after(newP)
+//? classList
+console.log(newP.classList.contains("par")); //? true
+newP.classList.add("new-class");
+console.log(newP);
+newP.classList.remove("new-class");
 
-console.log(newP.getAttribute("class"))
-console.log(newP.getAttribute("id"))
-
-console.log(newP.classList.contains("par"))
-newP.classList.add("newP")
-newP.classList.toggle("newp")
-console.log(newP)
-
+//? INNER HTML (Ciddi Guvenlik aciklari var)
+const ul = document.querySelector("ul");
+ul.innerHTML += `<li id="list-id" class="list">Boostrap</li>`;
