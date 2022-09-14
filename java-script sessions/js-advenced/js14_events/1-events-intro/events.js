@@ -13,3 +13,4 @@ h1.onmouseout = () => {
 h1.addEventListener("click", () => {
   alert("h1 pressed")
 })
+
