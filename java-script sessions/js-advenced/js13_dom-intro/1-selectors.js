@@ -20,3 +20,13 @@ console.log(list[1].textContent)
 console.log(list[1].innerText)
 list[4].innerHTML = '<a href="www.https://clarusway.com">ClarusWay Web</a>'
 console.log(list[4])
+
+const myList = document.getElementsByClassName("list")
+console.log(myList[0].innerText)
+
+const myArr = Array.from(myList)
+console.log(myArr)
+myArr.forEach((k) => console.log(k.innerText))
+
+
+// [...myList].forEach((a) => console.log(a.innerText))
