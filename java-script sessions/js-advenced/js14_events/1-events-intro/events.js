@@ -26,4 +26,6 @@ btn.addEventListener("click", function() {
   !input.value
     ? alert("please enter an item")
     : alert(`${input.value} entered`);
+    input.value = ""
 })
+
