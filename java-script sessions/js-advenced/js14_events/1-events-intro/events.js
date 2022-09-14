@@ -29,5 +29,19 @@ btn.addEventListener("click", function() {
     input.value = ""
 })
 
+const list = document.querySelectorAll(".list")
 
+list.forEach((li) => {
+  // console.log(li.innerText)
+  li.style.transition = "all 1s"
+  li.onmouseover = () => {
+    li.style.fontSize = "2rem"
+    li.style.transform = "translateX(10px)"
+  }
+
+  li.onmouseout = () => {
+    li.style.fontSize = "1rem"
+    li.style.transform = "translateX(-10px)"
+  }
+})
 
