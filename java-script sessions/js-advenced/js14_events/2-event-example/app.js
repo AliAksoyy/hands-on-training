@@ -6,4 +6,13 @@ const langList = document.querySelector("#lang-list")
 
 
 const newUl =document.createElement("ul")
-langList.appendChild(newUl)
+langList.appendChild(newUl);
+
+addBtn.addEventListener("click", () => {
+  if(!langInput.value) {
+    alert("please enter a language")
+  }else {
+    newUl.innerHTML += `<li>${langInput.value}</li>`;
+    langInput.value = ""
+  }
+})
