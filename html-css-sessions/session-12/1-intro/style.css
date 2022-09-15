@@ -15,7 +15,9 @@
 .outer:hover .inner {
     /* background-color:chartreuse;
     transform: translateX(100%); */
-    animation: travel 1s ease-in-out;
+    animation: travel 3s ease-in-out;
+    animation-iteration-count: 3;
+    animation-direction:alternate
 
 }
 @keyframes travel {
@@ -24,6 +26,12 @@
     }
     33% {
         transform: translateY(100%);
+    }
+    66% {
+        transform: translate(100%, 100%);
+    }
+    100% {
+        transform: translateX(100%);
     }
 }
 
