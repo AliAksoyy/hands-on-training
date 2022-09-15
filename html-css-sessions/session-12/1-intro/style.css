@@ -1,1 +1,30 @@
 /******* ANIMATION INTRO *******/
+.outer {
+    background-color: blueviolet;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+.inner {
+    background-color: cadetblue;
+    width: 50%;
+    height: 50%;
+    /* transition: transform 1s cubic-bezier(0.28, 0.78, 0.58, 0.42), background-color 1s */
+}
+
+.outer:hover .inner {
+    /* background-color:chartreuse;
+    transform: translateX(100%); */
+    animation: travel 1s ease-in-out;
+
+}
+@keyframes travel {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateY(100%);
+    }
+}
+
+    
