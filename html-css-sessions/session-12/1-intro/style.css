@@ -17,7 +17,8 @@
     transform: translateX(100%); */
     animation: travel 3s ease-in-out;
     animation-iteration-count: 3;
-    animation-direction:alternate
+    animation-direction:alternate;
+    animation-fill-mode: forwards;
 
 }
 @keyframes travel {
