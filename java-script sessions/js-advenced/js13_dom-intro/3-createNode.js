@@ -8,6 +8,7 @@ const text = document.createTextNode("This is a new p element");
 newP.appendChild(text);
 console.log(newP);
 
+
 const h2 = document.querySelector(".item-list h2");
 h2.after(newP);
 
