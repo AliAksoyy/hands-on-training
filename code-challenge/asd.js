@@ -49,3 +49,9 @@
     // console.log(degisim(12))
 
 
+const instructors = {
+  name: "Noah",
+};
+
+console.log( delete instructors.name);
+console.log(instructors)
