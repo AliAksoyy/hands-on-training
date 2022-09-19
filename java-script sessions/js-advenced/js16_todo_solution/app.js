@@ -18,6 +18,7 @@ addBtn.addEventListener("click", () => {
     };
 
     createListElement(newTodo);
+    todoInput.value = ""
   }
 });
 
@@ -34,12 +35,25 @@ const createListElement = (newTodo) => {
   li.appendChild(okIcon);
 
   //? todo basligi icin bir p elementi ve yazi dugumu olusturarak li'ye bagla
-    const p = document.createElement("p")
-    const pTextNode = document.createElement(newTodo.text)
-    p.append(pTextNode)
-    li.appendChild(p)
-  //? delete ikonu olustur ve li elementine bagla
-  console.log(li);
+  const p = document.createElement("p");
+  const pTextNode = document.createTextNode(newTodo.text);
+  p.appendChild(pTextNode);
+  li.appendChild(p);
 
+  //? delete ikonu olustur ve li elementine bagla
+  const deleteIcon = document.createElement("i");
+  deleteIcon.setAttribute("class", "fas fa-trash");
+  li.appendChild(deleteIcon);
   todoUl.appendChild(li);
 };
+
+
+todoInput.addEventListener("keydown", (e)=> {
+    if(e.code == "Enter") {
+        addBtn.click()
+    }
+})
+
+window.onload = function(){
+    todoInput.focus()
+}
