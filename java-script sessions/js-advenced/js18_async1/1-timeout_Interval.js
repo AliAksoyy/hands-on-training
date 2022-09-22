@@ -18,5 +18,10 @@
 
 //* Senkron
 //* ------------------------------------------------
+const bekle = (waitingTime) => {
 
-console.log("Timeout-Interval");
+}
+console.log("hello")
+alert("hi")
+bekle(3000)
+console.log("FS12")
