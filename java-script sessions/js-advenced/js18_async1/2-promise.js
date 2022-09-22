@@ -31,3 +31,10 @@
 //? Zincirleme olarak kullanilabilirler.
 
 console.log("Promise");
+
+const myPromise = new Promise((resolve,reject)=> {
+    resolve("data fetched")
+    reject("fetch halted")
+})
+
+myPromise.then( (res)=> console.log(res))
