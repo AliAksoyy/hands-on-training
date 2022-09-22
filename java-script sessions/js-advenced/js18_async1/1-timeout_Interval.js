@@ -26,5 +26,10 @@ while(new Date().getTime()< startTime+ waitingTime) {
 }
 console.log("hello")
 // alert("hi")
+console.time("timer")
 bekle(3000)
+console.timeEnd("timer")
 console.log("FS12")
+
+// asenkron
+
