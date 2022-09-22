@@ -19,9 +19,12 @@
 //* Senkron
 //* ------------------------------------------------
 const bekle = (waitingTime) => {
+const startTime = new Date().getTime()
+while(new Date().getTime()< startTime+ waitingTime) {
 
 }
+}
 console.log("hello")
-alert("hi")
+// alert("hi")
 bekle(3000)
 console.log("FS12")
