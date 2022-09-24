@@ -1,8 +1,15 @@
+const bekle = (w) => {
+  const a = new Date().getTime();
+  while (new Date().getTime() < a + w){}
 
+};
 
+console.log("hello")
 
-
-
+console.time("timer")
+bekle(3000);
+console.timeEnd("timer")
+console.log("fs12")
 
 
 
