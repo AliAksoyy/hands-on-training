@@ -26,30 +26,38 @@ const renderError = () => {
 
 const renderCountries = (data) => {
   console.log(data);
-  const {capital, currencies, flags:{svg},languages, name: {common}} =data[0]
-
-  console.log(Object.values(languages))
   const countryDiv = document.querySelector(".countries");
+  const {
+    capital,
+    currencies,
+    flags: { svg },
+    languages,
+    name: { common },
+    region,
+  } = data[0];
 
-  countryDiv.innerHTML = `
+  console.log(Object.values(languages));
+  console.log(Object.values(currencies)[0].name);
+  console.log(Object.values(currencies)[0].symbol);
+
+  countryDiv.innerHTML += `
     <div class="card mx-auto m-3 shadow-lg" style="width: 18rem;">
       <img src="${svg}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${common}</h5>
-        <p class="card-text">${data[0].region}.</p>
+        <p class="card-text">${region}</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item
-        <i class="fas fa-lg fa-landmark"></i>${capital}
+        <li class="list-group-item">
+          <i class="fas fa-lg fa-landmark"></i> ${capital}
         </li>
         <li class="list-group-item">
-        <i class="fa-solid fa-comments"></i> ${Object.values(languages)}
+          <i class="fas fa-lg fa-comments"></i> ${Object.values(languages)}
         </li>
         <li class="list-group-item">
-        <i class="fas fa-lg fa-money-bill-wave"></i> ${
-          Object.values(currencies)[0].name
-        }, ${Object.values(currencies)[0].symbol}
-        </li>
+          <i class="fas fa-lg fa-money-bill-wave"></i>
+          ${Object.values(currencies).map((item) => Object.values(item) + " ")}
+       </li>
       </ul>
       <div class="card-body">
         <a href="#" class="card-link">Card link</a>
@@ -62,4 +70,5 @@ const renderCountries = (data) => {
 };
 
 fetchCountryByName("turkey");
-
+fetchCountryByName("western sahara");
+fetchCountryByName("south africa");
