@@ -1,18 +1,31 @@
 
 
 
-setTimeout(() => {
-  console.log("john:Hi");
-  setTimeout(() => {
-    console.log("Sarah: Hello");
-    setTimeout(() => {
-      console.log("John: How Are you?");
-      setTimeout(() => {
-        console.log("Sarah:Fine and you?");
-      }, 1000);
-    }, 1000);
-  }, 1000);
-}, 1000);
+// setTimeout(() => {
+//   console.log("john:Hi");
+//   setTimeout(() => {
+//     console.log("Sarah: Hello");
+//     setTimeout(() => {
+//       console.log("John: How Are you?");
+//       setTimeout(() => {
+//         console.log("Sarah:Fine and you?");
+//       }, 1000);
+//     }, 1000);
+//   }, 1000);
+// }, 1000);
+
+setTimeout(()=> {
+  console.log("ali hi")
+  setTimeout(()=> {
+    console.log("merhabaaklrr")
+    setTimeout(()=> {
+      console.log("neyaptın")
+      setTimeout(()=> {
+        console.log("iyilik allaha şükğr")
+      },1000)
+    },1000)
+  },2000)
+},1000)
 
 
 
