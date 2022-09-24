@@ -1,43 +1,4 @@
 
-const newPromise = new Promise((resolve,rejected) => {
-  const random = Math.floor(Math.random() *5)
-
-  const data = {
-    a:1,b:2,c:3
-  }
-  if(random) {
-    resolve(data)
-  }else {
-    rejected(new Error("fetch halted"))
-  }
-})
-newPromise.then((res)=> console.log(res)).catch((err)=> console.log(err))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// !1111111111111111111
 // //* =================================================
 // //*                2- Promises
 // //* =================================================
