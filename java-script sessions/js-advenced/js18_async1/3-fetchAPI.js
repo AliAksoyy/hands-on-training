@@ -1,58 +1,3 @@
-fetch("https://api.github.com/users").then((res)=> {
-  // console.log(res)
-  if(!res.ok) {
-    throw new Error("something went wrong")
-  }
-   return res.json()}
-  )
-  .then((data)=> updateDOM(data))
-  .catch((err)=> console.log(err))
-
-
-  const updateDOM = (a) => {
-    // console.log(a)
-     const userDiv = document.querySelector(".users");
-    a.forEach((b)=> {
-      const {login,avatar_url} = b
-     userDiv.innerHTML += `<h2>${login}</h2>
-     <img src ="${avatar_url}" width="300px">`;
-      
-    })
-
-  }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ?444444444444444444444444444444!
 // //*========================================
@@ -67,30 +12,30 @@ fetch("https://api.github.com/users").then((res)=> {
 // //? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu
 // //? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
 
-// console.log("FETCH");
-// // let userData;
+console.log("FETCH");
+// let userData;
 
-// fetch("https://api.github.com/users")
-//   .then((res) => {
-//     // console.log(res);
-//     //! Error handling
-//     if (!res.ok) {
-//       throw new Error("Something went wrong");
-//     }
-//     return res.json();
-//   })
-//   .then((data) => updateDOM(data))
-//   .catch((hata) => console.log(hata));
+fetch("https://api.github.com/users")
+  .then((res) => {
+    console.log(res);
+    //! Error handling
+    if (!res.ok) {
+      throw new Error("Something went wrong");
+    }
+    return res.json();
+  })
+  .then((data) => updateDOM(data))
+  .catch((hata) => console.log(hata));
 
-// // console.log(userData);
+// console.log(userData);
 
-// const updateDOM = (users) => {
-//   console.log(users);
-//   const userDiv = document.querySelector(".users");
-//   users.forEach((user) => {
-//     const { login, avatar_url, following_url } = user;
-//     userDiv.innerHTML += ` <h2>${login}</h2>
-//     <img src="${avatar_url}" width="300px" alt="" />
-//     `;
-//   });
-// };
+const updateDOM = (users) => {
+  console.log(users);
+  const userDiv = document.querySelector(".users");
+  users.forEach((user) => {
+    const { login, avatar_url, following_url } = user;
+    userDiv.innerHTML += ` <h2>${login}</h2>
+    <img src="${avatar_url}" width="300px" alt="" />
+    `;
+  });
+};

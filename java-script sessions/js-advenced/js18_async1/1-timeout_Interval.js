@@ -20,47 +20,47 @@
 // //* Senkron
 // //* ------------------------------------------------
 
-// // const bekle = (waitingTime) => {
-// //   const startTime = new Date().getTime();
-// //   while (new Date().getTime() < startTime + waitingTime);
-// // };
+const bekle = (waitingTime) => {
+  const startTime = new Date().getTime();
+  while (new Date().getTime() < startTime + waitingTime);
+};
 
-// // console.log("Hello");
-// // // alert("CW"); //! blocking code
+console.log("Hello");
+// alert("CW"); //! blocking code
 
-// // console.time("timer");
-// // bekle(3000); //! blocking code
-// // console.timeEnd("timer");
-// // console.log("FS12");
+console.time("timer");
+bekle(3000); //! blocking code
+console.timeEnd("timer");
+console.log("FS12");
 
 // //* Asenkron (setTimeout)
 // //*----------------------------------------------------
-// // console.log("timeout");
-// // setTimeout(() => {
-// //   //! non-blocking
-// //   console.log("Hi");
-// // }, 1000);
+console.log("timeout");
+setTimeout(() => {
+  //! non-blocking
+  console.log("Hi");
+}, 1000);
 
-// // setTimeout(() => {
-// //   //! non-blocking
-// //   console.log("Hello");
-// // }, 3000);
+setTimeout(() => {
+  //! non-blocking
+  console.log("Hello");
+}, 3000);
 
-// // console.log("timeout bitti");
+console.log("timeout bitti");
 
 // //* Asenkron (setInterval, clearInterval)
 // //*----------------------------------------------------
-// // console.log("Timer Started");
-// // let counter = 0;
-// // const intervalId = setInterval(() => {
-// //   console.log(++counter);
-// //   if (counter > 4) {
-// //     clearInterval(intervalId);
-// //     console.log("Timer Stoped");
-// //   }
-// // }, 1000);
+console.log("Timer Started");
+let counter = 0;
+const intervalId = setInterval(() => {
+  console.log(++counter);
+  if (counter > 4) {
+    clearInterval(intervalId);
+    console.log("Timer Stoped");
+  }
+}, 1000);
 
-// // console.log("Timer Stoped");
+console.log("Timer Stoped");
 
 // //! Callback Hell (nested ve birbirine bagli callback'ler)
 // //!-----------------------------------------------------
@@ -68,18 +68,18 @@
 // //* yapisinin kullanilmasi gerekebilir. Fakat bu iyi bir programlama yaklasimi degildir.
 // // !callback hell olarak adlandirilan bu yapinin anlasilmasi ve surdurulebilirligi oldukca zordur.
 
-// setTimeout(() => {
-//   console.log("john:Hi");
-//   setTimeout(() => {
-//     console.log("Sarah: Hello");
-//     setTimeout(() => {
-//       console.log("John: How Are you?");
-//       setTimeout(() => {
-//         console.log("Sarah:Fine and you?");
-//       }, 1000);
-//     }, 1000);
-//   }, 1000);
-// }, 1000);
+setTimeout(() => {
+  console.log("john:Hi");
+  setTimeout(() => {
+    console.log("Sarah: Hello");
+    setTimeout(() => {
+      console.log("John: How Are you?");
+      setTimeout(() => {
+        console.log("Sarah:Fine and you?");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
 
 // //? COZUMLER:
 // //?----------------------------------------------------
