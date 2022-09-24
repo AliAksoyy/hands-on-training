@@ -1,4 +1,4 @@
-fetch("https://api.github.com/user").then((res)=> {
+fetch("https://api.github.com/users").then((res)=> {
   console.log(res)
   if(!res.ok) {
     throw new Error("something went wrong")
