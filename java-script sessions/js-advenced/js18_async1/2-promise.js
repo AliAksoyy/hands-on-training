@@ -1,5 +1,13 @@
 
-
+const newPromise = new Promise((resolve,rejected) => {
+  const random = Math.floor(Math.random() *5)
+  if(random) {
+    resolve("okey")
+  }else {
+    rejected("başarısız")
+  }
+})
+newPromise.then((res)=> console.log(res))
 
 
 
