@@ -1,12 +1,31 @@
 fetch("https://api.github.com/users").then((res)=> {
-  console.log(res)
+  // console.log(res)
   if(!res.ok) {
     throw new Error("something went wrong")
   }
    return res.json()}
   )
-  .then((data)=> console.log(data))
+  .then((data)=> updateDOM(data))
   .catch((err)=> console.log(err))
+
+
+  const updateDOM = (a) => {
+    // console.log(a)
+     const userDiv = document.querySelector(".users");
+    a.forEach((b)=> {
+      const {login,avatar_url} = b
+     userDiv.innerHTML += `<h2>${login}</h2>
+     <img src ="${avatar_url}" width="300px">`;
+      
+    })
+
+  }
+ 
+
+
+
+
+
 
 
 
