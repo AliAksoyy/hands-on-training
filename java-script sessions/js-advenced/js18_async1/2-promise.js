@@ -1,13 +1,17 @@
 
 const newPromise = new Promise((resolve,rejected) => {
   const random = Math.floor(Math.random() *5)
+
+  const data = {
+    a:1,b:2,c:3
+  }
   if(random) {
-    resolve("okey")
+    resolve(data)
   }else {
-    rejected("başarısız")
+    rejected(new Error("fetch halted"))
   }
 })
-newPromise.then((res)=> console.log(res))
+newPromise.then((res)=> console.log(res)).catch((err)=> console.log(err))
 
 
 
