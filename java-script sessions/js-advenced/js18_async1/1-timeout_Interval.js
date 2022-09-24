@@ -1,16 +1,18 @@
-const bekle = (w) => {
-  const a = new Date().getTime();
-  while (new Date().getTime() < a + w){}
 
-};
 
-console.log("hello")
 
-console.time("timer")
-bekle(3000);
-console.timeEnd("timer")
-console.log("fs12")
-
+setTimeout(() => {
+  console.log("john:Hi");
+  setTimeout(() => {
+    console.log("Sarah: Hello");
+    setTimeout(() => {
+      console.log("John: How Are you?");
+      setTimeout(() => {
+        console.log("Sarah:Fine and you?");
+      }, 1000);
+    }, 1000);
+  }, 1000);
+}, 1000);
 
 
 
