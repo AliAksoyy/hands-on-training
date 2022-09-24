@@ -17,3 +17,12 @@
 //* Await, promise-temelli herhangi bir fonksiyonun onune getirilerek getirildigi
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
+
+
+const getNews =async function () {
+    const API_KEY = "91bebcb7e4a2421089c507605565fcf0"
+    const url = "https://newsapi.org/v2/top-headlines?country=tr&apiKey=" + API_KEY;
+    const res = await fetch(url)
+    console.log(res)
+}
+getNews()
