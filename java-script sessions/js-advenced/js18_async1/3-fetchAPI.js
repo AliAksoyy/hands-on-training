@@ -1,3 +1,13 @@
+fetch("https://api.github.com/user").then((res)=> {
+  console.log(res)
+  if(!res.ok) {
+    throw new Error("something went wrong")
+  }
+   return res.json()}
+  )
+  .then((data)=> console.log(data))
+  .catch((err)=> console.log(err))
+
 
 
 
