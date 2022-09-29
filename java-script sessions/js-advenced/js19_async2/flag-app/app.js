@@ -1,6 +1,19 @@
 //*=========================================================
 //*                     FLAG-APP
 //*=========================================================
+let isError = false;
+
+const formSelect = document.querySelector(".form-select")
+
+formSelect.addEventListener("change",(e)=> {
+
+      console.log( e.target.value)
+      fetchCountryByName(e.target.value)
+})
+
+
+
+
 
 const fetchCountryByName = (name) => {
   const url = `https://restcountries.com/v3.1/name/${name}`;
@@ -34,14 +47,15 @@ const renderCountries = (data) => {
     languages,
     name: { common },
     region,
+    maps:{googleMaps}
   } = data[0];
 
   console.log(Object.values(languages));
   console.log(Object.values(currencies)[0].name);
   console.log(Object.values(currencies)[0].symbol);
 
-  countryDiv.innerHTML += `
-    <div class="card mx-auto m-3 shadow-lg" style="width: 18rem;">
+  countryDiv.innerHTML = `
+    <div class="card mx-auto m-3 shadow-lg " style="width: 18rem;">
       <img src="${svg}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${common}</h5>
@@ -59,9 +73,9 @@ const renderCountries = (data) => {
           ${Object.values(currencies).map((item) => Object.values(item) + " ")}
        </li>
       </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+      <div class="card-body text-center">
+        <a href="${googleMaps}" target="_blank" class="card-link btn btn-primary">Google Maps</a>
+        
       </div>
     </div>
 
@@ -69,6 +83,58 @@ const renderCountries = (data) => {
   `;
 };
 
+const fetchCountryByAllName =async ()=> {
+
+  const url ="https://restcountries.com/v3.1/all"
+  try {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      isError = true;
+    }
+
+    const data = await res.json();
+    
+    renderNames(data);
+  } catch (error) {
+    console.log(error)
+  }
+  
+
+}
+let counter = 0
+const renderNames = (data)=> {
+  const formSelect = document.querySelector(".form-select")
+  if(isError) {
+    document.querySelector("body") += `
+      <h2>News Can not be fetched</h2>
+      <img src="./img/404.png" alt="" />
+    `;
+    return;
+  }
+
+
+  data.forEach((item)=> {
+    
+    formSelect.innerHTML += `
+    <option value="${item.name.common}">${item.name.common}</option>
+    `;
+  })
+  console.log(data)
+
+}
+
+
+
+
+
+
+
+
+
+
+
 fetchCountryByName("turkey");
-fetchCountryByName("western sahara");
-fetchCountryByName("south africa");
+// fetchCountryByName("western sahara");
+// fetchCountryByName("south africa");
+fetchCountryByAllName()
