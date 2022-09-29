@@ -24,7 +24,7 @@ const book2 = new Book("sinekli bakkal","H.edip adıvar",1990)
 
 console.log(book1.getSummary())
 
-book1.price =100
+// book1.price =100
 console.log(book1)
 
 Book.prototype.getAge = function () {
@@ -32,4 +32,9 @@ Book.prototype.getAge = function () {
 }
 console.log(book1,book2)
 console.log(book1.getAge())
+
+Book.prototype.price = 100
+
+console.log(Book.prototype)
+console.log(book1.__proto__)
 
