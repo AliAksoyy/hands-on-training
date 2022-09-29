@@ -9,3 +9,5 @@
 //* Ornegin Date ve Array nesneleri Object.prototype'dan miras almaktadir.
 
 //? Object Constructor
+
+
