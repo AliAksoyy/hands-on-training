@@ -34,10 +34,13 @@ document.querySelector(".products").addEventListener("click",(e)=> {
 })
 
 function hesapla(btn) {
-  const product = btn.parentElement.parentElement.parentElement
+ const info= btn.closest(".product-info")
 
+ const price = info.querySelector(".product-price strong").innerText
+ const quantity = info.querySelector(".quantity").innerText
+ info.lastElementChild.innerText = (price * quantity).toFixed(2)
+ 
 
-  
 }
 
 
