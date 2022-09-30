@@ -55,6 +55,7 @@ function creatEl(newTodo) {
 }
 
   ul.addEventListener("click", (e)=> {
+    const Id = e.target.parentElement.getAttribute("id")
     
     if(e.target.classList.contains("fa-check")) {
       
@@ -62,7 +63,12 @@ function creatEl(newTodo) {
 
     }else if(e.target.getAttribute("class") == "fas fa-trash") {
       e.target.parentElement.remove()
-      
+
+    
+      todos = todos.filter(function(todo) {
+        return todo.id != Id;
+      })
+      localStorage.setItem("todos", JSON.stringify(todos))
     }
   })
 
