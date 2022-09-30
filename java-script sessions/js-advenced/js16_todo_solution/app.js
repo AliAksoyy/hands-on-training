@@ -1,93 +1,57 @@
+
 const input = document.querySelector("#todo-input")
 const btn = document.querySelector("#todo-button")
-
 const ul = document.querySelector("#todo-ul")
 
-todos = JSON.parse(localStorage.getItem("todos")) || []
+btn.addEventListener("click", function() {
+  if(input.value.trim() === "") {
+    alert("please something write")
+  }else {
+    const newTodo = {
+      id:new Date().getTime(),
+      text: input.value,
+      completed:false
+    }
 
-function renderDom() {
-  todos.forEach(function(todo) {
-    creatEl(todo)
+    creatEl(newTodo);
+    input.value = ""
+  }
+})
+
+function creatEl(newTodo) {
+
+    const {id,text,completed} = newTodo
+    const li = document.createElement("li")
+    li.setAttribute("id", id)
+    // completed ? li.classList.add("checked") : ""
+    completed && li.classList.add("checked")
+    const okIcon = document.createElement("i")
+    okIcon.setAttribute("class", "fas fa-check")
+    li.appendChild(okIcon)
+    const p = document.createElement("p")
+    const pText =document.createTextNode(text)
+    p.appendChild(pText)
+    li.appendChild(p)
+    const deleteIcon = document.createElement("i")
+    deleteIcon.className = "fas fa-trash"
+    li.appendChild(deleteIcon)
+    ul.appendChild(li)
+}
+
+  ul.addEventListener("click", (e)=> {
+    console.log(e.target)
+    console.log(e)
   })
-}
-renderDom()
 
 
-btn.addEventListener("click", (e)=> {
-     const newTodo = {
-       id: new Date().getTime(),
-       text: input.value,
-       completed: false,
-     };
 
-          if(input.value.trim() === "") {
-            alert("Please enter new todo")
-          }
-          creatEl(newTodo);
-          todos.push(newTodo)
-          localStorage.setItem("todos", JSON.stringify(todos))
-          console.log(todos)
-          input.value= ""
-       
-
-})
-
-function creatEl (newTodo) {
-     const { id, completed, text } = newTodo;
-
-  const ul = document.querySelector("#todo-ul")
-  const li = document.createElement("li")
-  li.id =id
-// completed ? li.classList.add("checked") : ""
-
-completed && li.classList.add("checked")
-
-  const okIcon = document.createElement("i")
-  okIcon.setAttribute("class", "fas fa-check");
-  li.appendChild(okIcon)
-  const p = document.createElement("p")
-  const texter = document.createTextNode(text)
-  p.appendChild(texter)
-  li.appendChild(p)
-  const deleteIcon = document.createElement("i")
-  deleteIcon.className = "fas fa-trash"
-  li.appendChild(deleteIcon)
-
-  ul.appendChild(li)
-
-}
-ul.addEventListener("click", (e)=> {
-  
- const ID  = e.target.parentElement.getAttribute("id")
- console.log(ID)
-
-  if(e.target.classList.contains("fa-check")) {
-  e.target.parentElement.classList.toggle("checked")
-  }
-  if(e.target.classList.contains("fa-trash")) {
-    e.target.parentElement.remove()
-
-   todos = todos.filter((el)=> el.id !=ID)
-    localStorage.setItem("todos", JSON.stringify(todos));
-
-   console.log(todos)
-  }
-})
 
 
 input.addEventListener("keydown", (e)=> {
-
-  if(e.code == "Enter") {
+  if(e.code === "Enter") {
     btn.click()
   }
-  })
-
-
-window.addEventListener("load", ()=> {
-  input.focus()
 })
-
-
 
 
 
