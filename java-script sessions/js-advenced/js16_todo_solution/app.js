@@ -3,6 +3,19 @@ const input = document.querySelector("#todo-input")
 const btn = document.querySelector("#todo-button")
 const ul = document.querySelector("#todo-ul")
 
+
+let todos = JSON.parse(localStorage.getItem("todos")) || []
+
+let renderSave = (todos)=> {
+      todos.forEach((todo)=> {
+        creatEl(todo)
+      })
+
+}
+renderSave(todos)
+
+
+
 btn.addEventListener("click", function() {
   if(input.value.trim() === "") {
     alert("please something write")
@@ -14,6 +27,9 @@ btn.addEventListener("click", function() {
     }
 
     creatEl(newTodo);
+    todos.push(newTodo)
+    localStorage.setItem("todos", JSON.stringify(todos))
+    console.log(todos)
     input.value = ""
   }
 })
@@ -39,8 +55,15 @@ function creatEl(newTodo) {
 }
 
   ul.addEventListener("click", (e)=> {
-    console.log(e.target)
-    console.log(e)
+    
+    if(e.target.classList.contains("fa-check")) {
+      
+      e.target.parentElement.classList.toggle("checked")
+
+    }else if(e.target.getAttribute("class") == "fas fa-trash") {
+      e.target.parentElement.remove()
+      
+    }
   })
 
 
