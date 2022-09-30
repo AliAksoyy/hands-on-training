@@ -4,7 +4,6 @@ const btn = document.querySelector("#todo-button")
 const ul = document.querySelector("#todo-ul")
 
 
-let todos =JSON.parse(localStorage.getItem("todos")) || []
 
 
 
@@ -21,6 +20,8 @@ btn.addEventListener("click", (e)=> {
             alert("Please enter new todo")
           }
           creatEl(newTodo);
+          todos.push(newTodo)
+          console.log(todos)
           input.value= ""
        
 
