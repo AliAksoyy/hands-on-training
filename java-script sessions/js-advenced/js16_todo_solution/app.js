@@ -6,37 +6,43 @@ const ul = document.querySelector("#todo-ul")
 
 let todos =JSON.parse(localStorage.getItem("todos")) || []
 
- const newTodo = {
-   id: new Date().getTime(),
-   text: input.value,
-   completed: false,
- };
-todos.push(newTodo);
 
-localStorage.setItem("todos", JSON.stringify(todos));
+
 
 
 btn.addEventListener("click", (e)=> {
-   
-          creatEl();
+     const newTodo = {
+       id: new Date().getTime(),
+       text: input.value,
+       completed: false,
+     };
+
+          if(input.value.trim() === "") {
+            alert("Please enter new todo")
+          }
+          creatEl(newTodo);
           input.value= ""
-          console.log(e.target)
+       
 
 })
 
-function creatEl () {
+function creatEl (newTodo) {
      const { id, completed, text } = newTodo;
 
   const ul = document.querySelector("#todo-ul")
   const li = document.createElement("li")
   li.id =id
+// completed ? li.classList.add("checked") : ""
+
+completed && li.classList.add("checked")
+
   const okIcon = document.createElement("i")
   okIcon.setAttribute("class", "fas fa-check");
   li.appendChild(okIcon)
   const p = document.createElement("p")
-  const texter = document.createTextNode(input.value)
-  p.append(texter)
-
+  const texter = document.createTextNode(text)
+  p.appendChild(texter)
+console.log(texter)
   li.appendChild(p)
   const deleteIcon = document.createElement("i")
   deleteIcon.className = "fas fa-trash"
@@ -55,6 +61,18 @@ ul.addEventListener("click", (e)=> {
   }
 })
 
+
+input.addEventListener("keydown", (e)=> {
+
+  if(e.code == "Enter") {
+    btn.click()
+  }
+  })
+
+
+window.addEventListener("load", ()=> {
+  input.focus()
+})
 
 
 
