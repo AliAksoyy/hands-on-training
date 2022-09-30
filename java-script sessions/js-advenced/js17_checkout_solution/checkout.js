@@ -1,3 +1,12 @@
+let price1 =25.98
+let price2 = 45.99
+let price3 = 74.99
+let tax = 0.18
+
+
+
+
+
 const products = document.querySelector(".products")
 const product = document.querySelectorAll(".product")
 const quantity = document.querySelectorAll(".quantity")
@@ -11,10 +20,18 @@ const price = document.querySelector(".product-line-price")
 products.addEventListener("click", (e)=> {
     if(e.target.classList.contains("fa-plus")) {
     e.target.previousElementSibling.innerText ++
-    }else if(e.target.classList.contains("fa-minus")) {
+      e.target.parentElement.parentElement.lastElementChild.innerText = (e.target.parentElement.parentElement.querySelector("strong").innerText * e.target.previousElementSibling.innerText).toFixed(2)
+
+    }
+    else if(e.target.classList.contains("fa-minus")) {
+
       if (e.target.nextElementSibling.innerText > 1 ) {
-        e.target.nextElementSibling.innerText--;  
-      }else {
+        e.target.nextElementSibling.innerText--;
+                  
+          e.target.parentElement.parentElement.lastElementChild.innerText = (e.target.parentElement.parentElement.querySelector("strong").innerText * e.target.nextElementSibling.innerText).toFixed(2)
+
+      }
+      else {
         if(  confirm(
             `Are you sure ${e.target.parentElement.parentElement.firstElementChild.innerText}`
           ) ){
