@@ -1,54 +1,39 @@
 
-const products = document.querySelector(".products")
-const product = document.querySelectorAll(".product")
-const quantity = document.querySelectorAll(".quantity")
+// let taxRate = 0.18
+// let shipping =15
+// let freeShipping = 300
 
-const minus = document.querySelector(".fa-minus")
-const plus = document.querySelector(".fa-plus")
+// window.addEventListener("load",function() {
+//   localStorage.setItem("taxRate", taxRate)
+//   localStorage.setItem("shipping",shipping)
+//   localStorage.setItem("freeShipping",freeShipping)
+// })
 
-const remove = document.querySelector(".remove-product")
-const price = document.querySelectorAll(".product-line-price")
 
-const subTotal = document.getElementById("cart-subtotal")
-
-const  tax = document.getElementById("cart-tax")
-const shipping = document.getElementById("cart-shipping")
-
-const total = document.getElementById("cart-total")
 
 
 products.addEventListener("click", (e)=> {
     if(e.target.classList.contains("fa-plus")) {
-    e.target.previousElementSibling.innerText ++
-      e.target.parentElement.parentElement.lastElementChild.innerText = (e.target.parentElement.parentElement.querySelector("strong").innerText * e.target.previousElementSibling.innerText).toFixed(2)
 
     }
-    else if(e.target.classList.contains("fa-minus")) {
+    
 
-      if (e.target.nextElementSibling.innerText > 1 ) {
-        e.target.nextElementSibling.innerText--;
-                  
-          e.target.parentElement.parentElement.lastElementChild.innerText = (e.target.parentElement.parentElement.querySelector("strong").innerText * e.target.nextElementSibling.innerText).toFixed(2)
+    
+    // else if(e.target.classList.contains("fa-minus")) {
 
-      }
-      else {
-        if(  confirm(
-            `Are you sure ${e.target.parentElement.parentElement.firstElementChild.innerText}`
-          ) ){
-          //  e.target.parentElement.parentElement.parentElement.remove()
-          e.target.closest(".product").remove()
-          }
+    // }
+
+     
+      
+      
         
-      }
-    }else if (e.target.classList.contains("remove-product")) {
-      e.target.closest(".product").remove()
-    }
-  })
+      
+    // else if (e.target.classList.contains("remove-product")) {
+    //   e.target.closest(".product").remove()
+    
+  
 
  
-  //  for(let i in Array.from(price)) {
-  //   console.log(price[i].innerText)
-  //  }
 
 
 
@@ -108,15 +93,15 @@ products.addEventListener("click", (e)=> {
 //       event.target.parentElement.querySelector(".quantity").innerText--;
 //       calculateProductPrice(event.target);
 //       calculateCartPrice();
-    // } else {
-    //   if (
-    //     confirm(
-    //       `${
-    //         event.target.parentElement.parentElement.querySelector("h2")
-    //           .innerText
-    //       } will be deleted!!!`
-    //     )
-    //   ) {
+//     } else {
+//       if (
+//         confirm(
+//           `${
+//             event.target.parentElement.parentElement.querySelector("h2")
+//               .innerText
+//           } will be deleted!!!`
+//         )
+//       ) {
 //         //remove
 //         // event.target.parentElement.parentElement.parentElement.remove();
 //         //! closest() ile kisa yoldan secim yapilabilir.
