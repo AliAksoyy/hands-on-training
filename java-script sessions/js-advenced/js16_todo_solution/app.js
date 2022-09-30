@@ -1,6 +1,8 @@
 const input = document.querySelector("#todo-input")
 const btn = document.querySelector("#todo-button")
 
+const ul = document.querySelector("#todo-ul")
+
 
 let todos =JSON.parse(localStorage.getItem("todos")) || []
 
@@ -20,11 +22,7 @@ btn.addEventListener("click", (e)=> {
           input.value= ""
           console.log(e.target)
 
-         
-
 })
-
-
 
 function creatEl () {
      const { id, completed, text } = newTodo;
@@ -47,6 +45,14 @@ function creatEl () {
   ul.appendChild(li)
 
 }
+ul.addEventListener("click", (e)=> {
+  
+  if(e.target.classList.contains("fa-check")) {
+    
+  }
+})
+
+
 
 
 
