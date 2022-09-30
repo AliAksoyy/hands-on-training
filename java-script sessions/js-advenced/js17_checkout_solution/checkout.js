@@ -7,9 +7,9 @@ const minus = document.querySelector(".fa-minus")
 const plus = document.querySelector(".fa-plus")
 
 const remove = document.querySelector(".remove-product")
-const price = document.querySelector(".product-line-price")
+const price = document.querySelectorAll(".product-line-price")
 
-const cardSubtotal = document.getElementById("cart-subtotal")
+const subTotal = document.getElementById("cart-subtotal")
 
 const  tax = document.getElementById("cart-tax")
 const shipping = document.getElementById("cart-shipping")
@@ -44,6 +44,13 @@ products.addEventListener("click", (e)=> {
       e.target.closest(".product").remove()
     }
   })
+
+ 
+  //  for(let i in Array.from(price)) {
+  //   console.log(price[i].innerText)
+  //  }
+
+
 
 
 
