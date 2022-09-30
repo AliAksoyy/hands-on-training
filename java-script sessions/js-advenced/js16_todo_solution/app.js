@@ -3,7 +3,14 @@ const btn = document.querySelector("#todo-button")
 
 const ul = document.querySelector("#todo-ul")
 
+todos = JSON.parse(localStorage.getItem("todos")) || []
 
+function renderDom() {
+  todos.forEach(function(todo) {
+    creatEl(todo)
+  })
+}
+renderDom()
 
 
 
@@ -21,6 +28,7 @@ btn.addEventListener("click", (e)=> {
           }
           creatEl(newTodo);
           todos.push(newTodo)
+          localStorage.setItem("todos", JSON.stringify(todos))
           console.log(todos)
           input.value= ""
        
