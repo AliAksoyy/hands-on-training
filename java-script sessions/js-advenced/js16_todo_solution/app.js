@@ -68,6 +68,8 @@ ul.addEventListener("click", (e)=> {
     e.target.parentElement.remove()
 
    todos = todos.filter((el)=> el.id !=ID)
+    localStorage.setItem("todos", JSON.stringify(todos));
+
    console.log(todos)
   }
 })
