@@ -13,9 +13,6 @@ function renderDom() {
 renderDom()
 
 
-
-
-
 btn.addEventListener("click", (e)=> {
      const newTodo = {
        id: new Date().getTime(),
@@ -51,7 +48,6 @@ completed && li.classList.add("checked")
   const p = document.createElement("p")
   const texter = document.createTextNode(text)
   p.appendChild(texter)
-console.log(texter)
   li.appendChild(p)
   const deleteIcon = document.createElement("i")
   deleteIcon.className = "fas fa-trash"
@@ -62,11 +58,17 @@ console.log(texter)
 }
 ul.addEventListener("click", (e)=> {
   
+ const ID  = e.target.parentElement.getAttribute("id")
+ console.log(ID)
+
   if(e.target.classList.contains("fa-check")) {
   e.target.parentElement.classList.toggle("checked")
   }
   if(e.target.classList.contains("fa-trash")) {
     e.target.parentElement.remove()
+
+   todos = todos.filter((el)=> el.id !=ID)
+   console.log(todos)
   }
 })
 
