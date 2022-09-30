@@ -18,10 +18,13 @@ btn.addEventListener("click", (e)=> {
    
           creatEl();
           input.value= ""
-   
           console.log(e.target)
 
+         
+
 })
+
+
 
 function creatEl () {
      const { id, completed, text } = newTodo;
