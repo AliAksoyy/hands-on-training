@@ -12,9 +12,16 @@ products.addEventListener("click", (e)=> {
     if(e.target.classList.contains("fa-plus")) {
     e.target.previousElementSibling.innerText ++
     }else if(e.target.classList.contains("fa-minus")) {
-        e.target.nextElementSibling.innerText--;
-      if (e.target.nextElementSibling.innerText < 1) {
-          confirm(`Are you sure ${e.target.parentElement.parentElement.firstElementChild.innerText}`)
+      if (e.target.nextElementSibling.innerText > 1 ) {
+        e.target.nextElementSibling.innerText--;  
+      }else {
+        if(  confirm(
+            `Are you sure ${e.target.parentElement.parentElement.firstElementChild.innerText}`
+          ) ){
+          //  e.target.parentElement.parentElement.parentElement.remove()
+          e.target.closest(".product").remove()
+          }
+        
       }
     }
   })
@@ -75,15 +82,15 @@ products.addEventListener("click", (e)=> {
 //       event.target.parentElement.querySelector(".quantity").innerText--;
 //       calculateProductPrice(event.target);
 //       calculateCartPrice();
-//     } else {
-//       if (
-//         confirm(
-//           `${
-//             event.target.parentElement.parentElement.querySelector("h2")
-//               .innerText
-//           } will be deleted!!!`
-//         )
-//       ) {
+    // } else {
+    //   if (
+    //     confirm(
+    //       `${
+    //         event.target.parentElement.parentElement.querySelector("h2")
+    //           .innerText
+    //       } will be deleted!!!`
+    //     )
+    //   ) {
 //         //remove
 //         // event.target.parentElement.parentElement.parentElement.remove();
 //         //! closest() ile kisa yoldan secim yapilabilir.
