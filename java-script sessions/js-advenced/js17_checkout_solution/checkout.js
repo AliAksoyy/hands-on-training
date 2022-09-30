@@ -43,12 +43,15 @@ function hesapla(btn) {
 
 }
 
-
-
-
-
-
 const lineHesapla = function() {
 
-
+ const fiyat =document.querySelectorAll(".product-line-price")
+ let subtotal =0
+  fiyat.forEach((div)=> {
+    subtotal +=parseFloat(div.innerText)
+    // console.log(subtotal)
+  })
+  console.log(subtotal)
+  const tax  = localStorage.getItem("taxRate")
+  const shipping = subtotal>0 && localStorage.getItem("freeShipping")
 }
