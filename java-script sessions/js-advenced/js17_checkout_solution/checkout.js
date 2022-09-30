@@ -1,11 +1,3 @@
-let price1 =25.98
-let price2 = 45.99
-let price3 = 74.99
-let tax = 0.18
-
-
-
-
 
 const products = document.querySelector(".products")
 const product = document.querySelectorAll(".product")
@@ -16,6 +8,14 @@ const plus = document.querySelector(".fa-plus")
 
 const remove = document.querySelector(".remove-product")
 const price = document.querySelector(".product-line-price")
+
+const cardSubtotal = document.getElementById("cart-subtotal")
+
+const  tax = document.getElementById("cart-tax")
+const shipping = document.getElementById("cart-shipping")
+
+const total = document.getElementById("cart-total")
+
 
 products.addEventListener("click", (e)=> {
     if(e.target.classList.contains("fa-plus")) {
@@ -40,6 +40,8 @@ products.addEventListener("click", (e)=> {
           }
         
       }
+    }else if (e.target.classList.contains("remove-product")) {
+      e.target.closest(".product").remove()
     }
   })
 
