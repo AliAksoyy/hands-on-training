@@ -61,6 +61,15 @@ function creatEl(newTodo) {
       
       e.target.parentElement.classList.toggle("checked")
 
+     
+      todos.map(function(item) {
+       
+        if(item.id == Number(Id) ){
+          item.completed ? item.completed = false : item.completed = true
+        }
+      })
+      localStorage.setItem("todos", JSON.stringify(todos))
+
     }else if(e.target.getAttribute("class") == "fas fa-trash") {
       e.target.parentElement.remove()
 
