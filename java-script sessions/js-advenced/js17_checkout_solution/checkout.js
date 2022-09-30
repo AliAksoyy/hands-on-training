@@ -53,5 +53,13 @@ const lineHesapla = function() {
   })
   console.log(subtotal)
   const tax  = localStorage.getItem("taxRate")
-  const shipping = subtotal>0 && localStorage.getItem("freeShipping")
+  const shipping = subtotal>0 && subtotal<localStorage.getItem("freeShipping") ? localStorage.getItem("shipping") : 0
+
+document.querySelector("#cart-subtotal").innerText = subtotal.toFixed(2)
+
+document.querySelector("#cart-tax").innerText = (subtotal *  parseFloat(tax)).toFixed(2)
+
+document.querySelector("#cart-shipping").innerText = shipping
+document.querySelector("#cart-total").innerText = parseFloat(subtotal + tax + shipping).toFixed(2);
 }
+
