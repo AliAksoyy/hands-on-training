@@ -27,10 +27,15 @@ console.log(book1.getAge())
 console.log(book1,book2)
 
 
+function Magazine(title,author,year,month) {
+
+  Book.call(this,title,author,year)
+  this.month = month
+}
+const mag1 = new Magazine("ali","aksoy",1990, "agus")
 
 
-
-
+console.log(mag1)
 
 
 
