@@ -24,3 +24,36 @@
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebilir.
 
 
+class Book {
+
+    #id = "123456";
+    constructor(title,author,year) {
+        this.author = author,
+          this.title = title,
+          this.year = year,
+          this.getThis = function () {
+            return this.title;
+          };
+    };
+    getId() {
+        return this.#id
+    }
+
+    setId(id) {
+        this.#id = id
+    }
+    getSummary() {
+        return `${this.title} was written by ${this.author} so its age is ${this.#computeAge}`
+    }
+    #computeAge() {
+        return new Date().getFullYear() -this.year
+    }
+}
+
+const book1 = new Book("simyacı","ali",1990)
+console.log(book1)
+console.log(book1.getId())
+
+book1.setId("0000")
+console.log(book1.setId())
+console.log(book1.getSummary())
