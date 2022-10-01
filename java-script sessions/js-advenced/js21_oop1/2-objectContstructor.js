@@ -11,23 +11,20 @@ function Book (title,author,year) {
 const book1 =new Book("kasagı","ömer",1980)
 const book2 =new Book("bakkal","ali",1880)
 
-console.log(book1.getSummary())
+
 console.log(book2)
 
-book1.price = 100
+console.log(Book.prototype)
+console.log(book1.__proto__)
 
-Book.prototype.getAge = function (){
-  return new Date().getFullYear -this.year
+Book.prototype.getAge= function() {
+  return new Date().getFullYear()- this.year
 }
+
+Book.prototype.price = 100
 
 console.log(book1.getAge())
-
-Book.prototype.getSummary = function() {
-     return `${this.title} was writtten by ${this.author} in ${this.year}`;
-
-}
-
-
+console.log(book1,book2)
 
 
 
