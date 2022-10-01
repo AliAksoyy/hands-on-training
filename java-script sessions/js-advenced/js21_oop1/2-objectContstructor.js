@@ -9,32 +9,79 @@
 //* Ornegin Date ve Array nesneleri Object.prototype'dan miras almaktadir.
 
 //? Object Constructor
-
-function Book (title,author,year) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.getSummary = function() {
-        return `${this.title} was written by ${this.author} in ${this.year}`
-    }
+function Book(title, author, year) {
+  this.author = author;
+  this.title = title;
+  this.year = year;
+  // this.getSummary = function () {
+  //   return `${this.title} was writtten by ${this.author} in ${this.year}`;
+  // };
 }
 
-const book1 = new Book("Kasagi", "omer seyfettin", 1920,"ali")
-const book2 = new Book("sinekli bakkal","H.edip adıvar",1990)
+//? new keyword'u Book Constructor'ini parameterler ile cagirmaktadir.
+//? Constructor ise Book nesnesinden bir ornek (instance) olusturmaktadir.
+//? Constructor, mantiksal bir ifade iken instance fiziksel bir olusum gibi dusunulebilir.
+//? Contructor'da tanimlanmis tum degisken ve fonksiyonlar olusturulan
+//? her bir instance'da hayat bulmus olur.
 
-console.log(book1.getSummary())
+//?instance
+const book1 = new Book("Kasagi", "Omer Seyfettin", 1920);
 
-// book1.price =100
-console.log(book1)
+//?instance
+const book2 = new Book("Sinekli Bakkal", "H. Edip Adıvar", 1930);
+
+//! Prototype, belirli bir Nesne'nin (Object) tum instance'larina
+//! kolay bir sekilde metotlar tanimlamaya izin vermektedir.
+//! Prototip alaninda bir metot tanimlamanin avantaji bu metot'un
+//! olusan tum instance'larin belleginde yer kaplamamasi ancak tum
+//! instance'larin bu metota ulasabilmesidir.
 
 Book.prototype.getAge = function () {
-    return new Date().getFullYear() -this.year
+  return new Date().getFullYear() - this.year;
+};
+
+Book.prototype.getSummary = function () {
+  return `${this.title} was writtten by ${this.author} in ${this.year}`;
+};
+
+Book.prototype.price = 100;
+// book1.price = 100;
+
+//* Ornegin Book nesnesinin tum instance'lari getAge() fonksiyonunu miras alabilir.
+//* Ancak, getAge() fonksiyonu bellekte sadece bir yer kaplamaktadir.
+
+//* Bir nesnenin prototiplerine .prototype ile erisilebilir.
+//* Ancak bir instance'in prototiplerine .__proto__ ile erisilmektedir.
+
+console.log(Book.prototype);
+console.log(book1.__proto__);
+
+console.log(book1);
+console.log(book1.getSummary());
+
+console.log(book1, book2);
+
+console.log(book1, book2);
+console.log(book1.getAge());
+console.log(book2.getAge());
+
+//? INHERITANCE (Kalitim - ES5)
+//?----------------------------------------------------------
+
+//? Sub-Class
+function Magazine(title, author, year, month) {
+  Book.call(this, title, author, year);
+  this.month = month;
 }
-console.log(book1,book2)
-console.log(book1.getAge())
 
-Book.prototype.price = 100
+//! Prototipleri miras almak icin Object.create() metodu kullanabilir.
+Magazine.prototype = Object.create(Book.prototype);
 
-console.log(Book.prototype)
-console.log(book1.__proto__)
+//? Magazine objesinin yeni bir instance
+const mag1 = new Magazine("Scientific Research", "Einstein", 1926, "Sep");
+console.log(mag1);
 
+//! Prototipler dogrudan miras olarak gelmez.
+console.log(mag1.getSummary());
+console.log(mag1.getAge());
+console.log(mag1.price);
