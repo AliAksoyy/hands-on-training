@@ -25,13 +25,13 @@ const apiKey = "91bebcb7e4a2421089c507605565fcf0";
   const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${apiKey}`;
 try {
   const res = await fetch(url);
-  console.log(res);
+  // console.log(res);
   if(!res.ok) {
-    
+ 
     throw new Error("hata var")
   }
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
   renderFetch(data.articles);
 
 
@@ -42,13 +42,46 @@ try {
 
 }
 
-getNews()
 
-const renderFetch = function (countries) {
-console.log(countries)
+
+const renderFetch = function (news) {
+console.log(news)
+
+news.forEach((item) => {
+  console.log(item)
+  const {title, urlToImage,content} = item
+ const newList = document.querySelector("#news-list");
+
+ newList.innerHTML += `
+<div class="col-md-6 col-lg-4 col-xl-2 ">
+    <div class="card" >
+      <img src="${urlToImage}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${title}</h5>
+        <p class="card-text">${content}.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+</div>
+
+
+`;
+
+
+
+
+})
+
+
+
+
+ 
+
+
+
 }
 
-
+window.addEventListener("load", getNews)
 
 
 
