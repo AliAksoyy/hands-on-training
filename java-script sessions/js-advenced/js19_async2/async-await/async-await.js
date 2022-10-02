@@ -20,15 +20,15 @@
 
 let isOkey =false;
 const getNews = async()=> {
-const apiKey = "91bebcb7e4a2421089c507605565fcf0";
+const apiKey = "91bebcb7e4a2421089c507605565fcf";
 
   const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${apiKey}`;
 try {
   const res = await fetch(url);
   // console.log(res);
   if(!res.ok) {
- 
-    throw new Error("hata var")
+ isOkey = true
+    // throw new Error("hata var")
   }
   const data = await res.json();
   // console.log(data);
@@ -44,13 +44,22 @@ try {
 
 
 
+
+
 const renderFetch = function (news) {
 console.log(news)
+ const newList = document.querySelector("#news-list");
+
+if(isOkey) {
+newList.innerHTML = `
+<h2>hata varsdafsdfdsfdsfdsfsdfsd</h2>`
+
+return
+}
 
 news.forEach((item) => {
   console.log(item)
   const {title, urlToImage,content} = item
- const newList = document.querySelector("#news-list");
 
  newList.innerHTML += `
 <div class="col-md-6 col-lg-4 col-xl-2 ">
