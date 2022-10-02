@@ -18,24 +18,34 @@
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
-
+let isOkey =false;
 const getNews = async()=> {
 const apiKey = "91bebcb7e4a2421089c507605565fcf0";
 
   const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${apiKey}`;
+try {
+  const res = await fetch(url);
+  console.log(res);
+  if(!res.ok) {
+    
+    throw new Error("hata var")
+  }
+  const data = await res.json();
+  console.log(data);
+  renderFetch(data.articles);
 
-const res = await fetch(url);
-console.log(res)
 
-const data = await res.json()
-renderFetch(data)
-console.log(data)
+} catch (error) {
+  console.log(error)
+}
+
+
 }
 
 getNews()
 
 const renderFetch = function (countries) {
- console.log(countries)
+console.log(countries)
 }
 
 
