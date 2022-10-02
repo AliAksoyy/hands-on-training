@@ -9,6 +9,7 @@ const url = `https://restcountries.com/v3.1/name/${cityName}`;
 
   fetch(url).then((res) => {
     if(!res.ok) {
+      renderError("hataadasfsd")
       throw new Error("hataaaaa")
     }
     return res.json()
@@ -17,12 +18,19 @@ const url = `https://restcountries.com/v3.1/name/${cityName}`;
 
 }
 
+const renderError = ()=> {
+    const cont = document.querySelector(".countries");
+
+    cont.innerHTML = `
+    <h2>dasfdsfsdfsd</h2>`
+}
+
   const renderData = (veri) => {
     console.log(veri)
       const {capital,languages:{tur},flags:{svg},name:{common}} = veri
       console.log(capital, svg, common, svg)
     const cont = document.querySelector(".countries");
-    
+
 
   }
 
