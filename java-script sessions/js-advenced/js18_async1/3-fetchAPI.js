@@ -14,46 +14,6 @@
 
 console.log("FETCH");
 
-const url = "https://api.github.com/users";
-
-fetch(url).then(function(res) {
-  console.log(res)
-  if(!res.ok) {
-    throw new Error("hata")
-
-  }
-  return res.json()
-}).then(data => {
-  console.log(data)
-  render(data)
-})
-.catch(function(err) {
-  console.log(err)
-})
-
-const render = (users)=> {
-  const ali = document.querySelector(".users");
-
-  console.log(users);
-  users.forEach((user) => {
-
-     ali.innerHTML += `
-    <h2>${user.login}</h2>
-
-  `;
-    
-  });
-
-
-   
-}
-
-
-
-
-
-
-
 
 
 // let userData;
