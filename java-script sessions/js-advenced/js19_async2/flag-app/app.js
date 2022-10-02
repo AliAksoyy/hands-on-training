@@ -2,61 +2,6 @@
 //*                     FLAG-APP
 //*=========================================================
 
-
-
-const fetchCountry = (cityName)=> {
-const url = `https://restcountries.com/v3.1/name/${cityName}`;
-
-  fetch(url).then((res) => {
-    if(!res.ok) {
-      renderError("hataadasfsd")
-      throw new Error("hataaaaa")
-    }
-    return res.json()
-  }).then((data) => renderData(data[0]))
-  .catch((err) => console.log(err))
-
-}
-
-const renderError = ()=> {
-    const cont = document.querySelector(".countries");
-
-    cont.innerHTML = `
-    <h2>dasfdsfsdfsd</h2>`
-}
-
-  const renderData = (veri) => {
-    console.log(veri)
-      const {capital,languages:{tur},flags:{svg},name:{common}} = veri
-      console.log(capital, svg, common, svg)
-    const cont = document.querySelector(".countries");
-
-
-  }
-
-window.addEventListener("load", fetchCountry("turkey"))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let isError = false;
 
 // const formSelect = document.querySelector(".form-select")
