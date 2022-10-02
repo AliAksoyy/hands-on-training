@@ -14,21 +14,39 @@
 
 console.log("FETCH");
 
-fetch("https://api.github.com/user")
-.then(res=>{
-console.log(res)
-if(!res.ok){
+const url = "https://api.github.com/users";
 
-  throw new Error("hata")
-}
+fetch(url).then(function(res) {
+  console.log(res)
+  if(!res.ok) {
+    throw new Error("hata")
 
-
- return res.json()
+  }
+  return res.json()
+}).then(data => {
+  console.log(data)
+  render(data)
 })
-.then((data)=> console.log(data))
-.catch((err)=> console.log(err))
+.catch(function(err) {
+  console.log(err)
+})
+
+const render = (users)=> {
+  const ali = document.querySelector(".users");
+
+  console.log(users);
+  users.forEach((user) => {
+
+     ali.innerHTML += `
+    <h2>${user.login}</h2>
+
+  `;
+    
+  });
 
 
+   
+}
 
 
 
