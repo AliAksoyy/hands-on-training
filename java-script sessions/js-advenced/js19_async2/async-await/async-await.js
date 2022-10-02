@@ -25,14 +25,21 @@ const apiKey = "91bebcb7e4a2421089c507605565fcf0";
   const url = `https://newsapi.org/v2/top-headlines?country=tr&apiKey=${apiKey}`;
 
 const res = await fetch(url);
+console.log(res)
 
 const data = await res.json()
 renderFetch(data)
+console.log(data)
 }
+
+getNews()
 
 const renderFetch = function (countries) {
  console.log(countries)
 }
+
+
+
 
 
 
