@@ -17,6 +17,8 @@ function yazdir() {
   console.log("merhaba");
 }
 
+
+
 yazdir(); //! invoke, call, cagirma
 yazdir();
 
@@ -32,6 +34,8 @@ selamla("Canan", "Ozturk");
 selamla("Ayse");
 selamla("John");
 
+
+
 //! Bir parametreyi cagirma sirasinda kullanmaz isek onun
 //! yerine default parametre atayabiliriz. Ornekteki lastName
 //! parametresi icin default değer olarak '' atanmistir.
@@ -46,6 +50,7 @@ function yasHesapla(isim, dogumTarihi) {
   return `${isim} in yasi ${new Date().getFullYear() - dogumTarihi} dir.`;
 }
 
+
 const mesaj1 = yasHesapla("Elif Can", 1990);
 console.log(mesaj1);
 console.log(yasHesapla("Veli Canan", 1980));
@@ -54,7 +59,7 @@ console.log(yasHesapla("Veli Canan", 1980));
 //*****************************************************/
 
 function tekCift(sayi) {
-  return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
+   return sayi % 2 ? `${sayi} TEKTIR` : `${sayi} CIFTTIR`;
 }
 
 console.log(tekCift(5));
