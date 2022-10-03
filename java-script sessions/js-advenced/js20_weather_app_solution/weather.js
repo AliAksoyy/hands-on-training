@@ -71,6 +71,18 @@ const getWeatherDataFromApi = async() => {
                             </figure>`;
     //append vs. prepend
     list.prepend(createdLi);
+      createdLi.addEventListener("click", (e) => {
+        alert(`${e.target.tagName} element is clicked`);
+        window.location.href = "https://google.com";
+      });
+      createdLi.addEventListener("click", (e) => {
+        alert(`${e.target.tagName} element is clicked`);
+        // window.location.href = "https://google.com";
+      });
+      createdLi.addEventListener("click", (e) => {
+        alert(`${e.target.tagName} element is clicked`);
+        // window.location.href = "https://google.com";
+      });
     form.reset();
     console.log(data);
   } catch (error) {
@@ -84,9 +96,7 @@ const getWeatherDataFromApi = async() => {
 
   //capturing
 
-  createdLi.addEventListener("click", function(e) {
-    
-  })
+
 }
 
 
