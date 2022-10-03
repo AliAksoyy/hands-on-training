@@ -9,7 +9,8 @@ console.log("****** ITERATION **********");
 //?  Dizideki herbir fiyati konsola bastiriniz.
 
 const prices = [100, 250, 50, 89];
-prices.forEach((p) => console.log(p));
+prices.forEach((p) => console.log(p,));
+
 
 //? ORNEK: prices dizisindekilerin toplamini konsola yazdiriniz */
 let sum = 0;
@@ -29,6 +30,7 @@ prices.forEach((price, index, arr) => {
   console.log(`${index + 1}.iteration: ${total}`);
   arr[index] = Math.trunc(price * 1.1);
 });
+
 
 console.log(prices);
 
@@ -82,6 +84,7 @@ const products = [
 
 //?For Capitilize
 products.map((p, i, arr) => (arr[i] = p[0].toUpperCase() + p.slice(1)));
+
 console.log(products);
 
 //* ======================================================
@@ -112,10 +115,11 @@ const lessThan9000Increase = salaries
 
 console.log(lessThan9000Increase);
 
-salaries
-  .filter((s) => s < 9000)
-  .map((s) => Math.trunc(s * 1.1))
-  .forEach((s) => console.log(s));
+// salaries
+//   .filter((s) => s < 9000)
+//   .map((s) => Math.trunc(s * 1.1))
+//   .forEach((s) => console.log(s));
+
 //* ======================================================
 //*                 REDUCE METHOD
 //* ======================================================
