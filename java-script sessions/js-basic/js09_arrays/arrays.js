@@ -86,7 +86,7 @@ console.log(arabalar, silinen);
 
 //* push() dizinin sonuna eleman ekler ve dizinin son eleman sayisini dondurur.
 
-const n = arabalar.push("Citroen");
+const n = arabalar.push("Citroen","ali",4);
 console.log(arabalar, n);
 
 //* unshift dizinin 0. indeksine eleman ekler ve dizinin son eleman sayisini dondurur.
@@ -163,6 +163,8 @@ console.log(sayilar1.lastIndexOf(4)); //? -1
 //* join()
 //*-----------------------------------------------------------
 //? join, dizinin elamanlari birlestirip string hale cevirir.
+const ali = ["12","14","15"]
+
 console.log(sayilar1.join(" "));
 console.log(sayilar1.join()); // 3,5...
 console.log(sayilar1);
@@ -202,6 +204,7 @@ console.log(combinedArr);
 
 const yasArray = [18, 22, 78, 34, 78, 79, 15];
 const check = yasArray.every((yas) => yas >= 18);
+// const check = yasArray.every(function(yas) {yas>= 18 })
 check
   ? console.log("Dizideki herkesin yasi 18'den buyuktur")
   : console.log("Dizide 18 yas alti var");

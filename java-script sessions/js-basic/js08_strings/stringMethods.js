@@ -210,7 +210,7 @@ console.log(veysel.substring(-10)); //? Uzun ince bir yoldayim yuruyorum gunduz 
 const tarkan = "Gel gunduzle gece olalim";
 const aliss = "ali aksoy"
 
-const splited = tarkan.split(" ");
+const splited = tarkan.split("");
 console.log(splited, typeof splited); //! Bosluklara göre ayirarak Array'e cevirdi.
 
 const chars = tarkan.split("");
