@@ -69,6 +69,8 @@ console.log(yourName);
 //     : `${str1} ile ${str2} Esit degildir`;
 // };
 
+
+
 const esitMi = (str1, str2) =>
   str1.toLocaleUpperCase() === str2.toLocaleUpperCase()
     ? `${str1} ile ${str2} Esittir`
@@ -97,9 +99,12 @@ console.log(str6.charAt(4)); //* " "
 console.log(str6.charAt()); //* F (ilk indistekini dondurur)
 console.log(str6.charAt(14)); //* h
 
+
 //! lenght bir property (objenin degiskenidir) dir ve string'in
 //! karakter sayisini tutar.
 console.log(str6.length); //* 27
+let str12 = "ali"
+
 
 //* String son harfini ogrenmek istersek
 console.log(str6.charAt(str6.length - 1)); //* 0 -26 => 27 eleman
@@ -108,12 +113,13 @@ console.log(str6.charAt(str6.length - 1)); //* 0 -26 => 27 eleman
 //* includes() - case sentive
 //* ----------------------------------------------------------
 const word = "To be or not to be, that is the question";
-
+const ali = "ali ak"
 console.log(word.includes("to be")); //? true
 console.log(word.includes("That")); //? false
 console.log(word.includes("")); //? true
 console.log(word.includes("to be", 14)); //? false
 console.log(word.includes("to be", 13)); //? true
+
 
 //! NOT: case insentive kullanmak icin str baslangicta kucuk veya
 //! buyuk harfe cevirilerek arama yapilabilir.
@@ -185,7 +191,8 @@ console.log(degistir2.replaceAll(/no/gi, "Hayir"));
 //*  substr (depreceated)
 //* ----------------------------------------------------------
 const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
-
+const alis = "ali ak"
+console.log(alis.slice(2,5))
 const sliced = veysel.slice(33);
 console.log(sliced, typeof sliced); //? gunduz gece..
 
@@ -201,6 +208,8 @@ console.log(veysel.substring(-10)); //? Uzun ince bir yoldayim yuruyorum gunduz 
 //* split([sep [, limit] ])
 //* ----------------------------------------------------------
 const tarkan = "Gel gunduzle gece olalim";
+const aliss = "ali aksoy"
+
 const splited = tarkan.split(" ");
 console.log(splited, typeof splited); //! Bosluklara göre ayirarak Array'e cevirdi.
 
