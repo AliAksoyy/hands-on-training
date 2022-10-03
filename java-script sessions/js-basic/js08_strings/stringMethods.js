@@ -16,6 +16,8 @@ console.log(str1, typeof str1);
 
 //!2 - Non-primitive String tanımlama
 const str4 = new String("Non-Primitive");
+const str10 = new String("ali aksoy")
+console.log(str10, typeof str10)
 console.log(typeof str4);
 
 //?----------------------------------------
@@ -30,7 +32,7 @@ console.log(str1.toLowerCase());
 //? Ek Açıklama için : https://javascript.info/primitives-methods
 
 const sayi = 5;
-const str5 = str1 + str2 + str3 + sayi; // Concatination
+const str5 = str1 + str2 + str3 + " " +sayi; // Concatination
 console.log(str5, typeof str5);
 
 //* ---------------------------------------------------
