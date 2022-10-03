@@ -21,6 +21,9 @@ const dizelereAyir = (n) => {
 };
 dizelereAyir(dizi);
 
+
+
+
 console.log(negatifler);
 console.log(pozitifler);
 console.log(dizi);
