@@ -2,6 +2,7 @@
 // ?                FONKSİYONLAR-SCOPE
 // ? ====================================================
 console.log("******* 3 - SCOPE ********");
+
 let sayi1 = 5; //! Global Scope
 console.log(sayi1); //! 5
 

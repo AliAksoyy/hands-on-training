@@ -2,49 +2,51 @@
 // *            DONGULER(LOOPS)- FOR
 // * ============================================
 
-// ! 1 inci proje
+console.log("****** FOR *******");
 
-// console.log("****** FOR *******");
+//? Ornek: 1 den n kadar sayiları toplayan kodu yaziniz.
 
-// const n = +prompt("bir sayi giriniz")
+const n = Number(prompt("Bir sayi girniz:"));
 
-// let toplam = 0;
-// for ( let i=1; i<=n; i++) {
-//     toplam +=i;
-//     console.log(toplam, i)
-// }
-// console.log("sonuc:", toplam);
+let toplam = 0;
+for (let i = 1; i <= n; i++) {
+  // toplam = toplam + i;
+  toplam += i;
+  console.log(toplam, i);
+}
 
+console.log("SONUC:", toplam);
 
-// ? 2 nci proje 0-100 arasında 10 ader rastgele tam sayı üreten kodu yazın
+//? Ornek: 0-100 Arasinda 10 adet rasgele tamsayi sayi ureten kodu
+//? for dongusu ile yaziniz..
 
-//* Math.floor() =>surekli asagiya yuvarlar
-//* Math.ceil() =>sürekli yukariya yuvarlar
+for (let i = 1; i <= 10; i++) {
+  const rasgele = Math.round(Math.random() * 100);
+  console.log(rasgele);
+}
+
+//* NOT:
+//* Math.floor() =>en yakin alt tamsayiya yuvarlar
+//* Math.ceil() =>en yaki ust tamsayiya yuvarlar
 //* Math.round() => degerine gore yuvarlar.
-//* Math.trunc() => kesirli sayinin tam 
+//* Math.trunc() => kesirli sayinin tam kismini alir.
 
-// for(let i = 1; i <= 10; i++) {
-//     const rastgele = Math.round(Math.random() * 100);
-//     console.log(rastgele)
-// }
+//? ÖRNEK: Girilen bir sayinin Asal olup olmadigini yazdiran kodu
+//? for dongulerini kullanarak yaziniz.
 
-// ? girilen sayının asal sayıp olup olmadıgını yazdıran kodu yaz for döngüsünü kullanarak
+const sayi = Number(prompt("Pozitif Bir sayi giriniz:"));
+let asal = true;
 
-// const sayi = Number(prompt("Pozitif Bir sayi giriniz:"));
-// let asal = true;
+if (sayi <= 1) {
+  alert("Sayi 1'den buyuk olmalidir.");
+} else {
+  for (let i = 2; i < sayi; i++) {
+    if (sayi % i === 0) {
+      asal = false;
+      break;
+    }
+  }
 
-// if (sayi <= 1) {
-//   alert("Sayi 1'den buyuk olmalidir.");
-// } else {
-//   for (let i = 2; i < sayi; i++) {
-//     if (sayi % i === 0) {
-//       asal = false;
-//       break;
-//     }
-//   }
-
-//   const sonuc = asal === true ? "ASALDIR" : "ASAL DEGILDIR";
-//   console.log(`${sayi} ${sonuc}`);
-// }
-
-
+  const sonuc = asal === true ? "ASALDIR" : "ASAL DEGILDIR";
+  console.log(`${sayi} ${sonuc}`);
+}
