@@ -68,6 +68,7 @@ console.log(kisiler);
 const yas55 = kisiler[5][2];
 console.log(yas55);
 
+
 //? kisiler icerisindeki yaslar dizisinde bulunan 44 yasini bir eksiltiniz.
 kisiler[5][1]--; //?43
 console.log(kisiler);
