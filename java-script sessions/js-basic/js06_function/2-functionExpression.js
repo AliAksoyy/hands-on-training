@@ -90,3 +90,6 @@ const hesapla = function (s1, s2, islem) {
 
 hesapla(3, 5, "+");
 console.log(hesapla(4, 3, "/"));
+
+
+
