@@ -8,7 +8,7 @@ const ul = document.querySelector(".cities")
 
 const form = document.querySelector("form")
 
-
+let res = {}
 
 localStorage.setItem(
   "tokenKey",
@@ -38,7 +38,8 @@ form.addEventListener("submit", (e)=> {
 
 
       try {
-        const res = await fetch(url)
+         res = await fetch(url)
+          console.log(res)
           .then((res) => {
             if (!res.ok) {
               throw new Error("something went wrong");
@@ -58,7 +59,19 @@ form.addEventListener("submit", (e)=> {
             li.classList.add("city");
 
             const spans = ul.querySelectorAll(".city span")
-            const spansArr = Array.from()
+            const spansArr = Array.from(spans)
+            if(spansArr.length > 0) {
+              const filterSpan = spansArr.filter((a)=> {
+                return a.innerText == name
+              })
+              if(filterSpan.length >0) {
+                msg.innerText = `sadasds ${name}`
+                setTimeout(()=> {
+                  msg.innerText = ""
+                },5000)
+                return
+              }
+            }
 
             li.innerHTML = `<h2 class="city-name" data-name="${name}">
                                  <span>${name}</span>
@@ -78,6 +91,10 @@ form.addEventListener("submit", (e)=> {
           })   
       } catch (error) {
         console.log(error)
+         msg.innerText = `${res.status}`;
+         setTimeout(() => {
+           msg.innerText = "";
+         }, 5000);
       }
       form.reset()
   }
