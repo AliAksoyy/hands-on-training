@@ -24,35 +24,38 @@ arabalar.lpg = true;
 console.log(arabalar);
 
 //!Read
-// console.log(arabalar.lpg); //? .notation
-// console.log("MODEL:", arabalar["model"]); //? Square bracket notation
+console.log(arabalar.lpg); //? .notation
+console.log("MODEL:", arabalar["model"]); //? Square bracket notation
 
 // //? Square bracket yonteminin en buyuk avantaji key degerini
 // //? degisken olarak kullanabilmemizdir.
-// const key = "mark";
-// console.log(arabalar[key]);
+const key = "mark";
+console.log(arabalar[key]);
 
-// arabalar.motor = "1.6";
-// console.log(arabalar);
+const ali = "motor"
+console.log("Motor: ",arabalar[ali])
+
+arabalar.motor = "1.6";
+console.log(arabalar);
 
 // //* ---------------------------------------------------------
 // //* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
 // //* ---------------------------------------------------------
 
 // //? Object Constructure
-// function Personel(id, ad, maas) {
-//   this.id = id;
-//   this.ad = ad;
-//   this.maas = maas;
-//   // console.log(this); //! Personel objesine baglanmistir (binded)
-// }
+function Personel(id, ad, maas) {
+  this.id = id;
+  this.ad = ad;
+  this.maas = maas;
+  // console.log(this); //! Personel objesine baglanmistir (binded)
+}
 
-// const kisi1 = new Personel("1234567890", "Mustafa", 15000);
-// const kisi2 = new Personel("177567890", "Canan", 25000);
-// // console.log(kisi1);
-// console.log(kisi1.ad);
-// console.log(kisi2.maas);
-// console.log(kisi2["id"]);
+const kisi1 = new Personel("1234567890", "Mustafa", 15000);
+const kisi2 = new Personel("177567890", "Canan", 25000);
+console.log(kisi1);
+console.log(kisi1.ad);
+console.log(kisi2.maas);
+console.log(kisi2["id"]);
 
 // //? Global alanda window objesini gosterir.
 // console.log(this);
@@ -98,7 +101,7 @@ console.log("PERSON:", person);
 
 //! Deep Copy
 let deepCopyOfWorker = JSON.parse(JSON.stringify(worker));
-// console.log(JSON.stringify(worker));
+console.log(JSON.stringify(worker));
 
 deepCopyOfWorker.dob = "2022";
 console.log("DEEP:", deepCopyOfWorker);
