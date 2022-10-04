@@ -195,6 +195,8 @@ for (let person in people) {
   console.log(people[person]);
 }
 
+
+
 //! FOR - OF
 //* for (x of iterable) {
 //*   code block to be executed
@@ -208,8 +210,9 @@ console.log("****************");
 //? people objesindeki tum salary 'leri yazdir
 for (let v of Object.values(people)) {
   console.log(v.salary);
-  // console.log(v["salary"]);
+  console.log(v["salary"]);
 }
+
 
 //? people objesindeki tum salary 'leri yazdir
 for (let [k, v] of Object.entries(people)) {
