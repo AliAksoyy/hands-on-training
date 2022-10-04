@@ -8,7 +8,7 @@ const ul = document.querySelector(".cities")
 
 const form = document.querySelector("form")
 
-let res = {}
+
 
 localStorage.setItem(
   "tokenKey",
@@ -38,20 +38,13 @@ form.addEventListener("submit", (e)=> {
 
 
       try {
-         res = await fetch(url)
-          console.log(res)
-          .then((res) => {
-            if (!res.ok) {
-              throw new Error("something went wrong");
-            }
-            return res.json();
-          })
-          .then((data) => {
-            let newData = data;
-            console.log(newData);
-            const { main, sys, name, weather } = data;
+        let  res = await axios(url)
+        console.log(res)
+          
+            const { main, sys, name, weather } = res.data
 
             const icon1 = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+            const icon2 = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${weather[0].icon}.svg`;
 
             console.log(icon1);
 
@@ -73,6 +66,14 @@ form.addEventListener("submit", (e)=> {
               }
             }
 
+              ul.addEventListener("click",(e)=> {
+                if(e.target.tagName == "IMG") {
+                  e.target.src = e.target.src == icon1 ? icon2 : icon1
+                }
+              })
+            
+
+
             li.innerHTML = `<h2 class="city-name" data-name="${name}">
                                  <span>${name}</span>
                                  <sup>${sys.country}</sup>
@@ -88,13 +89,11 @@ form.addEventListener("submit", (e)=> {
                           </figure> `;
             ul.prepend(li);
           
-          })   
+             
       } catch (error) {
         console.log(error)
-         msg.innerText = `${res.status}`;
-         setTimeout(() => {
-           msg.innerText = "";
-         }, 5000);
+      
+       
       }
       form.reset()
   }
