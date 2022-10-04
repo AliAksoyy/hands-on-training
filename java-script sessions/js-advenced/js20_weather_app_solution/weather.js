@@ -20,7 +20,7 @@ localStorage.setItem(
 form.addEventListener("submit", (e)=> {
   e.preventDefault()
   fetchWeather()
-
+  
 })
 
   const  fetchWeather = async ()=> {
@@ -48,7 +48,7 @@ form.addEventListener("submit", (e)=> {
           .then((data) => {
             let newData = data;
             console.log(newData);
-            const { main,sys, name, weather } = data;
+            const { main, sys, name, weather } = data;
 
             const icon1 = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
@@ -56,6 +56,9 @@ form.addEventListener("submit", (e)=> {
 
             const li = document.createElement("li");
             li.classList.add("city");
+
+            const spans = ul.querySelectorAll(".city span")
+            const spansArr = Array.from()
 
             li.innerHTML = `<h2 class="city-name" data-name="${name}">
                                  <span>${name}</span>
@@ -71,13 +74,12 @@ form.addEventListener("submit", (e)=> {
                                  }</figcaption>
                           </figure> `;
             ul.prepend(li);
-            form.reset()
-            
+          
           })   
       } catch (error) {
         console.log(error)
       }
-
+      form.reset()
   }
       
 
