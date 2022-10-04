@@ -9,6 +9,7 @@ const cities = document.querySelector(".cities")
 const form = document.querySelector("form")
 
 
+
 localStorage.setItem(
   "tokenKey",
 "pc8YHOgPN1XTHnmt2lLm/vIGUAaGJFJ1vEABsIprjGvkdyLesISAotmAipoCW2bg"
@@ -35,18 +36,33 @@ form.addEventListener("submit", (e)=> {
 
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${tokenKey}&units=${units}&lang=${lang}`
 
-      
-      const res = await fetch(url);
+      try {
+        const res = await fetch(url)
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error("something went wrong");
+            }
+            return res.json();
+          })
+          .then((data) => {
+            let newData = data;
+            console.log(newData);
+          });
 
-      const data = await res.json()
+          
 
+
+      } catch (error) {
+        console.log(error)
+      }
       
 
 
     
 
-
   }
+      
+
 
 
 
