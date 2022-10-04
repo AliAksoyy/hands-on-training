@@ -113,6 +113,7 @@ const mehmet = names[1]; //* indexing
 const [p1, p2, , p4] = names;
 console.log(p1, p2, p4);
 
+
 //*======================================================
 //*  REST (...)
 //* ======================================================
@@ -176,8 +177,10 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 const flyingVecihles = ["Aircraft", "Helicopter", "QuadCopter"];
 const automobiles = ["Truck", "Bus", "Car", "SUV"];
 // const allVehicles = [flyingVecihles, automobiles];
-const allVehicles = [...flyingVecihles, ...automobiles];
+// const allVehicles = [...flyingVecihles, ...automobiles];
+const allVehicles = [...flyingVecihles, ...automobiles]
 console.log(allVehicles);
+
 
 const citrus = ["orange", "lime", "lemon"];
 const fruits = ["apple", ...citrus, "banana", "chery", "pear"];
@@ -185,6 +188,7 @@ console.log(fruits);
 
 //* String spread
 let str = "Hello FS12";
+
 const charArray = [...str];
 console.log(charArray, str);
 
