@@ -6,8 +6,47 @@ const msg = document.querySelector("form span")
 
 const cities = document.querySelector(".cities")
 
+const form = document.querySelector("form")
 
-localStorage.setItem("tokenKey", "5bb1e360c88ace5e3a7f0c8cfe9a34d7");
+
+localStorage.setItem(
+  "tokenKey",
+"pc8YHOgPN1XTHnmt2lLm/vIGUAaGJFJ1vEABsIprjGvkdyLesISAotmAipoCW2bg"
+);
+
+// localStorage.setItem("tokenKey",EncryptStringAES("5bb1e360c88ace5e3a7f0c8cfe9a34d7"));
+
+form.addEventListener("submit", (e)=> {
+  e.preventDefault()
+  fetchWeather()
+
+})
+
+  const  fetchWeather = async ()=> {
+
+    const tokenKey = DecryptStringAES(localStorage.getItem("tokenKey"));
+    
+    const cityName = input.value;
+
+    const units = "metric"
+
+    const lang = "tr"
+    
+
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${tokenKey}&units=${units}&lang=${lang}`
+
+      
+      const res = await fetch(url);
+
+      const data = await res.json()
+
+      
+
+
+    
+
+
+  }
 
 
 
