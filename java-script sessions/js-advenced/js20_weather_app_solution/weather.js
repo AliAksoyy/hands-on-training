@@ -4,7 +4,7 @@ const button = document.querySelector("button")
 
 const msg = document.querySelector("form span")
 
-const cities = document.querySelector(".cities")
+const ul = document.querySelector(".cities")
 
 const form = document.querySelector("form")
 
@@ -49,9 +49,20 @@ form.addEventListener("submit", (e)=> {
             console.log(newData);
           });
 
-          
 
+          const li = document.createElement("li")
+          li.classList.add("city")
 
+          li.innerHTML = `<h2 class="city-name" data-name="">
+                                 <span></span>
+                                 <sup></sup>
+                          </h2>
+                          <div class="city-temp"><sup></sup></div>
+                          <figure>
+                                 <img class="city-icon" src="">
+                                 <figcaption></figcaption>
+                          </figure> `
+          ul.prepend(li)
       } catch (error) {
         console.log(error)
       }
