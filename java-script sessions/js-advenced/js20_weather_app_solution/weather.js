@@ -1,3 +1,14 @@
+const input = document.querySelector("input")
+
+const button = document.querySelector("button")
+
+const msg = document.querySelector("form span")
+
+const cities = document.querySelector(".cities")
+
+
+localStorage.setItem("tokenKey", "5bb1e360c88ace5e3a7f0c8cfe9a34d7");
+
 
 
 
