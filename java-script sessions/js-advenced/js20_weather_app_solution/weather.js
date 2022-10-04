@@ -36,6 +36,7 @@ form.addEventListener("submit", (e)=> {
 
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${tokenKey}&units=${units}&lang=${lang}`
 
+
       try {
         const res = await fetch(url)
           .then((res) => {
@@ -47,29 +48,35 @@ form.addEventListener("submit", (e)=> {
           .then((data) => {
             let newData = data;
             console.log(newData);
-          });
+            const { main,sys, name, weather } = data;
 
+            const icon1 = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
 
-          const li = document.createElement("li")
-          li.classList.add("city")
+            console.log(icon1);
 
-          li.innerHTML = `<h2 class="city-name" data-name="">
-                                 <span></span>
-                                 <sup></sup>
+            const li = document.createElement("li");
+            li.classList.add("city");
+
+            li.innerHTML = `<h2 class="city-name" data-name="${name}">
+                                 <span>${name}</span>
+                                 <sup>${sys.country}</sup>
                           </h2>
-                          <div class="city-temp"><sup></sup></div>
+                          <div class="city-temp"><sup>${Math.round(
+                            main.temp
+                          )}</sup></div>
                           <figure>
-                                 <img class="city-icon" src="">
-                                 <figcaption></figcaption>
-                          </figure> `
-          ul.prepend(li)
+                                 <img class="city-icon" src="${icon1}">
+                                 <figcaption>${
+                                   weather[0].description
+                                 }</figcaption>
+                          </figure> `;
+            ul.prepend(li);
+            form.reset()
+            
+          })   
       } catch (error) {
         console.log(error)
       }
-      
-
-
-    
 
   }
       
