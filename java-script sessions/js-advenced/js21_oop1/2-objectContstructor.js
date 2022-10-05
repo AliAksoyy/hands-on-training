@@ -23,9 +23,11 @@ const book2 = new Book("feyza","ayse","1930")
 console.log(book1)
 console.log(book2)
 
-book1.price = 100
+console.log(Book.prototype)
+console.log(book1.__proto__)
 
 console.log(book1)
+  Book.prototype.price = 100;
 
 Book.prototype.getAge = function() {
   return new Date().getFullYear -this.year
@@ -37,6 +39,7 @@ Book.prototype.getSummary = function() {
      
    return `${this.title} was writtten by ${this.author} in ${this.year}`;
   }
+
 
 
 
