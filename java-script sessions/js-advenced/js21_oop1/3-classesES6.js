@@ -15,40 +15,6 @@
 
 
 
-class Book {
-  constructor(title, author, year) {
-    this.title = title,
-    this.author = author,
-    this.year = year
-  }
-  getAge() {
-    return new Date().getFullYear() - this.year;
-  };
-
-  getSummary(){
-    return `${this.title} was writtten by ${this.author} in ${this.year}`;
-  };
-}
-
-const book1 = new Book("ali","aksoy", 1990)
-
-console.log(book1)
-
-class Magazine extends Book {
-    constructor(title,author,year,month) {
-        super(title,author,year)
-        this.month
-    }
-}
-
-const mag2 = new Magazine("ali","aksoy", 1990, "february")
-
-console.log(mag2)
-
-
-
-
-// !
 // class Book {
 //   constructor(title, author, year) {
 //     this.author = author;
