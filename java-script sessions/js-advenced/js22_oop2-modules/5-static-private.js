@@ -25,15 +25,23 @@ class Book {
       return this.title;
     };
   }
-  
+  getId() {
+    return this.#id
+  }
+
+  setId(id) {
+   this.#id = id
+  }
 }
 
   const book1 = new Book("ali", "aksoy", 1990)
 
   console.log(book1)
 
-  console.log(book1.id)
+  console.log(book1.getId())
   console.log(book1.title)
+
+  book1.setId("0000")
 
 
 
