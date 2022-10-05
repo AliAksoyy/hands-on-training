@@ -40,6 +40,18 @@ Book.prototype.getSummary = function() {
    return `${this.title} was writtten by ${this.author} in ${this.year}`;
   }
 
+Magazine.prototype= Object.create(Book.prototype)
+
+  function Magazine(title,author,year,month) {
+
+    Book.call(this,title,author,year)
+    this.month = month
+
+  }
+
+
+const mag1 = new Magazine("ali","beyda",1990, "februaray")
+console.log(mag1)
 
 
 
