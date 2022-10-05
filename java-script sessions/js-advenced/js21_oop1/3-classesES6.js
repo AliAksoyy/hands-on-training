@@ -13,6 +13,33 @@
 // //? Bir parent class'in degisken ve fonksiyonelliği extends
 // //? keyword'u ile child class'a gecmektedir.(INHERITANCE)
 
+
+
+class Book {
+  constructor(title, author, year) {
+    (title = "The Kramazov Brothers"), (author = "Dostoevski"), (year = 1880);
+  }
+  getAge() {
+    return new Date().getFullYear() - this.year;
+  };
+
+  getSummary(){
+    return `${this.title} was writtten by ${this.author} in ${this.year}`;
+  };
+}
+
+const book1 = new Book("ali","aksoy", 1990)
+
+console.log(book1)
+
+
+
+
+
+
+
+
+// !
 // class Book {
 //   constructor(title, author, year) {
 //     this.author = author;

@@ -9,63 +9,7 @@
 //* Object prototipi, prototip miras zincirinin en tepesinde yer almaktadir.
 //* Ornegin Date ve Array nesneleri Object.prototype'dan miras almaktadir.
 
-function Book (title,author,year) {
 
-  this.title = title,
-  this.author = author,
-  this.year = year
-
-}
-
-const book1 = new Book("ali","beyfa","1990")
-const book2 = new Book("feyza","ayse","1930")
-
-console.log(book1)
-console.log(book2)
-
-console.log(Book.prototype)
-console.log(book1.__proto__)
-
-console.log(book1)
-  Book.prototype.price = 100;
-
-Book.prototype.getAge = function() {
-  return new Date().getFullYear -this.year
-}
-console.log(book1)
-
-
-Book.prototype.getSummary = function() {
-     
-   return `${this.title} was writtten by ${this.author} in ${this.year}`;
-  }
-
-Magazine.prototype= Object.create(Book.prototype)
-
-  function Magazine(title,author,year,month) {
-
-    Book.call(this,title,author,year)
-    this.month = month
-
-  }
-
-
-const mag1 = new Magazine("ali","beyda",1990, "februaray")
-console.log(mag1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-// !
 // //? Object Constructor
 // function Book(title, author, year) {
 //   this.author = author;
