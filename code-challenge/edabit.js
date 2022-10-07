@@ -243,6 +243,7 @@
 // }
 // console.log( uzun("sen ve ben develepor olabildik"))
 
+console.log("ali");
 
 
 
