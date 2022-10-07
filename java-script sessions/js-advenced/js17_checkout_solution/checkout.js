@@ -1,65 +1,106 @@
+const taxRate = 0.18;
+const shippingPrice = 15;
+const shippingFreePrice = 300;
 
-// let taxRate = 0.18
-// let shipping =15
-// let freeShipping = 300
+window.addEventListener("load", () => {
+  calculateCartPrice();
+  //set items to LocalStorage
+  localStorage.setItem("taxRate", taxRate);
+  localStorage.setItem("shippingPrice", shippingPrice);
+  localStorage.setItem("shippingFreePrice", shippingFreePrice);
 
-// window.addEventListener("load",function() {
-//   localStorage.setItem("taxRate", taxRate)
-//   localStorage.setItem("shipping",shipping)
-//   localStorage.setItem("freeShipping",freeShipping)
-// })
+  //set items to sessionStorage
+  //  sessionStorage.setItem("taxRate", taxRate);
+  //  sessionStorage.setItem("shippingPrice", shippingPrice);
+  //  sessionStorage.setItem("shippingFreePrice", shippingFreePrice);
+});
 
-
-document.querySelector(".products").addEventListener("click",(e)=> {
-
-  if(e.target.className == "fa-solid fa-plus") {
-    e.target.previousElementSibling.innerText++
-    hesapla(e.target)
-    lineHesapla();
-
-  }else if(e.target.classList.contains("fa-minus")) {
-    if (e.target.nextElementSibling.innerText > 1) {
-      e.target.nextElementSibling.innerText--;
-    }else {
-      if(confirm("Are you sure")) {
-        e.target.closest(".product").remove()
+const productsDiv = document.querySelector(".products");
+//Capturing vs. Bubbling
+productsDiv.addEventListener("click", (event) => {
+  if (event.target.className == "fa-solid fa-minus") {
+    //console.log("minus btn is clicked!");
+    if (event.target.parentElement.querySelector(".quantity").innerText > 1) {
+      event.target.parentElement.querySelector(".quantity").innerText--;
+      calculateProductPrice(event.target);
+      calculateCartPrice();
+    } else {
+      if (
+        confirm(
+          `${
+            event.target.parentElement.parentElement.querySelector("h2")
+              .innerText
+          } will be deleted!!!`
+        )
+      ) {
+        //remove
+        // event.target.parentElement.parentElement.parentElement.remove();
+        //! closest() ile kisa yoldan secim yapilabilir.
+        event.target.closest(".product").remove();
+        calculateCartPrice();
       }
     }
-     hesapla(e.target);
-     lineHesapla();
-  }else if(e.target.className == "remove-product") {
-    e.target.closest(".product").remove()
-    lineHesapla()
+  } else if (event.target.classList.contains("fa-plus")) {
+    //console.log("plus btn is clicked!");
+    event.target.previousElementSibling.innerText++;
+    calculateProductPrice(event.target);
+    calculateCartPrice();
+  } else if (event.target.className == "remove-product") {
+    //console.log("remove btn is clicked!");
+    event.target.parentElement.parentElement.parentElement.remove();
+    calculateCartPrice();
+  } else {
+    //console.log("other element is clicked!");
   }
-})
+});
 
-function hesapla(btn) {
- const info= btn.closest(".product-info")
+const calculateProductPrice = (btn) => {
+  const productInfoDiv = btn.parentElement.parentElement;
+  //console.log(productInfoDiv);
+  const price = productInfoDiv.querySelector(".product-price strong").innerText;
+  const quantity = productInfoDiv.querySelector(".quantity").innerText;
+  const productTotalDiv = productInfoDiv.querySelector(".product-line-price");
+  productTotalDiv.innerText = (price * quantity).toFixed(2);
+  //alert(quantity);
+};
 
- const price = info.querySelector(".product-price strong").innerText
- const quantity = info.querySelector(".quantity").innerText
- info.lastElementChild.innerText = (price * quantity).toFixed(2)
- 
+const calculateCartPrice = () => {
+  const productsTotalPricesDivs = document.querySelectorAll(
+    ".product-line-price"
+  );
+  //foreach ==> NodeList, Array
+  //const productsTotalPricesDivs = [...document.getElementsByClassName("product-line-price")];
 
-}
+  // let subtotal = 0;
+  // productsTotalPricesDivs.forEach((div) => {
+  //   subtotal += parseFloat(div.innerText);
+  // });
 
-const lineHesapla = function() {
+  //! alternatif olarak reduce metodu da kullanilabilir.
+  const subtotal = [...productsTotalPricesDivs].reduce(
+    (acc, price) => acc + Number(price.innerText),
+    0
+  );
+  //console.log(subtotal);
+  const taxPrice = subtotal * localStorage.getItem("taxRate");
 
- const fiyat =document.querySelectorAll(".product-line-price")
- let subtotal =0
-  fiyat.forEach((div)=> {
-    subtotal +=parseFloat(div.innerText)
-    // console.log(subtotal)
-  })
-  console.log(subtotal)
-  const tax  = localStorage.getItem("taxRate")
-  const shipping = subtotal>0 && subtotal<localStorage.getItem("freeShipping") ? localStorage.getItem("shipping") : 0
+  const shippingPrice = parseFloat(
+    subtotal > 0 && subtotal < localStorage.getItem("shippingFreePrice")
+      ? localStorage.getItem("shippingPrice")
+      : 0
+  );
 
-document.querySelector("#cart-subtotal").innerText = subtotal.toFixed(2)
+  console.log(shippingPrice);
 
-document.querySelector("#cart-tax").innerText = (subtotal *  parseFloat(tax)).toFixed(2)
-
-document.querySelector("#cart-shipping").innerText = shipping
-document.querySelector("#cart-total").innerText = parseFloat(subtotal + tax + shipping).toFixed(2);
-}
-
+  document.querySelector("#cart-subtotal").lastElementChild.innerText =
+    subtotal.toFixed(2);
+  document.querySelector("#cart-tax p:nth-child(2)").innerText =
+    taxPrice.toFixed(2);
+  document.querySelector("#cart-shipping").children[1].innerText =
+    shippingPrice.toFixed(2);
+  document.querySelector("#cart-total").lastElementChild.innerText = (
+    subtotal +
+    taxPrice +
+    shippingPrice
+  ).toFixed(2);
+};
