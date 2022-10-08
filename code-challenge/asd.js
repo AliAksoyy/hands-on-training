@@ -55,3 +55,5 @@ const instructors = {
 
 console.log( delete instructors.name);
 console.log(instructors)
+
+//! abi çok mutluyum
