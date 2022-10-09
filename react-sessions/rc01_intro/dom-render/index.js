@@ -13,7 +13,7 @@ const setTime = () => {
   const reactElement = React.createElement(
     "div",
     null,
-    React.createElement("h1", null, "React"),
+    React.createElement("h1", null, "React Developer"),
     React.createElement("p", null, new Date().toLocaleTimeString())
   );
   ReactDOM.render(reactElement, document.querySelector(".container-2"));
