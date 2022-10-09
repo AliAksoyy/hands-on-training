@@ -37,6 +37,7 @@ const list = document.getElementsByTagName("li");
 console.log(list); //? HTML Collection
 list[2].style.color = "red";
 const elementThree = list.item(3);
+
 elementThree.style.color = "blue";
 elementThree.textContent = "React / Vue / Angular";
 
@@ -58,7 +59,7 @@ const myList = document.getElementsByClassName("list");
 console.log(myList); //? HTML Collection
 console.log(myList[0].innerText);
 
-//? HRML Collection'larda Dizi metotlari dogrudan kullanilamaz.
+//? HTML Collection'larda Dizi metotlari dogrudan kullanilamaz.
 //? Spread ve Array.from() ile kullanilabilri hale gelir.
 
 //?Array.from()
