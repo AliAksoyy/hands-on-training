@@ -1,0 +1,18 @@
+@import "./variables";
+
+
+.footer {
+    background-color:$lightPink;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+
+    .title {
+        color:$olive;
+        font-weight: 700;
+
+    }
+}
