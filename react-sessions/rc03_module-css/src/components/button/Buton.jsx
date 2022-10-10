@@ -1,15 +1,15 @@
 import React from "react";
 
-import "./Buton.css"
+import ButtonStyle from "./button.module.css"
 
 
 const Buton = ({btn}) => {
     console.log(btn)
     return (
         <>
-        <div>
+        <div className={ButtonStyle.title}>
 
-        <button>{btn}</button>
+        <button className={ButtonStyle["btn-blue"]}>{btn}</button>
 
         </div>
         </>
