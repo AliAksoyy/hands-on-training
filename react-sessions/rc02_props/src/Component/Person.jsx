@@ -1,10 +1,11 @@
 
-const Person = () => {
+const Person = ({name,img,tel}) => {
+    // console.log(props);
     return(
         <div>
-            <p>Merhaba Felix</p>
-            <img src="" alt="" />
-            <p>555555</p>
+            <p>Merhaba {name} </p>
+            <img src={img} alt="" />
+            <p>{tel}</p>
         </div>
     )
 }
