@@ -3,10 +3,15 @@ import React from "react";
 import "./Buton.css"
 
 
-const Buton = () => {
+const Buton = ({btn}) => {
+    console.log(btn)
     return (
         <>
-        <div>Buton</div>
+        <div>
+
+        <button>{btn}</button>
+
+        </div>
         </>
         
     )
