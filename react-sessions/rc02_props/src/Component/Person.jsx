@@ -1,10 +1,11 @@
+import Msg from "./Msg"
 
 const Person = ({name,img,tel}) => {
     // console.log(props);
     return(
-        <div>
-            <p>Merhaba {name} </p>
-            <img src={img} alt="" />
+        <div style={{textAlign:"center"}}>
+            <Msg name={name} />
+            <img style={{width:"200px"}} src={img} alt="" />
             <p>{tel}</p>
         </div>
     )
