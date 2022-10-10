@@ -2,6 +2,7 @@ import Msg from "./Msg"
 
 const Person = ({name,img,tel}) => {
     // console.log(props);
+    
     return(
         <div style={{textAlign:"center"}}>
             <Msg name={name} />
@@ -11,4 +12,6 @@ const Person = ({name,img,tel}) => {
     )
 }
 export default Person
+
+
 
