@@ -9,7 +9,6 @@ import "./index.css";
 //! olan elemana erisir.
 
 
-  
 
 //* render() metodu içerisinde App componenti cagrilir.
 const root = ReactDOM.createRoot(document.getElementById("root"));
