@@ -4,9 +4,15 @@ import "./Buton.css"
 
 
 const Buton = () => {
-    return(
+    return (
+        <>
         <div>Buton</div>
+        </>
+        
     )
+
+    
+    
 }
 
 export default Buton
