@@ -1,7 +1,10 @@
-function Msg ()  {
+function Msg ({name})  {
+    console.log(name)
+    // const {name} = props
     return (
         <div>
-            <h3>Merhaba Felix</h3>
+            <h3>Merhaba {name}</h3>
+            
         </div>
     )
 }

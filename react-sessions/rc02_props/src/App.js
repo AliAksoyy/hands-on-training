@@ -1,13 +1,19 @@
 import React from "react";
-import Msg from "./Component/Msg";
+import "./data"
+import Person from "./Component/Person";
 
-// import Person from "./components/Person";
+
 // import data from "./data";
-
 function App() {
+
+ 
   return (
-    <Msg />
-  )
+    
+    <>
+    <Person />
+     
+    </>
+    )
 }
 
 export default App;
