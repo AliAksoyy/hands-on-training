@@ -1,12 +1,15 @@
 
 import "./App.scss"
+import Navbar from "../src/components/Navbar/Navbar.jsx"
+import Header from "./components/Header/Header"
 
 const App = function() {
 
   return(
     <div className="App">
-      <h1>Ali Akosy</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit atque iste culpa sint fuga molestias ab non dolores ipsa eaque!</p>
+      <Navbar />
+      <Header />
+     
     </div>
   )
 }
