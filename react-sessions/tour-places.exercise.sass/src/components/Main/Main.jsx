@@ -9,7 +9,7 @@ export class Main extends React.Component {
     
         return(
             <div className="card-container">
-                {data.map((item)=> <Card {...item}/>
+                {data.map((item)=> <Card {...item} key={item.id}/>
                     
                 )}
             </div>
