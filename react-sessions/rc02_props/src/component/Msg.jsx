@@ -1,17 +1,19 @@
-import React from "react"
 
-export const Msg = function(props) {
-    console.log(props);
+import React from "react";
+// export const Msg = function(props) {
+//     console.log(props);
  
 
-return (
-    <div>
+// return (
+//     <div>
     
-        <h1>Msg {props.name} </h1>
-    </div>
-)
+//         <h1>Msg {props.name} </h1>
+//     </div>
+// )
 
-}
+// }
+
+
 
 
 
