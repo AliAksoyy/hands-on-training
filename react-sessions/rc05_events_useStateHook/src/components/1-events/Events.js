@@ -3,7 +3,9 @@
 const Events = () => {
 
 return(
-    <div>Events</div>
+    <div>
+            <button>Click</button>
+    </div>
 )
 
 }
