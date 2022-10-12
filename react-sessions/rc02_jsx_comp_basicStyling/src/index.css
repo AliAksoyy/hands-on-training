@@ -8,15 +8,3 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  text-align: center;
-  background-color: grey;
-  padding: 2rem;
-}
-
-footer {
-  color: white;
-  background-color: black;
-  text-align: center;
-  padding: 2rem;
-}

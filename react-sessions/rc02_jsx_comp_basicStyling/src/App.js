@@ -1,7 +1,5 @@
 import React from "react";
-import Content from "./components/Content";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+
 
 //? React,JSX kullanmaktadir.
 //? JSX'de, HTMl elementleri dogrudan JS icerisinde kullanilabilir
@@ -23,9 +21,7 @@ function App() {
     //* JSX
     //? stillendirme yapilmayacaksa container icin <> kullanilabilir
     <>
-      <Header />
-      <Content />
-      <Footer />
+      <h1>ali</h1>
     </>
   );
 }
