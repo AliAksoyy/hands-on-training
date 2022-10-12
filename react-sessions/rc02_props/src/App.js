@@ -1,27 +1,21 @@
 import React from "react";
-
-import Person from "./Component/Person";
-
-
+// import Msg from "./components/Msg";
+import Person from "./components/Person";
 import data from "./data";
-console.log(data)
+
 function App() {
-
- 
   return (
-    
-    <>
-    {data.map((person)=> <Person
-    key= {person.name}
-    name={person.name} 
-    img = {person.img} 
-    tel= {person.tel} />
-
-    )}
-    </>
-    )
+    <div>
+      {data.map((person) => (
+        <Person
+          key={person.name}
+          name={person.name}
+          img={person.img}
+          tel={person.tel}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default App;
-
-
