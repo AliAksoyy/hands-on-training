@@ -1,12 +1,11 @@
 
 
-export const Msg = function({name,id}) {
-    // console.log(props);
-    // const {name, id} =props
+export const Msg = function() {
+ 
 
 return (
     <div>
-        <h1>Msg {name} {id}</h1>
+        <h1>Msg </h1>
     </div>
 )
 
