@@ -7,6 +7,7 @@ function App() {
 
       <Events />
       <Counter  />
+      <Counter counter={5} />
 
     </div>
   );
