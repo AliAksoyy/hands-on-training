@@ -1,6 +1,7 @@
 
 
 export const Msg = function(props) {
+    console.log(props);
  
 
 return (

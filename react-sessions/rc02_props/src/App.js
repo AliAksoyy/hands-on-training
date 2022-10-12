@@ -12,7 +12,7 @@ return(
   
    {data.map((item,i)=>{
     return(
-      <Person key={i} name={item.name} img={item.img} tel={item.tel} />
+      <Person key={item.name} {...item} />
     )
   })}
   
