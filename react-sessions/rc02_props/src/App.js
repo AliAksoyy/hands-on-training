@@ -1,12 +1,17 @@
-import { Msg as M } from "./component/Msg"
+import { Msg } from "./component/Msg"
+
 
 
 function App () {
 
 return(
   <div>
-  <h1>Ali</h1>
-  <M />
+  
+  <Msg name="ali" id="feuza"/>
+ 
+ 
+ 
+
  
 
   </div>
