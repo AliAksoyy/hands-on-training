@@ -1,9 +1,30 @@
-
+import { useState } from "react";
 
 const Form = () => {
+
+  const [username, setUsername] =  useState("");
+
+const handleSubmit = (e)=> {
+  e.preventDefault()
+  console.log(e.target)
+  alert(`username: ${username}
+  email:,
+  password:
+  `)
+}
+const handleUsername = (e) => {
+  console.log(e.target.value);
+  setUsername(e.target.value)
+
+}
+
+
+
+
+
   return (
     
-  <form>
+  <form onSubmit={handleSubmit}>
   <h1 className="display-5 text-danger">FORMS</h1>
   <div className="mb-3">
     <label htmlFor="username" className="form-label">
@@ -13,6 +34,7 @@ const Form = () => {
       type="text"
       className="form-control"
       id="username"
+      onChange={handleUsername}
       
     />
     
