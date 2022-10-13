@@ -1,5 +1,17 @@
+import { useState } from "react";
+
+
+
+
 const KeyboardClipboard = () => {
-  return <div>KeyboardClipboard</div>;
+  const [inputValue, setInputValue] = useState("")
+  return (
+    <div className="container">
+      <h1>CLIPBOARD EVENTS</h1>
+      <input className="form-control" type="text" onChange={(e)=> setInputValue(e.target.value)} />
+      <p className="text-start mt-4">{inputValue}</p>
+    </div>
+  )
 };
 
 export default KeyboardClipboard;
