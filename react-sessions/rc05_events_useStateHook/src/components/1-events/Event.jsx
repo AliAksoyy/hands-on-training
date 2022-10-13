@@ -12,7 +12,7 @@ const Event =()=> {
     }
     const handleChange = function(e) {
         console.log(e.target);
-        message= "BEYDA AKSOYY"
+   
     }
 
 
