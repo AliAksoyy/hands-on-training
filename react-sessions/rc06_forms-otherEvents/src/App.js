@@ -1,9 +1,10 @@
-import Form from "./component/form/Form";
+import Keyboard from "./component/keyboard/Keyboard";
+
 
 function App() {
   return (
     <div className="container mt-4 text-center">
-      <Form />
+      <Keyboard />
       
     </div>
   );

@@ -22,7 +22,7 @@ const Form = () => {
  }
     function hadnleChange(e) {
         console.log(e.target)
-        setForm({...form}, [e.target.id]=e.target.value)
+        setForm({...form, [e.target.id] :e.target.value})
     }
 
  
