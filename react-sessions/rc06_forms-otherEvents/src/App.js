@@ -1,10 +1,11 @@
-import Keyboard from "./component/keyboard/Keyboard";
+import Mouseevent from "./component/mouseevent/Mouseevent";
+
 
 
 function App() {
   return (
     <div className="container mt-4 text-center">
-      <Keyboard />
+     <Mouseevent />
       
     </div>
   );
