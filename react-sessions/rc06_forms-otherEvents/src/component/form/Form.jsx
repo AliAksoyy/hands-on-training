@@ -1,45 +1,73 @@
+import { useState } from "react"
 
 const Form = () => {
 
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+
+    const handleSubmit = (e)=> {
+        // e.preventDefault()
+        console.log(e.target)
+        alert(`
+        username:${username}
+        email: ${email}
+        password: ${password}
+        `)
+        setEmail("")
+        setPassword("")
+        setUsername("")
+
+    }
+
+    function handleChange(e) {
+        setUsername(e.target.value)
+        
+    }
+
     return(
-        <form>
-        <h1 display-5 text-danger>FORMS</h1>
-  <div className="mb-3">
-    <label htmlFor="username" className="form-label">
-      Username
-    </label>
-    <input
-      type="text"
-      className="form-control"
-      id="username"
-    div
-    />
-    </div>
-  <div className="mb-3">
-    <label htmlFor="email" className="form-label">
-      Email address
-    </label>
-    <input
-      type="email"
-      className="form-control"
-      id="email"
-    div
-    />
-    </div>
-    
-  <div className="mb-3">
-    <label htmlFor="password" className="form-label">
-      Password
-    </label>
-    <input
-      type="password"
-      className="form-control"
-      id="password"
-    />
-  </div>
-  <button type="submit" className="btn btn-primary">
-    Submit
-  </button>
+        <form onSubmit={handleSubmit}>
+            <h1 className="display-5 text-danger">FORMS</h1>
+            <div className="mb-3">
+                <label htmlFor="username" className="form-label">
+                Username : <span>{username}</span>
+                </label>
+                <input
+                type="text"
+                className="form-control"
+                id="username"
+                onChange={handleChange}
+                
+                />
+            </div>
+            <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                Email address: <span>{email}</span>
+                </label>
+                <input
+                type="email"
+                className="form-control"
+                id="email"
+                onChange={(e)=> setEmail(e.target.value)}
+                
+                />
+            </div>
+                
+            <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                Password
+                </label>
+                <input
+                type="password"
+                className="form-control"
+                id="password"
+                onChange={(e)=> setPassword(e.target.value)}
+                />
+            </div>
+            <button type="submit" className="btn btn-primary">
+                Submit
+            </button>
 </form>
 
     )
