@@ -6,7 +6,8 @@ const Main = () => {
     
     return(
         <div className="card-container">
-            {data.map((item, index)=> <Card {...item} key={index}/>
+            
+            {data.map((item, index)=>  <Card {...item} key={index} />
             )}
         </div>
     )
