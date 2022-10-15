@@ -2,54 +2,58 @@ import { useState } from "react"
 
 const Form = () => {
 
-    const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+ const [form, setForm] = useState({
+    username:"",
+    email: "",
+    password:""
+ })
 
 
-    const handleSubmit = (e)=> {
-        // e.preventDefault()
-        console.log(e.target)
+ const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(e.target);
         alert(`
-        username:${username}
-        email: ${email}
-        password: ${password}
-        `)
-        setEmail("")
-        setPassword("")
-        setUsername("")
-
-    }
-
-    function handleChange(e) {
-        setUsername(e.target.value)
         
+        username:"${form}",
+        email:"${form}",
+        password:"${form}"
+        `)
+
+ }
+    function hadnleChange(e) {
+        console.log(e.target)
+        setForm({...form}, [e.target.id]=e.target.value)
     }
+
+ 
 
     return(
         <form onSubmit={handleSubmit}>
             <h1 className="display-5 text-danger">FORMS</h1>
             <div className="mb-3">
                 <label htmlFor="username" className="form-label">
-                Username : <span>{username}</span>
+                Username :
                 </label>
                 <input
                 type="text"
                 className="form-control"
                 id="username"
-                onChange={handleChange}
+                onChange={hadnleChange}
+              
                 
                 />
             </div>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                Email address: <span>{email}</span>
+                Email address: 
                 </label>
                 <input
                 type="email"
                 className="form-control"
                 id="email"
-                onChange={(e)=> setEmail(e.target.value)}
+                onChange={hadnleChange}
+
+              
                 
                 />
             </div>
@@ -62,7 +66,9 @@ const Form = () => {
                 type="password"
                 className="form-control"
                 id="password"
-                onChange={(e)=> setPassword(e.target.value)}
+                onChange={hadnleChange}
+
+          
                 />
             </div>
             <button type="submit" className="btn btn-primary">
