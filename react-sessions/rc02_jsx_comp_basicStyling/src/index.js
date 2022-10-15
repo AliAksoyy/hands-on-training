@@ -8,7 +8,6 @@ import "./index.css";
 //! public klasorunde yer alan index.html icersindeki id'si root
 //! olan elemana erisir.
 
-
 //* render() metodu içerisinde App componenti cagrilir.
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

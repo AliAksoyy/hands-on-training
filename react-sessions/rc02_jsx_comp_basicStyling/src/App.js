@@ -1,8 +1,8 @@
 import React from "react";
-import Content from "./components/Content/Content";
-import Footer from "./components/Footer/Footer";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-import Header from "./components/header/Header";
 //? React,JSX kullanmaktadir.
 //? JSX'de, HTMl elementleri dogrudan JS icerisinde kullanilabilir
 
