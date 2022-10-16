@@ -11,7 +11,7 @@
 
 // }
 
-// console.log( hesapla([10, 50, 61, 17, 82, 95, 9, 11, 12, 13], 12));
+// console.log( hesapla([10, 50, 61, 17, 82, 95, 9, 11, 12, 13], 12,87));
 
 // const donusum = (str) => {
 //   let newArr = [];
