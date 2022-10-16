@@ -46,11 +46,11 @@
     //     }
     //     return empty.join("")
     // }
-    // console.log(degisim(12))
+    // console.log(degisim(13))
 
 
 const instructors = {
-  name: "Noah",
+  name: "NoahA",
 };
 
 console.log( delete instructors.name);
