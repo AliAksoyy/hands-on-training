@@ -12,9 +12,14 @@ const App = () => {
     surname:"aksoy",
     age:32
   })
-  console.log(count);
 
 
+ 
+ 
+    
+    
+  
+  
 
 
 
@@ -23,10 +28,11 @@ const App = () => {
     <h2>{count.name}</h2>
     <h2>{count.surname}</h2>
     <p> {count.age}</p>
-    <button >Inc</button>
+    <button onClick={()=> setCount({...count, age: count.age<35 ? (count.age +1) : (count.age -1)})}>Inc</button>
     
    </div>
   )
 }
+
 
 export default App
