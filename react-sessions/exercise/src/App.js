@@ -5,14 +5,17 @@ import "../src/App.css"
 
 const App = () => {
 
+  const handleClick = (a,e) => {
+    console.log(a,e)
+  }
 
 
   return (
     <div className="App">
    
-    <input type="text"  onChange={(e)=> console.log(e)}/>
-    <button onClick={()=> alert("ali baba")}>değiştir</button>
-      
+    <h2>ali</h2>
+    <button onClick={() => {
+    handleClick("beyda")}}>add</button>
     </div>
   )
 }
