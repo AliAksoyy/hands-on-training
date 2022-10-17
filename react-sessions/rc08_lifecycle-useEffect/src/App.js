@@ -1,5 +1,6 @@
 import { useState } from "react";
-import LifeCycleMethods from "./components/LifeCycleMethods";
+// import LifeCycleMethods from "./components/LifeCycleMethods";
+import UseEffectHook from "./components/UseEffectHook";
 
 function App() {
   const [show, setShow] = useState(false)
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="container text-center mt-4">
       <button onClick={()=>setShow(!show)} className="btn btn-dark">{!show ? "Hide" : "Show"}</button>
-      {!show &&  <LifeCycleMethods />}
+      {!show &&  <UseEffectHook />}
+      {/* {!show &&  <LifeCycleMethods />} */}
      
     </div>
   );
