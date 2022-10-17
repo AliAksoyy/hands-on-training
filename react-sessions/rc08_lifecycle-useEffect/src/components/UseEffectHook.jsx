@@ -4,16 +4,21 @@ import { useState, useEffect } from "react"
 const UseEffectHook =() => {
     const [count, setCount] = useState(0)
 
+    const fetchData =() => {
+        console.log("data fetched");
+    }
 
+   useEffect(()=> {
+    const timerId = setInterval(fetchData,1000)
+    console.log("öounting")
 
-    useEffect(()=> {
+    return() => {
+        clearInterval(timerId)
+        console.log("unmounting");
+    }
+   }, [])
 
-        return () => {
-
-        }
-    }, [])
-
-    
+    console.log("rendered")
 
     return(
         <div className="container text-center">
