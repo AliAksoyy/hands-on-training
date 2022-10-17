@@ -7,22 +7,21 @@ import "../src/App.css"
 
 const App = () => {
 
-  const [count, setCount] = useState(0)
+  const [msg, setMsg] = useState("React")
 
-
- 
- 
-    
-    
+ const deg = (e)=> {
+  setMsg(e.target.previousElementSibling.value)
   
+ }
   
-
-
+ 
 
   return (
-    <div className="App">
-    <h2>you clicked {count} times</h2>
-    <button onClick={() => setCount(count +1)}> click me</button>
+    <div>
+    <h2>hello {msg} </h2>
+    <p>isim gir</p>
+    <input type="text"  />
+    <button onClick={deg}> click me</button>
    </div>
   )
 }
