@@ -1,26 +1,29 @@
-import React, { useState } from 'react'
+
+import { useState } from "react"
 import "../src/App.css"
 
 const App = () => {
+  const [input, setInput] = useState("");
 
-  const handleChange = (e) => {
-    console.log(e.target.value);
+  const ali = (e)=> {
+    e.preventDefault()
+    console.log("ali")
+    alert (`name is ${input}`)
+    setInput("")
   }
-
-
-  const handleSubmit = (e) => {
-      e.preventDefault()
-      alert ($`{e.target.value}`)
+  const beyda = (e) => {
+    setInput(e.target.value)
   }
- 
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input id="name" name="name" onChange={handleChange} />
-      <button>Submit</button>
-    </form>
+        <form onSubmit={ali}>
+          <label htmlFor="name">Name : </label>
+          <input type="text" name="name" id="name" value= {input} onChange={beyda}/>
+          <button >Sub</button>
+          <span>{input}</span>
+        </form>
+
       
     </div>
   )
