@@ -4,17 +4,16 @@ import FuncComp from "./FuncComp";
 
 
 export default function App() {
-  const [toggle, setToggle] = useState(true)
-
-  const toggler = () => {
-    setToggle(!toggle)
+  const [first, setFirst] = useState(false)
+  const tog = () => {
+    setFirst(!first)
   }
+  
  return(
   <div>
-    <h1>Ali Akosy</h1>
-    <button onClick={toggler}>Toggle</button>
-    {toggle && <FuncComp />}
-
+    <h1>ali</h1>
+    <button onClick={tog}>toggle</button>
+  {first || <FuncComp />}
   </div>
  )
   
