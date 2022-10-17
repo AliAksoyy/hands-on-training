@@ -20,6 +20,7 @@ import React from "react";
 
 class LifeCycleMethods extends React.Component {
   constructor(props) {
+    console.log("constructor")
     super(props);
     this.state = {
       count: 0,
@@ -32,7 +33,17 @@ class LifeCycleMethods extends React.Component {
     });
   };
 
+  componentDidMount() {
+    console.log("Mounted");
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    console.log("update")
+    console.log(prevState);
+  }
+
   render() {
+    console.log("rendered");
     return (
       <div className="container text-center">
         <h1 className="text-danger">LIFECYCLE METHODS</h1>
