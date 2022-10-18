@@ -1,18 +1,38 @@
-import React, { useState } from 'react'
-import Ali from './Ali'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const App = () => {
-  const [first, setFirst] = useState(false)
-  const btn = () => {
-    setFirst(!first)
-  }
-  return (
-    <div>
-      <h1>Ali Aksoy</h1>
-      <button onClick={btn}>Toggle</button>
-      {first && <Ali />}
-    </div>
-  )
-}
+  const [users, setUsers] = useState([]);
 
-export default App
+  useEffect(() => {
+    axios("https://randomuser.me/api/?results=10")
+      .then((response) => {
+      console.log(response.data)
+      return (
+        response.data.results.map((user) => ({
+          name: `${user.name.first} ${user.name.last}`,
+          username: `${user.login.username}`,
+          email: `${user.email}`,
+          image: `${user.picture.thumbnail}`,
+      })))}
+      )
+      .then((data) => {
+        setUsers(data);
+      });
+  }, []);
+
+  return (
+    <div className="users">
+      {users.map((user) => (
+        <div key={user.username} className="users__user">
+          <img src={user.image} className="users__avatar" alt="#" />
+          <div className="users__meta">
+            <h1>{user.name}</h1>
+            <p>{user.email}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+export default App;

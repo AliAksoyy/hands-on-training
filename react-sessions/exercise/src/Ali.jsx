@@ -23,7 +23,7 @@ const Ali = () => {
             isApi= false
             console.log("canceled")
         }
-    })
+    },[])
     
     console.log(users)
     const {name,email} = users
@@ -33,8 +33,13 @@ const Ali = () => {
         <h1>
             functional component
         </h1>
-        <p>{name?.first}</p>
+        {users&& (
+            <>
+            <p>{name.first}</p>
         <p>{email}</p>
+            </>
+        )}
+        
       
 
     </div>
