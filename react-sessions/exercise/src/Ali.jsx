@@ -1,48 +1,38 @@
 import React, { useEffect, useState } from 'react'
 
 const Ali = () => {
-    const [users, setUsers] = useState("")
 
-  
+    const [kullanici, setKullanici] = useState("");
 
-    useEffect(()=> {
 
-        let isApi=true;
-        if(isApi) {
-            setTimeout(()=> {
-                    fetch("https://randomuser.me/api/")
-                    .then((res)=> {
-                     if(!res.ok) {
+    useEffect(() => {
+        setTimeout(()=>{
+            fetch("https://randomuser.me/api/")
+            .then((res)=> {
+                if(!res.ok){
                     throw new Error("hata")
-                    }
-                     return res.json()
-                     }).then((data)=> setUsers(data.results[0]))
-            },3000)
+                }
+                return res.json()
+            }).then((data) => setKullanici(data.results[0]))
+        },2000)
+       
+        return () => {
+            console.log("unmounting");
         }
-        return()=> {
-            isApi= false
-            console.log("canceled")
-        }
-    },[])
+     
+    }, [])
+    console.log(kullanici)
     
-    console.log(users)
-    const {name,email} = users
-    
+    const {name, email} = kullanici
   return (
-    <div>
-        <h1>
-            functional component
-        </h1>
-        {users&& (
-            <>
-            <p>{name.first}</p>
-        <p>{email}</p>
-            </>
-        )}
+    
         
-      
+            <div>
+                <h1>Functional Component</h1>
+                <p>{name?.first} {name?.last}</p>
+                <p>{email}</p>
+           </div>
 
-    </div>
   )
 }
 
