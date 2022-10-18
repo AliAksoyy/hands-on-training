@@ -2,16 +2,28 @@ import React, { useEffect, useState } from 'react'
 
 const Ali = () => {
     const [users, setUsers] = useState("")
+
+  
+
     useEffect(()=> {
-        fetch("https://randomuser.me/api/")
-            .then((res)=> {
-        if(!res.ok) {
-            throw new Error("hata")
+
+        let isApi=true;
+        if(isApi) {
+            setTimeout(()=> {
+                    fetch("https://randomuser.me/api/")
+                    .then((res)=> {
+                     if(!res.ok) {
+                    throw new Error("hata")
+                    }
+                     return res.json()
+                     }).then((data)=> setUsers(data.results[0]))
+            },3000)
         }
-        return res.json()
-         }).then((data)=> setUsers(data.results[0]))
-        .catch((err)=> console.log(err))
-    },[])
+        return()=> {
+            isApi= false
+            console.log("canceled")
+        }
+    })
     
     console.log(users)
     const {name,email} = users
