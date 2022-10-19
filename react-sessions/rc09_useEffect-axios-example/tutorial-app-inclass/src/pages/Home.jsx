@@ -2,19 +2,27 @@ import AddTutorial from "../components/AddTutorial";
 import TutorialList from "../components/TutorialList";
 import axios from "axios"
 
-// import { useState, useEffect } from "react";
+import { useEffect, useState} from "react";
 const Home = () => {
+
+  const [tutorials, setTutorials] =useState([])
 
   const url ="https://tutorials-api-cw.herokuapp.com/api/tutorials"
 
 
   const getTutorials = async() => {
-
-    const data = axios(url)
-    console.log(data);
-
+    try {
+      const {data}=await axios(url)
+      console.log(data);
+      setTutorials(data)
+    } catch (error) {
+      console.log(error)
+    }
   }
-  getTutorials()
+  useEffect(()=> {
+    getTutorials()
+
+  },[])
   
   return (
     <>
