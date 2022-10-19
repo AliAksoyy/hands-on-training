@@ -9,13 +9,16 @@ const Home = () => {
 
   const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
 
-  const getTutorials = async() => {
-
+const getTutorials = async() => {
+  try {
     const {data} = await axios(url)
-   
     console.log(data)
     setTutorials(data)
+  } catch (error) {
+    console.log(error)
   }
+}
+
   useEffect(()=> {
     getTutorials()
   },[])
