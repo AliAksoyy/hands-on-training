@@ -8,26 +8,26 @@ const Home = () => {
   const [tutorials, setTutorials] =useState([])
 
   const url ="https://tutorials-api-cw.herokuapp.com/api/tutorials"
-
-
-  const getTutorials = async() => {
-    try {
-      const {data}=await axios(url)
-      console.log(data);
-      setTutorials(data)
-    } catch (error) {
-      console.log(error)
+    const getTutorials = async() => {
+      try {
+          const {data} =await axios(url)
+          console.log(data);
+          setTutorials(data)
+      } catch (error) {
+          console.log(error)
+      }
+      
     }
-  }
-  useEffect(()=> {
-    getTutorials()
+    useEffect(()=> {
+      getTutorials()
+    },[])
 
-  },[])
+ 
   
   return (
     <>
       <AddTutorial />
-      <TutorialList  />
+      <TutorialList tutorials={tutorials}  />
     </>
   );
 };

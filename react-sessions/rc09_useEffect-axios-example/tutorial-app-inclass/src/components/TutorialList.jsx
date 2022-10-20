@@ -1,12 +1,11 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 
-const TutorialList = () => {
- const tutorials= [{
-  id:1,
-  title:"ali",
-  description: "asd"
- }]
+
+
+const TutorialList = ({tutorials}) => {
+  console.log(tutorials);
+
 
   return (
     <div className="container mt-4">
