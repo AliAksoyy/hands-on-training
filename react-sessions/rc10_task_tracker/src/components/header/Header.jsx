@@ -6,7 +6,11 @@ const Header = () => {
   return (
  
         <div>
-          <h1>TASK TRACKER</h1>
+          <div className="d-flex justify-content-evenly align-items-center">
+            <TaskPng />
+            <h1 className="display-5">TASK TRACKER</h1>
+          </div>
+          
         </div>
 
   );
