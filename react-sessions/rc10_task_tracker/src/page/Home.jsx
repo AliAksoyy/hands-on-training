@@ -35,7 +35,7 @@ const Home = () => {
       className="form-control"
       size="lg"
       variant="danger">{text}</Button>
-      { isOpen && <AddTask/>}
+      { isOpen && <AddTask  getTask={getTask}/>}
      
       <TaskList  task={task}/>
     </div>

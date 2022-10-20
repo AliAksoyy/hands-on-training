@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 import axios from 'axios'
 
-const AddTask = () => {
+const AddTask = ({getTask}) => {
 
   const [task, setTask] = useState("")
   const [date, setDate] = useState("")
@@ -13,8 +13,11 @@ const AddTask = () => {
     const newTask={task,date }
     console.log(newTask);
     addNewTask(newTask)
+    
 
   }
+
+
 
   const addNewTask = async(newTask) => {
 
@@ -25,6 +28,7 @@ const AddTask = () => {
     } catch (error) {
       console.log(error)
     }
+  getTask()
 
   }
 
