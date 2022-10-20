@@ -1,18 +1,19 @@
 import { BsTrashFill } from "react-icons/bs";
 import { GoFileSymlinkDirectory } from "react-icons/go";
 
-function Tutorials() {
+function Tutorials({data}) {
+    console.log(data)
 
-    const tutorials = [{
-        id:1,
-        title:"ali",
-        descriptions:"aksoy"
-    }, {
-        id:2,
-        title:"beyda",
-        descriptions:"aksoy"
-    }]
-    console.log(tutorials);
+    // const tutorials = [{
+    //     id:1,
+    //     title:"ali",
+    //     descriptions:"aksoy"
+    // }, {
+    //     id:2,
+    //     title:"beyda",
+    //     descriptions:"aksoy"
+    // }]
+    
 
     return(
         <div className="text-center  p-4 container">
@@ -26,13 +27,13 @@ function Tutorials() {
                     </tr>
                 </thead>
                 <tbody>
-                {tutorials.map((item)=> {
-                    const {id,title,descriptions} = item
+                {data.map((item)=> {
+                    const {id,title,description} = item
                     return(
                         <tr key={id}>
                             <th scope="row">{id}</th>
                             <td>{title}</td>
-                            <td>{descriptions}</td>
+                            <td>{description}</td>
                             <td >
                             <GoFileSymlinkDirectory
                             size={23}
