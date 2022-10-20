@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from "axios"
 
 
 
@@ -6,16 +7,22 @@ const AddTutorials = () => {
     const [title,setTitle] = useState("")
     const [descriptions, setDescriptions] = useState("")
 
+    
+   
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(title);
-        console.log(descriptions)
         setTitle("")
         setDescriptions("")
 
     }
+const postTutorials = async() => {
 
+        const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials"
+        
+        await axios.post(url,{newTutorial})
+
+        }
    
 
     return(
