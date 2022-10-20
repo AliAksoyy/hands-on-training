@@ -1,8 +1,9 @@
 import React from 'react'
+import Home from './helper/Home'
 
 const App = () => {
   return (
-    <div>App</div>
+    <Home />
   )
 }
 
