@@ -17,6 +17,16 @@ const TutorialList = ({tutorials, getTutorials}) => {
       getTutorials()
      
   }
+
+  const editTutorials = async({id,title,description}) => {
+  const url ="https://tutorials-api-cw.herokuapp.com/api/tutorials"
+      try {
+        await axios.put(`${url}/${id}`, {title,description})
+      } catch (error) {
+        console.log(error)
+      }
+      getTutorials()
+  }
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -43,6 +53,7 @@ const TutorialList = ({tutorials, getTutorials}) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    onClick={()=> editTutorials(item)}
                   />
                   <AiFillDelete
                     size={22}
