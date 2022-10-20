@@ -1,12 +1,37 @@
+import axios from "axios";
+import { useState } from "react";
 
 
-const AddTutorial = () => {
- 
-  
+const AddTutorial = ({getTutorials}) => {
+  const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("aaa")
+    const newTutor = {"title":title, "description" : desc}
+    addTutorial(newTutor)
+    setTitle("")
+    setDesc("")
+
+  }
+    const addTutorial = async(newTutor) => {
+  const url ="https://tutorials-api-cw.herokuapp.com/api/tutorials"
+      try {
+        await axios.post(url, newTutor)
+      } catch (error) {
+        console.log(error);
+      }
+      getTutorials()
+    }
+
+
+
   return (
     <div className="container text-center mt-4">
       <h1 className="display-6 text-danger">Add Your Tutorial</h1>
-      <form >
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
@@ -16,7 +41,8 @@ const AddTutorial = () => {
             className="form-control"
             id="title"
             placeholder="Enter your title"
-            
+            value={title}
+            onChange={(e)=> setTitle(e.target.value)}
             
             required
           />
@@ -30,7 +56,8 @@ const AddTutorial = () => {
             className="form-control"
             id="desc"
             placeholder="Enter your Description"
-           
+           onChange={(e)=> setDesc(e.target.value)}
+           value={desc}
             required
           />
         </div>
