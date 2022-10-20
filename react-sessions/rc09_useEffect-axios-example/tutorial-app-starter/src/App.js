@@ -1,7 +1,9 @@
-import Home from "./pages/Home";
+import React from 'react'
 
-function App() {
-  return <Home />;
+const App = () => {
+  return (
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
