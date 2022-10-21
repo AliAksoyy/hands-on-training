@@ -10,6 +10,7 @@ const EditTutorials = ({handleOpenModal,data,setData}) => {
     
     const handleNewSubmit =(e) => {
         e.preventDefault()
+        console.log("ali")
         const newTodo = {title:newTitle, description: newDesc}
         console.log(newTodo)  
 
@@ -62,7 +63,7 @@ const EditTutorials = ({handleOpenModal,data,setData}) => {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button onSubmit={(e)=> handleNewSubmit(e)}  type="button" className="btn btn-primary" data-bs-dismiss="modal">
+                        <button onClick={(e)=> handleNewSubmit(e)}  type="button" className="btn btn-primary">
                         Save changes
                         </button>
                     </div>
