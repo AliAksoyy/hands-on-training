@@ -1,6 +1,22 @@
 
+import { useState } from "react"
 
-const EditTutorials = () => {
+
+const EditTutorials = ({handleOpenModal,data,setData}) => {
+    const [newTitle, setNewTitle] = useState("")
+    const [newDesc, setNewDesc] = useState("")
+    console.log(newTitle,newDesc);
+        
+    
+    const handleNewSubmit =(e) => {
+        e.preventDefault()
+        const newTodo = {title:newTitle, description: newDesc}
+        console.log(newTodo)  
+
+    }
+
+    
+    
     return(
         <div
             className="modal fade"
@@ -27,21 +43,26 @@ const EditTutorials = () => {
                                 <input
                                 type="text"
                                 className="form-control"
-                                id="title" />
+                                id="title"
+                                // value={{data}}
+                                onChange={(e)=> setNewTitle(e.target.value)}
+                                 />
                         </div>
                         <div className="mb-3">
                                 <label htmlFor="description" className="form-label">
                                 Description
                                 </label>
                                 <input
-                                type="password"
+                                type="text"
                                 className="form-control"
                                 id="description"
+                                // value={}
+                                onChange={(e)=> setNewDesc(e.target.value)}
                                 />
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button  type="button" className="btn btn-primary">
+                        <button onSubmit={(e)=> handleNewSubmit(e)}  type="button" className="btn btn-primary" data-bs-dismiss="modal">
                         Save changes
                         </button>
                     </div>

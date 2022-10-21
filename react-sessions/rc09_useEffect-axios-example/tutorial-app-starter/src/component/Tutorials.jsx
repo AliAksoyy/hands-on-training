@@ -4,8 +4,8 @@ import { BsTrashFill } from "react-icons/bs";
 import { GoFileSymlinkDirectory } from "react-icons/go";
 import EditTutorials from "./EditTutorials";
 
-function Tutorials({data, getTutorials}) {
-    console.log(data)
+function Tutorials({data,setData, getTutorials}) {
+   
 
    const handleDelete = async(id) => {
 
@@ -19,8 +19,15 @@ function Tutorials({data, getTutorials}) {
     getTutorials()
    }
 
-   const handleOpenModal =(id) => {
-        console.log(id);
+   const handleOpenModal =async(id) => {
+        console.log(id)
+        const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials"
+        try {
+            await axios.put(`${url}/${id}`)
+        } catch (error) {
+            
+        }
+
    }
    
 
@@ -64,7 +71,7 @@ function Tutorials({data, getTutorials}) {
                 })}  
                 </tbody>
             </table>
-            <EditTutorials />
+            <EditTutorials data={data} setData={setData} handleOpenModal={handleOpenModal} />
 
         </div>
     )
