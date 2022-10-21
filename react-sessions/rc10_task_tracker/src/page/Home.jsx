@@ -37,7 +37,7 @@ const Home = () => {
       variant="danger">{text}</Button>
       { isOpen && <AddTask  getTask={getTask}/>}
      
-      <TaskList  task={task}/>
+      <TaskList getTask={getTask} task={task}/>
     </div>
   );
 };

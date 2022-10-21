@@ -1,19 +1,24 @@
+
+import axios from "axios";
 import { BsTrashFill } from "react-icons/bs";
 import { GoFileSymlinkDirectory } from "react-icons/go";
 
-function Tutorials({data}) {
+function Tutorials({data, getTutorials}) {
     console.log(data)
 
-    // const tutorials = [{
-    //     id:1,
-    //     title:"ali",
-    //     descriptions:"aksoy"
-    // }, {
-    //     id:2,
-    //     title:"beyda",
-    //     descriptions:"aksoy"
-    // }]
-    
+   const handleDelete = async(id) => {
+
+    const url = `https://tutorials-api-cw.herokuapp.com/api/tutorials/${id}`
+    console.log(url);
+    try {
+        await axios.delete(url)
+    } catch (error) {
+       console.log(error) 
+    }
+    getTutorials()
+   }
+   
+
 
     return(
         <div className="text-center  p-4 container">
@@ -42,6 +47,7 @@ function Tutorials({data}) {
                             <BsTrashFill
                             size={23}
                             type={"button"}
+                            onClick={()=> handleDelete(id)}
                             />
                             </td>
                          </tr>

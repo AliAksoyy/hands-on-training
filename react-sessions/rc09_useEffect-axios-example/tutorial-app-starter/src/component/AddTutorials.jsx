@@ -3,26 +3,33 @@ import axios from "axios"
 
 
 
-const AddTutorials = () => {
+const AddTutorials = ({getTutorials}) => {
     const [title,setTitle] = useState("")
-    const [descriptions, setDescriptions] = useState("")
+    const [description, setDescriptions] = useState("")
 
     
    
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const newTodo = {title:title, description:description}
+        console.log(newTodo)
+        postTutorials(newTodo)
         setTitle("")
         setDescriptions("")
+        
 
     }
-const postTutorials = async() => {
+    const postTutorials = async(newTodo) => {
 
         const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials"
-        
-        await axios.post(url,{newTutorial})
-
+        try {
+            await axios.post(url,newTodo)
+        } catch (error) {
+            console.log(error);
         }
+        getTutorials()
+    }
    
 
     return(
@@ -52,7 +59,7 @@ const postTutorials = async() => {
                     id="description"
                     onChange={(e)=> setDescriptions(e.target.value)}
                     required
-                    value={descriptions}
+                    value={description}
                     />
                 </div>
                 <button type="submit" className="btn btn-danger">
