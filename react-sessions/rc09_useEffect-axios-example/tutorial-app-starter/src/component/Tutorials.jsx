@@ -2,6 +2,7 @@
 import axios from "axios";
 import { BsTrashFill } from "react-icons/bs";
 import { GoFileSymlinkDirectory } from "react-icons/go";
+import EditTutorials from "./EditTutorials";
 
 function Tutorials({data, getTutorials}) {
     console.log(data)
@@ -43,6 +44,10 @@ function Tutorials({data, getTutorials}) {
                             <GoFileSymlinkDirectory
                             size={23}
                             type={"button"}
+                            data-bs-toggle={"modal"}
+                            data-bs-target={"#modal"}
+
+                            
                             />
                             <BsTrashFill
                             size={23}
@@ -55,6 +60,7 @@ function Tutorials({data, getTutorials}) {
                 })}  
                 </tbody>
             </table>
+            <EditTutorials />
 
         </div>
     )
