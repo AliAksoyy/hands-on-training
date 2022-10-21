@@ -18,6 +18,10 @@ function Tutorials({data, getTutorials}) {
     }
     getTutorials()
    }
+
+   const handleOpenModal =(id) => {
+        console.log(id);
+   }
    
 
 
@@ -46,7 +50,7 @@ function Tutorials({data, getTutorials}) {
                             type={"button"}
                             data-bs-toggle={"modal"}
                             data-bs-target={"#modal"}
-
+                            onClick={()=>handleOpenModal(id)}
                             
                             />
                             <BsTrashFill

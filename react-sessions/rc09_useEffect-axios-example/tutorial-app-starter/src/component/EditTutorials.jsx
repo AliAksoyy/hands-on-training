@@ -41,7 +41,7 @@ const EditTutorials = () => {
                         </div>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary">
+                        <button  type="button" className="btn btn-primary">
                         Save changes
                         </button>
                     </div>
