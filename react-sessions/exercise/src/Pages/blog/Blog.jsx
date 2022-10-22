@@ -1,8 +1,12 @@
 import React from 'react'
+import {Outlet} from "react-router-dom"
 
 const Blog = () => {
   return (
-    <div>Blog Pages</div>
+    <div>
+    <Outlet />
+    
+    </div>
   )
 }
 

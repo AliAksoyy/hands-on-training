@@ -1,8 +1,10 @@
 import React from 'react'
 import {Routes, Route, Link, NavLink} from "react-router-dom"
-import Blog from './Pages/Blog'
+import Blog from './Pages/blog/Blog'
 import Contact from './Pages/Contact'
 import Home from './Pages/Home'
+import Categories from './Pages/blog/Categories'
+import Post from './Pages/blog/Post'
 
 const App = () => {
   return (
@@ -24,7 +26,10 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/contact' element={<Contact />} />
-      <Route path='/blog' element={<Blog />} />
+      <Route path='/blog' element={<Blog />}> 
+         <Route path='categories' element={<Categories/>} />
+         <Route path="post/:url" element={<Post/>}/>
+      </Route>
     </Routes>
     </>
   )
