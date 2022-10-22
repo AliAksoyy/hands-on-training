@@ -2,7 +2,7 @@
 import axios from "axios";
 import { BsTrashFill } from "react-icons/bs";
 import { GoFileSymlinkDirectory } from "react-icons/go";
-import EditTutorials from "./EditTutorials";
+import EditTutorials from "./EditTutorial";
 
 function Tutorials({data,setData, getTutorials}) {
    

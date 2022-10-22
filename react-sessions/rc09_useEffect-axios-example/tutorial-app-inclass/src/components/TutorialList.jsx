@@ -1,6 +1,7 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import axios from "axios";
+import EditTutorials from "./EditTutorials";
 
 
 
@@ -67,6 +68,7 @@ const TutorialList = ({tutorials, getTutorials}) => {
           })}
         </tbody>
       </table>
+      <EditTutorials handleOpenModal={handleOpenModal}, data={data}, setData={setData} />
     </div>
   );
 };
