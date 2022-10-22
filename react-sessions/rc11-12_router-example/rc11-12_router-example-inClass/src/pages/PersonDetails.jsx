@@ -8,7 +8,17 @@ const PersonDetails = () => {
     const {state:person} = useLocation()
     console.log(person);
   return (
-    <div>PersonDetails</div>
+    <div className='container text-center'>
+        <h3>{person.first_name} {person.last_name}</h3>
+        <img className='rounded' src={person.avatar} alt="" />
+        <p>{person.email}</p>
+        <div>
+            <button className="btn btn-success me-2">Home</button>
+            <button className="btn btn-warning">Go Back</button>
+        </div>
+
+
+    </div>
   )
 }
 
