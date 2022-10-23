@@ -1,11 +1,27 @@
-import React from 'react'
-import {useParams, useLocation} from "react-router-dom"
+import React, { useEffect, useState } from 'react'
+import {useParams, useLocation, useNavigate} from "react-router-dom"
 
 
 const PersonDetails = () => {
+    const [person, setPerson] = useState([])
+
+    
+       
+      
+      useEffect(() => {
+        fetch("https://reqres.in/api/users")
+        .then((res) => res.json())
+        .then((data) => setPerson(data.data))
+        .catch((err) => console.log(err));
+      }, []);
+    
+
+
+
+    const navigate = useNavigate()
     const {id} =useParams()
     console.log(id);
-    const {state:person} = useLocation()
+    // const {state:person} = useLocation()
     console.log(person);
   return (
     <div className='container text-center'>
@@ -13,8 +29,8 @@ const PersonDetails = () => {
         <img className='rounded' src={person.avatar} alt="" />
         <p>{person.email}</p>
         <div>
-            <button className="btn btn-success me-2">Home</button>
-            <button className="btn btn-warning">Go Back</button>
+            <button onClick={()=> navigate("/")} className="btn btn-success me-2">Home</button>
+            <button onClick={()=> navigate(-1)} className="btn btn-warning">Go Back</button>
         </div>
 
 
