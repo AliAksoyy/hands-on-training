@@ -6,14 +6,22 @@ import { Link,NavLink, Routes,Route } from 'react-router-dom'
 import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import NotFound from './pages/NotFound'
+import "./App.css"
 
 const App = () => {
   return (
     <>
     <nav>
-       <Link to="/">Anasayfa</Link>
-       <Link to="/contact">Contact</Link>
-       <Link to="/blog">Blog</Link>
+       <NavLink to="/" className={({isActive})=> isActive && 'aktif'}>Anasayfa</NavLink>
+       <NavLink to="/contact" style={({isActive})=> 
+       ({backgroundColor: isActive && "yellow"})
+       }>Contact</NavLink>
+       <NavLink to="/blog"> {({isActive})=> (
+            <>
+              Blog
+              {isActive && '(aktif)'}
+            </>
+       )}</NavLink>
     </nav>
 
       <Routes> 
