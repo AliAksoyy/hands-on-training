@@ -11,7 +11,7 @@ const People = () => {
         if(!res.ok) {
           throw new console.error("hata");
         }
-       res.json()
+       return res.json()
 
       })
       .then((data) => setPeople(data.data))
@@ -20,6 +20,7 @@ const People = () => {
   useEffect(() => {
     getPeople();
   }, []);
+  console.log(people)
 
   return (
     <div className="container text-center mt-4">
@@ -33,7 +34,8 @@ const People = () => {
               className=" col-sm-12 col-md-6 col-lg-4"
               type="button"
               
-              onClick={()=> navigate(`/people/${id}` ,{state:person})}
+              onClick={()=> navigate(`/people/${id}` )}
+              // onClick={()=> navigate(`/people/${id}` ,{state:person})}
             >
               <img className="rounded" src={avatar} alt="img" />
               <h6>
