@@ -7,10 +7,12 @@ import BookList from "./pages/BookList"
 import Contact from "./pages/Contact" 
 import NewBook from "./pages/NewBook" 
 import NotFound from "./pages/NotFound" 
+import Navbar from './component/Navbar'
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About/>} />

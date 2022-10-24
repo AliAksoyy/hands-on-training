@@ -1,8 +1,11 @@
 import React from 'react'
+import Ali from '../component/Ali'
 
 const Home = () => {
   return (
-    <div>home</div>
+    <div>home
+    <Ali />
+    </div>
   )
 }
 
