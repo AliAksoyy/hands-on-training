@@ -7,7 +7,13 @@ const People = () => {
 
   const getPeople = () => {
     fetch("https://reqres.in/api/users")
-      .then((res) => res.json())
+      .then((res) => {
+        if(!res.ok) {
+          throw new console.error("hata");
+        }
+       res.json()
+
+      })
       .then((data) => setPeople(data.data))
       .catch((err) => console.log(err));
   };
@@ -26,7 +32,7 @@ const People = () => {
               key={id}
               className=" col-sm-12 col-md-6 col-lg-4"
               type="button"
-              // onClick={()=> navigate(`/people/${id}` ,{state:person})}
+              
               onClick={()=> navigate(`/people/${id}` ,{state:person})}
             >
               <img className="rounded" src={avatar} alt="img" />
