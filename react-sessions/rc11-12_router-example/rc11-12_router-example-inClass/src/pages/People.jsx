@@ -34,6 +34,8 @@ const People = () => {
               <h6>
                 {first_name} {last_name}
               </h6>
+
+              <Link to={`/people/${}`}>Click</Link>
             </div>
           );
         })}
