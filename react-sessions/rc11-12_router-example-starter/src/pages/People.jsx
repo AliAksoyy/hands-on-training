@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {useNavigate} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 
 const People = () => {
   const navigate = useNavigate()
@@ -28,11 +28,13 @@ const People = () => {
               type="button"
               // onClick={()=>navigate(`/people/${id}`, {state:person})}
               onClick={()=>navigate(`/people/${id}`)}
+            
             >
               <img className="rounded" src={avatar} alt="img" />
               <h6>
                 {first_name} {last_name}
               </h6>
+           
             </div>
           );
         })}
