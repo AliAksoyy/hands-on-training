@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom'
 
 const Paths = () => {
+
+  const navigate = useNavigate()
   return (
     <div className='container mt-4'>
 
@@ -10,9 +13,10 @@ const Paths = () => {
 
       </p>
       <div>
-        <button className='btn btn-success w-50 '>FullStack</button>
-        <button className='btn btn-warning w-50'>Aws-Devops</button>
+        <Link className='btn btn-success w-50 ' to="fullstack">FullStack</Link>
+        <button className='btn btn-warning w-50' onClick={()=> navigate("aws")} >Aws-Devops</button>
       </div>
+      <Outlet />
     </div>
   )
 }
