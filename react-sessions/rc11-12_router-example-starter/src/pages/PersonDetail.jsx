@@ -18,10 +18,7 @@ const PersonDetail = () => {
   },[])
 
   return (
-   
-       
-           
-               
+
             <div className='container text-center' key={id}>
                         <h3>{person.first_name} {person.last_name}</h3>
                         <img className='rounded' src={person.avatar} alt="" />
