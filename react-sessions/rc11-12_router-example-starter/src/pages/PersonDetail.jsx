@@ -4,6 +4,7 @@ import NotFound from './NotFound'
 
 const PersonDetail = () => {
   const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
     const [person, setPeople] = useState("")
     const navigate = useNavigate()
     const {id} = useParams()
@@ -15,19 +16,29 @@ const PersonDetail = () => {
   useEffect(()=> {
         fetch(`https://reqres.in/api/users/${id}`)
         .then((res) => {
+          setLoading(true)
           if(!res.ok) {
             setError(true)
               throw new Error("something went wrong")
           }
           return res.json()
         })
-        .then((data)=> setPeople(data.data))
+        .then((data)=> {
+          setLoading(false)
+          setPeople(data.data)})
         .catch((err)=> console.log(err));
   },[])
 
   if(error) {
     return <NotFound />
-  }else{
+  }
+   if(loading) {
+    return <div>
+          <h3>Data fetching</h3>
+    </div>
+  }
+  
+  if(!error && !loading){
     return (
       <div className='container text-center' key={id}>
       <h3>{person.first_name} {person.last_name}</h3>
