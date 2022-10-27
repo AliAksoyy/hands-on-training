@@ -20,7 +20,8 @@ function App() {
         <Route path="people/:id" element={<PersonDetail />} />
 
         <Route path="paths" element={<Paths />} >
-          <Route path="fullstack" element={<FullStack />} />
+          <Route index element={<FullStack />} />
+          {/* <Route path="fullstack" element={<FullStack />} /> */}
           <Route path="aws" element={<Aws />} />
         </Route >
         <Route path="contact" element={<Contact />} />

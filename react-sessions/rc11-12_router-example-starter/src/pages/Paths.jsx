@@ -13,7 +13,8 @@ const Paths = () => {
 
       </p>
       <div>
-        <Link className='btn btn-success w-50 ' to="fullstack">FullStack</Link>
+        <Link className='btn btn-success w-50 ' to="/paths">FullStack</Link>
+        {/* <Link className='btn btn-success w-50 ' to="fullstack">FullStack</Link> */}
         <button className='btn btn-warning w-50' onClick={()=> navigate("aws")} >Aws-Devops</button>
       </div>
       <Outlet />
