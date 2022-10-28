@@ -28,7 +28,7 @@ const theme= {
 
 function App() {
   return (
-   <ThemeProvider>
+   <ThemeProvider theme={theme}>
       <BrowserRouter>
         <GlobalStyles />
         <AppRouter />
