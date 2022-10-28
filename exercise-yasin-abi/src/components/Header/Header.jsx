@@ -7,7 +7,7 @@ const Header = ({setSelected,selected,searchInput,setSearchInput,getFormValues})
 
     const handleSearch =(e)=> {
       e.preventDefault()
-        getFormValues(searchInput,selected)
+      getFormValues(searchInput,selected)
       
         
     }
