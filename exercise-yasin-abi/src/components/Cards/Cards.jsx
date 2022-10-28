@@ -8,8 +8,6 @@ export const Cards = ({recipes}) => {
   return (
       <MyCards>
       {recipes?.map((item,i)=> { 
-      
-        
         return(
           <Card  key={i} recipe={item.recipe} />
         )
