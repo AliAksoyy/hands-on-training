@@ -9,9 +9,9 @@ export const Cards = ({recipes}) => {
       <MyCards>
       {recipes?.map((item,i)=> { 
       
-        const {recipe} =item
+        
         return(
-          <Card  key={i} recipe={recipe} />
+          <Card  key={i} recipe={item.recipe} />
         )
       })}
          
