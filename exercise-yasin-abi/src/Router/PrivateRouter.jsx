@@ -1,13 +1,14 @@
 import React from 'react'
-import {Navigate , Outlet} from "react-router-dom"
+import { Outlet, Navigate } from 'react-router-dom'
 
-const PrivateRouter = () => {
-    const userAuthenticated = true; //! kullanıcı sifresini dogru girdi simülasyonu icin yazdık.
+export const PrivateRouter = () => {
+  const useAuthentic =true
   return (
     <div>
-        {userAuthenticated ? <Outlet/> : <Navigate to="/register"/> }
+
+    {useAuthentic ? <Outlet /> : <Navigate to="/register" /> }
+
     </div>
   )
 }
 
-export default PrivateRouter

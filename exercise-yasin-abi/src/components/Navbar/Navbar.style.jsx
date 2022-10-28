@@ -17,7 +17,7 @@ export const Links =styled.div`
     width:50%;
     
 `
-export const NavLink =styled.a`
+export const NavLinkA =styled.a`
 text-decoration:none;
 font-size:1.5rem;
 color:black;

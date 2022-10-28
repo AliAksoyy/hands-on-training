@@ -1,24 +1,18 @@
 import React from 'react'
-import { Links,  Logo, Nav, NavLink } from './Navbar.style'
-import logo from "../../assets/tastybites.png"
+import { Links, Logo, Nav,NavLinkA } from './Navbar.style'
+import Images from "../../assets/tastybites.png"
 
-
-const Navbar = () => {
-  const removeUser=() => {
-    //!Localstorageden bilgiler silinecek!!
-  }
+export const Navbar = () => {
   return (
-    <Nav >
-      <Logo src={logo} />
+    <Nav>
+      <Logo src={Images} />
       <Links>
-        <NavLink  href="/">Home</NavLink>
-        <NavLink  href="/about">About</NavLink>
-        <NavLink  href="https://google.com" target="_blank">Githubs</NavLink>
-        <NavLink  href="/login" onClick={()=> removeUser()}>Logout</NavLink>
+          <NavLinkA to="/">Home</NavLinkA>
+          <NavLinkA to="/private/about">About</NavLinkA>
+          <NavLinkA to="https://www.google.com">Gıthub</NavLinkA>
+          <NavLinkA to="/login">Logout</NavLinkA>
       </Links>
     </Nav>
-    
   )
 }
 
-export default Navbar
