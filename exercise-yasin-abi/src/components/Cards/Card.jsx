@@ -1,13 +1,16 @@
 import React from 'react'
 import { CardButton, CardImage, CardTitle, MyCard } from './Cards.style'
 
-export const Card = () => {
+export const Card = ({recipe}) => {
+  console.log(recipe)
   return (
-    <MyCard>
-      <CardTitle>asdas</CardTitle>
-      <CardImage src="https://picsum.photos/id/684/600/400" />
-      <CardButton>Details</CardButton>
-    </MyCard>
+  
+        <MyCard >
+          <CardTitle>{recipe.label}</CardTitle>
+          <CardImage src={recipe.images.REGULAR.url}  />
+          <CardButton>Details</CardButton>
+       </MyCard>
+
   )
 }
 

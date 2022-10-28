@@ -6,7 +6,7 @@ import {Navbar} from "../../components/Navbar/Navbar"
 
 export const Home = () => {
 
-  const[recipe,setRecipe]=useState([])
+  const[recipes,setRecipe]=useState([])
 
 
   const getRecipe =(query,mealType) => {
@@ -18,7 +18,7 @@ export const Home = () => {
     .then((res)=>res.json())
     .then((data)=> setRecipe(data.hits) )
   }
-console.log(recipe)
+
 useEffect(()=> {
   getRecipe()
 },[])
@@ -30,7 +30,7 @@ useEffect(()=> {
     <>
       <Navbar />
       <Header getRecipe={getRecipe} />
-      <Cards />
+      <Cards recipes={recipes} />
     </>
   )
 }
