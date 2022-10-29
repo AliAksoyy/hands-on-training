@@ -17,7 +17,7 @@ export const Details = () => {
         {(Object.values(recipe.totalNutrients)).map((item)=> {
 
           return(
-            <p>{item.label}  {item.quantitiy} {item.unit}</p>
+            <p>{item.label}  {item.quantity.toFixed(2)} {item.unit}</p>
           )
         })}
         </NutrientsDiv>
