@@ -14,11 +14,22 @@ export const Details = () => {
       </TitleDiv>
       <ContentDiv>
         <NutrientsDiv>
-          <p>as</p>
+        {(Object.values(recipe.totalNutrients)).map((item)=> {
+
+          return(
+            <p>{item.label}  {item.quantitiy} {item.unit}</p>
+          )
+        })}
         </NutrientsDiv>
-        <ContentImage src={} />
+        <ContentImage src={recipe.images.REGULAR.url} />
         <RecipeOrderDiv>
-          <p>sadas</p>
+        {Object.values(recipe.ingredientLines).map((item)=> {
+          console.log(item)
+          return(
+          <p>{item}</p>
+
+          )
+        })}
         </RecipeOrderDiv>
       </ContentDiv>
     </DetailsDiv>
