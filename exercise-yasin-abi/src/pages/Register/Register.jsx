@@ -13,15 +13,11 @@ export const Register = () => {
 
   const handleRegister=(e)=> {
         e.preventDefault()
-        setRegister({...register,  })
-        console.log(register)
-        if(register.username ==="" || register.email==="" || register.password === "") {
-          setTimeout(()=> {
-          document.querySelector(".explan").innerText = `boş bırakmayınız`
-          },3000)
-        }else{
-          localStorage.setItem("ali", JSON.stringify({...register}))
-        navigate("/home")
+        
+       const localValues= Object.values(localStorage).map((item)=> JSON.parse(item))
+      
+       
+
         setRegister({
         username:"",
         email:"",
@@ -30,7 +26,7 @@ export const Register = () => {
         
       })
     }
-  }
+  
   
   return (
     <RegisterDiv>
