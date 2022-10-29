@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { LoginBody, LoginButton, LoginDiv, LoginImg } from './Login.style'
 import LoginImage from "../../assets/meal2.svg"
 import { useNavigate } from 'react-router-dom'
-
+let counter = 0
 export const Login = () => {
   const navigate=useNavigate()
   
@@ -13,18 +13,40 @@ export const Login = () => {
  
   const handleSubmit=(e) => {
         e.preventDefault()
-         console.log(login)
-         if(JSON.parse(localStorage.getItem("ali")).username ===login.username || JSON.parse(localStorage.getItem("ali")).password ===login.password ) {
+
+        const localValues =Object.values(localStorage).map((item)=> JSON.parse(item))
+
+        if(!localValues.some((item)=> item.username === login.username) || !localValues.some((item)=> item.password === login.password)) {
+          counter++
+         
+            document.querySelector(".ali").textContent = ` kardeş hakkın ${3 -counter} kaldı`
+            
+         
+            if(counter ===3) {
+              setTimeout(() => {
+              navigate("/")
+                
+              }, 3000);
+            }
+        }else {
+          document.querySelector(".ali").textContent = ` home gidiyorsun tebrikler`
+          setTimeout(() => {
           navigate("/home")
-         }else {
-          navigate("/")
-         }
+            
+          }, 3000);
+        }
+
+
+
+
+
+
          setLogin({
           username:"",
           password:""
          });
   }
-  console.log(JSON.parse(localStorage.getItem("ali")))
+
 
   return (
     <>
@@ -47,6 +69,7 @@ export const Login = () => {
             value={login.password}
             />
             <LoginButton onClick={handleSubmit}>Login</LoginButton>
+            <h1 className='ali'></h1>
           </form>
         </LoginDiv>
       </LoginBody>

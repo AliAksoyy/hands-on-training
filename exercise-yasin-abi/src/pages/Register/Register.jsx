@@ -13,9 +13,23 @@ export const Register = () => {
 
   const handleRegister=(e)=> {
         e.preventDefault()
-        
-       const localValues= Object.values(localStorage).map((item)=> JSON.parse(item))
-      
+        const localValues =  Object.values(localStorage).map((item)=> JSON.parse(item))
+        if(!localValues.some((item)=> item.username === register.username) || !localValues.some((item)=> item.email === register.email) || !localValues.some((item)=> item.password ===register.password)) {
+        localStorage.setItem(new Date().getTime(), JSON.stringify(register))
+
+          
+            alert("kayıt başarılı")
+            setTimeout(() => {
+            navigate("/home")
+              
+            }, 2000);
+        }else {
+          alert("zaten kayıtlısım")
+          setTimeout(() => {
+          navigate("/login")
+            
+          }, 2000);
+        }
        
 
         setRegister({
