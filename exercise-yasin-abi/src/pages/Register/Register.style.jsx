@@ -12,6 +12,7 @@ justify-content:flex-start;
 align-items:center;
 width:100%;
 padding-top:5rem;
+
 `
 
 
@@ -23,14 +24,16 @@ text-align:center;
 width:90px;
 border:none;
 cursor:pointer;
+border:1px solid white;
 border-radius:10px;
-margin:1rem auto;
+margin:1rem 0 1rem 2.9rem;
 transition:all 0.6s;
 &:hover{
 background-color:white;
 color:black; 
 transform:scale(0.97);
 font-weight:bold;
+
 }
 `
 

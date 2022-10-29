@@ -26,7 +26,7 @@ export const Login = () => {
           <LoginImg src={LoginImage} />
           <form>
             <input type={"text"} 
-            placeholder={"enter your a recipe"} 
+            placeholder={"enter your a username"} 
             style={{display:"block",width:"188px",padding:"0.34rem"}}
             onChange={(e)=> setUsername(e.target.value)}
             value={username}
