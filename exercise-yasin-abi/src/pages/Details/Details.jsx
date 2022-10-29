@@ -2,11 +2,14 @@ import React from 'react'
 import {useLocation} from "react-router-dom"
 import { ContentDiv, ContentImage, DetailsDiv, NutrientsDiv, RecipeOrderDiv, TitleDiv, TitleImage } from './Detail.style'
 import pic from "../../assets/diet.svg"
+import { Navbar } from '../../components/Navbar/Navbar'
 
 export const Details = () => {
   const {state:recipe} =useLocation()
   console.log(recipe)
   return (
+    <>
+    <Navbar />
     <DetailsDiv>
       <TitleDiv>
         <h1>{recipe.label}</h1>
@@ -33,6 +36,7 @@ export const Details = () => {
         </RecipeOrderDiv>
       </ContentDiv>
     </DetailsDiv>
+    </>
   )
 }
 

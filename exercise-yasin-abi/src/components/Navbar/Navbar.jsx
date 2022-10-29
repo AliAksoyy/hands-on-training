@@ -7,9 +7,9 @@ export const Navbar = () => {
     <Nav>
       <Logo src={Images} />
       <Links>
-          <NavLinkA href="/">Home</NavLinkA>
+          <NavLinkA href="/home">Home</NavLinkA>
           <NavLinkA href="/private/about">About</NavLinkA>
-          <NavLinkA href="https://www.google.com">Gıthub</NavLinkA>
+          <NavLinkA href="https://github.com/AliAksoyy" target={"_blank"}>Gıthub</NavLinkA>
           <NavLinkA href="/login">Logout</NavLinkA>
       </Links>
     </Nav>

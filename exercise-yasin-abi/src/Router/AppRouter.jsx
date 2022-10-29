@@ -13,13 +13,13 @@ import { Register } from '../pages/Register/Register'
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/private" element={<PrivateRouter />}>
         <Route path="about" element={<About />} />
         <Route path="details" element={<Details />} />
       </Route>
       <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
+      <Route path="/" element={<Register />} />
     </Routes>
   )
 }

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { RegisterButton, RegisterDiv } from './Register.style'
 
 export const Register = () => {
+  const navigate = useNavigate()
   
   const [register, setRegister] = useState({
     username:"",
@@ -13,13 +15,21 @@ export const Register = () => {
         e.preventDefault()
         setRegister({...register,  })
         console.log(register)
-        localStorage.setItem(new Date().getTime(), JSON.stringify({...register}))
+        if(register.username ==="" || register.email==="" || register.password === "") {
+          setTimeout(()=> {
+          document.querySelector(".explan").innerText = `boş bırakmayınız`
+          },3000)
+        }else{
+          localStorage.setItem("ali", JSON.stringify({...register}))
+        navigate("/home")
         setRegister({
         username:"",
         email:"",
         password:""
+       
+        
       })
-
+    }
   }
   
   return (
@@ -32,7 +42,8 @@ export const Register = () => {
             placeholder={"enter your a username"} 
             style={{display:"block",width:"188px",padding:"0.34rem"}}
             onChange={(e)=> setRegister({...register, [e.target.name]: e.target.value})}
-            value={register.username}      
+            value={register.username} 
+            required     
             />
             <input type={"email"} 
             name={"email"}
@@ -40,6 +51,7 @@ export const Register = () => {
             style={{display:"block",width:"188px",padding:"0.34rem", margin:"1rem 0"}}
             onChange={(e)=> setRegister({...register, [e.target.name]:e.target.value})}
             value={register.email}
+            required
             />
             <input type={"password"} 
             name={"password"}
@@ -47,8 +59,10 @@ export const Register = () => {
             style={{display:"block", width:"188px",margin:"1rem 0", padding:"0.34rem"}}
              onChange={(e)=> setRegister({...register, [e.target.name]:e.target.value})}
              value={register.password}
+             required
             />
             <RegisterButton onClick={handleRegister} >Register</RegisterButton>
+            <p className='explan'></p>
           
       </form>
     </RegisterDiv>

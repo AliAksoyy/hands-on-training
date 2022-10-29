@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { LoginBody, LoginButton, LoginDiv, LoginImg } from './Login.style'
 import LoginImage from "../../assets/meal2.svg"
+import { useNavigate } from 'react-router-dom'
 
 export const Login = () => {
-  const [username,setUsername] =useState("")
-  const [password,setPassword] =useState("")
+  const navigate=useNavigate()
+  
   const [login,setLogin] = useState({
     username:"",
     password:""
@@ -12,12 +13,18 @@ export const Login = () => {
  
   const handleSubmit=(e) => {
         e.preventDefault()
-        setLogin({...login, username, password})
-        setUsername("")
-        setPassword("")
-
+         console.log(login)
+         if(JSON.parse(localStorage.getItem("ali")).username ===login.username || JSON.parse(localStorage.getItem("ali")).password ===login.password ) {
+          navigate("/home")
+         }else {
+          navigate("/")
+         }
+         setLogin({
+          username:"",
+          password:""
+         });
   }
-  console.log(login)
+  console.log(JSON.parse(localStorage.getItem("ali")))
 
   return (
     <>
@@ -26,16 +33,18 @@ export const Login = () => {
           <LoginImg src={LoginImage} />
           <form>
             <input type={"text"} 
+            name={"username"}
             placeholder={"enter your a username"} 
             style={{display:"block",width:"188px",padding:"0.34rem"}}
-            onChange={(e)=> setUsername(e.target.value)}
-            value={username}
+            onChange={(e)=> setLogin({...login, [e.target.name]:e.target.value})}
+            value={login.username}
             />
             <input type={"password"} 
+            name={"password"}
             placeholder={"enter your a password"}
             style={{display:"block", width:"188px",margin:"1rem 0", padding:"0.34rem"}}
-            onChange={(e)=> setPassword(e.target.value)}
-            value={password}
+            onChange={(e)=> setLogin({...login, [e.target.name]:e.target.value})}
+            value={login.password}
             />
             <LoginButton onClick={handleSubmit}>Login</LoginButton>
           </form>
