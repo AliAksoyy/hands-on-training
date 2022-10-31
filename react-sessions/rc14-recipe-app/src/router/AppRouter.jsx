@@ -6,20 +6,22 @@ import Login from "../pages/login/Login"
 import Detail from "../pages/detail/Detail"
 import About from "../pages/about/About"
 import PrivateRouter from './PrivateRouter'
+import Navbar from '../components/nav/Navbar'
 
 const AppRouter = () => {
   return (
 
     <BrowserRouter>
     <GlobalStyle />
+    <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/about" element={<PrivateRouter />} >
+      <Route path="login" element={<Login />} />
+      <Route path="about" element={<PrivateRouter />} >
         <Route path="" element={<About />} />
-        <Route path="/detail" element={<Detail />} />
+        <Route path="detail" element={<Detail />} />
       </Route>
-      <Route path="/detail" element={<Detail />} />
+     
     </Routes>
      
     </BrowserRouter>
