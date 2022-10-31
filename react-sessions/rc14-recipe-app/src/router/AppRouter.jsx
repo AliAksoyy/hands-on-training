@@ -1,10 +1,17 @@
 import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import { GlobalStyle } from '../style/GlobalStyle'
 
 const AppRouter = () => {
   return (
-    <div>
-      App Router
-    </div>
+
+    <BrowserRouter>
+    <GlobalStyle />
+    <Route>
+      
+    </Route>
+     
+    </BrowserRouter>
   )
 }
 
