@@ -1,10 +1,16 @@
 import React from 'react'
-
+import { DetailContainer, HeaderContainer } from './Detail.style'
+import {useLocation} from "react-router-dom"
 const Detail = () => {
+  const {state} = useLocation()
+  console.log(state)
   return (
-    <div>
+    <DetailContainer>
+      <HeaderContainer>
+
+    </HeaderContainer>
       Detail
-    </div>
+    </DetailContainer>
   )
 }
 
