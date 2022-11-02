@@ -5,10 +5,12 @@ import About from "../pages/About/About"
 import Login from "../pages//Login/Login"
 import Register from "../pages/Register/Register"
 import PrivateRouter from './PrivateRouter'
+import Navbar from '../components/Navbar/Navbar'
 
 const AppRouter = () => {
   return (
-   
+    <>
+    <Navbar />
     <Routes>
       <Route path="/home" element={<Home />} />
       <Route path="/private" element={<PrivateRouter />} >
@@ -18,6 +20,7 @@ const AppRouter = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/" element={<Register />} />
     </Routes>
+    </>
 
 
 

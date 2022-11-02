@@ -1,8 +1,19 @@
+import { LinksDiv, NavbarDiv, NavbarImg } from "./Navbar.style"
+import navbarimg from "../../assets/tastybites.png"
+import { NavLink } from "react-router-dom"
 
 
 const Navbar = () => {
     return(
-        <div>Navbar</div>
+        <NavbarDiv>
+            <NavbarImg src={navbarimg} />
+            <LinksDiv >
+                <NavLink style={({isActive})=> ({color: isActive ? "red" :"white", textDecoration:"none" }) } to="/home" >Home</NavLink>
+                <NavLink style={({isActive})=> ({color:isActive ? "red": "white", textDecoration:"none"})} to="/private/about">About</NavLink>
+                <NavLink style={({isActive})=> ({color: isActive ? "red" :"white", textDecoration:"none" })} to="/login">Login</NavLink>
+                <NavLink style={({isActive})=> ({color: isActive ? "red" :"white", textDecoration:"none" })} to="/">Register</NavLink>
+            </LinksDiv >
+        </NavbarDiv>
     )
 }
 
