@@ -1,7 +1,20 @@
+import {BrowserRouter} from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import AppRouter from "./Router/AppRouter"
+import { GlobalStyle } from "./Style/GlobalStyle.style";
+import { theme } from "./Style/theme";
+
+
+
 
 function App() {
   return (
-  <div>app</div>
+  <ThemeProvider theme={theme} >
+    <BrowserRouter>
+      <GlobalStyle />
+      <AppRouter />
+    </BrowserRouter>
+  </ThemeProvider>
   );
 }
 
