@@ -1,8 +1,13 @@
 import React from 'react'
+import { Outlet,Navigate } from 'react-router-dom'
+
 
 const PrivateRouter = () => {
+const userAuthentic = true;
   return (
-    <div>PrivateRouter</div>
+    <>
+   {userAuthentic ? <Outlet />  : <Navigate to="/register" /> }
+   </>
   )
 }
 
