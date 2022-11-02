@@ -10,7 +10,7 @@ import { LoginContext } from "./context/LoginContext";
 
 function App() {
   return (
-    <LoginContext.Provider>
+    <LoginContext.Provider value={{}}>
     <BrowserRouter>
       <Navs />
       <Routes>
