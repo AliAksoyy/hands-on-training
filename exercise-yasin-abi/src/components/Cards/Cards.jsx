@@ -1,20 +1,9 @@
 import React from 'react'
-import { MyCards } from './Cards.style'
-import {Card} from "./Card"
 
-export const Cards = ({recipes}) => {
-  
-
+const Cards = () => {
   return (
-      <MyCards>
-      {recipes?.map((item,i)=> { 
-        return(
-          <Card  key={i} recipe={item.recipe} />
-        )
-      })}
-         
-      </MyCards>
-    
+    <div>Cards</div>
   )
 }
 
+export default Cards
