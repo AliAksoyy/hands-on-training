@@ -6,7 +6,7 @@ const Header = () => {
    <HeaderDiv >
     <h1>Food Recipe</h1>
     <HeaderForm >
-      <input type="search" placeholder='Search' />
+      <input type="text" placeholder='Search' style={{padding:"0.5rem"}} />
       <button>Search</button>
       <select name="search" id="search">
         <option value="breakfast">breakfast</option>

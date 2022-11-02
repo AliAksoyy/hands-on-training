@@ -4,7 +4,7 @@
 export const theme ={
     colors:{
         nav:"#234",
-        header:"#412",
+        header:"#cd3",
         footer:"#cc2",
     },
     responsive:{
