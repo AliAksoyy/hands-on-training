@@ -15,13 +15,13 @@ const Details = () => {
         </div>
         <ContentDiv >
           <div>
-            {Object.values(state.totalNutrients).map((label)=> {
+            {Object.values(state.totalNutrients).map((label, i)=> {
               return(
-                <>
+                <div key={i}>
                 <p>{label.label}</p>
                 <h6>{Math.floor( label.quantity)}</h6>
                 <h6>{label.unit}</h6>
-                </>
+                </div>
                
               )
             })}
@@ -30,10 +30,10 @@ const Details = () => {
             <img  src={state?.images?.REGULAR?.url} alt="a" />
           </div>
           <div>
-              {state.ingredient.map((a)=> {
+              {state.ingredientLines.map((a, i)=> {
                 return(
                 
-                  <p>{a.text}</p>
+                  <p key={i}>{a}</p>
                 )
               })}
           </div>
