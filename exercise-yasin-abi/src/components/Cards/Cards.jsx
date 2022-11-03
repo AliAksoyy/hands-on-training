@@ -1,8 +1,19 @@
 import React from 'react'
+import Card from './Card'
+import { CardsDiv } from './Card.style'
 
 const Cards = () => {
   return (
-    <div>Cards</div>
+  <CardsDiv>
+     <Card />
+     <Card />
+     <Card />
+     <Card />
+     <Card />
+     <Card />
+     <Card />
+     <Card />
+   </CardsDiv>
   )
 }
 

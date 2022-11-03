@@ -8,6 +8,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 height:20vh;
+width:100%;
 gap:2rem;
 background-color:${({theme})=> theme.colors.header}
 
