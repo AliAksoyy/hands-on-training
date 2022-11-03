@@ -1,12 +1,15 @@
 import React from 'react'
 import { CardButton, CardDiv, CardImage } from './Card.style'
-import defaultImg from "../../assets/home.svg"
 
-const Card = () => {
+
+const Card = ({recipe}) => {
+  
+  
+  
   return (
    <CardDiv>
-    <h2>Pizza</h2>
-    <CardImage src={defaultImg} />
+    <h2>{recipe?.label}</h2>
+    <CardImage src={recipe?.images?.REGULAR?.url} />
     <CardButton> View More</CardButton>
    </CardDiv>
   )

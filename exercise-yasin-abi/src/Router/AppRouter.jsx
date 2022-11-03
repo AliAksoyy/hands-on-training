@@ -12,7 +12,7 @@ import axios from "axios"
 const AppRouter = () => {
  const {state} = useLocation()
  
-const [recipes, setRecipes] = useState("")
+const [recipes, setRecipes] = useState([])
 
 const getData = async(query,mealType) => {
     const appID= "61dbc14c";

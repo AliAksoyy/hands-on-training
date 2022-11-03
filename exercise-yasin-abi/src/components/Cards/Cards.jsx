@@ -4,14 +4,15 @@ import { CardsDiv } from './Card.style'
 
 const Cards = ({recipes}) => {
 
- 
+  console.log(recipes);
   return (
 
-  
   <CardsDiv>
-   
-    <Card />  
-    
+   {recipes.map((recipe,i)=> {
+    return(
+    <Card key = {i} {...recipe}  />   
+    )
+   })}
    </CardsDiv>
   )
 }
