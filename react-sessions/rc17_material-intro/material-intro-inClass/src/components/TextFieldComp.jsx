@@ -15,7 +15,7 @@ const TextFieldComp = () => {
           TEXT FIELD
         </Typography>
 
-        <Box sx={{ mt: 4 }}>
+        <Box sx={{ mt: 4}}>
           <TextField
             margin="dense"
             id="email"
@@ -35,6 +35,8 @@ const TextFieldComp = () => {
             error={error}
             helperText={error && "Incorrect password"}
           />
+
+          <Button variant="contained" color="warning" sx={{marginTop:"2.5rem"}}>Submit</Button>
         </Box>
       </Container>
     </div>
