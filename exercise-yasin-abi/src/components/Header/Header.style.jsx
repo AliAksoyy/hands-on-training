@@ -13,7 +13,7 @@ gap:2rem;
 background-color:${({theme})=> theme.colors.header}
 
 `
-export const HeaderForm =styled.div`
+export const HeaderForm =styled.form`
 display:flex;
 justify-content:center;
 

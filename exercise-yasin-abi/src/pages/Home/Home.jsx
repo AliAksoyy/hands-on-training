@@ -3,11 +3,12 @@ import Cards from '../../components/Cards/Cards'
 import Header from '../../components/Header/Header'
 import { HomeDiv } from './Home.style'
 
-const Home = () => {
+
+const Home = ({getData, recipes}) => {
   return (
     <HomeDiv>
-    <Header />
-    <Cards />
+    <Header getData={getData} />
+    <Cards recipes={recipes} />
     </HomeDiv>
   )
 }

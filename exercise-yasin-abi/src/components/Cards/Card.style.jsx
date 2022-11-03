@@ -35,12 +35,16 @@ export const CardButton = styled.button`
 padding:0.4rem;
 background-color:yellow;
 text-align:center;
+border-radius:10px;
+outline:none;
+border:none;
 color:black;
 transition:0.4s;
  &:hover{
     color:yellow;
     background-color: black;
     transform:sclae(0.98);
+    opacity:0.9;
 }
 
 `
