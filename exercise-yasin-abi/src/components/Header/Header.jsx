@@ -18,7 +18,7 @@ const handleSubmit = (e) => {
   getData(bilgiler.query, bilgiler.mealType)
   setBilgiler({
     query:"",
-    mealType:""
+    
   });
 
   
@@ -30,6 +30,7 @@ const handleSubmit = (e) => {
     <HeaderForm onSubmit={handleSubmit} >
       <input type="text"
        placeholder='Search'
+       value={bilgiler.query}
        style={{padding:"0.5rem"}}
         onChange={(e)=> setBilgiler({...bilgiler, query:e.target.value})}
          />
