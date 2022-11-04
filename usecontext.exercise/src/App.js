@@ -6,8 +6,8 @@ import People from "./pages/People";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
-import {LoginProvider} from "./context/LoginProvider"
-import { useState } from "react";
+import LoginProvider from "./context/LoginProvider"
+// import { useState } from "react";
 import PrivateRouter from "./pages/PrivateRouter"
 
 function App() {
