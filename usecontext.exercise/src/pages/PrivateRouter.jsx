@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Outlet, Navigate } from "react-router-dom";
-import { LoginContext } from "../context/LoginContext";
+import { LoginProvider } from "../context/LoginProvider";
 
 
 
 const PrivateRouter = () => {
-  const {user}=useContext(LoginContext)
+  const {user}=useContext(LoginProvider)
  console.log(user)
   return user ? <Outlet /> : <Navigate to="/login" />;
 };
