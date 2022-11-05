@@ -1,28 +1,25 @@
-import { useState } from "react";
+import { useReducer} from "react";
+import { initialState, reduce } from "./reduce";
 
 const UseReducer = () => {
-  const [catImage, setCatImage] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+ 
+    const {state,dispatch} =useReducer(reduce,initialState)
+
+    const {loading,catImage,error} =state
 
   const getCatImage = async () => {
     const url = "https://api.thecatapi.com/v1/images/search";
-    setLoading(true);
+    dispatch({type:"start"})
     try {
       const res = await fetch(url);
       const data = await res.json();
-      setCatImage(data[0].url);
-      setError("");
+      dispatch({type:"success", payload:data[0].url})
     } catch (error) {
-      setError("DATA CAN NOT BE FETCHED");
-      setCatImage("");
+      dispatch({type:"fail", payload:"hata"})
       console.log(error);
-    } finally {
-      setLoading(false);
-    }
+    } 
   };
-  console.log(error);
-  console.log(catImage);
+
 
   return (
     <div>
