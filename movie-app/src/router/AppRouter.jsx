@@ -14,13 +14,13 @@ const AppRouter = () => {
       <>
         <Navbar />
         <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="moviedetail" element={<PrivateRouter />} >
-        <Route path="/" element={<MovieDetail />} /> 
-        </Route>
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="*" element={<Main />} />
+          <Route path="/" element={<Main />} />
+          <Route path="moviedetail" element={<PrivateRouter />} >
+          <Route path="" element={<MovieDetail />} /> 
+          </Route>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="*" element={<Main />} />
         </Routes>
       </>
   )
