@@ -1,28 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {useParams} from "react-router-dom"
 
 const MovieDetail = () => {
+
+  const [movieDetail,setMovieDetail]=useState("")
+
+  const {id} = useParams()
+  
+
+  const getMoviesId = (id) => {
+    const API_KEY ="f9d519cf637913b53609ad35ac541965"
+    const url=`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
+    fetch(url).then((res)=>{
+      if(!res.ok) {
+        throw new Error("hata var movies'te")
+      }
+      return res.json()}).then((data)=> setMovieDetail(data)).catch((err)=>console.log(err))
+  }
+getMoviesId(id)
+
+
+
+
   return (
-    <div className="d-flex flex-column align-items-center p-3" >
-        <div className='d-flex justify-content-center align-items-center' style={{width:"100%", height:"35vh"}} >
+    <div className="d-flex flex-column align-items-center p-3 " sytle={{height:"60vh", border:"3px solid red"}} >
+        <div className='d-flex justify-content-center align-items-center ' style={{width:"100%", height:"35vh"}} >
           Movie 
         </div>
-        <div className="card mt-3" style={{width:"100%", height:"50vh"}}>
+        <div className="card mt-3" style={{width:"100%", height:"40vh"}}>
           <div className="row g-0">
             <div className="col-md-4" style={{width:"30%"}}>
-              <img src="..." className="img-fluid rounded-start" alt="..." />
+              <img src={`https://image.tmdb.org/t/p/w1280${movieDetail?.poster_path}`} className="img-fluid rounded-start" alt="..." />
             </div>
-            <div className="col-md-8" style={{width:"70%"}}>
-              <div className="card-body d-flex flex-column justify-content-between " style={{height:"50vh"}}>
-              <div>
-                <h5 className="card-title">Card title</h5>
+            <div className="col-md-8" style={{width:"70%", height:"50vh"}}>
+              <div className=" d-flex flex-column justify-content-between " style={{height:"65vh"}}>
+              <div className="ms-2">
+                <h5 className="card-title">{movieDetail?.title}</h5>
                 <p className="card-text">
-                  This is a wider card with supporting text below as a natural lead-in
-                  to additional content. This content is a little bit longer.
+                 {movieDetail?.overview}
                 </p>
                 </div>
                 <div>
-                <p className="card-text">
-                 sdfgsdfsdfs
+                <p className="card-text ms-2">
+                 {movieDetail?.title}
                 </p>
                 </div>
               </div>

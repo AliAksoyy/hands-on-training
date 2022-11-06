@@ -11,6 +11,7 @@ import {useNavigate} from "react-router-dom"
 
 const Main = () => {
 
+
   const[search,setSearch]=useState("")
 
   const [movies,setMovies]= useState([])
@@ -19,18 +20,16 @@ const Main = () => {
   
   const handleSubmit=(e)=> {
     e.preventDefault()
-    console.log(movies);
     getMovies()
-
     setSearch("")
   }
 
-const getMovies =()=> {
-
-  const API_KEY ="f9d519cf637913b53609ad35ac541965"
+  const getMovies =()=> {
+    const API_KEY ="f9d519cf637913b53609ad35ac541965"
   const url=`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
+  
 
-  fetch(url).then((res)=> {
+    fetch(url).then((res)=> {
     if(!res.ok){
       throw new Error("hata var")
     }
@@ -56,11 +55,9 @@ const getMovies =()=> {
      <div className="d-flex justify-content-center gap-4 mt-4 align-items-center flex-wrap">
      {movies.map((movie)=> {
       const {id,vote_average,poster_path,title} = movie
-      console.log(poster_path)
-      console.log(movie)
       return(
         
-        <Card onClick={()=>navigate("moviedetail")}  key={id} sx={{ width: "300px", height:"350px", borderRadius:"15px", boxShadow:"3px 3px 10px rgba(0,0,0,0.6)"}}>
+        <Card onClick={()=>navigate(`moviedetail/${id}`)}  key={id} sx={{ width: "300px", height:"350px", borderRadius:"15px", boxShadow:"3px 3px 10px rgba(0,0,0,0.6)"}}>
       <CardActionArea > 
         <CardMedia
           component="img"
