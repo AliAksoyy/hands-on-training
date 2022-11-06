@@ -1,9 +1,11 @@
-import TypoButtons from "../components/TypoButtons";
+import TextFieldCom from "../components/TextFieldCom";
+// import TypoButtons from "../components/TypoButtons";
 
 const Home = () => {
   return (
     <>
-      <TypoButtons />
+      {/* <TypoButtons /> */}
+      <TextFieldCom />
     </>
   );
 };
