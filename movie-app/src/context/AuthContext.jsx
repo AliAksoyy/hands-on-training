@@ -1,9 +1,26 @@
-import React from 'react'
+import { createContext, useContext, useState } from "react"
+
+
+export const LoginContext =createContext;
+
+
+
 
 const AuthContext = () => {
-  return (
-    <div>AuthContext</div>
-  )
-}
 
-export default AuthContext
+  const [user,setUser]=useState("")
+
+const value={user,setUser}
+
+  return  <LoginContext.Provider value={value}>
+
+          </LoginContext.Provider>
+  
+}
+export default AuthContext;
+
+//custom Hokk
+
+export const useLoginContext = () => {
+    return useContext(LoginContext)
+}
