@@ -7,14 +7,18 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import data from "../data"
+import Grid from "@mui/material/Grid"
 
 export default function CardGrid() {
   return (
     <>
+    <Typography variant="h4" color="error" align="center" mt={4}>Card and Grid</Typography>
+       <Grid container spacing={2} justifyContent="center">
     {data.map((card)=> {
         const {id,text,img,name} = card
         return(
-    <Card key={id} sx={{ maxWidth: 345 }}>
+        <Grid item xs={12} md={6} lg={3}>
+    <Card key={id} >
       <CardActionArea>
         <CardMedia
           component="img"
@@ -32,9 +36,12 @@ export default function CardGrid() {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Grid>
+    
         )
     })}
    
+    </Grid>
     </>
   );
 }
