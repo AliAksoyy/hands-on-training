@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -7,43 +7,86 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
-import Grid from '@mui/material/Grid';
+import {useNavigate} from "react-router-dom"
+
 const Main = () => {
+
+  const[search,setSearch]=useState("")
+
+  const [movies,setMovies]= useState([])
+
+  const navigate = useNavigate()
+  
+  const handleSubmit=(e)=> {
+    e.preventDefault()
+    console.log(movies);
+    getMovies()
+
+    setSearch("")
+  }
+
+const getMovies =()=> {
+
+  const API_KEY ="f9d519cf637913b53609ad35ac541965"
+  const url=`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
+
+  fetch(url).then((res)=> {
+    if(!res.ok){
+      throw new Error("hata var")
+    }
+    return res.json()
+  }).then((data)=> setMovies(data.results))
+  .catch((err)=> console.log(err))
+}
+
+
+
+
   return (
-    <>
+    <div className="p-2">
      <Box
       component="form"
       sx={{'& > :not(style)': { m: 1, width: '25ch' },display:"flex", justifyContent:"center", backgroundColor:"#ccc"}}
       noValidate
       autoComplete="off"
     >
-      <TextField id="standard-basic" label="search movie.." variant="standard" />
-      <Button variant="outlined">Search</Button>
+      <TextField id="standard-basic" label="search movie.." value={search} variant="standard" onChange={(e)=> setSearch(e.target.value)} />
+      <Button  onClick={handleSubmit} variant="outlined">Search</Button>
       </Box>
-     <div className="d-flex justify-content-center gap-4 mt-4 align-items-center">
-        <Card sx={{ minWidth: 250, borderRadius:"15px", boxShadow:"3px 3px 10px rgba(0,0,0,0.6) " }}>
-      <CardActionArea>
+     <div className="d-flex justify-content-center gap-4 mt-4 align-items-center flex-wrap">
+     {movies.map((movie)=> {
+      const {id,vote_average,poster_path,title} = movie
+      console.log(poster_path)
+      console.log(movie)
+      return(
+        
+        <Card onClick={()=>navigate("moviedetail")}  key={id} sx={{ width: "300px", height:"350px", borderRadius:"15px", boxShadow:"3px 3px 10px rgba(0,0,0,0.6)"}}>
+      <CardActionArea > 
         <CardMedia
           component="img"
-          height="200"
-          image="https://picsum.photos/id/684/600/400"
+          height="280"
+          image={`https://image.tmdb.org/t/p/w1280${poster_path}`}
           alt="green iguana"
         />
         <CardContent sx={{backgroundColor:"#2a3", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-          <Typography variant="body2" sx={{color:"white"}}>
-            Lorem ipsum dolor sit amet.
+          <Typography variant="body2" sx={{color:"white", border:"2px solid red", width:"80%", padding:"0.3rem"}}>
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{backgroundColor:"orange", padding:"0.415rem",borderRadius:"5px", color:"white"}}>
-            6.3
+            {vote_average}
           </Typography>
 
         </CardContent>
       </CardActionArea>
       
     </Card>
+       
+      )
+     })}
+   
    
     </div>
-    </>
+    </div>
   )
 }
 

@@ -82,7 +82,7 @@ function Navbar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <NavLink className="text-decoration-none text-dark"  to={page.toLowerCase()} textAlign="center">{page}</NavLink>
+                  <NavLink className="text-decoration-none text-dark"  to={page.toLowerCase()} >{page}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
