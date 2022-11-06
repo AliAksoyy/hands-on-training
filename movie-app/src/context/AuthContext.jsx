@@ -6,18 +6,21 @@ export const LoginContext =createContext;
 
 
 
-const AuthContext = () => {
+export const AuthContext = ({children}) => {
 
-  const [user,setUser]=useState("")
+  const [user,setUser]=useState({
+    email:"",
+    password:""
+  })
 
 const value={user,setUser}
 
   return  <LoginContext.Provider value={value}>
-
+            {children}
           </LoginContext.Provider>
   
 }
-export default AuthContext;
+
 
 //custom Hokk
 
