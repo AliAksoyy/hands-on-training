@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -14,17 +14,21 @@ const Main = () => {
 
   const[search,setSearch]=useState("")
 
-  const [movies,setMovies]= useState([])
+  const [datas,setDatas]= useState([])
+
+
+
+
 
   const navigate = useNavigate()
   
   const handleSubmit=(e)=> {
     e.preventDefault()
-    getMovies()
+    getMovies(search)
     setSearch("")
   }
 
-  const getMovies =()=> {
+  const getDatas =()=> {
     const API_KEY ="f9d519cf637913b53609ad35ac541965"
   const url=`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
   
@@ -34,9 +38,25 @@ const Main = () => {
       throw new Error("hata var")
     }
     return res.json()
-  }).then((data)=> setMovies(data.results))
+  }).then((data)=> setDatas(data.results))
   .catch((err)=> console.log(err))
 }
+useEffect(()=> {
+  getDatas()
+},[])
+
+
+const getMovies = (search) => {
+  const API_KEY ="f9d519cf637913b53609ad35ac541965"
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}`
+  fetch(url).then((res)=> res.json()).then((data)=> setDatas(data.results)).catch((err)=> console.log(err))
+}
+
+
+
+
+
+
 
 
 
@@ -53,8 +73,8 @@ const Main = () => {
       <Button  onClick={handleSubmit} variant="outlined">Search</Button>
       </Box>
      <div className="d-flex justify-content-center gap-4 mt-4 align-items-center flex-wrap">
-     {movies.map((movie)=> {
-      const {id,vote_average,poster_path,title} = movie
+     {datas?.map((data)=> {
+      const {id,vote_average,poster_path,title} = data
       return(
         
         <Card onClick={()=>navigate(`moviedetail/${id}`)}  key={id} sx={{ width: "300px", height:"350px", borderRadius:"15px", boxShadow:"3px 3px 10px rgba(0,0,0,0.6)"}}>
@@ -66,7 +86,7 @@ const Main = () => {
           alt="green iguana"
         />
         <CardContent sx={{backgroundColor:"#2a3", display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-          <Typography variant="body2" sx={{color:"white", border:"2px solid red", width:"80%", padding:"0.3rem"}}>
+          <Typography variant="body2" sx={{color:"white", width:"80%", padding:"0.3rem"}}>
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{backgroundColor:"orange", padding:"0.415rem",borderRadius:"5px", color:"white"}}>

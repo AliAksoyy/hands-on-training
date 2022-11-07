@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom"
 const MovieDetail = () => {
 
   const [movieDetail,setMovieDetail]=useState("")
+  const [videos,setVideos]=useState("")
 
   const {id} = useParams()
   
@@ -17,15 +18,33 @@ const MovieDetail = () => {
       }
       return res.json()}).then((data)=> setMovieDetail(data)).catch((err)=>console.log(err))
   }
-getMoviesId(id)
+
+
+  const getVideos= (id)=> {
+    const API_KEY ="f9d519cf637913b53609ad35ac541965"
+    const url = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`
+    fetch(url).then((res)=> res.json()).then((data)=> {console.log(data.results[0].key);
+    return setVideos(data.results[0].key)})
+    .catch((err)=>console.log(err))
+  }
 
 
 
+useEffect(() => {
+  getMoviesId(id)
+  getVideos(id)
+}, [])
+
+ 
 
   return (
     <div className="d-flex flex-column align-items-center p-3 " sytle={{height:"60vh", border:"3px solid red"}} >
-        <div className='d-flex justify-content-center align-items-center ' style={{width:"100%", height:"35vh"}} >
-          Movie 
+        <div className='d-flex justify-content-center align-items-center m-5  ' style={{width:"100%", height:"35vh"}} >
+
+         
+        <iframe width="70%" height="240" src={`https://www.youtube.com/embed?v=${videos}`} frameborder="0" allowfullscreen></iframe>
+      {console.log("ali")}
+
         </div>
         <div className="card mt-3" style={{width:"100%", height:"40vh"}}>
           <div className="row g-0">
