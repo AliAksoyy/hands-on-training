@@ -36,7 +36,7 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-       getUser()
+ 
   };
 
   const getUser = (e) => {
