@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useLoginContext } from '../context/AuthProvider';
+import { creatUser } from '../auth/firebase';
 
 
 function Copyright(props) {
@@ -36,6 +37,7 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    creatUser(user.email,user.password)
  
   };
 
