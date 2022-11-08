@@ -54,13 +54,6 @@ const getMovies = (search) => {
 
 
 
-
-
-
-
-
-
-
   return (
     <div className="p-2">
      <Box

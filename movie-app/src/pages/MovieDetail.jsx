@@ -42,7 +42,7 @@ useEffect(() => {
         <div className='d-flex justify-content-center align-items-center m-5  ' style={{width:"100%", height:"35vh"}} >
 
          
-        <iframe width="70%" height="240" src={`https://www.youtube.com/embed?v=${videos}`} frameBorder="0" ></iframe>
+        <iframe width="50%" height="300" src={`https://www.youtube.com/embed/${videos}`} frameBorder="0" ></iframe>
       {console.log("ali")}
 
         </div>
