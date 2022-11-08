@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { useLoginContext } from '../context/AuthProvider';
 import { creatUser } from '../auth/firebase';
+import {useNavigate} from "react-router-dom"
 
 
 function Copyright(props) {
@@ -34,10 +35,12 @@ export default function Register() {
 
   const {user,setUser}= useLoginContext()
 
+  const navigate=useNavigate()
+
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    creatUser(user.email,user.password)
+       e.preventDefault();
+       creatUser(user.email,user.password,navigate)
  
   };
 
