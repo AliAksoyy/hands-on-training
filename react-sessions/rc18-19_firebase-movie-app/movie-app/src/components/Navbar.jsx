@@ -7,10 +7,10 @@ import { useLoginContext } from "../context/LoginProvider";
 
 const Navbar = () => {
 
-const {user}=useLoginContext()
-console.log(user.email)
+const {currentUser}=useLoginContext()
+console.log(currentUser)
 
-  const currentUser = {displayName:"Ali Aksoy"}
+  // const currentUser = {displayName:"Ali Aksoy"}
   return <div>
     <nav className="relative w-full fixed-top flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
   <div className="container-fluid w-full flex flex-wrap items-center justify-between px-6">
