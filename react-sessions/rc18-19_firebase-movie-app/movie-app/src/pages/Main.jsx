@@ -9,6 +9,8 @@ const Main = () => {
 
   const [movies,setMovies]=useState([])
 
+  const [searchTerm, setSearchTerm] = useState("")
+
   useEffect(() => {
    getMovies(FEATURED_API)
   }, [])
@@ -24,19 +26,45 @@ const Main = () => {
     }).then((data)=> setMovies(data.results))
     .catch((err)=>console.log(err));
 
+  }   
+
+  const handleSubmit = (e)=> {
+      e.preventDefault()
+      getMovies(SEARCH_API+searchTerm)
+
+      
   }
 
 
 
-
-
-
-
-
-
-  return <div classsName="flex justify-content-center flex-wrap">
-    {movies.map((movie)=> <MovieCard key={movie.id} {...movie} />)}
-  </div>;
+  return (
+    <>
+      <form className="flex justify-center p-2" onSubmit={handleSubmit}>
+        <input
+          type="search"
+          className="w-80 h-8 rounded-md outline-none border p-1 m-2"
+          placeholder="Search a movie..."
+          onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchTerm}
+        />
+        <button className="text-white" type="submit">
+          Search
+        </button>
+      </form>
+      <div className="flex justify-center flex-wrap">
+         {loading ? (
+          <div
+            className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full text-blue-600 mt-52"
+            role="status"
+          >
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        ) : (
+          movies.map((movie) => <MovieCard key={movie.id} {...movie} />)
+        )} 
+      </div>
+    </>
+  );
 };
 
 export default Main;
