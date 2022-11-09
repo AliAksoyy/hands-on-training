@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import GoogleIcon from "../assets/icons/GoogleIcon";
 
 const Login = () => {
@@ -19,7 +20,7 @@ const Login = () => {
 
     <div className="overflow-hidden flex-1 h-screen justify-center items-center bg-[#23242a]">
       <div
-        className={`mt-[3vh] mx-auto overflow-hidden relative w-[380px] h-[620px] rounded-[8px] bg-[#1c1c1c] before:content-[""] before:absolute before:w-[380px] before:h-[420px] before:top-[-50%] before:left-[-50%] after:content-[""] after:absolute after:w-[380px] after:h-[420px] after:top-[-50%] after:left-[-50%] custom-linear-gradient`}
+        className={`mt-[3vh] mx-auto overflow-hidden relative w-[380px] h-[500px] rounded-[8px] bg-[#1c1c1c] before:content-[""] before:absolute before:w-[380px] before:h-[420px] before:top-[-50%] before:left-[-50%] after:content-[""] after:absolute after:w-[380px] after:h-[420px] after:top-[-50%] after:left-[-50%] custom-linear-gradient`}
       >
         <form className="absolute inset-[2px] rounded-[8px] bg-[#28292d] z-[10] form flex flex-col p-20" onSubmit={handleSubmit}>
           <h2 className="text-[#ff4b45] text-2xl font-[500] text-center tracking-[0.1em]">
@@ -51,6 +52,20 @@ const Login = () => {
             </span>
             <i className="absolute left-0 bottom-0 w-[100%] h-[2px] bg-[#ff4b45] rounded-[4px]"></i>
           </div>
+          <div className="flex justify-between">
+              <span
+                role="button"
+                className="links-a font-[0.75em] cursor-pointer decoration-none text-[#8f8f8f]"
+              >
+                Forgot Password
+              </span>
+              <Link
+                className="links-a font-[0.75em] cursor-pointer decoration-none text-[#8f8f8f]"
+                to="/register"
+              >
+                Sign Up
+              </Link>
+            </div>
           <input
             className="border-none outline-none bg-[#ff4b45] custom-input w-[100px] mt-[10px] rounded-[4px] font-[600] cursor-pointer"
             type="submit"
