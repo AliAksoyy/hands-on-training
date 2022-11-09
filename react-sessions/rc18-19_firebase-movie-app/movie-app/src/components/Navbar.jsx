@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import avatar from "../assets/icons/avatar.png"
 import {  logout } from "../auth/firebase";
 import { useLoginContext } from "../context/LoginProvider";
+import Switch from "./Switch";
 
 const Navbar = () => {
 
@@ -25,6 +26,7 @@ console.log(currentUser)
     <div className="flex items-center relative">
       
       {currentUser && <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>}
+      <Switch />
     
       <div className="dropdown relative">
         <span

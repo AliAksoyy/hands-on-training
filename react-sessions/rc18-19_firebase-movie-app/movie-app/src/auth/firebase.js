@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth,GoogleAuthProvider,onAuthStateChanged,signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile  } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth,GoogleAuthProvider,onAuthStateChanged,sendPasswordResetEmail,signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile  } from "firebase/auth";
+import { toastErrorNotify, toastSuccessNotify, toastWarnNotify } from "../helpsers/ToastNotify";
 
 
 //* Your web app's Firebase configuration
@@ -24,6 +25,7 @@ let userCredential =await createUserWithEmailAndPassword(auth, email, password,)
 await updateProfile(auth.currentUser, {displayName: displayName, photoURL: "https://thumbs.dreamstime.com/b/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg"})
 console.log(userCredential)
 navigate("/")
+toastSuccessNotify("Registered Succesfully")
 } catch (error) {
   console.log(error.message);
 }
@@ -35,6 +37,7 @@ export const signIn = async(email,password,navigate) => {
 
     let userCredential = await signInWithEmailAndPassword(auth, email, password)
     navigate("/")
+    toastSuccessNotify("Log in successfully")
 
     console.log(userCredential)
     
@@ -80,6 +83,21 @@ export const signUpWithGoogle = (navigate)=> {
   });
 }
 
+
+export const forgotPassword = (email)=> {
+
+
+  sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+    toastWarnNotify("Please check your email")
+  })
+  .catch((err) => {
+    toastErrorNotify(err.message)
+    // ..
+  });
+}
 
 
 
