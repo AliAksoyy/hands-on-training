@@ -44,15 +44,15 @@ export default function Tables() {
   return (
     <div>
     <h1 className='border border-3 bg-light my-5 text-center'>CONTACTS</h1>
-    <TableContainer  sx={{width:"35rem"}} component={Paper}>
+    <TableContainer  sx={{width:"35rem",marginTop:"5rem"}} component={Paper}>
       <Table sx={{ Width: 400 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            <StyledTableCell>Username</StyledTableCell>
+            <StyledTableCell align="right">Phone Number</StyledTableCell>
+            <StyledTableCell align="right">Gender</StyledTableCell>
+            <StyledTableCell align="right">Delete</StyledTableCell>
+            <StyledTableCell align="right">Edit</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -61,10 +61,10 @@ export default function Tables() {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="center">{row.calories}</StyledTableCell>
+              <StyledTableCell align="center">{row.fat}</StyledTableCell>
+              <StyledTableCell align="center">{row.carbs}</StyledTableCell>
+              <StyledTableCell align="center">{row.protein}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
