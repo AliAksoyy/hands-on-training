@@ -7,6 +7,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import ModeEditTwoToneIcon from '@mui/icons-material/ModeEditTwoTone';
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -63,8 +66,8 @@ export default function Tables() {
               </StyledTableCell>
               <StyledTableCell align="center">{row.calories}</StyledTableCell>
               <StyledTableCell align="center">{row.fat}</StyledTableCell>
-              <StyledTableCell align="center">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="center">{row.protein}</StyledTableCell>
+              <StyledTableCell align="center"><DeleteForeverIcon /></StyledTableCell>
+              <StyledTableCell align="center"><ModeEditTwoToneIcon /></StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
