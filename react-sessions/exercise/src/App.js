@@ -1,38 +1,31 @@
 import React from 'react'
-import Home from './pages/Home'
-
-
-import { Link,NavLink, Routes,Route } from 'react-router-dom'
-import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import NotFound from './pages/NotFound'
-import "./App.css"
 
 const App = () => {
   return (
-    <>
-    <nav>
-       <NavLink to="/" className={({isActive})=> isActive && 'aktif'}>Anasayfa</NavLink>
-       <NavLink to="/contact" style={({isActive})=> 
-       ({backgroundColor: isActive && "yellow"})
-       }>Contact</NavLink>
-       <NavLink to="/blog"> {({isActive})=> (
-            <>
-              Blog
-              {isActive && '(aktif)'}
-            </>
-       )}</NavLink>
-    </nav>
+    <div className='p-4 w-50 mx-auto border-border-2'>
+          <h1>Ürünler</h1>
+       <div className='d-flex justify-content-center gap-5 m-3'>
+           <div  style={{backgroundColor:"grey", width:"10rem", height:"10rem",paddingTop:"2rem"}}>
+            <h4>İpohone 12</h4>
+            <h6>15.000</h6>
+            <button>sepete ekle</button>
+           </div>
+           <div style={{backgroundColor:"grey", width:"10rem", height:"10rem",paddingTop:"2rem"}}>
+            <h4>Galaxy S20</h4>
+            <h6>7.000</h6>
+            <button>sepete ekle</button>
+           </div>
+           <div style={{backgroundColor:"grey", width:"10rem", height:"10rem",paddingTop:"2rem"}}>
+            <h4>Huawei P40</h4>
+            <h6>10.000</h6>
+            <button>sepete ekle</button>
+           </div>
+       </div>
+       <h2>Sepetiniz    <span>sepetiniz boş</span></h2> 
 
-      <Routes> 
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact/>} />
-        <Route path='/blog' element={<Blog/>} />
-        <Route path='*' element={<NotFound/>} />
-      </Routes>
-    </>
-    
-   
+
+
+    </div>
   )
 }
 
