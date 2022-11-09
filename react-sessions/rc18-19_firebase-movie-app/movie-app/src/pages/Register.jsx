@@ -12,8 +12,8 @@ const Register = () => {
 
   const handleSubmit = (e)=> {
     e.preventDefault()
-    createUser(email,password)
-    navigate("login")
+    createUser(email,password,navigate)
+    
     console.log(firstName,lastName);
   }
 

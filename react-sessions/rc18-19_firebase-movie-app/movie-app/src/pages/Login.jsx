@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import GoogleIcon from "../assets/icons/GoogleIcon";
+import { signIn } from "../auth/firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const navigate=useNavigate()
 
   const handleSubmit = (e)=> {
     e.preventDefault()
+    signIn(email,password,navigate) 
     
   }
 
@@ -24,7 +27,7 @@ const Login = () => {
       >
         <form className="absolute inset-[2px] rounded-[8px] bg-[#28292d] z-[10] form flex flex-col p-20" onSubmit={handleSubmit}>
           <h2 className="text-[#ff4b45] text-2xl font-[500] text-center tracking-[0.1em]">
-            Sign Up
+            Sign In
           </h2>
           <div className="relative w-[300px] mt-[35px] inputbox">
             <input
@@ -69,7 +72,7 @@ const Login = () => {
           <input
             className="border-none outline-none bg-[#ff4b45] custom-input w-[100px] mt-[10px] rounded-[4px] font-[600] cursor-pointer"
             type="submit"
-            value="Register"
+            value="Login"
           />
           <button
             className="flex justify-between border-none outline-none bg-[#ff4b45] custom-input w-[300px] mt-[15px] rounded-[4px] font-[600] cursor-pointer"

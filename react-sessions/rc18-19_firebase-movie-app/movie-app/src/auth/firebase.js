@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth,signInWithEmailAndPassword  } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth,onAuthStateChanged,signInWithEmailAndPassword, signOut  } from "firebase/auth";
+
 
 //* Your web app's Firebase configuration
 const firebaseConfig = {
@@ -16,21 +17,24 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
 
-export const createUser =async(email,password)=> {
+export const createUser =async(email,password,navigate)=> {
 try {
 
-let userCredential =await createUserWithEmailAndPassword(auth, email, password)
+let userCredential =await createUserWithEmailAndPassword(auth, email, password,)
 console.log(userCredential)
+navigate("/")
 } catch (error) {
   console.log(error.message);
 }
 }
 
-export const signIn = async(email,password) => {
+export const signIn = async(email,password,navigate) => {
 
   try {
 
     let userCredential = await signInWithEmailAndPassword(auth, email, password)
+    navigate("/")
+
     console.log(userCredential)
     
   } catch (error) {
@@ -40,6 +44,23 @@ export const signIn = async(email,password) => {
   }
 
 
+}
+
+export const userObserver = ()=> {
+ 
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log(user);
+  } else {
+          console.log("çıkış");
+
+       
+  }
+});
+}
+
+export const logout = ()=> {
+  signOut(auth)
 }
 
 
