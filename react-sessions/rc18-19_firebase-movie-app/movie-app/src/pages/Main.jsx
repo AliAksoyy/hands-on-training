@@ -34,7 +34,7 @@ const Main = () => {
 
 
 
-  return <div classsName="flex justify-center flex-wrap">
+  return <div classsName="flex justify-content-center flex-wrap">
     {movies.map((movie)=> <MovieCard key={movie.id} {...movie} />)}
   </div>;
 };
