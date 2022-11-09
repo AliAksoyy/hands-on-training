@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword, getAuth,onAuthStateChanged,signInWithEmailAndPassword, signOut  } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth,GoogleAuthProvider,onAuthStateChanged,signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile  } from "firebase/auth";
 
 
 //* Your web app's Firebase configuration
@@ -17,10 +17,11 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
 
-export const createUser =async(email,password,navigate)=> {
+export const createUser =async(email,password,navigate,displayName)=> {
 try {
 
 let userCredential =await createUserWithEmailAndPassword(auth, email, password,)
+await updateProfile(auth.currentUser, {displayName: displayName, photoURL: "https://thumbs.dreamstime.com/b/businessman-icon-image-male-avatar-profile-vector-glasses-beard-hairstyle-179728610.jpg"})
 console.log(userCredential)
 navigate("/")
 } catch (error) {
@@ -64,6 +65,19 @@ onAuthStateChanged(auth, (user) => {
 
 export const logout = ()=> {
   signOut(auth)
+}
+
+export const signUpWithGoogle = (navigate)=> {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(auth, provider)
+  .then((result) => {
+   console.log(result);
+   navigate("/")
+    // ...
+  }).catch((error) => {
+    console.log(error)
+    // ...
+  });
 }
 
 
