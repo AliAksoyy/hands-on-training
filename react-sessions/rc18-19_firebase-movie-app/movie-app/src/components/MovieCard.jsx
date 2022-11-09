@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useLoginContext } from '../context/LoginProvider';
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
@@ -9,6 +10,8 @@ const defaultImage =
 const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
 
   const {currentUser}=useLoginContext()
+
+  const navigate=useNavigate()
 
   const getVoteClass = (vote)=> {
     if(vote>=8){
@@ -26,8 +29,8 @@ const MovieCard = ({ poster_path, title, overview, vote_average, id }) => {
         <div
           className="movie"
           onClick={() => {
-            // navigate("details/" + id);
-            // !currentUser && alert("please log in to see details");
+            navigate("details/" + id);
+           !currentUser && alert("please log in to see details");
           }}
         >
           <img
