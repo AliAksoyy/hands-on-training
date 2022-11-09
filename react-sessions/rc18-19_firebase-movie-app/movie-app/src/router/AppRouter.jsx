@@ -5,10 +5,12 @@ import Login from "../pages/Login"
 import Main from "../pages/Main"
 import MovieDetail from "../pages/MovieDetail"
 import Navbar from "../components/Navbar";
+import LoginProvider from "../context/LoginProvider";
 
 const AppRouter = () => {
   return (
     <>
+      <LoginProvider>
       <BrowserRouter>
       <Navbar />
         <Routes>
@@ -18,6 +20,7 @@ const AppRouter = () => {
           <Route path="/details/:id" element={<MovieDetail />} />
         </Routes>
       </BrowserRouter>
+      </LoginProvider>
     </>
   )
 };
