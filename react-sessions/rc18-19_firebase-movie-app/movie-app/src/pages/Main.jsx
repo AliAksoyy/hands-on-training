@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../components/MovieCard";
+import { useLoginContext } from "../context/LoginProvider";
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY
 const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`;
@@ -11,6 +12,10 @@ const Main = () => {
 
   const [searchTerm, setSearchTerm] = useState("")
 
+  const [loading, setLoading] = useState(false)
+
+  const {currentUser}=useLoginContext()
+
   useEffect(() => {
    getMovies(FEATURED_API)
   }, [])
@@ -18,19 +23,30 @@ const Main = () => {
 
   const getMovies = (API)=> {
 
+    setLoading(true)
+
     fetch(API).then((res)=> {
       if(!res.ok){
         throw new Error("hata")
       }
       return res.json()
     }).then((data)=> setMovies(data.results))
-    .catch((err)=>console.log(err));
+    .catch((err)=>console.log(err))
+    .finally(()=>setLoading(false))
 
   }   
 
   const handleSubmit = (e)=> {
       e.preventDefault()
-      getMovies(SEARCH_API+searchTerm)
+      if(searchTerm && currentUser) {
+        getMovies(SEARCH_API+searchTerm)
+        setSearchTerm("")
+      }else if(!currentUser){
+        alert("please log in see details")
+      }else {
+        alert("please enter a text")
+      }
+      
 
       
   }
