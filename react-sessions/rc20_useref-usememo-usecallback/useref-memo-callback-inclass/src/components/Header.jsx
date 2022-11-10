@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = () => {
-  console.log("header");
+const Header = ({count}) => {
+  console.log("Render => Header Components")
   return (
-    <div className='bg-warning text-center'>Header Componenti</div>
+    <div className='bg-warning text-center'>Header Componenti : {count}</div>
   )
 }
 

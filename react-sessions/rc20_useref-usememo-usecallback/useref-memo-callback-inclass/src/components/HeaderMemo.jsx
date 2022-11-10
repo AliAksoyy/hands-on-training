@@ -1,10 +1,9 @@
-import React from 'react'
-import { memo } from 'react'
+import React,{memo} from 'react'
 
 const HeaderMemo = ({count}) => {
-  console.log("header components")
+  console.log("Render => HeaderMemo Components")
   return (
-    <div className='bg-danger text-center'>HeaderMemo Componenti {count}</div>
+    <div className='bg-danger text-center'>HeaderMemo Componenti : {count}</div>
   )
 }
 
