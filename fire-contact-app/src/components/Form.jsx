@@ -9,11 +9,22 @@ import Button  from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
 
 import NativeSelect from '@mui/material/NativeSelect';
+import { useState } from 'react';
 
 
 const Form = () => {
 
-
+    const [users, setUsers] = useState({
+        username:"",
+        phone:"",
+        gender:""
+    });
+console.log(users.username, users.phone,users.gender)
+        const handleSubmit = (e)=> {
+            e.preventDefault()
+            console.log("aliiids")
+            console.log(users);
+        }
 
 
   return (
@@ -28,13 +39,16 @@ const Form = () => {
                         Name
                         </InputLabel>
                         <Input
+                        name="username"
                         label="name"
                         id="input-with-icon-adornment"
                             startAdornment={
                             <InputAdornment position="start">
                             <AccountCircle />
                             </InputAdornment>
+                           
                         }
+                        onChange={(e)=> setUsers({...users, username:e.target.value})}
                         />
                         
   
@@ -50,25 +64,31 @@ const Form = () => {
                         ),
                         }}
                         variant="standard"
+                        onChange={(e)=> setUsers({...users, phone:e.target.value})}
+                        
+
                     />
                             <FormControl sx={{width:"14rem"}}>
                                 <InputLabel variant="standard" htmlFor="uncontrolled-native">
                                 Gender
                                 </InputLabel>
                                 <NativeSelect
+                                 onChange={(e)=> setUsers({...users, gender:e.target.value})}
+                                
+
                                 defaultValue={30}
                                 inputProps={{
                                     name: 'gender',
                                     id: 'uncontrolled-native',
                                 }}
                                 >
-                                <option value={10}>Male</option>
-                                <option value={20}>Female</option>
-                                <option value={30}>Unisex</option>
-                               
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="unisex">Unisex</option>
+                                
                                 </NativeSelect>
                             </FormControl>
-                            <Button margin="normal" sx={{width:"14rem"}} variant="contained" color="success">Add</Button>
+                            <Button onClick={handleSubmit} margin="normal" sx={{width:"14rem"}} variant="contained" color="success">Add</Button>
                     
                     </Box>
                 
