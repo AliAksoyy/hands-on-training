@@ -7,21 +7,23 @@ import TextField from '@mui/material/TextField';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Button  from '@mui/material/Button';
 import InputLabel from '@mui/material/InputLabel';
-
 import NativeSelect from '@mui/material/NativeSelect';
 import { useState } from 'react';
 
 
-const Form = () => {
+const Form = ({addUser}) => {
 
     const [users, setUsers] = useState({
         username:"",
         phone:"",
         gender:""
     });
-console.log(users.username, users.phone,users.gender)
+    const {username,phone,gender}=users
+
+
         const handleSubmit = (e)=> {
             e.preventDefault()
+            addUser(username,phone,gender)
             console.log("aliiids")
             console.log(users);
         }
