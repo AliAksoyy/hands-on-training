@@ -1,13 +1,12 @@
 import "./App.css";
 import Counter from "./components/counter/Counter";
-// import Todo from "./components/todo/Todo";
-import { legacy_createStore } from "redux";
-import reducer from "./redux";
 import { Provider } from "react-redux";
+import { store } from "./redux";
 
 function App() {
 
-const store = legacy_createStore(reducer)
+
+
 
 
 
