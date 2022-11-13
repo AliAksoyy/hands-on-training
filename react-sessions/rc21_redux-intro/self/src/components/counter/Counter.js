@@ -11,8 +11,8 @@ const Counter = () => {
       <h1>counter:{counter}</h1>
       <div>
         <button onClick={()=> dispatch({type: "INCREMENT"})} className="counter-button positive">increase</button>
-        <button className="counter-button zero">reset</button>
-        <button className="counter-button negative">decrease</button>
+        <button onClick={()=> dispatch({type:"CLEAR"})}  className="counter-button zero">reset</button>
+        <button onClick={()=> dispatch({type:"DECREMENT"})} className="counter-button negative">decrease</button>
       </div>
     </div>
   );
