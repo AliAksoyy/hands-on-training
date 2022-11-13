@@ -4,7 +4,7 @@ import todoReducer from "./reducers/todoReducers"
 
 
 const rootReducer = combineReducers({
-    counter:counterReducer,
+    count:counterReducer,
     todo:todoReducer
 });
 

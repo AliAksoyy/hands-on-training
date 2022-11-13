@@ -4,7 +4,7 @@ import "./Counter.css";
 
 const Counter = () => {
   const dispatch=useDispatch()
-  const {counter} =useSelector((state)=> state)
+  const {count:{counter}} =useSelector((state)=> state)
 
   return (
     <div className="app">
