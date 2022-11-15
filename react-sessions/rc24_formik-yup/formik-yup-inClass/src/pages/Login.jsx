@@ -11,6 +11,9 @@ import { useSelector } from "react-redux";
 import { Formik, Form } from "formik";
 import { TextField } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
+import useAuthCall from "../hooks/useAuthCall"
+import { useEffect } from "react";
+import {toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify"
 
 const  loginSchema = yup.object().shape({
   email: yup.string().email("please enter valid email").required("Please enter an email"),
@@ -20,6 +23,18 @@ const  loginSchema = yup.object().shape({
 const Login = () => {
   const navigate = useNavigate();
   const { currentUser, error, loading } = useSelector((state) => state?.auth);
+  const {login} = useAuthCall()
+
+  useEffect(()=> {
+    if(currentUser){
+      navigate("/stock")
+      toastSuccessNotify("Login Perfomed")
+    }
+  },[currentUser])
+
+  useEffect(()=> {
+    error && toastErrorNotify("Login can not a performed")
+  },[error])
 
   return (
     <Container maxWidth="lg">
@@ -62,7 +77,7 @@ const Login = () => {
             initialValues={{ email: "", password: "" }}
             validationSchema={loginSchema}
             onSubmit={(values, actions) => {
-              //!login(values)
+              login(values)
               actions.resetForm();
               actions.setSubmitting(false);
             }}
