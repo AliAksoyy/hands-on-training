@@ -10,29 +10,25 @@ import {Formik,Form} from "formik"
 import { useSelector } from "react-redux";
 import { TextField } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
+import * as yup from "yup";
+import useAuthCall from "../hooks/useAuthCall";
 
 
-let loginSchema = (values)=> {
-  const errors = {};
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-  ) {
-    errors.email = 'Invalid email address';
-  }
-  return errors;
-}
-
-
-
-
+const  loginSchema = yup.object().shape({
+  email: yup.string().email("please enter valid email").required("Please enter an email"),
+  password:yup.string().required().min(8, "8 harf olmalı")
+  .max(16, "yeter")
+  .matches(/\d+/, "number olmalı")
+  .matches(/[a-z]+/, "içermeli")
+})
+  
 
 
 
 const Login = () => {
   const navigate = useNavigate();
   const { currentUser, error, loading } = useSelector((state) => state?.auth);
+  const {login} =useAuthCall()
 
   return (
     <Container maxWidth="lg">
@@ -71,47 +67,62 @@ const Login = () => {
             Login
           </Typography>
 
-         <Formik
-         initialState={{email:"",password:""}}
-         validationSchema={loginSchema}
-         onSubmit={(values, actions)=> {
-          //!login isteği gönder
-          actions.resetForm()
-          actions.setSubmitting(false)
-         }}
-         >
-          {(values,errors,isSubmitting,handleChange,touched,handleBlur)=> (
+          <Formik
+            initialValues={{ email: "", password: "" }}
+            validationSchema={loginSchema}
+            onSubmit={(values, actions) => {
+             login(values)
+              actions.resetForm();
+              actions.setSubmitting(false);
+            }}
+          >
+            {({
+              values,
+              isSubmitting,
+              handleChange,
+              handleBlur,
+              touched,
+              errors,
+            }) => (
               <Form>
-                <Box sx={{display:"flex", flexDirection:"column",gap: 2}}>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   <TextField
-                  label="Email" 
-                  name="email"
-                  id="email"
-                  type="email"
-                  variant="outlined"
-                  value={values?.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  error={touched?.email && Boolean(errors?.email)}
-                  helperText={touched?.email && errors?.email}
+                    label="Email"
+                    name="email"
+                    id="email"
+                    type="email"
+                    variant="outlined"
+                    value={values.email}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.email && Boolean(errors.email)}
+                    helperText={touched.email && errors.email}
                   />
+
                   <TextField
-                  label="Password" 
-                  name="password"
-                  id="password"
-                  type="password"
-                  variant="outlined"
-                  value={values?.password}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  error={touched?.password && Boolean(errors?.password)}
-                  helperText={touched?.password && errors?.password}
+                    label="Password"
+                    name="password"
+                    id="password"
+                    type="password"
+                    variant="outlined"
+                    value={values.password}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={touched.password && Boolean(errors.password)}
+                    helperText={touched.password && errors.password}
                   />
-                  <LoadingButton type="submit" variant="outlined" loading={loading} loadingPosition="center"> Submit</LoadingButton>
+                  <LoadingButton
+                    type="submit"
+                    loading={loading}
+                    loadingPosition="center"
+                    variant="contained"
+                  >
+                    Submit
+                  </LoadingButton>
                 </Box>
               </Form>
-          )}
-         </Formik>     
+            )}
+          </Formik>    
 
 
           <Box sx={{ textAlign: "center", mt: 2 }}>
