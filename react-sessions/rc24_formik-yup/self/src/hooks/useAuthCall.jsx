@@ -23,6 +23,9 @@ const useAuthCall = () => {
         dispatch(fetchFail())
     }
 }
+
+
+
   const logout = async()=> {
 
     dispatch(fetchStart())

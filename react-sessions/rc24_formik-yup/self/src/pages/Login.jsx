@@ -44,6 +44,8 @@ const Login = () => {
    error && toastErrorNotify("login can not e performed")
   },[error])
   console.log(currentUser)
+
+  
   return (
     <Container maxWidth="lg">
       <Grid
