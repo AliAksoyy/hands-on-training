@@ -20,7 +20,7 @@ function Dashboard() {
    error &&  toastErrorNotify("logout oluyorsunuz")
   },[error])
 
-  
+
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
