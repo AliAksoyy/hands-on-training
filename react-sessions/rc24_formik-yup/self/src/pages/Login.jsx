@@ -13,6 +13,7 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import * as yup from "yup";
 import useAuthCall from "../hooks/useAuthCall";
 import { useEffect } from "react";
+import {toastSuccessNotify, toastErrorNotify} from "../helper/ToastNotify"
 
 
 const  loginSchema = yup.object().shape({
@@ -34,12 +35,13 @@ const Login = () => {
   useEffect(()=> {
     if(currentUser){
       navigate("/stock")
+      toastSuccessNotify("Login success")
     
     }
   },[currentUser])
 
   useEffect(()=> {
-   
+   error && toastErrorNotify("login can not e performed")
   },[error])
   console.log(currentUser)
   return (
