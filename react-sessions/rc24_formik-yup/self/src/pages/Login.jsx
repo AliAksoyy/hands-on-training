@@ -12,6 +12,7 @@ import { TextField } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
 import * as yup from "yup";
 import useAuthCall from "../hooks/useAuthCall";
+import { useEffect } from "react";
 
 
 const  loginSchema = yup.object().shape({
@@ -30,6 +31,17 @@ const Login = () => {
   const { currentUser, error, loading } = useSelector((state) => state?.auth);
   const {login} =useAuthCall()
 
+  useEffect(()=> {
+    if(currentUser){
+      navigate("/stock")
+    
+    }
+  },[currentUser])
+
+  useEffect(()=> {
+   
+  },[error])
+  console.log(currentUser)
   return (
     <Container maxWidth="lg">
       <Grid
