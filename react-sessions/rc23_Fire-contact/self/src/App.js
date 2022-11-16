@@ -13,10 +13,14 @@ function App() {
 
   const [info,setInfo]=useState(initialValues)
 
+  const handleSubmit = (e) => {
+      e.preventDefault()
+  }
+
 
   return (
     <div className="App">
-      <FormComponent info={info} setInfo={setInfo} />
+      <FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit} />
       <Contacts />
     </div>
   );
