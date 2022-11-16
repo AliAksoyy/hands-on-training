@@ -18,7 +18,7 @@ const FormComponent = ({info,setInfo, handleSubmit}) => {
 
   const handleChange = (e)=> {
     setInfo({...info, [e.target.name]:e.target.value})
-    console.log(info);
+    
 
   }
 
@@ -48,7 +48,7 @@ const FormComponent = ({info,setInfo, handleSubmit}) => {
       <h2 className="contact-header">Add Contact</h2>
 
       <Box style={{ backgroundColor: "white", padding: "20px" }}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e)=>handleSubmit(e)}>
           <Stack spacing={3} direction="column">
             <TextField
               variant="outlined"

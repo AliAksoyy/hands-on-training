@@ -8,8 +8,13 @@ import {
   TableBody,
   Paper,
 } from "@mui/material";
+import { useFetch } from "../../utils/functions";
 
 const Contacts = () => {
+
+  const {isLoading, contactList} =useFetch()
+
+
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -26,7 +31,36 @@ const Contacts = () => {
           </TableHead>
 
           <TableBody>
-            <TableRow></TableRow>
+           {isLoading ? (
+            <TableRow >
+              <TableCell colSpan={5} align="center">
+              Loading
+              </TableCell>
+            </TableRow>
+           ) :
+
+           contactList?.lenght===0 ? (
+            <TableRow>
+                 <TableCell colSpan={5} align="center">
+                  No result found
+                  </TableCell>
+            </TableRow>
+           ) : (
+
+            contactList?.map((item,i)=> {
+                console.log(item)
+                return (
+                <TableRow>
+                <TableCell align="center">{item.username}</TableCell>
+                <TableCell align="center">{item.phoneNumber}</TableCell>
+                <TableCell align="center">{item.gender}</TableCell>
+                <TableCell align="center"></TableCell>
+                <TableCell align="center"></TableCell>
+              </TableRow>
+              
+              )})
+           )
+            }
           </TableBody>
         </Table>
       </TableContainer>
