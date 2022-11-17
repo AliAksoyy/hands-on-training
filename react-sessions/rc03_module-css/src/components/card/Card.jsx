@@ -8,12 +8,12 @@ import CardStyle from "./card.module.css";
 //* baska class tarafindan ezilmesi (overriding) engellenir.
 //* CCS module Webpack, Browsify gibi tool'lar ile kullanilabilir.
 
-const Card = ({ language, btn, img }) => {
-  // console.log(props);
-  // const { language, btn, img } = props;  //!destr.
+const Card = (props) => {
+  
+   const { language, btn, img } = props.item;  //!destr.
   return (
     <div>
-      <h1 className={CardStyle["title"]}>{language}</h1>
+      <h1 className={CardStyle.title}>{language}</h1>
       <img className={CardStyle["images"]} src={img} alt="img" />
       <Buton btn={btn} />
     </div>
@@ -21,3 +21,4 @@ const Card = ({ language, btn, img }) => {
 };
 
 export default Card;
+

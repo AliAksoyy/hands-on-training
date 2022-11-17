@@ -8,13 +8,15 @@ import {
   TableBody,
   Paper,
 } from "@mui/material";
-import { useFetch } from "../../utils/functions";
+import { useFetch, deleteUser ,editUser} from "../../utils/functions";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
-const Contacts = () => {
+const Contacts = ({editUser}) => {
 
   const {isLoading, contactList} =useFetch()
 
-
+  console.log(contactList)
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -51,11 +53,15 @@ const Contacts = () => {
                 console.log(item)
                 return (
                 <TableRow>
-                <TableCell align="center">{item.username}</TableCell>
-                <TableCell align="center">{item.phoneNumber}</TableCell>
-                <TableCell align="center">{item.gender}</TableCell>
-                <TableCell align="center"></TableCell>
-                <TableCell align="center"></TableCell>
+                <TableCell align="center">{item?.username}</TableCell>
+                <TableCell align="center">{item?.phoneNumber}</TableCell>
+                <TableCell align="center">{item?.gender}</TableCell>
+                <TableCell align="center" onClick={()=> deleteUser(item.id)}>
+                  <DeleteIcon sx={{cursor:"pointer"}} />
+                </TableCell>
+                <TableCell align="center">
+                  <EditIcon sx={{cursor:"pointer"}} onClick={()=> editUser({...item})} />
+                </TableCell>
               </TableRow>
               
               )})
