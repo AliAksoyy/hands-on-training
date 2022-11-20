@@ -49,12 +49,14 @@
     // console.log(degisim(13))
 
 
-const instructors = {
-  name: "NoahA",
-};
+// const instructors = {
+//   name: "NoahA",
+// };
 
-console.log( delete instructors.name);
-console.log(instructors)
+// console.log( delete instructors.name);
+// console.log(instructors)
 
 
 // this done subject
+
+

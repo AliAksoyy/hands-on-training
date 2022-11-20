@@ -1,10 +1,13 @@
 import React from "react";
-import Register from "./pages/Register";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./router/AppRouter"
 
 const App = () => {
   return (
     <div>
-      <Register />
+      <BrowserRouter >
+        <AppRouter />
+      </BrowserRouter>
     </div>
   );
 };

@@ -6,46 +6,13 @@ import Typography from "@mui/material/Typography";
 import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/result.svg";
 import { Link, useNavigate } from "react-router-dom";
-import {Formik,Form} from "formik"
+
 import { useSelector } from "react-redux";
-import { TextField } from "@mui/material";
-import LoadingButton from '@mui/lab/LoadingButton';
-import * as yup from "yup";
-import useAuthCall from "../hooks/useAuthCall";
-import { useEffect } from "react";
-import {toastSuccessNotify, toastErrorNotify} from "../helper/ToastNotify"
-
-
-const  loginSchema = yup.object().shape({
-  email: yup.string().email("please enter valid email").required("Please enter an email"),
-  password:yup.string().required().min(8, "8 harf olmalı")
-  .max(16, "yeter")
-  .matches(/\d+/, "number olmalı")
-  .matches(/[a-z]+/, "içermeli")
-})
-  
-
-
 
 const Login = () => {
   const navigate = useNavigate();
-  const { currentUser, error, loading } = useSelector((state) => state?.auth);
-  const {login} =useAuthCall()
+  const { currentUser, error } = useSelector((state) => state?.auth);
 
-  useEffect(()=> {
-    if(currentUser){
-      navigate("/stock")
-      toastSuccessNotify("Login success")
-    
-    }
-  },[currentUser])
-
-  useEffect(()=> {
-   error && toastErrorNotify("login can not e performed")
-  },[error])
-  console.log(currentUser)
-
-  
   return (
     <Container maxWidth="lg">
       <Grid
@@ -82,64 +49,6 @@ const Login = () => {
           >
             Login
           </Typography>
-
-          <Formik
-            initialValues={{ email: "", password: "" }}
-            validationSchema={loginSchema}
-            onSubmit={(values, actions) => {
-             login(values)
-              actions.resetForm();
-              actions.setSubmitting(false);
-            }}
-          >
-            {({
-              values,
-              isSubmitting,
-              handleChange,
-              handleBlur,
-              touched,
-              errors,
-            }) => (
-              <Form>
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                  <TextField
-                    label="Email"
-                    name="email"
-                    id="email"
-                    type="email"
-                    variant="outlined"
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={touched.email && Boolean(errors.email)}
-                    helperText={touched.email && errors.email}
-                  />
-
-                  <TextField
-                    label="Password"
-                    name="password"
-                    id="password"
-                    type="password"
-                    variant="outlined"
-                    value={values.password}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={touched.password && Boolean(errors.password)}
-                    helperText={touched.password && errors.password}
-                  />
-                  <LoadingButton
-                    type="submit"
-                    loading={loading}
-                    loadingPosition="center"
-                    variant="contained"
-                  >
-                    Submit
-                  </LoadingButton>
-                </Box>
-              </Form>
-            )}
-          </Formik>    
-
 
           <Box sx={{ textAlign: "center", mt: 2 }}>
             <Link to="/register">Do you have not an account?</Link>

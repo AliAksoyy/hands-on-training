@@ -318,3 +318,6 @@ function emek(tarih,isim) {
 emek(1985,"a")
 emek(1987,"b")
 emek(1937,"c")
+
+
+for (var i = 0)
