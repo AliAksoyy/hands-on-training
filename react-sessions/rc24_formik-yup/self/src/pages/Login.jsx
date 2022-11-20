@@ -12,6 +12,8 @@ import { useSelector } from "react-redux";
 import { LoadingButton } from "@mui/lab";
 import * as yup from "yup"
 import { useAuthCall } from "../hooks/useAuthCalls";
+import { toastErrorNotify } from "../helper/ToastNotify";
+import { useEffect } from "react";
 
 
 const loginSchema=yup.object().shape({
@@ -25,6 +27,10 @@ const Login = () => {
   const {login} = useAuthCall()
 
   const { currentUser, error, loading } = useSelector((state) => state?.auth);
+
+  useEffect(()=> {
+    error && toastErrorNotify("hata var")
+  },[error])
 
   return (
     <Container maxWidth="lg">
@@ -69,6 +75,7 @@ const Login = () => {
           validationSchema={loginSchema}
           onSubmit={(values,actions)=> {
             login(values)
+            navigate("/stock")
             actions.resetForm()
             actions.setSubmitting(false)
           }}
