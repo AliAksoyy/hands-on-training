@@ -13,7 +13,7 @@ const BASE_URL="https://clarusway.pythonanywhere.com"
     dispatch(fetchStart())
 
     try {
-        const {data} = await axios.post(`${BASE_URL}/account/auth/login`), {email:values.email, password:values.password}
+        const {data} = await axios.post(`${BASE_URL}/account/auth/login`, {email:values.email, password:values.password})
         dispatch(loginSuccess(data))
     } catch (error) {
         console.log(error)
