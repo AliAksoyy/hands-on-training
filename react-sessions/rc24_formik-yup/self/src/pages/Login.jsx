@@ -11,6 +11,7 @@ import {Formik, Form, } from "formik"
 import { useSelector } from "react-redux";
 import { LoadingButton } from "@mui/lab";
 import * as yup from "yup"
+import { useAuthCall } from "../hooks/useAuthCalls";
 
 
 const loginSchema=yup.object().shape({
@@ -20,6 +21,9 @@ const loginSchema=yup.object().shape({
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const {login} = useAuthCall()
+
   const { currentUser, error, loading } = useSelector((state) => state?.auth);
 
   return (
@@ -64,7 +68,7 @@ const Login = () => {
           initialValues={{email:"", password:""}}
           validationSchema={loginSchema}
           onSubmit={(values,actions)=> {
-            //!login(values)
+            login(values)
             actions.resetForm()
             actions.setSubmitting(false)
           }}
