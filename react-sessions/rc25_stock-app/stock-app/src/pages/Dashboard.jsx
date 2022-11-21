@@ -90,8 +90,12 @@ function Dashboard(props) {
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
+          PaperProps={{
+            sx:{backgroundColor:blueGrey[900]},
+          }}
           open
         >
+        
           {drawer}
         </Drawer>
       </Box>
