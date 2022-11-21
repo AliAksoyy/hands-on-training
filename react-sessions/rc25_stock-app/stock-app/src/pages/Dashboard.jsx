@@ -11,6 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MenuListItems from '../components/MenuListItems';
+import { blueGrey } from '@mui/material/colors';
 
 const drawerWidth = 200;
 
@@ -76,6 +77,9 @@ function Dashboard(props) {
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+          }}
+          PaperProps={{
+            sx:{backgroundColor:blueGrey[900]},
           }}
         >
           {drawer}
