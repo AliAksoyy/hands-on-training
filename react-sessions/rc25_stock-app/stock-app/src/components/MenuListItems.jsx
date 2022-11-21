@@ -59,12 +59,23 @@ const MenuListItems = () => {
          <List>
         {icons?.map((item, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton onClick={()=> navigate(item.url)}>
+            {!item.url.includes("http") && 
+            ( <ListItemButton onClick={()=> navigate(item.url)}>
               <ListItemIcon>
                 {item.icon}
               </ListItemIcon>
               <ListItemText primary={item.title} />
-            </ListItemButton>
+            </ListItemButton> 
+            )}
+            {item.url.includes("http") && 
+            ( <ListItemButton to={item.url}>
+              <ListItemIcon>
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.title} />
+            </ListItemButton> 
+            )}
+            
           </ListItem>
         ))}
       </List>
