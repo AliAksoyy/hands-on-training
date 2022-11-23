@@ -18,6 +18,8 @@ const useStockCalls = () => {
       dispatch(fetchFail());
       console.log(error);
     }
+
+    dsfsd
   };
 
   const getFirms = () => getStockData("firms");
