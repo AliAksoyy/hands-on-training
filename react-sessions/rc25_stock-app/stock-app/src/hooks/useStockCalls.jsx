@@ -18,7 +18,8 @@ const useStockCalls = () => {
       dispatch(fetchFail());
       console.log(error);
     }
-
+    hocam derse başlamadan bir soru sorabilir miyim
+    hocam birşey sormak istiyorum da ; Şimdi bize sunmuş olduğunuz bu backend server girişi sonradan pasif hale gelecek mi ? biz bu çalışmamızın sürekli çalışmaı için kendimiz yaparken mockApi'den kendi endpointleri belirleyerek yapsak olur mu ?
     dsfsd
   };
 
