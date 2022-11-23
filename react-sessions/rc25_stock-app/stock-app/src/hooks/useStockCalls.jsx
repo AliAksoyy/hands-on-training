@@ -35,6 +35,8 @@ const useStockCalls = () => {
     }
   };
 
+  
+
   const deleteFirm = (id) => deleteStockData("firms", id);
 
   return { getFirms, getSales, deleteFirm };
