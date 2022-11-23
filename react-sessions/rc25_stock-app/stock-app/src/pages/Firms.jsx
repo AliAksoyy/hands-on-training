@@ -48,7 +48,7 @@ const Firms = () => {
         Firms
       </Typography>
 
-      <Button variant="contained" onClick={}>New Firm</Button>
+      <Button variant="contained" onClick={()=> setOpen(true)}>New Firm</Button>
 
        <FirmModal open={open} setOpen={setOpen} />
 
