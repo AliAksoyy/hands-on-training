@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useStockCalls from "../hooks/useStockCalls";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
@@ -14,7 +14,9 @@ import FirmCard from "../components/FirmCard";
 
 const Firms = () => {
   const { getFirms } = useStockCalls();
-  const { firms } = useSelector((state) => state.stock);
+  const { firms } = useSelector((state) => state.stock); 
+  const [open, setOpen] = useState(false);
+  ;
 
   // const dispatch = useDispatch();
 
@@ -46,7 +48,9 @@ const Firms = () => {
         Firms
       </Typography>
 
-      <Button variant="contained">New Firm</Button>
+      <Button variant="contained" onClick={}>New Firm</Button>
+
+       <FirmModal open={open} setOpen={setOpen} />
 
       {firms?.length > 0 && (
         <Grid container justifyContent="center" gap={3}>
