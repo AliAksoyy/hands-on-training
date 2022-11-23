@@ -19,10 +19,9 @@ const useStockCalls = () => {
       console.log(error);
     }
     hocam derse başlamadan bir soru sorabilir miyim
-    hocam birşey sormak istiyorum da ; Şimdi bize sunmuş olduğunuz bu backend server girişi sonradan pasif hale gelecek mi ? biz bu projemizin sürekli çalışmaı için kendimiz yaparken mockApi'den kendi endpointleri belirleyerek yapsak olur mu ?
+    hocam birşey sormak istiyorum da ; Şimdi bize sunmuş olduğunuz bu backend server girişi sonradan pasif hale gelecek mi ? biz bu projemizin sürekli çalışmaı için kendimiz yaparken mockApi'den kendi endpointlerimizi belirleyerek yapsak olur mu ?
     dsfsd
   };
-
   const getFirms = () => getStockData("firms");
   const getSales = () => getStockData("sales");
 
