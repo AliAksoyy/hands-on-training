@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MenuListItems from '../components/MenuListItems';
+import Button from '@mui/material/Button';
 
 const drawerWidth = 200;
 
@@ -51,9 +52,14 @@ function Dashboard(props) {
           >
             <MenuIcon />
           </IconButton>
+          <Box sx={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"100%"}}>
           <Typography variant="h6" noWrap component="div">
             Stock App
           </Typography>
+          <Button sx={{color:"#eee", fontSize:"1.1rem" }}>
+            Logout
+          </Button>
+          </Box>
         </Toolbar>
       </AppBar>
       <Box
