@@ -1,29 +1,13 @@
-import axios from "axios"
-import { useSelector, useDispatch } from 'react-redux';
-import {getSuccess} from "../features/stockSlice"
+
 import {useEffect} from "react"
+import useStockCalls from "../hooks/useStockCalls";
 
 const Firms = () => {
 
-  const {token} = useSelector(state => state.auth)
-  const dispatch=useDispatch()
- 
-
-  const getData = async() => {
-
-  const BASE_URL = "https://14281.fullstack.clarusway.com";
-    try {
-        const {data} = await axios.get(`${BASE_URL}/stock/firms/`, 
-        {headers: {Authorization: `Token ${token}`}} )
-        console.log(data)
-        dispatch(getSuccess(data, "firm"))
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  const {getFirms}= useStockCalls()
 
 useEffect(() => {
- getData()
+ getFirms("firms")
 }, [])
 
 
