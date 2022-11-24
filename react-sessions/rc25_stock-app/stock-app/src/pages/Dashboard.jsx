@@ -1,26 +1,26 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import MenuListItems from '../components/MenuListItems';
-import Button from '@mui/material/Button';
-import useAuthCalls from '../hooks/useAuthCalls';
-import { useSelector } from 'react-redux';
-import { Outlet } from 'react-router-dom';
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import MenuListItems from "../components/MenuListItems";
+import { blueGrey } from "@mui/material/colors";
+import useAuthCalls from "../hooks/useAuthCalls";
+import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 const drawerWidth = 200;
 
 function Dashboard(props) {
-
-  const {logout} = useAuthCalls()
-
-  const {currentUser}= useSelector(state=> state.auth)
+  const { currentUser } = useSelector((state) => state.auth);
+  const { logout } = useAuthCalls();
 
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -34,14 +34,14 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
       <MenuListItems />
-     
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -56,21 +56,18 @@ function Dashboard(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{display:"flex", justifyContent:"space-between", alignItems:"center", width:"100%"}}>
-          <Typography variant="h6" noWrap component="div">
+          <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             Stock App
           </Typography>
           {currentUser && (
-            <Button sx={{color:"#eee", fontSize:"1.1rem" }} onClick={()=> logout()}>
-            Logout
-          </Button>
+            <Button color="inherit" onClick={() => logout()}>
+              Logout
+            </Button>
           )}
-          
-          </Box>
         </Toolbar>
       </AppBar>
       <Box
@@ -88,12 +85,16 @@ function Dashboard(props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
-          PaperProps={{ 
-            sx:{backgroundColor:"lightgrey"}
-            
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
+            },
           }}
         >
           {drawer}
@@ -101,21 +102,29 @@ function Dashboard(props) {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
+            },
           }}
           open
-          PaperProps={{ 
-            sx:{backgroundColor:"lightgrey"}
-          }}
-
         >
           {drawer}
         </Drawer>
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+        }}
       >
         <Toolbar />
         <Outlet />
@@ -123,7 +132,4 @@ function Dashboard(props) {
     </Box>
   );
 }
-
-
-
 export default Dashboard;
