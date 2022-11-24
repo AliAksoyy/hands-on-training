@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import {useDispatch } from 'react-redux';
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 import { fetchFail, fetchStart, getSuccess } from '../features/stockSlice';
 import useAxiosCalls from './useAxiosCalls';
