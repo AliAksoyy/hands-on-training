@@ -12,6 +12,7 @@ import MenuListItems from '../components/MenuListItems';
 import Button from '@mui/material/Button';
 import useAuthCalls from '../hooks/useAuthCalls';
 import { useSelector } from 'react-redux';
+import { Outlet } from 'react-router-dom';
 
 const drawerWidth = 200;
 
@@ -117,7 +118,7 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        
+        <Outlet />
       </Box>
     </Box>
   );
