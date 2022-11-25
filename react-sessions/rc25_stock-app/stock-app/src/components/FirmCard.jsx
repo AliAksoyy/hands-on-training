@@ -7,6 +7,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import useStockCalls from '../hooks/useStockCalls';
+import EditIcon from '@mui/icons-material/Edit';
+import {globalHoverStyle} from "../style/globalStyle"
 
 export default function FirmCard({firm}) {
 
@@ -33,9 +35,9 @@ export default function FirmCard({firm}) {
          {address}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
+      <CardActions sx={{display:"flex", justifyContent:"center"}}>
+        <Button sx={globalHoverStyle} size="small"><EditIcon /></Button>
+        <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
       </CardActions>
     </Card>
   );
