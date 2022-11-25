@@ -26,13 +26,31 @@ const useStockCalls = () => {
     }
   }
     const getFirms = ()=> getStockData("firms")
+
+      // !--------------deleteCalls---------------
+
+        const deleteStockData = async(id,url) => {
+
+            dispatch(fetchStart())
+
+            try{
+                await axiosWithToken.delete(`/stock/${url}/${id}/`)
+                getStockData(url)
+                
+            }catch(err){
+              console.log(err)
+              dispatch(fetchFail())
+            }
+        }
+
+        const deleteFirm =(id)=> deleteStockData(id, "firms")
  
 
 
     
 
 
-  return {getFirms};
+  return {getFirms,deleteFirm};
 };
 
 export default useStockCalls
