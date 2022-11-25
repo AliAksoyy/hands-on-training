@@ -44,13 +44,30 @@ const useStockCalls = () => {
         }
 
         const deleteFirm =(id)=> deleteStockData(id, "firms")
+
+      // !--------------pıstCalls---------------
+      
+
+      const postStockData = async(info,url) => {
+
+        dispatch(fetchStart())
+      try {
+        await axiosWithToken.post(`stock/${url}/`, info)
+        getStockData(url)
+      } catch (error) {
+        console.log(error)
+      }
+
+      }
+
+      const postFirm = (info) =>postStockData(info,"firms")
  
 
 
     
 
 
-  return {getFirms,deleteFirm};
+  return {getFirms,deleteFirm, postFirm};
 };
 
 export default useStockCalls

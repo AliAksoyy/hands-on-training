@@ -40,7 +40,7 @@ useEffect(() => {
                 <Grid container justifyContent="center" gap={3} >
                     {firms?.map((firm)=> 
                   <Grid item key={firm.id}>
-                      <FirmCard firm={firm} />
+                      <FirmCard firm={firm}  open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
                   </Grid>
                   )}
                 </Grid>

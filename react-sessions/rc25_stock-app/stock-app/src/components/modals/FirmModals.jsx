@@ -5,13 +5,25 @@ import Modal from '@mui/material/Modal';
 import {modalStyle} from "../../style/globalStyle"
 import  TextField  from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import useStockCalls from '../../hooks/useStockCalls';
 
 
 export default function FirmModals({open,setOpen, info, setInfo}) {
+
+    const {postFirm}=useStockCalls()
  
     const handleSubmit = (e) => {
             e.preventDefault()
+            postFirm(info)
+            setOpen(false)
+            setInfo(null)
+           
             console.log(info)
+    }
+
+    const handleChange = (e) => {
+        setInfo({...info, [e.target.name]:e.target.value}) 
+
     }
 
   return (
@@ -31,38 +43,41 @@ export default function FirmModals({open,setOpen, info, setInfo}) {
             variant="outlined"
             name="name"
             type="text"
-            value={info?.name}
-            onChanege={(e)=> {setInfo({...info, [e.target.name]:e.target.value })}}
+            value={info?.name || ""}
+            onChange={handleChange}
             
              />
         <TextField 
-            id="name" 
-            label="Firm Name" 
+            id="phone" 
+            label="Phone" 
             variant="outlined"
-            name="name"
-            type="text"
-            value={info?.name}
-            onChanege={(e)=> {setInfo({...info, [e.target.name]:e.target.value })}}
+            name="phone"
+            type="tel"
+            value={info?.phone || ""}
+            onChange={handleChange}
+            
             
              />
         <TextField 
-            id="name" 
-            label="Firm Name" 
+            id="address" 
+            label="address" 
             variant="outlined"
-            name="name"
+            name="address"
             type="text"
-            value={info?.name}
-            onChanege={(e)=> {setInfo({...info, [e.target.name]:e.target.value })}}
+            value={info?.address || ""}
+            onChange={handleChange}
+            
             
              />
         <TextField 
-            id="name" 
-            label="Firm Name" 
+            id="image" 
+            label="Image" 
             variant="outlined"
-            name="name"
-            type="text"
-            value={info?.name}
-            onChanege={(e)=> {setInfo({...info, [e.target.name]:e.target.value })}}
+            name="image"
+            type="url"
+            value={info?.image || ""}
+            onChange={handleChange}
+            
             
              />
              <Button type="submit" variant="contained"> Submit</Button>

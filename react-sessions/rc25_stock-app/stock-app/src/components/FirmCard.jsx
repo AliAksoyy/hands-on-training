@@ -10,9 +10,9 @@ import useStockCalls from '../hooks/useStockCalls';
 import EditIcon from '@mui/icons-material/Edit';
 import {globalHoverStyle} from "../style/globalStyle"
 
-export default function FirmCard({firm}) {
+export default function FirmCard({firm, open, setOpen, info, setInfo}) {
 
-    const {deleteFirm} = useStockCalls()
+    const {deleteFirm, postFirm} = useStockCalls()
 
     const {name, phone, image, address, id} = firm
 
@@ -36,7 +36,7 @@ export default function FirmCard({firm}) {
         </Typography>
       </CardContent>
       <CardActions sx={{display:"flex", justifyContent:"center"}}>
-        <Button sx={globalHoverStyle} size="small"><EditIcon /></Button>
+        <Button onClick={()=> {setOpen(true); setInfo(firm); postFirm(info) }} sx={globalHoverStyle} size="small"><EditIcon  /></Button>
         <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
       </CardActions>
     </Card>
