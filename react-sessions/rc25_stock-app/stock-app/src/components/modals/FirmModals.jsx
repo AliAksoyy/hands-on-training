@@ -10,15 +10,18 @@ import useStockCalls from '../../hooks/useStockCalls';
 
 export default function FirmModals({open,setOpen, info, setInfo}) {
 
-    const {postFirm}=useStockCalls()
+    const {postFirm ,putFirms}=useStockCalls()
  
     const handleSubmit = (e) => {
             e.preventDefault()
-            postFirm(info)
+            if(info.id) {
+                putFirms(info)
+            }else {
+                postFirm(info)
+            }
             setOpen(false)
             setInfo(null)
            
-            console.log(info)
     }
 
     const handleChange = (e) => {

@@ -61,13 +61,28 @@ const useStockCalls = () => {
       }
 
       const postFirm = (info) =>postStockData(info,"firms")
+
+      // !--------------putCalls---------------
+
+      const putStockData = async(info,url) => {
+        dispatch(fetchStart())
+        try{
+        await axiosWithToken.put(`stock/${url}/${info.id}/`, info)
+         getStockData(url)
+          
+        }catch (err) {
+          console.log(err)
+          dispatch(fetchFail())
+        }
+      }
+      const putFirms = (info) => putStockData(info,"firms")
  
 
 
     
 
 
-  return {getFirms,deleteFirm, postFirm};
+  return {getFirms,deleteFirm, postFirm, putFirms};
 };
 
 export default useStockCalls

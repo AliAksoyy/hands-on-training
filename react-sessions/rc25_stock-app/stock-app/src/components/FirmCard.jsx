@@ -12,7 +12,7 @@ import {globalHoverStyle} from "../style/globalStyle"
 
 export default function FirmCard({firm, open, setOpen, info, setInfo}) {
 
-    const {deleteFirm, postFirm} = useStockCalls()
+    const {deleteFirm} = useStockCalls()
 
     const {name, phone, image, address, id} = firm
 
@@ -36,7 +36,7 @@ export default function FirmCard({firm, open, setOpen, info, setInfo}) {
         </Typography>
       </CardContent>
       <CardActions sx={{display:"flex", justifyContent:"center"}}>
-        <Button onClick={()=> {setOpen(true); setInfo(firm); postFirm(info) }} sx={globalHoverStyle} size="small"><EditIcon  /></Button>
+        <Button onClick={()=> {setOpen(true); setInfo(firm) }} sx={globalHoverStyle} size="small"><EditIcon  /></Button>
         <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
       </CardActions>
     </Card>
