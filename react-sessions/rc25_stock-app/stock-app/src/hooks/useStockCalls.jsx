@@ -26,6 +26,7 @@ const useStockCalls = () => {
     }
   }
     const getFirms = ()=> getStockData("firms")
+ 
 
 
     
