@@ -16,7 +16,7 @@ export default function BrandCard({brand, setOpen, setInfo, info}) {
     const {putBrands, deleteBrands} =useStockCalls()
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} elevation={20}>
         <CardContent>
         <Typography align='center'  variant="h5" component="div">
           {brand?.name}

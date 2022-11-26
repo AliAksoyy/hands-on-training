@@ -33,7 +33,7 @@ console.log(open)
       <Typography variant="h4" mb={4}>
         Brands
       </Typography>
-      <Button variant="contained" onClick={()=>{setOpen(true); setInfo({})}}> New Brands</Button>
+      <Button sx={{marginBottom:4}} variant="contained" onClick={()=>{setOpen(true); setInfo({})}}> New Brands</Button>
 
       <BrandModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
       
