@@ -21,3 +21,4 @@ export const modalStyle = {
     gap:2
 
   }
+  
