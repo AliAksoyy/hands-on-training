@@ -20,10 +20,12 @@ const Products = () => {
   const {products}=useSelector(state=>state.stock)
   console.log(products)
 
-const {getProducts}=useStockCalls()
+const {getProducts, getBrands, getCategories}=useStockCalls()
 
 useEffect(()=>{
   getProducts()
+  getBrands()
+  getCategories()
 },[])
 
 
