@@ -18,35 +18,56 @@ import ProductModal from "../components/modals/ProductModal";
 
 const Products = () => {
 
-  const [open,setOpen]=useState(false)
+  const [open,setOpen]=useState()
   const [info,setInfo]=useState({})
   
-  console.log(info)
-
   const [toogle, setToogle] =useState({
-    brand:false,
-    name:false,
-    stock:false
+    brand:1,
+    name:1,
+    stock:1
   })
-  const {products, category,brands}=useSelector(state=>state.stock)
+  const {products}=useSelector(state=>state.stock)
+
+  const [sortData,setSortData]=useState(products)
+  // console.log(sortData)
 
 //  console.log(products);
 //  console.log(category);
 // console.log(brands);
 
+useEffect(() => {
 
-const {getProducts, getBrands, getCategories}=useStockCalls()
+  setSortData(products)
 
-useEffect(()=>{
-  getProducts()
-  getBrands()
-  getCategories()
-},[])
+}, [products])
 
-const handleSort = (arg) => {
-  setToogle({...toogle, [arg]: !toogle[arg]})
+useEffect(() => {
+getCategories()
+getBrands()
+getProducts()
+}, [])
+
+const {getProducts, getBrands,getCategories}=useStockCalls()
+
+
+
+const handleSort = (arg,type) => {
+  setToogle({...toogle, [arg]: toogle[arg] * (-1)})
+  setSortData(
+    sortData?.map((item)=>item).sort((a,b)=> {
+      if(type==="number"){
+        return toogle[arg] * (a[arg]- b[arg])
+      }else {
+        if(toogle[arg]===1){
+          return b[arg] > a[arg] ? 1 : a[arg] > b[arg] ? -1 :0
+        }else {
+            return a[arg] > b[arg] ? 1 : b[arg] > a[arg] ? -1 : 0
+        }
+      }
+    })
+  )
 }
-
+console.log(sortData)
 
 
   return (
@@ -66,7 +87,7 @@ const handleSort = (arg) => {
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>#</TableCell>
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>Category</TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("brand")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("brand", "text")}>
                     <div>Brand</div>
                     {toogle.brand &&  <UpgradeIcon /> }
                     {!toogle.brand && <VerticalAlignBottomIcon /> }
@@ -74,14 +95,14 @@ const handleSort = (arg) => {
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("name")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("name", "text")}>
                     <div>Name</div>
                     {toogle.name &&  <UpgradeIcon /> }
                     {!toogle.name && <VerticalAlignBottomIcon /> }
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("stock")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("stock", "number")}>
                     <div>Stock</div>
                     {toogle.stock &&  <UpgradeIcon /> }
                     {!toogle.stock && <VerticalAlignBottomIcon /> }
@@ -91,15 +112,15 @@ const handleSort = (arg) => {
               </TableRow>
             </TableHead>
                <TableBody>
-                  {products?.map((product,i)=> (
+                  {sortData?.map((sData,i)=> (
                     <TableRow key={i+1}>
                     <TableCell align="center" component="th" scope="row">
                       {i+1}
                     </TableCell>
-                    <TableCell align="center">{product.category}</TableCell>
-                    <TableCell align="center">{product.brand}</TableCell>
-                    <TableCell align="center">{product.name}</TableCell>
-                    <TableCell align="center">{product.stock}</TableCell>
+                    <TableCell align="center">{sData.category}</TableCell>
+                    <TableCell align="center">{sData.brand}</TableCell>
+                    <TableCell align="center">{sData.name}</TableCell>
+                    <TableCell align="center">{sData.stock}</TableCell>
                     <TableCell align="center"><DeleteForeverIcon sx={{"&:hover": {color:"red"}, cursor:"pointer"}} /></TableCell>
                   </TableRow> 
                   ))}
