@@ -20,6 +20,7 @@ const Firms = () => {
   const {getFirms}= useStockCalls()
 
   const {firms} = useSelector(state=> state.stock)
+  
 
 useEffect(() => {
  getFirms()
@@ -32,7 +33,7 @@ useEffect(() => {
               <Typography variant="h4" mb={4}>
                 Firms
               </Typography>
-              <Button variant="contained" onClick={()=> setOpen(true)}>New Firm</Button>
+              <Button variant="contained" onClick={()=> {setOpen(true); setInfo({})}}>New Firm</Button>
 
                 <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
 

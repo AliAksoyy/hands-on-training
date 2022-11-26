@@ -21,4 +21,23 @@ export const modalStyle = {
     gap:2
 
   }
+
+  export const gridFlex = {
+    display:"flex",
+    flexDirection: {xs:"column", md:"row"},
+    alignItems:"center",
+    justifyContent:"center",
+    gap:2,
+ 
+
+  }
+  export const iconFlex = {
+    display:"flex",
+    width:"100%",
+    alignItems:"center",
+    justifyContent:"center",
+    gap:1,
+    
+ 
+  }
   

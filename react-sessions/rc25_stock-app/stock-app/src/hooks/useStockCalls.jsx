@@ -26,6 +26,7 @@ const useStockCalls = () => {
     }
   }
     const getFirms = ()=> getStockData("firms")
+    const getBrands = ()=> getStockData("brands")
 
       // !--------------deleteCalls---------------
 
@@ -45,7 +46,7 @@ const useStockCalls = () => {
 
         const deleteFirm =(id)=> deleteStockData(id, "firms")
 
-      // !--------------pıstCalls---------------
+      // !--------------postCalls---------------
       
 
       const postStockData = async(info,url) => {
@@ -82,7 +83,7 @@ const useStockCalls = () => {
     
 
 
-  return {getFirms,deleteFirm, postFirm, putFirms};
+  return {getFirms,deleteFirm, postFirm, putFirms, getBrands};
 };
 
 export default useStockCalls
