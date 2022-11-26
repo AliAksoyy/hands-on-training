@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import useStockCalls from "../hooks/useStockCalls";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import UpgradeIcon from "@mui/icons-material/Upgrade";
@@ -17,8 +17,15 @@ import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
 
 const Products = () => {
 
+  const [toogle, setToogle] =useState({
+    brand:false,
+    name:false,
+    stock:false
+  })
+
   const {products}=useSelector(state=>state.stock)
-  console.log(products)
+ console.log(products);
+
 
 const {getProducts, getBrands, getCategories}=useStockCalls()
 
@@ -27,6 +34,11 @@ useEffect(()=>{
   getBrands()
   getCategories()
 },[])
+
+const handleToogle = (tt) => {
+  setToogle({...toogle, [tt]: !toogle[tt]})
+}
+console.log(toogle)
 
 
   return (
@@ -43,24 +55,25 @@ useEffect(()=>{
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>#</TableCell>
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>Category</TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("brand")}>
                     <div>Brand</div>
-                    {true && <UpgradeIcon />}
-                    {false && <VerticalAlignBottomIcon />}
+                    {toogle.brand &&  <UpgradeIcon /> }
+                    {!toogle.brand && <VerticalAlignBottomIcon /> }
+                    
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("name")}>
                     <div>Name</div>
-                    {true && <UpgradeIcon />}
-                    {false && <VerticalAlignBottomIcon />}
+                    {toogle.name &&  <UpgradeIcon /> }
+                    {!toogle.name && <VerticalAlignBottomIcon /> }
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("stock")}>
                     <div>Stock</div>
-                    {true && <UpgradeIcon />}
-                    {false && <VerticalAlignBottomIcon />}
+                    {toogle.stock &&  <UpgradeIcon /> }
+                    {!toogle.stock && <VerticalAlignBottomIcon /> }
                   </Box>
                 </TableCell>
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>Operation</TableCell >
