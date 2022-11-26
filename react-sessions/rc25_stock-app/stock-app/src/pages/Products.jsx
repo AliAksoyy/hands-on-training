@@ -12,10 +12,14 @@ import { useSelector } from "react-redux";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import UpgradeIcon from "@mui/icons-material/Upgrade";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
+import ProductModal from "../components/modals/ProductModal";
 
 
 
 const Products = () => {
+
+  const [open,setOpen]=useState(false)
+  const [info,setInfo]=useState({category:"", productName:"",brand:""})
 
   const [toogle, setToogle] =useState({
     brand:false,
@@ -38,7 +42,7 @@ useEffect(()=>{
 const handleSort = (arg) => {
   setToogle({...toogle, [arg]: !toogle[arg]})
 }
-console.log(toogle)
+console.log(open)
 
 
   return (
@@ -46,7 +50,10 @@ console.log(toogle)
         <Typography variant="h4" my={4} color="error">
           Products
         </Typography>
-        <Button variant="contained" sx={{marginBottom:"4rem"}}>New Product</Button>
+        <Button variant="contained" sx={{marginBottom:"4rem"}} onClick={()=> {setOpen(true); setInfo({})}} >New Product</Button>
+
+        <ProductModal setInfo={setInfo} info={info} open={open} setOpen={setOpen} />
+
         <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} elevation={10}>
              
