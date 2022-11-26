@@ -19,19 +19,22 @@ import ProductModal from "../components/modals/ProductModal";
 const Products = () => {
 
   const [open,setOpen]=useState(false)
-  const [info,setInfo]=useState({category:"", productName:"",brand:""})
+  const [info,setInfo]=useState({})
+  
+  console.log(info)
 
   const [toogle, setToogle] =useState({
     brand:false,
     name:false,
     stock:false
   })
-
+  const {getProducts, getBrands, getCategories}=useStockCalls()
   const {products}=useSelector(state=>state.stock)
- console.log(products);
 
+//  console.log(products);
+//  console.log(category);
+// console.log(brands);
 
-const {getProducts, getBrands, getCategories}=useStockCalls()
 
 useEffect(()=>{
   getProducts()
@@ -39,10 +42,12 @@ useEffect(()=>{
   getCategories()
 },[])
 
+
+
 const handleSort = (arg) => {
   setToogle({...toogle, [arg]: !toogle[arg]})
 }
-console.log(open)
+
 
 
   return (

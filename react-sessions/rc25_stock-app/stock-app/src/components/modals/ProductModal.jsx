@@ -3,9 +3,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Select from '@mui/material/Select';
 import Modal from '@mui/material/Modal';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import { useSelector } from "react-redux";
+import { TextField } from '@mui/material';
 import useStockCalls from '../../hooks/useStockCalls';
 
-import { TextField } from '@mui/material';
 
 const style = {
   position: 'absolute',
@@ -20,12 +24,17 @@ const style = {
   
 };
 
-export default function ProductModal({open, setOpen, setInfo, info}) {
+export default function ProductModal({open,setOpen, setInfo, info}) {
  
-const {putProduct, postProduct} =useStockCalls()
+ const {putProduct, postProduct} =useStockCalls()
+const {categories,brands}=useSelector(state=>state.stock)
+
+
+
 
         const handleSubmit = (e) => {
             e.preventDefault()
+            console.log(info)
             if(info.id){
               putProduct(info)
             }else{
@@ -36,7 +45,7 @@ const {putProduct, postProduct} =useStockCalls()
             }
            
             
-            console.log(info)
+           
 
         
     const handleChange = (e) => {
@@ -55,31 +64,50 @@ const {putProduct, postProduct} =useStockCalls()
       >
         <Box component="form" onSubmit={handleSubmit} sx={style}>
         <Box sx={{display:"flex", flexDirection:"column", gap:2}}>
-          <Select
+        <FormControl fullWidth>
+        <InputLabel id="demo-controlled-open-select-label">Category</InputLabel>
+        <Select
             label="Category"
             id="category"
             name="category"
             type="text"
             variant="outlined"
-            value={info?.category}
+            value={info?.category_id || ""}
             onChange={handleChange}
-          />
-          <Select
-            label="Brand"
-             id="brand"
-             type="text"
-            name="brand"
+        >
+          
+         {categories?.map((category)=> (
+          <MenuItem key={category.id} value={category.name}>{category.name}</MenuItem>
+         ) )}
+          
+        </Select>
+      </FormControl>
+        <FormControl fullWidth>
+        <InputLabel id="demo-controlled-open-select-label">Brands</InputLabel>
+        <Select
+            label="Brands"
+            id="brands"
+            name="brands"
+            type="text"
             variant="outlined"
-            value={info?.brand}
+            value={info?.brands_id || ""}
             onChange={handleChange}
-          />
+        >
+        {brands?.map((brand)=> 
+          <MenuItem key={brand.id} value={brand.name}>{brand.name}</MenuItem>
+        )}
+         
+        
+        </Select>
+      </FormControl>
+         
           <TextField
             label="Product Name"
              id="product"
              type="text"
             name="product"
             variant="outlined"
-            value={info?.product}
+            value={info?.name|| ""}
             onChange={handleChange}
           />
           <Button type="submit" variant="contained" size="large">Save Brands</Button>
