@@ -35,8 +35,8 @@ useEffect(()=>{
   getCategories()
 },[])
 
-const handleToogle = (tt) => {
-  setToogle({...toogle, [tt]: !toogle[tt]})
+const handleSort = (arg) => {
+  setToogle({...toogle, [arg]: !toogle[arg]})
 }
 console.log(toogle)
 
@@ -55,7 +55,7 @@ console.log(toogle)
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>#</TableCell>
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>Category</TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("brand")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("brand")}>
                     <div>Brand</div>
                     {toogle.brand &&  <UpgradeIcon /> }
                     {!toogle.brand && <VerticalAlignBottomIcon /> }
@@ -63,14 +63,14 @@ console.log(toogle)
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("name")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("name")}>
                     <div>Name</div>
                     {toogle.name &&  <UpgradeIcon /> }
                     {!toogle.name && <VerticalAlignBottomIcon /> }
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleToogle("stock")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("stock")}>
                     <div>Stock</div>
                     {toogle.stock &&  <UpgradeIcon /> }
                     {!toogle.stock && <VerticalAlignBottomIcon /> }
