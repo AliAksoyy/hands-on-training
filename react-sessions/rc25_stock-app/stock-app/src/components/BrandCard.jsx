@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
@@ -11,9 +10,9 @@ import { iconFlex } from '../style/globalStyle';
 import { Box } from '@mui/material';
 import useStockCalls from "../hooks/useStockCalls"
 
-export default function BrandCard({brand, setOpen, setInfo, info}) {
+export default function BrandCard({brand, setOpen, setInfo}) {
 
-    const {putBrands, deleteBrands} =useStockCalls()
+    const {deleteBrands} =useStockCalls()
 
   return (
     <Card sx={{ maxWidth: 345 }} elevation={20}>
