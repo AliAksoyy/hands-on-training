@@ -20,9 +20,6 @@ const Products = () => {
 
   const [open,setOpen]=useState(false)
   const [info,setInfo]=useState({})
-
-  const [selectedBrands, setSelectedBrands] = useState([]);
-  const [selectedProducts, setSelectedProducts] = useState([]);
   
   console.log(info)
 
@@ -31,22 +28,20 @@ const Products = () => {
     name:false,
     stock:false
   })
-  console.log(toogle)
-  const {getProducts, getBrands, getCategories}=useStockCalls()
-  const {products}=useSelector(state=>state.stock)
+  const {products, category,brands}=useSelector(state=>state.stock)
 
 //  console.log(products);
 //  console.log(category);
 // console.log(brands);
 
 
+const {getProducts, getBrands, getCategories}=useStockCalls()
+
 useEffect(()=>{
   getProducts()
   getBrands()
   getCategories()
 },[])
-
-
 
 const handleSort = (arg) => {
   setToogle({...toogle, [arg]: !toogle[arg]})
@@ -71,7 +66,7 @@ const handleSort = (arg) => {
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>#</TableCell>
                 <TableCell align="center" sx={{"&:hover":{color:"red"}, cursor:"pointer"}}>Category</TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("brand", "text")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("brand")}>
                     <div>Brand</div>
                     {toogle.brand &&  <UpgradeIcon /> }
                     {!toogle.brand && <VerticalAlignBottomIcon /> }
@@ -79,14 +74,14 @@ const handleSort = (arg) => {
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("name","text")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("name")}>
                     <div>Name</div>
                     {toogle.name &&  <UpgradeIcon /> }
                     {!toogle.name && <VerticalAlignBottomIcon /> }
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("stock","number")}>
+                <Box sx={{display:"flex", gap:1, justifyContent:"center", cursor:"pointer", "&:hover":{color:"red"}}} onClick={()=>handleSort("stock")}>
                     <div>Stock</div>
                     {toogle.stock &&  <UpgradeIcon /> }
                     {!toogle.stock && <VerticalAlignBottomIcon /> }
