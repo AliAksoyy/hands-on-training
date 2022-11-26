@@ -33,7 +33,7 @@ console.log(open)
       <Typography variant="h4" mb={4}>
         Brands
       </Typography>
-      <Button variant="contained" onClick={()=>setOpen(true)}> New Brands</Button>
+      <Button variant="contained" onClick={()=>{setOpen(true); setInfo({})}}> New Brands</Button>
 
       <BrandModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
       
@@ -41,7 +41,7 @@ console.log(open)
         <Grid container sx={gridFlex} >
         {brands?.map((brand)=> 
         <Grid item key={brand.id}>
-          <BrandCard  brand={brand} setInfo={setInfo} setOpen={setOpen}/>
+          <BrandCard  brand={brand} setInfo={setInfo} info={info} setOpen={setOpen}/>
         </Grid>
         )}
       </Grid>

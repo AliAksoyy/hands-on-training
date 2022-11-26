@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import useStockCalls from '../../hooks/useStockCalls';
 
 import { TextField } from '@mui/material';
 
@@ -21,11 +22,23 @@ const style = {
 
 export default function BrandModal({open, setOpen, setInfo, info}) {
  
+const {putBrands, postBrands} =useStockCalls()
 
         const handleSubmit = (e) => {
             e.preventDefault()
+            if(info.id){
+                putBrands(info)
+            }else{
+            postBrands(info)
+            }
+            setInfo({})
+            setOpen(false)
+            }
+           
+            
             console.log(info)
-        }
+
+        
     const handleChange = (e) => {
         const {name,value}=e.target
         setInfo({...info, [name]:value})
@@ -66,5 +79,5 @@ export default function BrandModal({open, setOpen, setInfo, info}) {
         </Box>
       </Modal>
     </div>
-  );
+  )
 }

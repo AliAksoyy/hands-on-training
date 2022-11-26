@@ -9,8 +9,12 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { iconFlex } from '../style/globalStyle';
 import { Box } from '@mui/material';
+import useStockCalls from "../hooks/useStockCalls"
 
-export default function BrandCard({brand, setOpen, setInfo}) {
+export default function BrandCard({brand, setOpen, setInfo, info}) {
+
+    const {putBrands, deleteBrands} =useStockCalls()
+
   return (
     <Card sx={{ maxWidth: 345 }}>
         <CardContent>
@@ -30,8 +34,8 @@ export default function BrandCard({brand, setOpen, setInfo}) {
       
       <CardActions>
         <Box sx={iconFlex}>
-        <EditIcon onClick={()=> setOpen(true)} sx={{"&:hover" : {color:"red"},cursor:"pointer"}}/>
-        <DeleteForeverIcon  sx={{"&:hover" : {color:"red"},cursor:"pointer"}}/>
+        <EditIcon onClick={()=> {setOpen(true);  setInfo(brand)}} sx={{"&:hover" : {color:"red"},cursor:"pointer"}}/>
+        <DeleteForeverIcon onClick={()=> deleteBrands(brand.id)}  sx={{"&:hover" : {color:"red"},cursor:"pointer"}}/>
         </Box>
       </CardActions>
     </Card>
