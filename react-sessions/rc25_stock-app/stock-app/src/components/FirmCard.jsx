@@ -1,55 +1,43 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import EditIcon from "@mui/icons-material/Edit";
-import { btnHoverStyle, flexCenter, flexColumn } from "../styles/globalStyle";
-import useStockCalls from "../hooks/useStockCalls";
-import { CardHeader } from "@mui/material";
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import DeleteIcon from '@mui/icons-material/Delete';
+import useStockCalls from '../hooks/useStockCalls';
+import EditIcon from '@mui/icons-material/Edit';
+import {globalHoverStyle} from "../style/globalStyle"
 
-export default function FirmCard({ firm, setOpen, setInfo }) {
-  const { deleteFirm } = useStockCalls();
+export default function FirmCard({firm, open, setOpen, info, setInfo}) {
+
+    const {deleteFirm} = useStockCalls()
+
+    const {name, phone, image, address, id} = firm
+
   return (
-    <Card
-      elevation={10}
-      sx={{
-        p: 2,
-        maxWidth: "300px",
-        maxHeight: "400px",
-        minHeight: "400px",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <CardHeader title={firm?.name} subheader={firm?.address} />
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        height="325"
-        width="250"
-        image={firm?.image}
-        sx={{ p: 1, objectFit: "contain" }}
         component="img"
-        alt="firm-img"
+        alt="green iguana"
+        height="140"
+        image={image}
       />
       <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {name}
+        </Typography>
+        <Typography gutterBottom variant="h5" component="div">
+         {phone}
+        </Typography>
         <Typography variant="body2" color="text.secondary">
-          Phone: {firm?.phone}
+         {address}
         </Typography>
       </CardContent>
-      <CardActions sx={flexCenter}>
-        <EditIcon
-          sx={btnHoverStyle}
-          onClick={() => {
-            setOpen(true);
-            setInfo(firm);
-          }}
-        />
-        <DeleteOutlineIcon
-          sx={btnHoverStyle}
-          onClick={() => deleteFirm(firm?.id)}
-        />
+      <CardActions sx={{display:"flex", justifyContent:"center"}}>
+        <Button onClick={()=> {setOpen(true); setInfo(firm) }} sx={globalHoverStyle} size="small"><EditIcon  /></Button>
+        <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
       </CardActions>
     </Card>
   );
