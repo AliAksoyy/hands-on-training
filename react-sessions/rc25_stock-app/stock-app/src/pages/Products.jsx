@@ -61,7 +61,7 @@ const handleSort = (arg,type) => {
         if(toogle[arg]===1){
           return b[arg] > a[arg] ? 1 : a[arg] > b[arg] ? -1 :0
         }else {
-            return a[arg] > b[arg] ? 1 : b[arg] > a[arg] ? -1 : 0
+            return a[arg] > b[arg] ? 1 : b[arg > a[arg] ? -1 :0]
         }
       }
     })
