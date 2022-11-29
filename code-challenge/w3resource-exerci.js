@@ -664,6 +664,7 @@
 //       if(str[i] === str[i+1]) {
 //           counter++
 //           console.log(counter)
+ss
 //       }
 
 //     }
