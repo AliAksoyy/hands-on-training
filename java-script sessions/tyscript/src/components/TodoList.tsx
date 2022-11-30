@@ -1,6 +1,10 @@
 import React from 'react'
 
-const TodoList = () => {
+interface ITodoList {
+    todos:TodoType[]
+}
+
+const TodoList = ({todos}) => {
   return (
     <div>TodoList</div>
   )
