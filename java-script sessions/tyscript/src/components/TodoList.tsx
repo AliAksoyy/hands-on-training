@@ -4,7 +4,7 @@ interface ITodoList {
     todos:TodoType[]
 }
 
-const TodoList = ({todos}) => {
+const TodoList:React.FC<ITodoList>= ({todos}) => {
   return (
     <div>TodoList</div>
   )
