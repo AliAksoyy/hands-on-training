@@ -63,5 +63,12 @@
 
 // console.log(filterList([1,2,'aasf','1','123',123]));
 
+let a = +prompt("1 sayı")
+let b = +prompt("2 sayı")
+let c = +prompt("3 sayı")
 
-
+if((a%10 === b%10) || (a%10 === c%10) || (c%10 === b%10)) {
+   console.log(true)
+}else {
+    console.log(false)
+}
