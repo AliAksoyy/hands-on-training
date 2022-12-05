@@ -131,11 +131,18 @@
 
 
 
-let a = Number(prompt("sayı"))
-let total = 0
-for(let i = 1; i<=a; i++){
 
-    total +=i
+let a = +prompt("sayı")
+let asal=true
+if(a<=1){
+    alert("sayı 1 den bbüyük olmalı")
+}else {
+    for(let i=2; i<a; i++){
+        if(a%i===0){
+            asal=false;
+            break;
+        }
+    }
+    let sonuc= asal ? "asal" : "asal değil"
+    console.log(`${a} ${sonuc}`)
 }
-
-console.log(total);
