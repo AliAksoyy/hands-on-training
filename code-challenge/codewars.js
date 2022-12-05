@@ -63,8 +63,79 @@
 
 // console.log(filterList([1,2,'aasf','1','123',123]));
 
-let a = +prompt("1")
-let b = +prompt("2")
-let c= +prompt("3")
+// soru 4
+
+// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+// Input
+// Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+// Output
+// Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+// Example
+// input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+// cevap 4
+
+// const member =(arr) => {
+
+//    return  arr.map((item)=> item[0]>=55 && item[1]>7 ? "senior" :"open")
+
+// }
+// console.log(member([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]))
+
+// soru 5
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+// cevap 5
+
+// const spinWords =(str) => {
+
+//     return str.split(" ").map((item)=>item.length>=5 ? item.split("").reverse().join("") : item).join(" ")
+
+// }
+// console.log(spinWords("Hey fellow warriors"));
+
+// soru 6 
+
+// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+// cevap 6
+
+// const countString = (str) => {
+//    let obj ={}
+//     let arr =str.split("")
+//     for(let i in arr) {
+//         if(!Object.keys(obj).includes(arr[i])){
+//             obj[arr[i]]=1
+//         }else {
+//             obj[arr[i]] = arr.slice(i).includes(arr[i]) ? Number(obj[arr[i]]) +1 : obj[arr[i]]
+//         }
+//     }
+//     return obj
+// }
+// console.log(countString("kırıkkale"))
 
 
+
+let a = Number(prompt("sayı"))
+let total = 0
+for(let i = 1; i<=a; i++){
+
+    total +=i
+}
+
+console.log(total);
