@@ -132,3 +132,67 @@
 
 
 
+// soru 7
+
+// Your task is calculate merged subperiods from given periods with assigned period titles. You get the periods as an array of objects having from and to date attributes (string, format 'YYYY-MM-DD'), as well as a title attribute (string).
+
+// You return the subperiods as an array of objects, also with from/to dates and merged titles (or empty if gap). Sort titles alphabetically and join them by comma+space.
+
+// example:
+
+// const periods = [ // you get this
+//   { from: '2019-01-01', to: '2019-01-10', title: 'B' },
+//   { from: '2019-01-05', to: '2019-01-15', title: 'A' }
+// ];
+
+// cevap 7
+
+// const mergePeriods = (periods) => {
+    
+
+//     function getPreviousDay(date = new Date()) {
+//         const previous = new Date(date.getTime());
+//         previous.setDate(date.getDate() - 1);
+      
+//         return previous.toISOString().slice(0, previous.toISOString().indexOf("T")) 
+//       }
+
+//     function getNextDay(date = new Date()) {
+//         const previous = new Date(date.getTime());
+//         previous.setDate(date.getDate() + 1);
+      
+//         return previous.toISOString().slice(0, previous.toISOString().indexOf("T")) 
+//     }
+      
+
+
+//     let arr=[]
+
+//     let sortPeriods= periods.sort((a,b) => { return new Date(a.from) - new Date(b.from) })
+//     for(let i=0; i<sortPeriods.length; i++){
+//         for(let j=i+1; j<sortPeriods.length; j++ ){
+//             if(new Date(sortPeriods[j].from) < new Date(sortPeriods[i].to)){
+//                 let obj1={from:sortPeriods[i].from, to:getPreviousDay(new Date(sortPeriods[j].from)), title: sortPeriods[i].title}
+//                 arr.push(obj1)
+//                 let obj2={from:sortPeriods[j].from, to:sortPeriods[i].to, title: `${sortPeriods[i].title} ${sortPeriods[j].title}`}
+//                 arr.push(obj2)
+//                 let obj3={from:getNextDay(new Date(sortPeriods[i].to)), to:sortPeriods[j].to, title: sortPeriods[j].title}
+//                 arr.push(obj3)
+//             }else {
+//                 let obj4 = {from:sortPeriods[i].to, to:sortPeriods[j].from, title: "empty"}
+//                 arr.push(obj4)
+//             }
+//         }
+//     }
+//     return arr
+
+// }
+
+// console.log(mergePeriods([ { from: '2019-01-01', to: '2019-01-10', title: 'B' },
+// { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
+
+
+const tekCift = function(n){
+    return n % 2 ? "tek" : "cift"
+}
+console.log(tekCift(4))dd
