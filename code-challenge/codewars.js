@@ -195,4 +195,4 @@
 const tekCift = function(n){
     return n % 2 ? "tek" : "cift"
 }
-console.log(tekCift(4))dd
+console.log(tekCift(4))
