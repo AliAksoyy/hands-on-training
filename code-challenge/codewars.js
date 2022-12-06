@@ -192,7 +192,5 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const tekCift = function(n){
-    return n % 2 ? "tek" : "cift"
-}
-console.log(tekCift(4))
+const a = "ali"
+console.log(a.replace("a","b"))
