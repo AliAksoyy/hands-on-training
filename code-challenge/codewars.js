@@ -192,5 +192,6 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const a = "ali"
-console.log(a.replace("a","b"))
+const arr = [100,250,50,89]
+
+
