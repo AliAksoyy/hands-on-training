@@ -195,4 +195,24 @@
 
 
 
+const ali ={
+    ali1:{
+        a:"1",
+        b:"2"
+    },
+    ali2:{
+        c:"3",
+        d:"4"
+    },
+    ali3:{
+        e:"5",
+        f:"6"
+    }
+}
 
+for(let [k,v] of Object.entries(ali)){
+  console.log(k,v)
+}
+
+Object.keys(ali).forEach((a)=> console.log(ali[a]))
+Object.values(ali).forEach((a)=> console.log(a["b"]))
