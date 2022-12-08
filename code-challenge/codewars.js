@@ -191,13 +191,8 @@
 // console.log(mergePeriods([ { from: '2019-01-01', to: '2019-01-10', title: 'B' },
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
-const maas = [5500,8000,6500,9000,10000,15000,25000]
-let newarr=[]
-const b =maas.filter((a,i)=> {
-  return a<9000
-}).map((b1,i)=>{
-    newarr[i]=b1*1.1
-})
-console.log(newarr);
+
+
+
 
 
