@@ -222,6 +222,22 @@ team.forEach((a)=> {
 } )
 
 
+const getInfo =() => {
+    return {
+        id:1,
+        productName:"Iphone",
+        price:3000
+    }
+}
+console.log(getInfo());
+const {id,price} = getInfo()
+console.log(id,price)
+
+const calculate = ({id,price}) => {
+    console.log(price);
+
+}
+calculate({id:1, price:3000})
 
 
 
