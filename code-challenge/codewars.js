@@ -192,27 +192,26 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-
-
-
-const ali ={
-    ali1:{
-        a:"1",
-        b:"2"
+const team=[
+    {
+        name:"jJosh",
+        surname:"Adams",
+        job:"developer",
+        age:30
     },
-    ali2:{
-        c:"3",
-        d:"4"
+    {
+        name:"Mary",
+        surname:"Bary",
+        job:"tester",
+        age:22
     },
-    ali3:{
-        e:"5",
-        f:"6"
+    {
+        name:"Hazel",
+        surname:"Nut",
+        job:"developer",
+        age:20
     }
-}
+]
 
-for(let [k,v] of Object.entries(ali)){
-  console.log(k,v)
-}
-
-Object.keys(ali).forEach((a)=> console.log(ali[a]))
-Object.values(ali).forEach((a)=> console.log(a["b"]))
+const b =team.reduce((acc,cur)=> (acc+=cur.age),0) /team.length
+console.log(b);
