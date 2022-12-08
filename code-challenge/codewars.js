@@ -192,9 +192,9 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const team=[
-    {
-        name:"jJosh",
+const team=[{
+    
+        name:"Josh",
         surname:"Adams",
         job:"developer",
         age:30
@@ -205,13 +205,23 @@ const team=[
         job:"tester",
         age:22
     },
-    {
+     {
         name:"Hazel",
         surname:"Nut",
         job:"developer",
         age:20
     }
 ]
+team.forEach((a)=> {
+    const {name,surname,job,age}=a
+    console.log("*********")
+    console.log(name);
+    console.log(surname);
+    console.log(job)
+    console.log(age);
+} )
 
-const b =team.reduce((acc,cur)=> (acc+=cur.age),0) /team.length
-console.log(b);
+
+
+
+
