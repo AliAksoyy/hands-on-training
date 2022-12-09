@@ -192,52 +192,19 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const team=[{
-    
-        name:"Josh",
-        surname:"Adams",
-        job:"developer",
-        age:30
-    },
-    {
-        name:"Mary",
-        surname:"Bary",
-        job:"tester",
-        age:22
-    },
-     {
-        name:"Hazel",
-        surname:"Nut",
-        job:"developer",
-        age:20
-    }
-]
-team.forEach((a)=> {
-    const {name,surname,job,age}=a
-    console.log("*********")
-    console.log(name);
-    console.log(surname);
-    console.log(job)
-    console.log(age);
-} )
 
 
-const getInfo =() => {
-    return {
-        id:1,
-        productName:"Iphone",
-        price:3000
-    }
+const obj = {
+    a:1,
+    b:2,
+    c:3
 }
-console.log(getInfo());
-const {id,price} = getInfo()
-console.log(id,price)
+const asl={...obj}
+asl.c="33"
+console.log(asl)
+console.log("Obj", obj)
 
-const calculate = ({id,price}) => {
-    console.log(price);
 
-}
-calculate({id:1, price:3000})
 
 
 
