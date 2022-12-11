@@ -195,3 +195,22 @@
 
 
 
+const list = document.querySelectorAll(".list")
+console.log(list);
+const newArr= [...list]
+console.log(newArr)
+newArr.map((item)=> {
+    item.addEventListener("mouseover", ()=> {
+        item.style.fontSize="1.2rem";
+        item.style.display="inline-block"
+        item.style.color="red"
+    })
+})
+newArr.map((item)=> {
+    item.addEventListener("mouseout", ()=> {
+        item.style.fontSize="1rem";
+        item.style.color="black"
+        item.style.display="block"
+
+    })
+})
