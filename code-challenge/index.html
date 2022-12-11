@@ -2,23 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Basics 5</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="style.css" />
+    <title>JS14 - Events</title>
   </head>
   <body>
-    <header>
-      <img
-        src="https://clarusway.com/wp-content/uploads/2021/06/CLARUSWAY_LOGO.png"
-        alt="Clarusway"
-        class="logo"
-      />
+    <header id="header">
+      <h1>EVENTS</h1>
     </header>
-    <h1>JavaScript Basics</h1>
-    <h2>JS5 - Loops</h2>
+    <main>
+      <section class="add-item">
+        <h2>ADD NEW ITEM</h2>
+        <input id="input" type="text" />
+        <input id="btn" type="button" value="ADD" />
+      </section>
+      <section class="item-list">
+        <h2>ITEM LIST</h2>
+        <ul>
+          <li class="list">HTML</li>
+          <li class="list">
+            CSS <span style="display: none">- Cascade Style Sheet</span>
+          </li>
+          <li class="list">Javascript</li>
+          <li class="list">React</li>
+          <li class="list">Django</li>
+        </ul>
+      </section>
+    </main>
 
     <script src="./codewars.js"></script>
+    
   </body>
 </html>

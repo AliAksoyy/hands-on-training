@@ -194,17 +194,4 @@
 
 
 
-const obj = {
-    a:1,
-    b:2,
-    c:3
-}
-const asl={...obj}
-asl.c="33"
-console.log(asl)
-console.log("Obj", obj)
-
-
-
-
 
