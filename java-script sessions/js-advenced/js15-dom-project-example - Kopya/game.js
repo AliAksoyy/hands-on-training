@@ -32,8 +32,11 @@ document.querySelector(".check-btn").addEventListener("click", ()=> {
         // document.querySelector("body").style.background="red"
         document.querySelector("body").classList.add("bg-success")
         document.querySelector(".secret-number").textContent=randomNumber
-        localStorage.setItem("topScore", score)
-        document.querySelector(".top-score").innerText= `${score}`
+        if(score>topScore){
+            localStorage.setItem("topScore", score)
+            document.querySelector(".top-score").innerText= `${score}`
+        }
+    
 
     }else {
         score--
