@@ -49,7 +49,25 @@ document.querySelector(".check-btn").addEventListener("click", ()=> {
             document.querySelector(".check-btn").disabled=true
         }   
     }
+})
 
 
+document.querySelector(".guess-input").addEventListener("keydown", (e)=> {
+  
+        if(e.key==="Enter") {
+           
+           document.querySelector(".check-btn").click()
+        }
+})
+
+document.querySelector(".again-btn").addEventListener("click", ()=> {
+        document.querySelector(".secret-number").innerText= `?`
+        const randomNumber = Math.round(Math.random()*100)
+        document.querySelector("body").classList.remove("bg-success", "bg-danger")
+        document.querySelector(".score").innerText =10
+        document.querySelector(".msg").innerText ="Start"
+        document.querySelector(".guess-input").value=""
+        document.querySelector(".check-btn").disabled=false
+        
 })
 
