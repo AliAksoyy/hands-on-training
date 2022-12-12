@@ -193,24 +193,23 @@
 
 
 
+const input =document.querySelector(".lang-input")
+const addBtn = document.querySelector("#add-btn")
+const deleteBtn = document.querySelector("#delete-btn")
+const add=document.querySelector("#lang-list")
 
 
-const list = document.querySelectorAll(".list")
-console.log(list);
-const newArr= [...list]
-console.log(newArr)
-newArr.map((item)=> {
-    item.addEventListener("mouseover", ()=> {
-        item.style.fontSize="1.2rem";
-        item.style.display="inline-block"
-        item.style.color="red"
-    })
-})
-newArr.map((item)=> {
-    item.addEventListener("mouseout", ()=> {
-        item.style.fontSize="1rem";
-        item.style.color="black"
-        item.style.display="block"
 
-    })
+
+
+
+
+
+
+addBtn.addEventListener("click", ()=> {
+    input.value==="javascript" && document.querySelector("").style.color="red"
+    add.innerHTML +=`
+    <li>${input.value}</li>
+    ` 
+    input.value=""
 })
