@@ -193,23 +193,4 @@
 
 
 
-const input =document.querySelector(".lang-input")
-const addBtn = document.querySelector("#add-btn")
-const deleteBtn = document.querySelector("#delete-btn")
-const add=document.querySelector("#lang-list")
-
-
-
-
-
-
-
-
-
-addBtn.addEventListener("click", ()=> {
-    input.value==="javascript" && document.querySelector("").style.color="red"
-    add.innerHTML +=`
-    <li>${input.value}</li>
-    ` 
-    input.value=""
-})
+console.log("object");
