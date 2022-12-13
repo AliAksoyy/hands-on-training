@@ -6,10 +6,15 @@ const completedNumber = document.querySelector("#completed")
 const ul =document.querySelector("#ulLi")
 
 let com=0
-let tot=0
+let tot =0
+let todos =JSON.parse(localStorage.getItem("todos")) || []
+
+
+
+
+console.log(todos);
 
 btn.addEventListener("click", ()=> {
-
     if(!input.value) {
         ul.innerText="Lütfen inputu boş birakmayin"
     }else {
@@ -19,7 +24,14 @@ btn.addEventListener("click", ()=> {
             completed:false
         }
         ali(newTodo)
-        input.value=""   
+        localStorage.setItem("tot", tot++)
+        
+        total.innerText=tot
+        todos.push(newTodo)
+        localStorage.setItem("todos", JSON.stringify(todos))
+        input.value="" 
+        console.log(todos)
+        
     }
 })
     const ali = (newTodo)=> {
@@ -41,21 +53,35 @@ btn.addEventListener("click", ()=> {
         li.appendChild(deleteIcon)
         ul.appendChild(li)
     }
+    todos?.forEach((todo)=> {
+        ali(todo)
+    })
 
     document.querySelector("#ulLi").addEventListener("click", (e)=> {
         if(e.target.classList.contains("fa-trash")){
             e.target.parentElement.remove()
+            todos =todos.filter((item)=>  item.id != e.target.parentElement.getAttribute("id"))
+            localStorage.setItem("todos", JSON.stringify(todos))
+           
         }else if(e.target.classList.contains("fa-check")) {
-            console.log(com);
+           
             e.target.nextElementSibling.classList.toggle("text-decoration-line-through")
-          
-            if(e.target.nextElementSibling.classList.contains("text-decoration-line-through")) {com++;completedNumber.innerText=com} else {
-                com=0; completedNumber.innerText=com
-            }
-            
+            const ide = e.target.parentElement.getAttribute("id");
+           
+            todos.map((todo,i)=> {
+                if(todo.id == ide) {
+                   todos[i].completed = !todos[i].completed 
+                }
+            })
+            localStorage.setItem("todos", JSON.stringify(todos))
+            console.log(todos)
         }
-    })
-    console.log(com)
+            
+    })   
+            
+        
+    
+
     input.addEventListener("keydown", (e)=> {
         if(e.keyCode==13){
             btn.click()
@@ -64,6 +90,7 @@ btn.addEventListener("click", ()=> {
 
     window.addEventListener("load", ()=> {
         input.focus()
+        
     })
 
 
