@@ -5,7 +5,8 @@ const total = document.querySelector("#total")
 const completedNumber = document.querySelector("#completed")
 const ul =document.querySelector("#ulLi")
 
-
+let com=0
+let tot=0
 
 btn.addEventListener("click", ()=> {
 
@@ -45,10 +46,16 @@ btn.addEventListener("click", ()=> {
         if(e.target.classList.contains("fa-trash")){
             e.target.parentElement.remove()
         }else if(e.target.classList.contains("fa-check")) {
+            console.log(com);
             e.target.nextElementSibling.classList.toggle("text-decoration-line-through")
+          
+            if(e.target.nextElementSibling.classList.contains("text-decoration-line-through")) {com++;completedNumber.innerText=com} else {
+                com=0; completedNumber.innerText=com
+            }
+            
         }
     })
-
+    console.log(com)
     input.addEventListener("keydown", (e)=> {
         if(e.keyCode==13){
             btn.click()
