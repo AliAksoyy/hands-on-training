@@ -9,27 +9,29 @@ const ul =document.querySelector("#ulLi")
 
 btn.addEventListener("click", ()=> {
 
-
-    
-    
     if(!input.value) {
         ul.innerText="Lütfen inputu boş birakmayin"
     }else {
-
         const newTodo= {
             id: new Date().getTime(),
             text:input.value,
             completed:false
         }
-        
+        ali(newTodo)
+        input.value=""   
+    }
+})
+    const ali = (newTodo)=> {
+        const {id,text,completed}=newTodo
         const li = document.createElement("li")
-        li.id=newObj.id
+        li.id=id
         li.setAttribute("class", "d-flex w-100 justify-content-around align-items-center")
+        
         const tikIcon=document.createElement("i")
         tikIcon.setAttribute("class", "fa-solid fa-check")
         const newP=document.createElement("p")
         newP.classList.add("mt-3")
-        const newPContent = document.createTextNode(`${input.value}`)
+        const newPContent = document.createTextNode(text)
         newP.appendChild(newPContent)
         li.appendChild(tikIcon)
         li.appendChild(newP)
@@ -37,13 +39,26 @@ btn.addEventListener("click", ()=> {
         deleteIcon.setAttribute("class", "fa-solid fa-trash")
         li.appendChild(deleteIcon)
         ul.appendChild(li)
-        input.value=""
-        newArr.push({id:new Date().getTime(), content:input.value, completed:false})
     }
-console.log(newArr)
-    
-})
-// parentElement.classList.toggle("text-decoration-line-through")
+
+    document.querySelector("#ulLi").addEventListener("click", (e)=> {
+        if(e.target.classList.contains("fa-trash")){
+            e.target.parentElement.remove()
+        }else if(e.target.classList.contains("fa-check")) {
+            e.target.nextElementSibling.classList.toggle("text-decoration-line-through")
+        }
+    })
+
+    input.addEventListener("keydown", (e)=> {
+        if(e.keyCode==13){
+            btn.click()
+        }
+    })
+
+    window.addEventListener("load", ()=> {
+        input.focus()
+    })
+
 
 
 
