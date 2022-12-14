@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem !important;
+    justify-content: flex-start;
+    min-height: 100vh;
+    gap: 1rem;
+    background-color: beige;
+    padding-bottom:3rem;
+}
+main {
+    width: 40%;
+    min-height: 80vh;
+    border: 1px solid black;
+    background-color: burlywood;
+    border-radius: 20px;
+}
+i:hover{
+    font-size: 1.5rem !important;
+    cursor: pointer;
+    color:antiquewhite !important;
+}
+
+.ali:hover {
+    background-color: rgb(240, 229, 229) !important;
+    color: red !important;
+}

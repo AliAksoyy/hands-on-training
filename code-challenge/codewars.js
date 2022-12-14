@@ -191,6 +191,5 @@
 // console.log(mergePeriods([ { from: '2019-01-01', to: '2019-01-10', title: 'B' },
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
-
-
-console.log("object");
+console.log([1,2,3,4].reduce((acc,cur)=> (acc+cur)))
+sessionStorage.setItem("ali", 1)
