@@ -192,27 +192,3 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-
-fetch("https://api.github.com/users")
-.then((res)=> {
-    if(!res.ok){
-        throw new Error("hata")
-    }
-    return res.json()
-}).then((data)=> ali(data))
-.catch(err => console.log(err))
-
-const ali=(veli)=> {
-    const usersBil=document.querySelector("#users") 
-    veli.map((item)=> {
-        const {login, avatar_url,repos_url}= item
-        usersBil.innerHTML += `
-                        <img src="${avatar_url}"/>
-                        <p>${login}</p>
-                        <a href="${repos_url}">Repo</a>
-                        
-                        `
-    })
-    
-        console.log(veli)
-}
