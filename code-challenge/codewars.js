@@ -65,7 +65,7 @@
 
 // soru 4
 
-// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+// The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with aşn application form that will tell prospective members which category they will be placed.
 
 // To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
 
@@ -172,7 +172,7 @@
 //     for(let i=0; i<sortPeriods.length; i++){
 //         for(let j=i+1; j<sortPeriods.length; j++ ){
 //             if(new Date(sortPeriods[j].from) < new Date(sortPeriods[i].to)){
-//                 let obj1={from:sortPeriods[i].from, to:getPreviousDay(new Date(sortPeriods[j].from)), title: sortPeriods[i].title}
+//   0               let obj1={from:sortPeriods[i].from, to:getPreviousDay(new Date(sortPeriods[j].from)), title: sortPeriods[i].title}
 //                 arr.push(obj1)
 //                 let obj2={from:sortPeriods[j].from, to:sortPeriods[i].to, title: `${sortPeriods[i].title} ${sortPeriods[j].title}`}
 //                 arr.push(obj2)
@@ -191,44 +191,4 @@
 // console.log(mergePeriods([ { from: '2019-01-01', to: '2019-01-10', title: 'B' },
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
-let flag=true
-async function getNews(){
-    
-    const baseUrl="https://newsapi.org/v2/top-headlines?country=tr&apiKey="
-    const apiKey="91bebcb7e4a2421089c507605565fcf0"
-    
-    try{
-        const res = await fetch(baseUrl+apiKey)
-        if(!res.ok){
-           flag=false
-            // throw new Error("hata var kardeş")
-        }
-        const {articles} = await res.json()
-        ali(articles)
-    }catch(err){
-        console.log(err)
-    }
-}
 
-
-
-const ali= function(news){
-    const divNews=document.querySelector("#div")
-   if(!flag){
-    divNews.innerHTML = `<img src="img/404.jpg" />`
-    return;
-   }
-
-    news.forEach((item)=> {
-        const {content,description,title,url,urlToImage}=item
-        divNews.innerHTML += `
-                        <h2>${title}</h2>
-                        <img style="width:200px" src="${urlToImage}"/>
-                        <p>${content}</p>
-                        <p>${description}</p>
-                        <a href="${url}" target="_blank">Haber detayina git</a>   
-    `
-    })
-}
-
-window.onload=()=>{getNews()}
