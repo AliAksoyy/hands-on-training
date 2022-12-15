@@ -192,15 +192,27 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const myPromise = new Promise((resolve, rejected)=> {
-    const success = Math.floor(Math.random()*3)
-    const data=[{a:1,b:2}]
-    if(success){
-        resolve(data)
-    }else {
-        rejected(new Error("Fetch halted"))
+
+fetch("https://api.github.com/users")
+.then((res)=> {
+    if(!res.ok){
+        throw new Error("hata")
     }
-})
+    return res.json()
+}).then((data)=> ali(data))
+.catch(err => console.log(err))
 
-
-myPromise.then((res)=>console.log(res)).catch((err)=>console.log(err))
+const ali=(veli)=> {
+    const usersBil=document.querySelector("#users") 
+    veli.map((item)=> {
+        const {login, avatar_url,repos_url}= item
+        usersBil.innerHTML += `
+                        <img src="${avatar_url}"/>
+                        <p>${login}</p>
+                        <a href="${repos_url}">Repo</a>
+                        
+                        `
+    })
+    
+        console.log(veli)
+}
