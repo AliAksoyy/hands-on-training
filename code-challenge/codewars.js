@@ -192,5 +192,15 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
+const myPromise = new Promise((resolve, rejected)=> {
+    const success = Math.floor(Math.random()*3)
+    const data=[{a:1,b:2}]
+    if(success){
+        resolve(data)
+    }else {
+        rejected(new Error("Fetch halted"))
+    }
+})
 
 
+myPromise.then((res)=>console.log(res)).catch((err)=>console.log(err))
