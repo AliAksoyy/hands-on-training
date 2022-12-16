@@ -192,3 +192,53 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
+const form =document.querySelector("#form")
+const input = document.querySelector("#input")
+const button = document.querySelector("#button")
+const span=document.querySelector("#span")
+const ul = document.querySelector("#ul")
+
+
+localStorage.setItem("token", "pc8YHOgPN1XTHnmt2lLm/vIGUAaGJFJ1vEABsIprjGvkdyLesISAotmAipoCW2bg")
+
+
+
+
+form.addEventListener("submit", (e)=> {
+    e.preventDefault()
+    getweatherApi()
+    input.value=""
+})
+
+function getweatherApi(){
+    const ali =DecryptStringAES(localStorage.getItem("token"))
+    
+    const inputValue =input.value;
+    const units="metric"
+    const lang="tr"
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${ali}&units=${units}&lang=${lang}`
+    getData(url)
+}
+
+const getData =(beyda) =>{
+    fetch(beyda).then((res)=>res.json()).then((data)=> gelenData(data))
+}
+
+const gelenData =function(feyza){
+    console.log(feyza);
+    const {weather,name,main:{temp_max,temp_min}, } =feyza
+    const icon=weather[0].icon;
+    console.log(icon);
+    const iconUrl =`http://openweathermap.org/img/wn/${icon}@2x.png`
+    ul.innerHTML += `
+       
+            <img src="${iconUrl}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${name}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">${temp_max}</li>
+            <li class="list-group-item">${temp_min}</li>
+            </ul>
+    `
+}
