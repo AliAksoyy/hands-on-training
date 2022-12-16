@@ -34,7 +34,7 @@ export default function Navbar() {
           >
           <Box
                 component="img"
-                sx={{width: 35,}}
+                sx={{width: 35}}
             alt="The house from the offer."
             src="https://www.freeiconspng.com/thumbs/blogger-logo-icon-png/blogger-logo-icon-png-10.png"
              />
