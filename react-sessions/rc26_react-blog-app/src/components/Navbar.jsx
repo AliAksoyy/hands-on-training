@@ -7,11 +7,12 @@ import IconButton from '@mui/material/IconButton';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import {useAuth} from "../context/AuthContextProvider"
 
 export default function Navbar() {
  
   const [anchorEl, setAnchorEl] = React.useState(null);
-
+  const {currentUser} =useAuth()
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
