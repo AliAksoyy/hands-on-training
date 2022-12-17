@@ -1,5 +1,5 @@
 import React,{useContext, createContext, useState, useEffect} from "react"
-import {auth, googleProvider} from "../utils/firebaseUtil"
+import {auth, googleProvider} from "../utils/firebase"
 
 
 
@@ -11,7 +11,7 @@ export function useAuth(){
 
 
 
-const AuthcontextProvider = ({children})=> {
+export const AuthcontextProvider = ({children})=> {
 
     const [currentUser,setCurrentUser] = useState()
     const [loading,setLoading]=useState(true)
@@ -54,4 +54,3 @@ const AuthcontextProvider = ({children})=> {
         </AuthContext.Provider>
     )
 }
-export default AuthcontextProvider
