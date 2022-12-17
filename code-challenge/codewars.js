@@ -192,25 +192,35 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const book1 ={
-    title:"the Kramazow Brothers",
-    author: "Dostoveyski",
-    year:1880,
-    getSummary:function(){
-        return `${this.title} was written by ${this.author} in ${this.year}`
+class Book {
+    constructor(title,author,year){
+        this.title=title;
+        this.author=author;
+        this.year=year;
+        this.getTitle=function(){
+            return this.title
+        }
+    }
+    getSummary(){
+        return `${this.title} ${this.author}`
+    };
+    getAge(){
+        return new Date().getFullYear() - this.year
     }
 }
-console.log(book1)
 
-function Book(title,age){
-    this.title=title;
-    this.age=age
+const book1 = new Book("ali", "aksoy", 1991)
+console.log(book1);
+console.log(book1.getSummary())
+console.log(book1.getAge())
+
+class Magazine extends Book {
+    constructor(title,author,year,month){
+    super(title,author,year) 
+        this.month=month
+    }
+
 }
 
-const book2 =new Book("asdsad","asdasdas")
-console.log(book2);
-
-Book.prototype.getSummary=function(){
-    console.log("ali")
-}
-
+const mag1 =new Magazine("ali","aksoy", 1926, "Sep")
+console.log(mag1)
