@@ -192,27 +192,27 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-function add (a,b){
-    return a+b
-}
+const falsyFind = (arr) => {
+   
+    const newArr=arr.splice(0,1)
+    let bos=[]
+   for(let item of newArr){
+    for(let ali in item){
+        bos.push(item[ali])
+    }
+   }
+  
+  
+   bos.sort(function(a,b){
+    return a-b
+   }).map((item,i)=> {
+    if(item<=arr) {return i}
+   })
+   
+    
+    
+} 
 
-const ali = 40
 
-let counter = 0
+console.log(falsyFind([[3,10,5],3]))
 
-function inc(amount=1){
-    counter +=amount
-    return counter
-}
-function dec(amount=1){
-    counter -=amount
-    return counter
-}
-
-const beyda = "Module -1"
-
-export default function karesi (a){
-        return a*a
-}
-
-export {ali, add as sum, inc, dec, counter, }
