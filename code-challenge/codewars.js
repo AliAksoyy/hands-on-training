@@ -203,16 +203,19 @@ const falsyFind = (arr) => {
    }
   
   
-   bos.sort(function(a,b){
-    return a-b
-   }).map((item,i)=> {
-    if(item<=arr) {return i}
-   })
+   
+   bos=bos.sort((a,b)=> a-b)
+
+   for(let ali in bos){
+    if(bos[ali] >=arr[0]){
+        return ali
+    }
+   }
    
     
     
 } 
 
 
-console.log(falsyFind([[3,10,5],3]))
+console.log(falsyFind([[1,3,10,5],3]))
 
