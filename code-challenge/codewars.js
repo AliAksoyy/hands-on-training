@@ -192,35 +192,27 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-class Book {
-    constructor(title,author,year){
-        this.title=title;
-        this.author=author;
-        this.year=year;
-        this.getTitle=function(){
-            return this.title
-        }
-    }
-    getSummary(){
-        return `${this.title} ${this.author}`
-    };
-    getAge(){
-        return new Date().getFullYear() - this.year
-    }
+function add (a,b){
+    return a+b
 }
 
-const book1 = new Book("ali", "aksoy", 1991)
-console.log(book1);
-console.log(book1.getSummary())
-console.log(book1.getAge())
+const ali = 40
 
-class Magazine extends Book {
-    constructor(title,author,year,month){
-    super(title,author,year) 
-        this.month=month
-    }
+let counter = 0
 
+function inc(amount=1){
+    counter +=amount
+    return counter
+}
+function dec(amount=1){
+    counter -=amount
+    return counter
 }
 
-const mag1 =new Magazine("ali","aksoy", 1926, "Sep")
-console.log(mag1)
+const beyda = "Module -1"
+
+export default function karesi (a){
+        return a*a
+}
+
+export {ali, add as sum, inc, dec, counter, }
