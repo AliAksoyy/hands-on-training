@@ -192,30 +192,5 @@
 // { from: '2019-01-05', to: '2019-01-15', title: 'A' }]))
 
 
-const falsyFind = (arr) => {
-   
-    const newArr=arr.splice(0,1)
-    let bos=[]
-   for(let item of newArr){
-    for(let ali in item){
-        bos.push(item[ali])
-    }
-   }
-  
-  
-   
-   bos=bos.sort((a,b)=> a-b)
 
-   for(let ali in bos){
-    if(bos[ali] >=arr[0]){
-        return ali
-    }
-   }
-   
-    
-    
-} 
-
-
-console.log(falsyFind([[1,3,10,5],3]))
 
