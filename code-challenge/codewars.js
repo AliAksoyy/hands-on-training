@@ -193,4 +193,31 @@
 
 
 
+const ali = (str) => {
+    
+    str=str.toLowerCase()
+
+    console.log(str);
+    const alf =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n","o", "p", "q","r","s","t","u","v" ,"w", "x","y","z"]
+    let sayi=[]
+    console.log(alf)
+    for(let item of str ){
+
+         sayi.push(alf.indexOf(item) +13)
+    }
+    sayi.map((item,i,arr)=> {
+        console.log(item);
+        if(item>=26){
+          arr[i]=item-26
+        }
+    })
+let string=[]
+    sayi.map((item)=> {
+        string.push(alf[item])
+    })
+    return string.join(" ")
+}
+
+console.log(ali("SERRPBQRPNZC"));
+
 
