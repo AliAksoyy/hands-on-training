@@ -1,15 +1,19 @@
-const ara =(num)=> {
-
-    let newArr=[]
-    if(num>100 && num<1000){
-        console.log("ali")
-        for(let i=num; i<1000; i++){
-            if(i%3==0 && i%5==0){
-                newArr.push(i)
-            }
+const ali = (a)=> {
+    console.log(a.split(""))
+    let res=""
+    for(let i in a){
+        if(i==0){
+            res+=a[i]+"-"
+        }else if(i<4){
+            res+=+a[i]
+        }else if(i==4){
+            res+="-"+ a[i] +"-"
+        }else{
+            res+=a[i]
         }
     }
-    return newArr
+    return res
 }
 
-console.log(ara(754))
+
+console.log(ali("025468"))
