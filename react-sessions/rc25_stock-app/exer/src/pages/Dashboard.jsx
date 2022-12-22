@@ -13,6 +13,7 @@ import Button from '@mui/material/Button';
 import useAuthCalls from '../hooks/useAuthCalls';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
+import { blueGrey } from '@mui/material/colors';
 
 const drawerWidth = 200;
 
@@ -92,7 +93,7 @@ function Dashboard(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           PaperProps={{ 
-            sx:{backgroundColor:"lightgrey"}
+            sx:{backgroundColor:blueGrey[900]}
             
           }}
         >
@@ -106,7 +107,8 @@ function Dashboard(props) {
           }}
           open
           PaperProps={{ 
-            sx:{backgroundColor:"lightgrey"}
+            sx:{backgroundColor:blueGrey[900]}
+            
           }}
 
         >
