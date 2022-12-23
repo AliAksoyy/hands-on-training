@@ -29,7 +29,7 @@ useEffect(() => {
   return ( 
         <div>
             <Box>
-              <Typography variant="h4" mb={4}>
+              <Typography variant="h4" mb={4} color="error">
                 Firms
               </Typography>
               <Button variant="contained" onClick={()=> setOpen(true)}>New Firm</Button>

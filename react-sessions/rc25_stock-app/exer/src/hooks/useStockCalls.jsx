@@ -17,12 +17,12 @@ const useStockCalls = () => {
       const {data} = await axiosWithToken.get(`/stock/${url}/`)
       console.log(data)
       dispatch(getSuccess({data,url}))
-      toastSuccessNotify("başarili")
+      toastSuccessNotify("basarili")
 
     } catch (err) {
       console.log(err)
       dispatch(fetchFail())
-      toastErrorNotify("başarisiz")
+      toastErrorNotify("basarisiz")
     }
   }
     const getFirms = ()=> getStockData("firms")
@@ -35,11 +35,13 @@ const useStockCalls = () => {
 
             try{
                 await axiosWithToken.delete(`/stock/${url}/${id}/`)
+                toastSuccessNotify(`${url} successfuly deleted`)
                 getStockData(url)
                 
             }catch(err){
               console.log(err)
               dispatch(fetchFail())
+              toastErrorNotify(`${url} cannot deleted`)
             }
         }
 

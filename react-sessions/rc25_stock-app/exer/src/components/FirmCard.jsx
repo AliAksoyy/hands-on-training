@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import useStockCalls from '../hooks/useStockCalls';
 import EditIcon from '@mui/icons-material/Edit';
 import {globalHoverStyle} from "../style/globalStyle"
+import CardHeader  from '@mui/material/CardHeader';
 
 export default function FirmCard({firm, open, setOpen, info, setInfo}) {
 
@@ -17,27 +18,27 @@ export default function FirmCard({firm, open, setOpen, info, setInfo}) {
     const {name, phone, image, address, id} = firm
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{p:2, maxWidth:"300px", maxHeight:"400px", minHeight:"430px", display:"flex", flexDirection:"column"}} elevation={10}>
+    <CardHeader title={name} subheader={address} />
       <CardMedia
         component="img"
-        alt="green iguana"
-        height="140"
+        alt="firm-img"
+        width="250"
         image={image}
+        height="325"
+        sx={{objectFit:"contain", p:2}}
+
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {name}
-        </Typography>
-        <Typography gutterBottom variant="h5" component="div">
-         {phone}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-         {address}
+        <Typography gutterBottom variant="body2" color="text.secondary" >
+         Phone: {phone}
         </Typography>
       </CardContent>
       <CardActions sx={{display:"flex", justifyContent:"center"}}>
-        <Button onClick={()=> {setOpen(true); setInfo(firm) }} sx={globalHoverStyle} size="small"><EditIcon  /></Button>
-        <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  /></Button>
+        <Button onClick={()=> {setOpen(true); setInfo(firm) }} sx={globalHoverStyle} size="small"><EditIcon  />
+        </Button>
+        <Button sx={globalHoverStyle} onClick={()=> deleteFirm(id)} size="small" ><DeleteIcon  />
+        </Button>
       </CardActions>
     </Card>
   );

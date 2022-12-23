@@ -10,3 +10,13 @@ export const axiosWithToken = axios.create({
     headers: {Authorization: `Token ${token}`}
 
   });
+
+  // axios.interceptors.request.use((config) => {
+
+  //   if(!config.headers["Authorization"]){
+  //     config.headers["Authorization"]=`Token ${token}`
+  //   }
+    
+  //   return config;
+  // }, 
+  // );
