@@ -17,12 +17,12 @@ const useStockCalls = () => {
       const {data} = await axiosWithToken.get(`/stock/${url}/`)
       console.log(data)
       dispatch(getSuccess({data,url}))
-      toastSuccessNotify("başarılı")
+      toastSuccessNotify("başarili")
 
     } catch (err) {
       console.log(err)
       dispatch(fetchFail())
-      toastErrorNotify("başarısız")
+      toastErrorNotify("başarisiz")
     }
   }
     const getFirms = ()=> getStockData("firms")
