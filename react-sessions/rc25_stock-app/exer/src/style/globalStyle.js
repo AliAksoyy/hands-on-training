@@ -1,5 +1,7 @@
 export const globalHoverStyle = {
-    "&:hover .MuiSvgIcon-root" : {color:"red"}
+    "&:hover .MuiSvgIcon-root" : {color:"red"},
+    "&:hover": {color:"red"},
+    cursor:"pointer"
 }
 export const modalStyle = {
     position: 'absolute',
@@ -20,4 +22,12 @@ export const modalStyle = {
     alignItems:"center",
     justifyContent:"center",
     gap:2,
+  }
+  export const flex = {
+    display:"flex",
+    justifyContent:"center",
+    "&:hover .MuiSvgIcon-root" : {color:"red"},
+    "&:hover": {color:"red"},
+    cursor:"pointer"
+    
   }

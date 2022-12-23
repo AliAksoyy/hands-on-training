@@ -15,7 +15,6 @@ const useStockCalls = () => {
       dispatch(fetchStart())
     try {
       const {data} = await axiosWithToken.get(`/stock/${url}/`)
-      console.log(data)
       dispatch(getSuccess({data,url}))
       toastSuccessNotify("basarili")
 
@@ -26,6 +25,10 @@ const useStockCalls = () => {
     }
   }
     const getFirms = ()=> getStockData("firms")
+    const getSales = ()=> getStockData("sales")
+    const getCategories = ()=> getStockData("categories")
+    const getProducts = ()=> getStockData("products")
+    const getBrands = ()=> getStockData("brands")
 
       // !--------------deleteCalls---------------
 
@@ -78,7 +81,7 @@ const useStockCalls = () => {
       const putFirms = (info) => putStockData(info,"firms")
 
 
-  return {getFirms,deleteFirm, postFirm, putFirms};
+  return {getFirms,deleteFirm, postFirm, putFirms,getProducts,getBrands,getCategories,getSales};
 };
 
 export default useStockCalls
