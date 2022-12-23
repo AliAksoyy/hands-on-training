@@ -23,7 +23,7 @@ const Firms = () => {
 
 useEffect(() => {
  getFirms()
-}, [])
+},[])
 
 
   return ( 
@@ -32,7 +32,7 @@ useEffect(() => {
               <Typography variant="h4" mb={4} color="error">
                 Firms
               </Typography>
-              <Button variant="contained" onClick={()=> setOpen(true)}>New Firm</Button>
+              <Button variant="contained" mb={2} onClick={()=> setOpen(true)}>New Firm</Button>
 
                 <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
 

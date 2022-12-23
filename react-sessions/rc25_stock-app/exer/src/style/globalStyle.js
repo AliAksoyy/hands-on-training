@@ -9,6 +9,7 @@ export const modalStyle = {
     width: 400,
     bgcolor: 'background.paper',
     border: '2px solid #000',
+    
     boxShadow: 24,
     p: 4,
   };
@@ -18,6 +19,5 @@ export const modalStyle = {
     flexDirection:"column",
     alignItems:"center",
     justifyContent:"center",
-    gap:2
-
+    gap:2,
   }

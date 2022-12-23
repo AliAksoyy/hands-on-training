@@ -93,8 +93,7 @@ function Dashboard(props) {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           PaperProps={{ 
-            sx:{backgroundColor:blueGrey[900]}
-            
+            sx:{backgroundColor:blueGrey[900]}    
           }}
         >
           {drawer}
@@ -110,7 +109,6 @@ function Dashboard(props) {
             sx:{backgroundColor:blueGrey[900]}
             
           }}
-
         >
           {drawer}
         </Drawer>
