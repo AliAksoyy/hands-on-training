@@ -33,3 +33,10 @@ export const modalStyle = {
     cursor:"pointer"
     
   }
+
+  export const select={
+    display:"flex",
+    justifyContent:"center",
+    flexDirection: {xs:"column",sm:"row"},
+    gap:"2rem"
+  }

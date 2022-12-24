@@ -14,11 +14,13 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { globalHoverStyle } from "../style/globalStyle";
+import { globalHoverStyle, select } from "../style/globalStyle";
 import { flex } from "../style/globalStyle";
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 import useSortColumn from "../hooks/useSortColumn"
+import {  MultiSelectBox,MultiSelectBoxItem} from '@tremor/react';
+import { Filter } from "@mui/icons-material";
 
 
 
@@ -37,9 +39,22 @@ const Products = () => {
     stock:1
   }
 
-  const {products} =useSelector(state=>state.stock)
+  const [selectedBrands,setSelectedBrands]=useState([])
+  console.log(selectedBrands)
+  const [selectedProducts,setSelectedProducts]=useState([])
+  console.log(selectedProducts)
+
+  const {products,brands} =useSelector(state=>state.stock)
 
   const {toggle, sortedData,handleSort} =useSortColumn(products,columObj)
+
+  const isSelectedBrands=(item)=> selectedBrands.includes(item.brand) || selectedBrands.length===0
+
+  const filteredProducts=products?.filter(item=>selectedBrands.includes(item.brand))
+
+  const isSelectedProducts=(item)=>selectedProducts.includes(item.name) || selectedProducts.length===0
+
+  console.log(filteredProducts)
 
 useEffect(() => {
  getBrands()
@@ -54,6 +69,26 @@ useEffect(() => {
                 Products
               </Typography>
               <Button variant="contained" mb={2} onClick={()=> setOpen(true)}>New Products</Button>
+              <Box sx={select} mt={3}>
+              <MultiSelectBox
+                    handleSelect={ (item) => setSelectedBrands(item) }
+                    placeholder="Select Brands"
+                >
+                    { brands?.map((item) => (
+                        <MultiSelectBoxItem key={ item.name } value={ item.name } text={ item.name } />
+                    )) }
+                </MultiSelectBox>
+                 <MultiSelectBox
+                    handleSelect={ (item) => setSelectedProducts(item) }
+                    placeholder="Select Products"
+                >
+                    { filteredProducts?.map((item) => (
+                        <MultiSelectBoxItem key={ item.name } value={ item.name } text={ item.name } />
+                    )) }
+                </MultiSelectBox> 
+
+                  
+                </Box>
 
                  {/* <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
 
@@ -90,7 +125,8 @@ useEffect(() => {
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {sortedData.map((product,index) => (
+                      {sortedData?.filter(item=>isSelectedBrands(item)).filter((item)=> isSelectedProducts(item))
+                      ?.map((product,index) => (
                         <TableRow
                           key={product.name}
                           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
