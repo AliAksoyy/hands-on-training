@@ -46,6 +46,7 @@ const useStockCalls = () => {
         }
 
         const deleteFirm =(id)=> deleteStockData(id, "firms")
+        const deleteBrand =(id)=> deleteStockData(id, "brands")
 
       // !--------------postCalls---------------
       
@@ -63,6 +64,7 @@ const useStockCalls = () => {
       }
 
       const postFirm = (info) =>postStockData(info,"firms")
+      const postBrand = (info) =>postStockData(info,"brands")
 
       // !--------------putCalls---------------
 
@@ -79,9 +81,10 @@ const useStockCalls = () => {
         }
       }
       const putFirms = (info) => putStockData(info,"firms")
+      const putBrand = (info) => putStockData(info,"brands")
 
 
-  return {getFirms,deleteFirm, postFirm, putFirms,getProducts,getBrands,getCategories,getSales};
+  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand};
 };
 
 export default useStockCalls

@@ -8,10 +8,16 @@ import Typography from '@mui/material/Typography';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import {globalHoverStyle} from "../style/globalStyle"
+import useStockCalls from '../hooks/useStockCalls';
 
-const BrandCard =({brand})=> {
+const BrandCard =({brand, setOpen, setInfo})=> {
 
-    const {name,image}=brand
+
+    const {deleteBrand}=useStockCalls()
+    
+
+
+    const {id,name,image}=brand
    
     return(
        
@@ -31,8 +37,8 @@ const BrandCard =({brand})=> {
                 />
                 <CardActions sx={{display:"flex", justifyContent:"center"}}>
                
-                    <Button sx={globalHoverStyle}  size="small"><EditIcon /></Button>
-                    <Button sx={globalHoverStyle} size="small"><DeleteIcon /></Button>
+                    <Button sx={globalHoverStyle}  size="small" onClick={()=> {setOpen(true); setInfo(brand)}}><EditIcon /></Button>
+                    <Button sx={globalHoverStyle} size="small" onClick={()=> deleteBrand(id)}><DeleteIcon /></Button>
                 
                   
                 </CardActions>
