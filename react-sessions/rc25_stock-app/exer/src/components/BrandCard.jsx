@@ -12,11 +12,8 @@ import useStockCalls from '../hooks/useStockCalls';
 
 const BrandCard =({brand, setOpen, setInfo})=> {
 
-
     const {deleteBrand}=useStockCalls()
     
-
-
     const {id,name,image}=brand
    
     return(
