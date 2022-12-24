@@ -18,45 +18,34 @@ import { globalHoverStyle } from "../style/globalStyle";
 import { flex } from "../style/globalStyle";
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
+import useSortColumn from "../hooks/useSortColumn"
 
 
 
 const Products = () => {
-
+  const {getCategories,getBrands,getProducts}= useStockCalls()
   const [open, setOpen] = useState(false);
-
-  const [info, setInfo] = useState([{
+  const [info, setInfo] = useState({
     name:"",
     address:"",
     phone:"",
     image:""
-  }])
-
-  const [toggle,setToggle]=useState({
-    brands:false,
-    name:false,
-    stock:false
   })
-
-  const handleToggle=(ali)=> {
-    setToggle({...toggle, [ali]: !toggle[ali] })
+  const columObj={
+    brand:1,
+    name:1,
+    stock:1
   }
-  console.log(toggle)
 
- 
-  const {getCategories,getBrands,getProducts}= useStockCalls()
+  const {products} =useSelector(state=>state.stock)
 
-  const {products} = useSelector(state=> state.stock)
+  const {toggle, sortedData,handleSort} =useSortColumn(products,columObj)
 
 useEffect(() => {
  getBrands()
  getCategories()
  getProducts()
 },[])
-
-
-console.log(products)
-
 
   return ( 
         <div>
@@ -68,40 +57,40 @@ console.log(products)
 
                  {/* <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
 
-               {products?.length > 0 && (
+               {sortedData?.length > 0 && (
                 <TableContainer sx={{mt:3}} component={Paper} elevation={10}>
                   <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                       <TableRow>
                         <TableCell align="center">#</TableCell>
                         <TableCell align="center">Categories</TableCell>
-                        <TableCell onClick={()=>handleToggle("brands")} align="center">
+                        <TableCell onClick={()=>handleSort("brand","text")} align="center">
                         <Box sx={flex} >
                           <div>Brands</div>
-                          {!toggle.brands && <UpgradeIcon />}
-                          {toggle.brands && <VerticalAlignBottomIcon />}
+                          {toggle.brand ===1 && <UpgradeIcon />}
+                          {toggle.brand !==1 && <VerticalAlignBottomIcon />}
                         </Box>
                        
                         </TableCell>
-                        <TableCell align="center" onClick={()=>handleToggle("name")}>
+                        <TableCell align="center" onClick={()=>handleSort("name","text")}>
                         <Box sx={flex} >
                           <div>Name</div>
-                          {!toggle.name && <UpgradeIcon />}
-                          {toggle.name && <VerticalAlignBottomIcon />}
+                          {toggle.name ===1 && <UpgradeIcon />}
+                          {toggle.name !==1 && <VerticalAlignBottomIcon />}
                         </Box>
                         </TableCell>
-                        <TableCell align="center" onClick={()=>handleToggle("stock")}>
+                        <TableCell align="center" onClick={()=>handleSort("stock", "number")}>
                         <Box sx={flex} >
                           <div>Stock</div>
-                          {!toggle.stock && <UpgradeIcon />}
-                          {toggle.stock && <VerticalAlignBottomIcon />}
+                          {toggle.stock ===1 && <UpgradeIcon />}
+                          {toggle.stock !==1 && <VerticalAlignBottomIcon />}
                         </Box>
                         </TableCell>
                         <TableCell align="center">Operation</TableCell>
                       </TableRow>
                     </TableHead>
                     <TableBody>
-                      {products.map((product,index) => (
+                      {sortedData.map((product,index) => (
                         <TableRow
                           key={product.name}
                           sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
