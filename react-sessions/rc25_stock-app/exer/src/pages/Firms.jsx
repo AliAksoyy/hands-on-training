@@ -32,7 +32,7 @@ useEffect(() => {
               <Typography variant="h4" mb={4} color="error">
                 Firms
               </Typography>
-              <Button variant="contained" mb={2} onClick={()=> setOpen(true)}>New Firm</Button>
+              <Button sx={{marginBottom:"2rem"}} variant="contained" mb={2} onClick={()=> setOpen(true)}>New Firm</Button>
 
                 <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
 
