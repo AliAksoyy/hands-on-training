@@ -1,6 +1,6 @@
 import {useDispatch } from 'react-redux';
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
-import { fetchFail, fetchStart, getSuccess } from '../features/stockSlice';
+import { fetchFail, fetchStart, getProCatBrandsSuccess, getSuccess } from '../features/stockSlice';
 import useAxiosCalls from './useAxiosCalls';
 
 const useStockCalls = () => {
@@ -30,6 +30,24 @@ const useStockCalls = () => {
     const getProducts = ()=> getStockData("products")
     const getBrands = ()=> getStockData("brands")
 
+    const getProCatBrands = async()=> {
+      dispatch(fetchStart())
+      try{
+       const[products, categories, brands] =await Promise.all(
+            [axiosWithToken.get("stock/products/"),
+            axiosWithToken.get("stock/categories/"),
+            axiosWithToken.get("stock/brands/")]
+            )
+            console.log(products,brands,categories)
+            dispatch(getProCatBrandsSuccess([products?.data, categories?.data, brands?.data]))
+            toastSuccessNotify("basarili")
+      } catch(err){
+          console.log(err)
+          dispatch(fetchFail())
+          toastErrorNotify("basarisiz")
+      }
+    }
+
       // !--------------deleteCalls---------------
 
         const deleteStockData = async(id,url) => {
@@ -47,6 +65,7 @@ const useStockCalls = () => {
 
         const deleteFirm =(id)=> deleteStockData(id, "firms")
         const deleteBrand =(id)=> deleteStockData(id, "brands")
+        const deleteProduct =(id)=> deleteStockData(id, "products")
 
       // !--------------postCalls---------------
       
@@ -84,7 +103,7 @@ const useStockCalls = () => {
       const putBrand = (info) => putStockData(info,"brands")
 
 
-  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand};
+  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand,deleteProduct,getProCatBrands};
 };
 
 export default useStockCalls

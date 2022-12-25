@@ -2,8 +2,6 @@
 import { Typography, Box,Button,} from "@mui/material";
 import {useEffect, useState} from "react"
 import { useSelector } from "react-redux";
-import FirmCard from "../components/FirmCard";
-import FirmModals from "../components/modals/FirmModals";
 import useStockCalls from "../hooks/useStockCalls";
 import React from 'react';
 import Table from '@mui/material/Table';
@@ -20,31 +18,33 @@ import UpgradeIcon from '@mui/icons-material/Upgrade';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 import useSortColumn from "../hooks/useSortColumn"
 import {  MultiSelectBox,MultiSelectBoxItem} from '@tremor/react';
-import { Filter } from "@mui/icons-material";
-
-
+import ProductsModal from "../components/modals/ProductsModal";
 
 const Products = () => {
-  const {getCategories,getBrands,getProducts}= useStockCalls()
+  const {getProCatBrands,deleteProduct}= useStockCalls()
+  const {products,brands,categories} =useSelector((state)=>state.stock)
+  useEffect(() => {
+    getProCatBrands()
+   },[])
+
+   
+   console.log(products,brands,categories)
+
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({
+    category:"",
+    brand:"",
     name:"",
-    address:"",
-    phone:"",
-    image:""
   })
+
   const columObj={
     brand:1,
     name:1,
     stock:1
   }
-
   const [selectedBrands,setSelectedBrands]=useState([])
-  console.log(selectedBrands)
-  const [selectedProducts,setSelectedProducts]=useState([])
-  console.log(selectedProducts)
 
-  const {products,brands} =useSelector(state=>state.stock)
+  const [selectedProducts,setSelectedProducts]=useState([])
 
   const {toggle, sortedData,handleSort} =useSortColumn(products,columObj)
 
@@ -53,14 +53,6 @@ const Products = () => {
   const filteredProducts=products?.filter(item=>selectedBrands.includes(item.brand))
 
   const isSelectedProducts=(item)=>selectedProducts.includes(item.name) || selectedProducts.length===0
-
-  console.log(filteredProducts)
-
-useEffect(() => {
- getBrands()
- getCategories()
- getProducts()
-},[])
 
   return ( 
         <div>
@@ -85,12 +77,10 @@ useEffect(() => {
                     { filteredProducts?.map((item) => (
                         <MultiSelectBoxItem key={ item.name } value={ item.name } text={ item.name } />
                     )) }
-                </MultiSelectBox> 
-
-                  
+                </MultiSelectBox>   
                 </Box>
 
-                 {/* <FirmModals open={open} setOpen={setOpen} info={info} setInfo={setInfo} /> */}
+                <ProductsModal info={info} setInfo={setInfo} setOpen={setOpen} open={open} />
 
                {sortedData?.length > 0 && (
                 <TableContainer sx={{mt:3}} component={Paper} elevation={10}>
@@ -138,7 +128,7 @@ useEffect(() => {
                           <TableCell align="center">{product.brand}</TableCell>
                           <TableCell align="center">{product.name}</TableCell>
                           <TableCell align="center">{product.stock}</TableCell>
-                          <TableCell align="center">
+                          <TableCell align="center" onClick={()=>deleteProduct(product.id)}>
                             <DeleteIcon sx={globalHoverStyle}/>
                           </TableCell>
                         </TableRow>
