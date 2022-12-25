@@ -29,6 +29,7 @@ const useStockCalls = () => {
     const getCategories = ()=> getStockData("categories")
     const getProducts = ()=> getStockData("products")
     const getBrands = ()=> getStockData("brands")
+    const getPurchases = ()=> getStockData("purchases")
 
     const getProCatBrands = async()=> {
       dispatch(fetchStart())
@@ -105,7 +106,7 @@ const useStockCalls = () => {
       const putSale = (info) => putStockData(info,"sales")
 
 
-  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand,deleteProduct,getProCatBrands,postProduct,deleteSales,postSale,putSale};
+  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand,deleteProduct,getProCatBrands,postProduct,deleteSales,postSale,putSale,getPurchases};
 };
 
 export default useStockCalls

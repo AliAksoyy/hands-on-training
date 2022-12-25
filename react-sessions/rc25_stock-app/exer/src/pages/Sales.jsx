@@ -49,7 +49,7 @@ const [selectedProducts,setSelectedProducts]=useState([])
 
 const [info,setInfo]=useState([])
 const [open,setOpen]=useState(false)
-console.log(info)
+
 
 const isSelectedBrand=(item)=> selectedBrands.includes(item.brand) || selectedBrands.length===0
 const filteredProducts=products?.filter((item)=>selectedBrands.includes(item.brand))
