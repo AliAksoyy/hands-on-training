@@ -1,4 +1,4 @@
-import { Button, FormControl, InputLabel, MenuItem, Modal, Select, TextField, Typography } from '@mui/material'
+import { Button, FormControl, InputLabel, MenuItem, Modal, Select, TextField} from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
@@ -7,7 +7,7 @@ import { modalStyle } from '../../style/globalStyle'
 
 const SalesModal = ({info,setInfo,open,setOpen}) => {
 
-    const {getBrands,getProducts,postSale}=useStockCalls()
+    const {getBrands,getProducts,postSale,putSale}=useStockCalls()
 
     useEffect(()=>{
         getBrands()
@@ -15,7 +15,7 @@ const SalesModal = ({info,setInfo,open,setOpen}) => {
     },[])
 
     const {brands,products}=useSelector(state=>state.stock)
-    console.log(products)
+   
 
     const handleChange=(e)=>{
         setInfo({...info, [e.target.name]:Number(e.target.value)})
@@ -23,17 +23,22 @@ const SalesModal = ({info,setInfo,open,setOpen}) => {
 
     const handleSubmit=(e)=> {
         e.preventDefault()
+        if(info.id){
+        putSale(info)
+        }
+       else{
         postSale(info)
+       }
         setOpen(false)
         setInfo({})
          
     }
-    console.log(info)
+  
   return (
   
         <Modal
         open={open}
-        onClose={()=>setOpen(false)}
+        onClose={()=>{setOpen(false);setInfo({})}}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
         >

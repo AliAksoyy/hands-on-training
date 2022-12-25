@@ -44,20 +44,21 @@ const columnObj={
 
 const {handleSort,sortedData,toggle}=useSortColumn(sales,columnObj)
 
-console.log(sortedData)
-
 const [selectedBrands,setSelectedBrands]=useState([])
 const [selectedProducts,setSelectedProducts]=useState([])
 
 const [info,setInfo]=useState([])
 const [open,setOpen]=useState(false)
+console.log(info)
 
 const isSelectedBrand=(item)=> selectedBrands.includes(item.brand) || selectedBrands.length===0
 const filteredProducts=products?.filter((item)=>selectedBrands.includes(item.brand))
 const isSelectedProducts=(item)=>selectedProducts.includes(item.product) || selectedProducts.length===0
-console.log(filteredProducts);
-console.log(selectedBrands)
-console.log(selectedProducts)
+
+const handleEdit=(row)=> {
+  setInfo(row)
+  setOpen(true)
+}
 
   return (
     <Box>
@@ -145,7 +146,7 @@ console.log(selectedProducts)
                   <TableCell align="center">{row.price_total}</TableCell>
                   <TableCell align="center">
                     <Box>
-                      <EditIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} />
+                      <EditIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} onClick={()=>handleEdit(row)} />
                       <DeleteIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} onClick={()=>deleteSales(row.id)} />
                     </Box>
                   </TableCell>
