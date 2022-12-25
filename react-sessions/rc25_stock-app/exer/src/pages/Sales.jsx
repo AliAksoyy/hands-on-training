@@ -5,7 +5,7 @@ import {MultiSelectBox,MultiSelectBoxItem,} from '@tremor/react';
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import useStockCalls from "../hooks/useStockCalls";
-import { select } from "../style/globalStyle";
+import { select,flex } from "../style/globalStyle";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -75,13 +75,49 @@ console.log(selectedProducts)
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="center">Date</TableCell>
+                <TableCell align="center" onClick={()=>handleSort("date", "number")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Date</Typography>
+                  {toggle.date===1 && <UpgradeIcon />}
+                  {toggle.date!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
                 <TableCell align="center">Category</TableCell>
-                <TableCell align="center" onClick={()=>handleSort("brand","text")}>Brand</TableCell>
-                <TableCell align="center">Product</TableCell>
-                <TableCell align="center">Quantity</TableCell>
-                <TableCell align="center">Price</TableCell>
-                <TableCell align="center">Amount</TableCell>
+                <TableCell align="center" onClick={()=>handleSort("brand","text")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Brand</Typography>
+                  {toggle.brand===1 && <UpgradeIcon />}
+                  {toggle.brand!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
+                <TableCell align="center" onClick={()=>handleSort("product", "text")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Product</Typography>
+                  {toggle.product===1 && <UpgradeIcon />}
+                  {toggle.product!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
+                <TableCell align="center"  onClick={()=> handleSort("quantity","number")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Quantity</Typography>
+                  {toggle.quantity===1 && <UpgradeIcon />}
+                  {toggle.quantity!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
+                <TableCell align="center" onClick={()=> handleSort("price","number")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Price</Typography>
+                  {toggle.price===1 && <UpgradeIcon />}
+                  {toggle.price!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
+                <TableCell align="center" oonClick={()=>handleSort("amount","number")}>
+                <Box sx={flex}>
+                  <Typography variant="body2">Amount</Typography>
+                  {toggle.amount===1 && <UpgradeIcon />}
+                  {toggle.amount!==1 && <VerticalAlignBottomIcon />}
+                </Box>
+                </TableCell>
                 <TableCell align="center">Operation</TableCell>
               </TableRow>
             </TableHead>
