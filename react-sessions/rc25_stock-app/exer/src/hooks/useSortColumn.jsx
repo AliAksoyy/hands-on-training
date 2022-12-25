@@ -29,7 +29,7 @@ const useSortColumn = (data,columObj) => {
   }
 
 
-  return {handleSort,columObj,sortedData,toggle}
+  return {handleSort,sortedData,toggle}
 }
 
 export default useSortColumn
