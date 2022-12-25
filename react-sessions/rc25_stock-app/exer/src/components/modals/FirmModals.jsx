@@ -6,12 +6,13 @@ import {modalStyle} from "../../style/globalStyle"
 import  TextField  from '@mui/material/TextField';
 import { Button } from '@mui/material';
 import useStockCalls from '../../hooks/useStockCalls';
+import { useSelector } from 'react-redux';
 
 
 export default function FirmModals({open,setOpen, info, setInfo}) {
 
     const {postFirm ,putFirms}=useStockCalls()
- 
+  const {products}=useSelector(state=>state.stock)
     const handleSubmit = (e) => {
             e.preventDefault()
             if(info.id) {
@@ -28,7 +29,8 @@ export default function FirmModals({open,setOpen, info, setInfo}) {
         setInfo({...info, [e.target.name]:e.target.value}) 
 
     }
-
+console.log(info);
+console.log(products);
   return (
     <div>
     

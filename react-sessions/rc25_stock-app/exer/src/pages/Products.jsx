@@ -22,20 +22,19 @@ import ProductsModal from "../components/modals/ProductsModal";
 
 const Products = () => {
   const {getProCatBrands,deleteProduct}= useStockCalls()
-  const {products,brands,categories} =useSelector((state)=>state.stock)
+  const {products,brands} =useSelector((state)=>state.stock)
+
+  console.log(products)
   useEffect(() => {
     getProCatBrands()
    },[])
 
-   
-   console.log(products,brands,categories)
-
   const [open, setOpen] = useState(false);
-  const [info, setInfo] = useState({
-    category:"",
-    brand:"",
+  const [info, setInfo] = useState([{
     name:"",
-  })
+    category_id:"",
+    brand_id:""
+  }])
 
   const columObj={
     brand:1,

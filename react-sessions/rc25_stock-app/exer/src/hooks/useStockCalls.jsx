@@ -38,7 +38,6 @@ const useStockCalls = () => {
             axiosWithToken.get("stock/categories/"),
             axiosWithToken.get("stock/brands/")]
             )
-            console.log(products,brands,categories)
             dispatch(getProCatBrandsSuccess([products?.data, categories?.data, brands?.data]))
             toastSuccessNotify("basarili")
       } catch(err){
@@ -84,6 +83,7 @@ const useStockCalls = () => {
 
       const postFirm = (info) =>postStockData(info,"firms")
       const postBrand = (info) =>postStockData(info,"brands")
+      const postProduct = (info) =>postStockData(info,"products")
 
       // !--------------putCalls---------------
 
@@ -103,7 +103,7 @@ const useStockCalls = () => {
       const putBrand = (info) => putStockData(info,"brands")
 
 
-  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand,deleteProduct,getProCatBrands};
+  return {getFirms,deleteFirm,putBrand, postFirm, putFirms,getProducts,getBrands,getCategories,getSales,deleteBrand,postBrand,deleteProduct,getProCatBrands,postProduct};
 };
 
 export default useStockCalls
