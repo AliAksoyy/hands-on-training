@@ -18,10 +18,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 import useSortColumn from "../hooks/useSortColumn";
+import SalesModal from "../components/modals/SalesModal";
 
 const Sales = () => {
 
-const {getBrands,getProducts,getSales}=useStockCalls()
+const {getBrands,getProducts,getSales,deleteSales}=useStockCalls()
 
 useEffect(()=>{
   getBrands()
@@ -30,7 +31,7 @@ useEffect(()=>{
 },[])
 
 const {brands,sales,products}=useSelector(state=>state.stock)
-console.log(sales)
+
 
 const columnObj={
   date:1,
@@ -38,25 +39,30 @@ const columnObj={
   product:1,
   quantity:1,
   price:1,
-  amount:1
+  price_total:1
 }
 
-const {handleSort,sortedData,toggle}=useSortColumn(brands,columnObj)
+const {handleSort,sortedData,toggle}=useSortColumn(sales,columnObj)
 
-console.log(toggle)
+console.log(sortedData)
 
 const [selectedBrands,setSelectedBrands]=useState([])
 const [selectedProducts,setSelectedProducts]=useState([])
 
+const [info,setInfo]=useState([])
+const [open,setOpen]=useState(false)
 
-
+const isSelectedBrand=(item)=> selectedBrands.includes(item.brand) || selectedBrands.length===0
+const filteredProducts=products?.filter((item)=>selectedBrands.includes(item.brand))
+const isSelectedProducts=(item)=>selectedProducts.includes(item.product) || selectedProducts.length===0
+console.log(filteredProducts);
 console.log(selectedBrands)
 console.log(selectedProducts)
 
   return (
     <Box>
       <Typography color="error" variant="h4" mb={3}>Sales</Typography>
-      <Button variant="contained" sx={{marginBottom:"1rem"}} >New Sale</Button>
+      <Button variant="contained" sx={{marginBottom:"1rem"}} onClick={()=>setOpen(true)} >New Sale</Button>
       <Box sx={select}>
       <MultiSelectBox 
         handleSelect={ (item) => setSelectedBrands(item) }
@@ -67,10 +73,11 @@ console.log(selectedProducts)
       <MultiSelectBox 
         handleSelect={ (item) => setSelectedProducts(item) }
         placeholder="Select Products">
-        { products?.map((item) => (
+        { filteredProducts?.map((item) => (
         <MultiSelectBoxItem key={ item.name } value={ item.name } text={ item.name } />)) }
       </MultiSelectBox>
       </Box>
+      <SalesModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
       <TableContainer component={Paper} sx={{marginTop:"1.5rem"}} elevation={10}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -111,18 +118,18 @@ console.log(selectedProducts)
                   {toggle.price!==1 && <VerticalAlignBottomIcon />}
                 </Box>
                 </TableCell>
-                <TableCell align="center" oonClick={()=>handleSort("amount","number")}>
+                <TableCell align="center" onClick={()=>handleSort("price_total","number")}>
                 <Box sx={flex}>
                   <Typography variant="body2">Amount</Typography>
-                  {toggle.amount===1 && <UpgradeIcon />}
-                  {toggle.amount!==1 && <VerticalAlignBottomIcon />}
+                  {toggle.price_total===1 && <UpgradeIcon />}
+                  {toggle.price_total!==1 && <VerticalAlignBottomIcon />}
                 </Box>
                 </TableCell>
                 <TableCell align="center">Operation</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {sales?.map((row) => (
+              {sortedData?.filter(item=>isSelectedBrand(item)).filter(item=>isSelectedProducts(item)).map((row) => (
                 <TableRow
                   key={row.id}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -130,8 +137,8 @@ console.log(selectedProducts)
                   <TableCell align="center" component="th" scope="row">
                     {row.createds}
                   </TableCell>
-                  <TableCell align="center">{row.category[0]["name"]}</TableCell>
-                  <TableCell align="center">{row.brand}</TableCell>
+                  <TableCell align="center">{row?.category[0]["name"]}</TableCell>
+                  <TableCell align="center">{row?.brand}</TableCell>
                   <TableCell align="center">{row.product}</TableCell>
                   <TableCell align="center">{row.quantity}</TableCell>
                   <TableCell align="center">{row.price}</TableCell>
@@ -139,7 +146,7 @@ console.log(selectedProducts)
                   <TableCell align="center">
                     <Box>
                       <EditIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} />
-                      <DeleteIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} />
+                      <DeleteIcon sx={{"&:hover":{color:"red"}, cursor:"pointer"}} onClick={()=>deleteSales(row.id)} />
                     </Box>
                   </TableCell>
                 </TableRow>
