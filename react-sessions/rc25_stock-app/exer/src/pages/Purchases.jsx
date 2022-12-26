@@ -16,12 +16,13 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import UpgradeIcon from '@mui/icons-material/Upgrade';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
 import useSortColumn from "../hooks/useSortColumn";
+import PurchasesModal from "../components/modals/PurchasesModal";
 
 
 
 const Purchases = () => {
 
-  const {getBrands,getProducts,getPurchases}=useStockCalls()
+  const {getBrands,getProducts,getPurchases,deletePurchases}=useStockCalls()
 
   const columnObj={
     createds:1,
@@ -36,7 +37,7 @@ const Purchases = () => {
   const [selectedBrands,setSelectedBrands]=useState([])
   const [selectedProducts,setSelectedProducts]=useState([])
   const [open,setOpen]=useState(false)
-  const [info,setInfo]=useState([])
+  const [info,setInfo]=useState({})
   const {brands,products,purchases}=useSelector(state=>state.stock)
 
 
@@ -44,13 +45,9 @@ const Purchases = () => {
 
   useEffect(()=>{
     getBrands();
-    getProducts()
-    getPurchases()
+    getProducts();
+    getPurchases();
   },[])
-
-
-  
-
 
   const isSelectedBrand=(item)=> selectedBrands.includes(item.brand) || selectedBrands.length===0
   const filteredProducts=products?.filter((item)=> selectedBrands.includes(item.brand))
@@ -63,7 +60,7 @@ console.log(purchases)
     <Box>
       <Typography color="error" variant="h4" mb={3}>Purchases</Typography>
 
-      <Button variant="contained" sx={{marginBottom:"1rem"}} onClick={()=> setOpen(true)}>New Purchases</Button>
+      <Button variant="contained" sx={{marginBottom:"1rem"}} onClick={()=> setOpen(true)} >New Purchases</Button>
         <Box sx={select}>
        <MultiSelectBox 
        handleSelect={ (item) => setSelectedBrands(item) }
@@ -75,7 +72,10 @@ console.log(purchases)
       { filteredProducts?.map((item) => (<MultiSelectBoxItem key={ item.name } value={ item.name } text={ item.name } />)) } 
        </MultiSelectBox>
        </Box>
-       <Purchases open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
+
+      <PurchasesModal open={open} setOpen={setOpen} info={info} setInfo={setInfo}/>
+     
+
         <Box sx={{marginTop:"1rem"}}>
           <TableContainer component={Paper} elevation={10}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -152,8 +152,9 @@ console.log(purchases)
                       <TableCell align="center">{row.price_total}</TableCell>
                       <TableCell align="center">
                         <Box>
-                          <EditIcon  sx={{"&:hover":{color:"red"},cursor:"pointer"}}/>
-                          <DeleteIcon sx={{"&:hover":{color:"red"},cursor:"pointer"}}/>
+                          <EditIcon  sx={{"&:hover":{color:"red"},cursor:"pointer"}} onClick={()=>{setOpen(true); setInfo(row)}}/>
+                          <DeleteIcon sx={{"&:hover":{color:"red"},cursor:"pointer"}}
+                           onClick={()=>deletePurchases(row.id)}/>
                         </Box>
                       </TableCell>
                     </TableRow> 

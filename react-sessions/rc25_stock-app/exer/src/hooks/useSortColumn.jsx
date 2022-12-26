@@ -6,6 +6,7 @@ const useSortColumn = (data,columObj) => {
 
   const [toggle,setToggle]=useState(columObj)
 console.log(toggle)
+
   useEffect(()=> {
     setSortedData(data)
   },[data])
