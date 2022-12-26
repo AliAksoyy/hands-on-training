@@ -36,7 +36,7 @@ const Purchases = () => {
   const [selectedBrands,setSelectedBrands]=useState([])
   const [selectedProducts,setSelectedProducts]=useState([])
   const [open,setOpen]=useState(false)
-  const [info,setInfo]=useState({})
+  const [info,setInfo]=useState([])
   const {brands,products,purchases}=useSelector(state=>state.stock)
 
 
