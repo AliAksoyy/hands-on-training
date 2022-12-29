@@ -1,8 +1,8 @@
 import React from 'react'
-
+import FooterStyle from "../sass/footer.module.scss"
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className={FooterStyle["footer"]}>Copy right by clarusway {new Date().toDateString()}</div>
   )
 }
 

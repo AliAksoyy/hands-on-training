@@ -1,8 +1,11 @@
 import React from 'react'
+import HeaderStyle from "../sass/header.module.scss"
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className={HeaderStyle.header}>
+      Comments
+    </div>
   )
 }
 
