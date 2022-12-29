@@ -22,6 +22,8 @@ const Content = () => {
     width: "300px",
     margin: "1rem auto",
   };
+
+  
   return (
     //* JSX alanı
     <div>
