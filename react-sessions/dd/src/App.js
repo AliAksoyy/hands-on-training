@@ -1,10 +1,14 @@
-import Events from "./components/events/Events";
+import Ali from "./component/Ali";
+
+
 
 
 const App = () => {
+ 
   return(
     <div className="App">
-    <Events />
+    <Ali />
+   
     </div>
   )
 }
