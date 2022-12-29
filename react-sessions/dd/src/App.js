@@ -1,22 +1,18 @@
-
-import './App.css';
-import Card from './component/card/Card';
-import data from "./utils/data"
+import Card from "./components/Card";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import "./scss/App.scss";
 
 
 
 function App() {
- 
-  
- return <>
-  {data.map((item)=> {
-   
-    return(
-      <Card key={item.id} {...item}  />
-    )
-  })}
- </>
-
+  return (
+    <>
+      <Header />
+      <Card />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
