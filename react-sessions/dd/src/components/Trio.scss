@@ -1,1 +1,23 @@
 @import "../scss/variables";
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(238, 147, 147);
+    a{
+        text-decoration: none;
+        color:bisque;
+        font-size: 1.1rem;
+        padding: 1.15rem;
+        &:hover{
+            background-color:$bodybg ;
+            color:rgb(238, 147, 147); ;
+        }
+    }
+
+}
+
+.header {
+    text-align: center;
+    margin: 1rem;
+}
