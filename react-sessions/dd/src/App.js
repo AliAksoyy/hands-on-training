@@ -1,17 +1,10 @@
 
-import Keyboard from "./components/Keyboard";
-
-
-
-
+import React from 'react'
 
 const App = () => {
- 
-  return(
-    <div className="container mt-4 text-center">
-    <Keyboard />
-    </div>
+  return (
+    <div>App</div>
   )
 }
 
-export default App;
+export default App
