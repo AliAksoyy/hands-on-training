@@ -1,4 +1,5 @@
-import Form from "./components/Form";
+
+import Keyboard from "./components/Keyboard";
 
 
 
@@ -8,7 +9,7 @@ const App = () => {
  
   return(
     <div className="container mt-4 text-center">
-    <Form />
+    <Keyboard />
     </div>
   )
 }
