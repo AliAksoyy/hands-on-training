@@ -1,4 +1,5 @@
-import Ali from "./component/Ali";
+import Form from "./components/Form";
+
 
 
 
@@ -6,9 +7,8 @@ import Ali from "./component/Ali";
 const App = () => {
  
   return(
-    <div className="App">
-    <Ali />
-   
+    <div className="container mt-4 text-center">
+    <Form />
     </div>
   )
 }
