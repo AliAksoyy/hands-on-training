@@ -1,14 +1,29 @@
-import React, { useState } from 'react'
+import { useState } from "react"
+
+
+
 
 const Keyboard = () => {
-    let ali=  /\d/g
-    const [text,setText]=useState("")
+    const [x, setX] = useState(0)
+    const [y, setY] = useState(0)
+   
+    const ali=(e)=> {
+     setX(e.pageX)
+     setY(e.pageY)
+    }
+   
+   
+   
+ 
   return (
-    <div className='container text-center mt-4'>
-   <h1>event</h1>
-   <input value={text.toLocaleUpperCase()} onChange={(e)=> {!e.target.value.match(ali) && setText(e.target.value)}} type="text" className='form-control' name='text' id='text' />
-   <p>{text.toUpperCase()}</p>
-    </div>
+   <div className="container  mt-4">
+        <h1>Mouse evebts</h1>
+     
+        <div onMouseMove={ali} className="w-25 p-4 bg-success mx-auto  mb-1" >todo item3</div>
+        <p>X and Y</p>
+        <p className="text-danger">{x} {y}</p>
+
+   </div>
   )
 }
 
