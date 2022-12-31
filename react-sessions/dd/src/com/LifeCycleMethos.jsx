@@ -1,52 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from 'react'
 
-class LifeCycleMethods extends React.Component {
-  //! 1-) Bir componentin olsuturulmasinda cagrilir
-  constructor(props) {
-    console.log("Constructor running");
-    super(props);
-    this.state = {
-      count: 0,
-    };
-  }
+const LifeCycleMethos = () => {
 
-  handleInc = () => {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  };
-
-  //! 3-) Bir component DOM agacina eklendiginde calistirilir.
-  //! (İlk render sonrasi).
-  //! Her yasam dongusu icin bir kere calisir.
-  componentDidMount() {
-    console.log("Mounted");
-  }
-
-  //! 4-) Bu metot ilk render haric diger tüm render'lardan sonra cagrilir.
-  //!  prevState ve prevProps degerlerini parametre olarak alabilir.
-  componentDidUpdate(prevProps, prevState) {
-    console.log("Updated");
-    // console.log(prevState.count);
-  }
-
-  //! 5-) Bir component DOM agacindan kaldiriltiktan hemen sonra cagirlir.
-  componentWillUnmount() {
-    console.log("Unmounted");
-  }
-
-  render() {
-    //! 2-) Her bir render'da cagrilir
-    console.log("Rendered");
-    return (
-      <div className="container text-center">
-        <h1 className="text-danger">LIFECYCLE METHODS</h1>
-        <h3>COUNT={this.state.count}</h3>
-        <button className="btn btn-info" onClick={this.handleInc}>
-          INC
-        </button>
-      </div>
-    );
-  }
+    const [info,setInfo]=useState([])
+    const ali =()=> {
+    fetch("https://randomuser.me/api/").then((res)=>{
+        if(!res.ok){
+            throw new Error("hata var")
+        }
+        return res.json()
+        .then((data)=> setInfo(data.results[0]))
+    }).catch((err)=> {
+        console.log(err)
+    })
 }
-export default LifeCycleMethods;
+
+useEffect(() => {
+  ali()
+}, [])
+
+
+
+
+console.log(info)
+
+  return (
+    <div className=' container'>
+    <div className='row justify-content-center gap-3'>
+   
+    
+            <div className='col-12 text-center'>
+                <h3>{info?.name?.first}</h3>
+                {/* <img style={{width:"15rem"}} src={info[0].picture.thumbnail} alt="" /> */}
+                <p>s</p>
+                <button onClick={ali}>s</button>
+        </div>
+        
+
+      
+        
+       
+    </div>
+      
+    </div>
+  )
+}
+
+export default LifeCycleMethos
