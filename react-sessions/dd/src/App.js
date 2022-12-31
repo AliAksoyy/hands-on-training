@@ -1,10 +1,10 @@
 import React from 'react'
-import LifeCycleMethods from './com/LifeCycleMethos'
+import Home from './pages/Home'
 
 const App = () => {
   return (
     <div>
-      <LifeCycleMethods />
+      <Home />
     </div>
   )
 }
