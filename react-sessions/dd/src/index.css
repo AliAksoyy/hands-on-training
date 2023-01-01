@@ -6,24 +6,9 @@
 }
 
 
-body {
-  background-image: url(./assets/back-abstract.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  
-}
 
-.app {
-  
-  width: 100vw;
-  display:flex;
-  justify-content: center;
-}
+
+
 
 
 
