@@ -1,11 +1,9 @@
 import React from 'react'
-import Home from './pages/Home'
+import Home from './page/Home'
 
 const App = () => {
   return (
-    <div className='container'>
-      <Home />
-    </div>
+    <div className="app"><Home /></div>
   )
 }
 

@@ -68,7 +68,7 @@ const TutorialList = ({tutorials, getTutorials}) => {
           })}
         </tbody>
       </table>
-      <EditTutorials handleOpenModal={handleOpenModal}, data={data}, setData={setData} />
+      <EditTutorials handleOpenModal={handleOpenModal} data={data} setData={setData} />
     </div>
   );
 };
