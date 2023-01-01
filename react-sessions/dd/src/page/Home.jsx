@@ -27,8 +27,8 @@ console.log(info)
       <Header show={show} setShow={setShow} />
       {show && (
         <>
-        <AddTask />
-        <ListTask />
+        <AddTask info ={info} setInfo={setInfo} getData={getData} />
+        <ListTask info ={info} setInfo={setInfo} />
         </>
       )}
        
