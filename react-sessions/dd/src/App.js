@@ -1,7 +1,10 @@
+import Header from "./components/Header";
+import { Button } from "./styles/Button.styled";
+
 const App = () => {
   return (
     <>
-      <h1>APP</h1>
+    <Header />
     </>
   );
 };
