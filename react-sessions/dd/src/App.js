@@ -1,28 +1,14 @@
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import People from "./pages/People";
-import NotFound from "./pages/NotFound";
-import { BrowserRouter,Routes,Route } from "react-router-dom";
-import Path from "./pages/Path";
-import PeopleDetails from "./pages/PeopleDetails";
+import React from 'react'
+import { Button } from './components/Button.styled'
+import { Container } from './components/Container'
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/people" element={ <People />} />
-      <Route path="/people/:id" element={<PeopleDetails />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="path/" element={<Path />} />
-      <Route path="*" element={ <NotFound />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
-  );
+    <Container>
+      <Button primary >Button</Button>
+      <Button >Button</Button>
+    </Container>
+  )
 }
 
-export default App;
+export default App
