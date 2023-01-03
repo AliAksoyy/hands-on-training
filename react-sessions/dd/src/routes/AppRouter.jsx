@@ -5,6 +5,7 @@ import About from '../pages/about/About'
 import Details from '../pages/detail/Details'
 import Home from '../pages/home/Home'
 import Login from '../pages/login/Login'
+import Register from '../pages/register/Register'
 import PrivateRouter from './PrivateRouter'
 
 
@@ -19,6 +20,7 @@ const AppRouter = () => {
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
         <Route path='/about' element={<PrivateRouter />} >
             <Route index element={<About />} />    
         </Route>

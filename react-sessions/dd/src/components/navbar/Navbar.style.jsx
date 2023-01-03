@@ -16,5 +16,6 @@ export const NavDiv=styled(Div)`
 
 export const NLink=styled(NavLink)`
     text-decoration:none;
-   color:${(props)=> props.isActive && "red"};
+    
+   color:${(props)=> props.isActive ? "red" : "black"};
 `

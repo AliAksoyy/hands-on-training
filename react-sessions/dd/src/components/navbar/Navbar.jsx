@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
  
 const Navbar = () => {
 const navigate=useNavigate()
-const user =true
+const user =JSON.parse(localStorage.getItem("user"))
   return (
    <Div>
     <div>
@@ -17,7 +17,7 @@ const user =true
       <NLink to="/">Home</NLink>
       <NLink to="/about">About</NLink>
       <a style={{textDecoration:"none"}} href="https://github.com/AliAksoyy" target="_blank">Github</a>
-      {user ?  <NLink to="/login">Logout</NLink> : <NLink to="/login">Login</NLink>  }
+      {user ?  <NLink to="/register">Logout</NLink> : <NLink to="/login">Login</NLink>  }
      
     </NavDiv>
    </Div>
