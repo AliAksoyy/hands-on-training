@@ -13,13 +13,29 @@ const Register = () => {
   
   const handleSubmit =(e) => {
     e.preventDefault()
-    const newArr=[info]
-    localStorage.setItem("user", JSON.stringify(newArr))
-  navigate("/")
+    
+    const localValues=Object.values(localStorage).map((item)=> JSON.parse(item))
+  
+  
+ 
+    if(localValues?.some((item)=> item.user ===info.user)){
+      document.querySelector("#msg").innerText="zaten registersin"
+      setTimeout(()=> {
+        navigate("/")
+      },3000)
+    }
+
+
+
+
+
+
+ 
   setInfo({})
   }
 
   return  <DivStyle>
+                <h2 id='msg'></h2>
               <Content>
                 <Image src={img} />
                 <h3 style={{color:"white", marginBottom:".5rem"}}>ED8EN RECIPE`</h3>
@@ -32,6 +48,7 @@ const Register = () => {
                   placeholder='Username...'
                   value={info?.user || ""}
                   onChange={handleChange}
+                  required
                 />
                 <Input
                   alis
@@ -41,6 +58,7 @@ const Register = () => {
                   placeholder='Lastname...'
                   value={info?.last || ""}
                   onChange={handleChange}
+                  required
                 />
                 <Input 
                   type="password"
@@ -49,6 +67,7 @@ const Register = () => {
                   placeholder='Password...'
                   value={info?.password || ""}
                   onChange={handleChange}
+                  required
                 />
                 <Button type='submit'>register</Button>
                 </form>         
