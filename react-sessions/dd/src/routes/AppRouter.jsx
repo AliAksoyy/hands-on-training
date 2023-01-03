@@ -13,14 +13,12 @@ import PrivateRouter from './PrivateRouter'
 const AppRouter = () => {
 
 
-
-
   return (
     <>
     <Navbar />
     <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/about' element={<PrivateRouter />} >
             <Route index element={<About />} />    
         </Route>
