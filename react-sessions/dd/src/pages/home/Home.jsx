@@ -8,8 +8,8 @@ import { useEffect } from 'react'
 
 const Home = () => {
 
-const [query,setQuery]=useState("")
-const [mealType,setMealType]=useState("")
+const [query,setQuery]=useState("pizza")
+const [mealType,setMealType]=useState("Lunch")
 const [eats,setEats]=useState([])
 
 
@@ -23,17 +23,13 @@ const getMeal=(query,mealType)=> {
   const baseUrl="https://api.edamam.com/search?q="
   const url=`${baseUrl}${query}&app_id=${app_id}&app_key=${app_key}&mealType=${mealType}`
   fetch(url).then((res)=>res.json()).then((data)=> setEats(data.hits)).catch(err=>console.log(err))
+  
 }
 
   return (
     <Div>
     <Header query={query} setQuery={setQuery} mealType={mealType} setMealType={setMealType} getMeal={getMeal} />
-    {eats?.map((item,i)=> {
-      return(
-        <Card key={i} item={item} />     
-      )
-    })}
-    
+        <Card eats={eats} />     
     </Div>
   )
 }

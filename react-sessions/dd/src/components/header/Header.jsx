@@ -7,8 +7,7 @@ const Header = ({query,setQuery,mealType,setMealType,getMeal}) => {
   const handleSubmit=(e)=> {
    e.preventDefault()
    getMeal(query,mealType)  
-   console.log(query);
-   console.log(mealType);
+   setQuery("")
   }
  
 

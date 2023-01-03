@@ -7,6 +7,7 @@ align-items:center;
 flex-wrap:wrap;
 gap:2rem;
 border:2px solid red;
+padding-bottom:2rem;
 
 `
 
