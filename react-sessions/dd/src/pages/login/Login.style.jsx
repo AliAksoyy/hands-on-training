@@ -25,7 +25,7 @@ padding:0.5 2rem;
 `
 
 export const Image =styled.img`
-width:8rem;
+width:${({ali})=> ali ? "6rem" : "8rem"};
 margin:.6rem 0 ;
 `
 
