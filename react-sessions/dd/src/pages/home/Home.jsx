@@ -15,7 +15,7 @@ const [eats,setEats]=useState([])
 
 useEffect(()=> {getMeal(query,mealType)},[])
 
-console.log(query)
+
 
 const getMeal=(query,mealType)=> {
   const app_id="d96c2393"
