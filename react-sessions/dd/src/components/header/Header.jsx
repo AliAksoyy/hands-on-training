@@ -5,10 +5,12 @@ import { Form } from './Header.style'
 const Header = ({query,setQuery,mealType,setMealType,getMeal}) => {
 
   const handleSubmit=(e)=> {
-    e.preventDefault()
-    getMeal(query)
+   e.preventDefault()
+    // getMeal()
+    setQuery(query)
+    
   }
-  console.log(query)
+ 
 
   return (
     

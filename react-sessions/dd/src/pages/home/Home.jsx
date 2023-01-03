@@ -13,10 +13,11 @@ const [mealType,setMealType]=useState("Lunch")
 const [eats,setEats]=useState([])
 
 
-useEffect(()=> {getMeal(query)},[])
-console.log(query);
+useEffect(()=> {getMeal()},[])
 
-const getMeal=(query)=> {
+console.log(query)
+
+const getMeal=()=> {
   const app_id="d96c2393"
   const app_key="fad46d838ea94ddb14caf25719fc08db"
   const baseUrl="https://api.edamam.com/search?q="
