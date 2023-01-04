@@ -1,9 +1,10 @@
-import React from 'react'
+import UseStateExample from "./UseStateExample";
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <div>
+      <UseStateExample />
+    </div>
+  );
 }
-
-export default App
+export default App;
