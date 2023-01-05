@@ -1,10 +1,7 @@
-import UseStateExample from "./UseStateExample";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <UseStateExample />
-    </div>
-  );
+  return <Home />;
 }
+
 export default App;
