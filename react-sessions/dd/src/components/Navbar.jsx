@@ -28,7 +28,6 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
-  
 
   return (
     <AppBar position="static">
