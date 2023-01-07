@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import {useAuthContext} from "../context/ProviderAuth"
-import {createUserWithEmailAndPassword } from "firebase/auth";
+import {createUserWithEmailAndPassword,updateProfile  } from "firebase/auth";
 import {auth} from "../firebase/auth"
 import { useNavigate } from 'react-router-dom';
 
@@ -29,26 +29,31 @@ function Copyright(props) {
 
 export default function Register() {
 
-  const {user,setUser}=useAuthContext()
-  
+  const {authUser,setAuthUser}=useAuthContext()
   const [info,setInfo]=React.useState({})
   const navigate=useNavigate()
+
+
   const signUp=(email,password)=> {
 
   
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
    
-    const kullanici = userCredential.user;
-    
+    const myuser = userCredential.user;
+    console.log(myuser)
   })
   .catch((error) => {
    
     console.log(error.message)
     console.log(error.code)
   });
+  
+  updateProfile(auth.authUser,{displayName : authUser.email, })
 
   }
+  
+   
 
   const handleChange=(e)=> {
     setInfo({...info, [e.target.id]:e.target.value})
@@ -57,17 +62,12 @@ export default function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    if(user.email===info.email){
-      alert("Zaten böyle kullanıcı var başka kullanıcı ile giriş yapın")
-    }
     signUp(info.email,info.password)
     
     document.querySelector("#success").innerText="Tebrikler kayıt oldunuz ve home page'ne yönlendiriliyorusunuz"
     setTimeout(()=> {
       navigate("/")
     },2000)
-    setUser({...user, email:info.email, password:info.password})
-    
    setInfo({})
   };
 

@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { useAuthContext } from '../context/ProviderAuth';
-import {signInWithEmailAndPassword } from "firebase/auth";
+import {signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import {auth} from "../firebase/auth"
 import { useNavigate } from 'react-router-dom';
 
@@ -30,41 +30,51 @@ function Copyright(props) {
 export default function Login() {
  const navigate=useNavigate()
   const [info,setInfo]=React.useState({})
-  const {user}=useAuthContext()
-  console.log(user)
+  
+
+
+
   const handleChange=(e)=> {
     setInfo({...info, [e.target.id]:e.target.value})
   }
 
   const signIn=(email,password)=> {
     
-  
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
       
-        const kullanici = userCredential.user;
-      
+        const myuser = userCredential.user;
+        if(myuser){
+          navigate(-1)
+        }
       })
       .catch((error) => {
-       
+       if(window.confirm("Wrong Email or Password! If you haven't been registerd yet, Please Register!")){
+          navigate("/register")
+       }
         console.log(error.code)
         console.log(error.message)
         
       });
   }
-
-
+  const handleGoogle=()=> {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+  .then((result) => {
+   
+    const myuser = result.user;
+   if(myuser){
+    navigate(-1)
+   }
+  }).catch((error) => {
+    console.log(error.code)
+    console.log(error.message)
+  });
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(info)
     signIn(info.email,info.password)
-    if(user.email!==info.email){
-      alert("kullanıcı bilgisi hatalı")
-      navigate("/register")
-    }else {
-      navigate("/")
-    }
     setInfo({})
     
   };
@@ -134,6 +144,15 @@ export default function Login() {
               >
                 Login
               </Button>
+              <Button
+              onClick={handleGoogle}
+                type="button"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Google with Sign In
+              </Button>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -141,7 +160,7 @@ export default function Login() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link to="/register" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
