@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { useAuthContext } from '../context/ProviderAuth'
 import MoviCard from "../components/MoviCard"
-
+import Header from '../components/Header'
 const Main = () => {
 const {authUser}=useAuthContext()
 console.log(authUser)
@@ -17,7 +17,11 @@ console.log(movies)
 
 
   return (
+    <>
+    <Header/>
     <div style={{marginTop:"2rem"}}><MoviCard movies={movies} setMovies={setMovies} /></div>
+
+    </>
   )
 }
 
