@@ -9,9 +9,10 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-
-
-
+import { useAuthContext } from '../context/ProviderAuth';
+import {signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../firebase/auth"
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -27,17 +28,45 @@ function Copyright(props) {
 }
 
 export default function Login() {
- 
+ const navigate=useNavigate()
   const [info,setInfo]=React.useState({})
-
+  const {user}=useAuthContext()
+  console.log(user)
   const handleChange=(e)=> {
     setInfo({...info, [e.target.id]:e.target.value})
   }
 
+  const signIn=(email,password)=> {
+    
+  
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      
+        const kullanici = userCredential.user;
+      
+      })
+      .catch((error) => {
+       
+        console.log(error.code)
+        console.log(error.message)
+        
+      });
+  }
+
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(info)
-   
+    signIn(info.email,info.password)
+    if(user.email!==info.email){
+      alert("kullanıcı bilgisi hatalı")
+      navigate("/register")
+    }else {
+      navigate("/")
+    }
+    setInfo({})
+    
   };
 
   return (
@@ -103,7 +132,7 @@ export default function Login() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Register
+                Login
               </Button>
               <Grid container>
                 <Grid item xs>

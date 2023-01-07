@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import {useAuthContext} from "../context/ProviderAuth"
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../firebase/auth"
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -29,8 +30,9 @@ function Copyright(props) {
 export default function Register() {
 
   const {user,setUser}=useAuthContext()
+  
   const [info,setInfo]=React.useState({})
-
+  const navigate=useNavigate()
   const signUp=(email,password)=> {
 
   
@@ -38,7 +40,7 @@ export default function Register() {
   .then((userCredential) => {
    
     const kullanici = userCredential.user;
-    setUser({...user, email:kullanici.email})
+    
   })
   .catch((error) => {
    
@@ -47,16 +49,26 @@ export default function Register() {
   });
 
   }
-console.log(user)
+
   const handleChange=(e)=> {
     setInfo({...info, [e.target.id]:e.target.value})
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(info)
+    
+    if(user.email===info.email){
+      alert("Zaten böyle kullanıcı var başka kullanıcı ile giriş yapın")
+    }
     signUp(info.email,info.password)
-   
+    
+    document.querySelector("#success").innerText="Tebrikler kayıt oldunuz ve home page'ne yönlendiriliyorusunuz"
+    setTimeout(()=> {
+      navigate("/")
+    },2000)
+    setUser({...user, email:info.email, password:info.password})
+    
+   setInfo({})
   };
 
 
@@ -93,6 +105,10 @@ console.log(user)
             <Typography component="h1" variant="h5">
               Register
             </Typography>
+            <Typography id="success" className="text-danger mt-2" component="h1" variant="h5">
+              
+            </Typography>
+
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="dense"
