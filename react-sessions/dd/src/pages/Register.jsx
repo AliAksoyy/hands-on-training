@@ -9,8 +9,9 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import { purple } from '@mui/material/colors';
-
+import {useAuthContext} from "../context/ProviderAuth"
+import {createUserWithEmailAndPassword } from "firebase/auth";
+import {auth} from "../firebase/auth"
 
 function Copyright(props) {
   return (
@@ -27,8 +28,26 @@ function Copyright(props) {
 
 export default function Register() {
 
+  const {user,setUser}=useAuthContext()
   const [info,setInfo]=React.useState({})
 
+  const signUp=(email,password)=> {
+
+  
+  createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+   
+    const kullanici = userCredential.user;
+    setUser({...user, email:kullanici.email})
+  })
+  .catch((error) => {
+   
+    console.log(error.message)
+    console.log(error.code)
+  });
+
+  }
+console.log(user)
   const handleChange=(e)=> {
     setInfo({...info, [e.target.id]:e.target.value})
   }
@@ -36,8 +55,11 @@ export default function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(info)
+    signUp(info.email,info.password)
    
   };
+
+
 
   return (
     
