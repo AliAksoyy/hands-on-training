@@ -8,12 +8,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import { useNavigate } from 'react-router-dom';
 
 const pages = ['Home', 'Login', 'Register'];
 
 
 function Navbar() {
+  const navigate=useNavigate()
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -24,7 +27,15 @@ function Navbar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (e) => {
+    
+    if(e.target.getAttribute("name")==="Home"){
+      navigate("/")
+    }else if(e.target.getAttribute("name")==="Login"){
+      navigate("/login")
+    }else if(e.target.getAttribute("name")==="Register"){
+      navigate("/register")
+    }
     setAnchorElNav(null);
   };
 
@@ -37,7 +48,7 @@ function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -62,12 +73,36 @@ function Navbar() {
             >
               <MenuIcon />
             </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem  key={page} onClick={handleCloseNavMenu}>
+                  <Typography name={page}  textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
           </Box>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -85,6 +120,7 @@ function Navbar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                name={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >

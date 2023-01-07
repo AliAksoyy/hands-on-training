@@ -2,9 +2,11 @@ import AppRouter from "./router/AppRouter"
 import { BrowserRouter } from "react-router-dom"
 import { createTheme,ThemeProvider } from "@mui/material/styles"
 import { pink, purple, red, teal } from "@mui/material/colors"
+import ProviderAuth, { useAuthContext } from "./context/ProviderAuth"
 
 
 const App=()=> {
+  
 
   const theme=createTheme({
     paletta:{
@@ -15,16 +17,17 @@ const App=()=> {
     }
   })
 
-
+ 
 
 
   return(
+    <ProviderAuth>
     <BrowserRouter >
     <ThemeProvider theme={theme}>
-
-       <AppRouter />
+      <AppRouter />
     </ThemeProvider>
     </BrowserRouter>
+    </ProviderAuth>
    
   )
 }
