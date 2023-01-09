@@ -1,34 +1,47 @@
-import AppRouter from "./router/AppRouter"
-import { BrowserRouter } from "react-router-dom"
-import { createTheme,ThemeProvider } from "@mui/material/styles"
-import { pink, purple, red, teal } from "@mui/material/colors"
-import ProviderAuth, { useAuthContext } from "./context/ProviderAuth"
+import { useEffect, useState } from "react";
+import Card from "./components/Card";
+import Header from "./components/Header";
+import HeaderMemo from "./components/HeaderMemo";
+
+function App() {
+  const [count, setCount] = useState(0)
+  const [text, setText] = useState("")
+  const [search, setSearch] = useState("")
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        setData(data)
+      })
+  }, [])
 
 
-const App=()=> {
-  
 
-  const theme=createTheme({
-    paletta:{
-      primary:{main:purple[500]},
-      secondary:{main:red[500]},
-      danger:{main:pink[400]},
-      warning:{main:teal[400]},
-    }
-  })
-
- 
-
-
-  return(
-    <ProviderAuth>
-    <BrowserRouter >
-    <ThemeProvider theme={theme}>
-      <AppRouter />
-    </ThemeProvider>
-    </BrowserRouter>
-    </ProviderAuth>
-   
-  )
+  return (
+    <div className="container mt-2">
+      <div>
+        <Header />
+        <hr />
+        <HeaderMemo />
+      </div>
+      <hr />
+      <div>
+        <p>{count}</p>
+        <button className='btn btn-danger' onClick={() => setCount(count + 1)}>Increment</button>
+      </div>
+      <hr />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <input type='text' />
+        <button type='button'>Search</button>
+      </div>
+      <div className="row">
+        <Card data={data} />
+      </div>
+    </div>
+  );
 }
-export default App
+
+export default App;
