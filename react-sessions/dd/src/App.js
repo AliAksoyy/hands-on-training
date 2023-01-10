@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useMemo } from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
-
+import ClearButton from "./components/ClearButton"
 function App() {
   const [count, setCount] = useState(0)
   const [text, setText] = useState("")
@@ -17,15 +17,26 @@ function App() {
         setData(data)
       })
   }, [])
+  const handleSearch=()=> {
+    setSearch(text)
+  }
 
+  const handleClear =()=> {
 
+      setSearch("")
+      setText("")
+  }
+
+    const filteredData = useMemo(()=>{
+     return data?.filter((item)=> item.name.toLowerCase().includes(search.toLowerCase()))
+    },[data,search])    
 
   return (
     <div className="container mt-2">
       <div>
         <Header />
         <hr />
-        <HeaderMemo />
+        <HeaderMemo  count={count<5 ? 0 : count } />
       </div>
       <hr />
       <div>
@@ -34,12 +45,15 @@ function App() {
       </div>
       <hr />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <input type='text' />
-        <button type='button'>Search</button>
+        <input type='text' value={text} onChange={(e)=> setText(e.target.value)}/>
+        <button type='button' onClick={handleSearch}>Search</button>
       </div>
       <div className="row">
-        <Card data={data} />
+        <Card data={filteredData} />
       </div>
+      <hr />
+      <ClearButton handleClear={handleClear} />
+      <br />
     </div>
   );
 }
