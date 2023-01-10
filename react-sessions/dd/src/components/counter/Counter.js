@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { clear, decrement, increment } from "../redux/actions/counterAction";
 import "./Counter.css";
 
 
@@ -6,16 +7,7 @@ import "./Counter.css";
 const Counter = () => {
   const dispatch=useDispatch()
   const counter=useSelector(state=>state.counter)
-  const inc=()=> {
-    
-          dispatch({type:"ARTTIR"})
-  }
-  const reset=()=> {
-
-  }
-  const dec=()=> {
-
-  }
+ 
 
 
 
@@ -24,9 +16,9 @@ const Counter = () => {
       <h2 className="counter-header">Counter With Redux</h2>
       <h1>counter:{counter}</h1>
       <div>
-        <button className="counter-button positive" onClick={inc}>increase</button>
-        <button className="counter-button zero" onClick={reset}>reset</button>
-        <button className="counter-button negative" onClick={dec}>decrease</button>
+        <button className="counter-button positive" onClick={()=> dispatch(increment())}>increase</button>
+        <button className="counter-button zero" onClick={()=>dispatch(clear())}>reset</button>
+        <button className="counter-button negative" onClick={()=>dispatch(decrement())}>decrease</button>
       </div>
     </div>
   );

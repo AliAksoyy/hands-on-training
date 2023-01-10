@@ -1,13 +1,14 @@
 import "./App.css";
 import Counter from "./components/counter/Counter";
 import Todo from "./components/todo/Todo";
-import {createStore} from "redux"
-import { reducer } from "./components/redux";
+
+import {reducer} from "./components/redux/reducers/counterReducer"
 import { Provider } from "react-redux";
+import { store } from "./components/redux";
 
 function App() {
 
-  const store=createStore(reducer)
+ 
 
 
   return (
