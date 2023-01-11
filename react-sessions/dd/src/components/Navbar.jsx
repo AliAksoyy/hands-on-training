@@ -5,13 +5,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
+import { clearUser } from "../features/authSlice";
 
 export default function Navbar() {
-  const user=true
+  const dispatch=useDispatch()
   const navigate = useNavigate();
-
+  const {user}=useSelector((state)=> state.auth)
   const handleLogout =()=> {
-
+    dispatch(clearUser())
+    navigate("login")
   }
 
   return (
