@@ -10,6 +10,9 @@ const newsSlice=createSlice({
     name:"news",
     initialState,
     reducers:{
+        fetchStart:(state)=> {
+            
+        },
         clearNewsList:(state)=> {
             state.news=[]
         }
