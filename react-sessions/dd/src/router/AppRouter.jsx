@@ -1,20 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
-import News from "../pages/News";
+import Dashboard from "../pages/Dashboard";
 
 const AppRouter = () => {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<PrivateRouter />}>
-          <Route path="" element={<News />} />
+        <Route path="/" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="stock" element={<PrivateRouter />}>
+          <Route path="" element={<Dashboard />} />
         </Route>
-
-        <Route path="login" element={<Login />} />
       </Routes>
     </Router>
   );
