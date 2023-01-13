@@ -16,7 +16,7 @@ function Dashboard() {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+      <CssBaseline f />
       <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
