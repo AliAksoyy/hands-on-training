@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-input:focus, button:focus{
+ input:focus, button:focus{
     outline: 0;
-}
+ }
 
 body {
     font-family: "Poppins";
@@ -53,7 +53,7 @@ h2{
 input {
     font-family: "Poppins";
     padding: 10px 20px;
-    border:0;
+    border:0; 
     border-top:1px solid #ccc;
     width: 100%;
     font-size: 15px;
