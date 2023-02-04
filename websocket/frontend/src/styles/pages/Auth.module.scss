@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background-color: var(--color-primary);
+
+  .quest {
+    margin-top: 1rem;
+    button {
+      display: inline;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: var(--color-secondary);
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}
