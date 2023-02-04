@@ -1,6 +1,6 @@
 # React - Socket.io Chat app
 
-### Start app
+### Start app 
 
 1. node start
 
