@@ -26,3 +26,13 @@
 <script src="./chat.js"></script>
 </body>
 </html>
+
+<!-- Merhaba,
+
+Bundan yıllar yıllar öncesine kadar(yani geçen yıla kadar) web yapılanmalarında gerçek zamanlı işler yapılacağı zaman Ajax teknolojisi kullanılarak, belli aralıklarla 1 saniye – milisaniye yapılan sorgular neticesinde sanki gerçek zamanlı bir sistem izlenimi veren yapılar üzerinde çalışıyorduk. Dolayısıyla sistemin canlılık durumunu kusursuz sağlayabilmek için Backend’e yapılacak sorgu aralığını mümkün mertebe azaltarak, sistemin kullanıcıya dönük işleyişinde gerçek zamanlılık özelliğini arttırmayı tercih ederdik. Hal böyleyken, mikro aralıklarla yapılan her bir talep neticesinde bilanço bizlere yüksek maliyet ve performans kaybı olarak yansımaktaydı. Vee tabi tüm bu süreç Http protokolü üzerinden gerçekleşmekte ve yapılan her bir talebe karşılık ihtiyaç olmaksızın bir cevap alınmaktaydı.
+
+Websoket teknolojisi ile TCP bağlantısı üzerinden çift yönlü mesaj gönderebilme özelliği sayesinde, backende micro aralıklarla yapılan talep yoğunluğu neticesinde ödenen yüksek maliyetten kurtulunmakta ve gerçek zamanlı uygulamaları dört dörtlük bir şekilde uygulayabilme şansı elde etmekteyiz. -->
+
+<!-- Evet… Websoket teknolojisi; sürekli açık olan bir TCP bağlantısı üzerinden çift yönlü mesaj gönderebilme işlemini yapabilen bir protokoldür. Bu açık TCP protokolü üzerinden taraflardan isteyen istediğine mesaj gönderebilmektedir ve HTTP protokolünde olduğu gibi gönderilen mesajlara cevap verme zorunluluğu bulunmamaktadır. O yüzden burada “talep(request)” / “cevap(response)” terminolojisinden ziyade sadece “mesaj/message/data” terminolojisi tercih edilmektedir. -->
+
+<!-- https://www.gencayyildiz.com/blog/node-js-websocket-nedir-nasil-kullanilir/ -->
